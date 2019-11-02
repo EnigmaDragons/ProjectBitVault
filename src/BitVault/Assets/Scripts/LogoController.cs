@@ -20,6 +20,7 @@ public class LogoController : MonoBehaviour
     {
         targetColor = image.color;
         targetTransparent = new Color(targetColor.r, targetColor.g, targetColor.b, 0f);
+        image.color = targetTransparent;
         BeginAnim();
     }
 
