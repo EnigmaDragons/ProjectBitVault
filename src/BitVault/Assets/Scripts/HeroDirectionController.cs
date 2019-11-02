@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class HeroDirectionController : MonoBehaviour
 {
+    [SerializeField] private CurrentLevelMap currentLevelMap;
+    
     private bool _readyForNewInput = true;
 
     void Update()
@@ -10,18 +12,26 @@ public class HeroDirectionController : MonoBehaviour
         var hDir = Input.GetAxis("Horizontal");
         var vDir = Input.GetAxis("Vertical");
 
+        
+        // TODO: Refactor out duplication
         if (Math.Abs(hDir) > 0.01)
         {
             if (!_readyForNewInput) return;
+
+            var newPosition = transform.position + new Vector3(1 * Math.Sign(hDir), 0, 0);
+            if (!currentLevelMap.IsWalkable(newPosition)) return;
             
-            transform.position += new Vector3(1 * Math.Sign(hDir), 0, 0);
+            transform.position = newPosition;
             _readyForNewInput = false;
         }
         else if (Math.Abs(vDir) > 0.01)
         {
             if (!_readyForNewInput) return;
             
-            transform.position += new Vector3(0, 1 * Math.Sign(vDir), 0);
+            var newPosition = transform.position + new Vector3(0, 1 * Math.Sign(vDir), 0);
+            if (!currentLevelMap.IsWalkable(newPosition)) return;
+            
+            transform.position = newPosition;
             _readyForNewInput = false;
         }
         else
