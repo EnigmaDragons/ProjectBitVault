@@ -9,8 +9,8 @@ public class HeroDirectionController : MonoBehaviour
 
     void Update()
     {
-        var hDir = Input.GetAxis("Horizontal");
-        var vDir = Input.GetAxis("Vertical");
+        var hDir = Input.GetAxisRaw("Horizontal");
+        var vDir = Input.GetAxisRaw("Vertical");
 
         
         // TODO: Refactor out duplication
