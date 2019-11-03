@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using UnityEngine;
 
 [Serializable]
@@ -10,6 +9,9 @@ public class TilePoint
 
     public TilePoint() {}
 
+    public TilePoint(GameObject o)
+        : this(o.transform.position) {}
+    
     public TilePoint(Vector3 v)
         : this(v.x.FlooredInt(), v.y.FlooredInt()) {}
     
