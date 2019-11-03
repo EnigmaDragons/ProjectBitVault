@@ -28,7 +28,10 @@ public sealed class MoveProcessor : MonoBehaviour
         if (map.IsWalkable(destination))
             activePiece.transform.position = destination;
         else if (map.IsJumpable(destination) && map.IsWalkable(twoSquaresAway))
+        {
             activePiece.transform.position = twoSquaresAway;
+            Message.Publish(new TileJumped(new TilePoint(destination)));
+        }
     }
 
     private void ProcessMoveToRequest(MoveToRequested m)

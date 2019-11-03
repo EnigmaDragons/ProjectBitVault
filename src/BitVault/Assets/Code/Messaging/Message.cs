@@ -63,5 +63,4 @@ public static class Message
             _ownerSubscriptions.Remove(owner);
         }
     }
-
 }

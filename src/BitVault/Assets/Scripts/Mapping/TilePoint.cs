@@ -21,7 +21,8 @@ public class TilePoint
         Y = y;
     }
 
-    public override int GetHashCode() => $"{X}{Y}".GetHashCode();
+    public override string ToString() => $"{X},{Y}";
+    public override int GetHashCode() => ToString().GetHashCode();
     public override bool Equals(object obj) => obj is TilePoint point && Equals(point);
     private bool Equals(TilePoint other) => other.X == X && other.Y == Y;
 
