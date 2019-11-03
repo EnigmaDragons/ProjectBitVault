@@ -13,7 +13,7 @@ public class MainMenuControls : MonoBehaviour
     {
         if (Application.isMobilePlatform || Application.platform == RuntimePlatform.WebGLPlayer)
             exitButton.enabled = false;
-        playButton.onClick.AddListener(navigator.NavigateToGameScene);
+        playButton.onClick.AddListener(navigator.NavigateToLevelSelect);
         creditsButton.onClick.AddListener(navigator.NavigateToCredits);
         optionsButton.onClick.AddListener(() => Debug.Log("Options Button was Pressed"));
         exitButton.onClick.AddListener(Application.Quit);
