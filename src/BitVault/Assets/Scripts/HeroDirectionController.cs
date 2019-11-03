@@ -7,6 +7,11 @@ public class HeroDirectionController : MonoBehaviour
     
     private bool _readyForNewInput = true;
 
+    private void Start()
+    {
+        Message.Publish(new PieceSelected(gameObject));
+    }
+
     void Update()
     {
         var hDir = Input.GetAxisRaw("Horizontal");
@@ -19,9 +24,7 @@ public class HeroDirectionController : MonoBehaviour
             if (!_readyForNewInput) return;
 
             var newPosition = transform.position + new Vector3(1 * Math.Sign(hDir), 0, 0);
-            if (!currentLevelMap.IsWalkable(newPosition)) return;
-            
-            transform.position = newPosition;
+            Message.Publish(new MoveToRequested(new TilePoint(newPosition)));
             _readyForNewInput = false;
         }
         else if (Math.Abs(vDir) > 0.01)
@@ -29,9 +32,7 @@ public class HeroDirectionController : MonoBehaviour
             if (!_readyForNewInput) return;
             
             var newPosition = transform.position + new Vector3(0, 1 * Math.Sign(vDir), 0);
-            if (!currentLevelMap.IsWalkable(newPosition)) return;
-            
-            transform.position = newPosition;
+            Message.Publish(new MoveToRequested(new TilePoint(newPosition)));
             _readyForNewInput = false;
         }
         else

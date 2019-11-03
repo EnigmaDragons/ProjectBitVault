@@ -24,4 +24,6 @@ public class TilePoint
     public override int GetHashCode() => $"{X}{Y}".GetHashCode();
     public override bool Equals(object obj) => obj is TilePoint point && Equals(point);
     private bool Equals(TilePoint other) => other.X == X && other.Y == Y;
+
+    public Vector3 Plus(Vector3 v) => v + new Vector3(X, Y, 0);
 }

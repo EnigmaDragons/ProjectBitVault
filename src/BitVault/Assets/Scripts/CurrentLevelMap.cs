@@ -18,10 +18,7 @@ public class CurrentLevelMap : ScriptableObject
     public void RegisterBitVault(GameObject obj) => bitVaultLocation = new TilePoint(obj.transform.position);
     public void RegisterWalkableTile(GameObject obj) => walkableTiles.Add(new TilePoint(obj.transform.position));
 
-    public bool IsWalkable(Vector3 position)
-    {
-        var tilepoint = new TilePoint(position);
-        return walkableTiles.Any(t => t.Equals(tilepoint));
-    }
+    public bool IsWalkable(Vector3 position) => IsWalkable(new TilePoint(position));
+    public bool IsWalkable(TilePoint tile) => walkableTiles.Any(t => t.Equals(tile));
 }
 
