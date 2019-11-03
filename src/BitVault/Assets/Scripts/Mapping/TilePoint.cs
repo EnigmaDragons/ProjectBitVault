@@ -26,4 +26,5 @@ public class TilePoint
     private bool Equals(TilePoint other) => other.X == X && other.Y == Y;
 
     public Vector3 Plus(Vector3 v) => v + new Vector3(X, Y, 0);
+    public TilePoint Plus(TilePoint t) => new TilePoint(t.X + X, t.Y + Y);
 }

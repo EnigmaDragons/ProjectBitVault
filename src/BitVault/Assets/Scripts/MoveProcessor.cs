@@ -21,9 +21,14 @@ public sealed class MoveProcessor : MonoBehaviour
     {
         if (activePiece == null) return;
 
-        var destination = m.Delta.Plus(activePiece.transform.position);
+        var pos = activePiece.transform.position;
+        var destination = m.Delta.Plus(pos);
+        var twoSquaresAway = m.Delta.Plus(m.Delta).Plus(pos);
+        
         if (map.IsWalkable(destination))
-            activePiece.transform.position = new Vector3(destination.x, destination.y, activePiece.transform.position.z);
+            activePiece.transform.position = destination;
+        else if (map.IsJumpable(destination) && map.IsWalkable(twoSquaresAway))
+            activePiece.transform.position = twoSquaresAway;
     }
 
     private void ProcessMoveToRequest(MoveToRequested m)
