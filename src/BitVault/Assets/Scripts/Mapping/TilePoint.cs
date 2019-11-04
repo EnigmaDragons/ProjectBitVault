@@ -33,5 +33,5 @@ public class TilePoint
     public TilePoint Plus(TilePoint t) => t + this;
     public static TilePoint operator +(TilePoint t, TilePoint t2) => new TilePoint(t.X + t2.X, t.Y + t2.Y);
     public static TilePoint operator -(TilePoint t, TilePoint t2) => new TilePoint(t.X - t2.X, t.Y - t2.Y);
-
+    public static TilePoint operator /(TilePoint t, int divisor) => new TilePoint(t.X / divisor, t.Y / divisor);
 }

@@ -28,8 +28,10 @@ public sealed class MoveProcessor : MonoBehaviour
             if (MoveIsInvalid(m)) return;
             
             var pos = activePiece.transform.position;
-            var destination = m.Delta.Plus(pos);
-            var twoSquaresAway = m.Delta.Plus(m.Delta).Plus(pos);
+            
+            var oneSquareDelta = m.Delta / m.Delta.TotalMagnitude();
+            var destination = oneSquareDelta.Plus(pos);
+            var twoSquaresAway = oneSquareDelta.Plus(oneSquareDelta).Plus(pos);
 
             if (map.IsWalkable(destination))
                 activePiece.transform.position = destination;
