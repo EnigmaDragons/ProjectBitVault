@@ -176,10 +176,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -320,28 +320,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6808502126616173507, guid: e300fa04153ae664ca02ad9339483019,
-        type: 3}
-      propertyPath: m_text
-      value: 'Level 1
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 6808502126616173507, guid: e300fa04153ae664ca02ad9339483019,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6808502126616173507, guid: e300fa04153ae664ca02ad9339483019,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6808502126616173507, guid: e300fa04153ae664ca02ad9339483019,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1921779215097119929, guid: e300fa04153ae664ca02ad9339483019,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -371,6 +349,28 @@ PrefabInstance:
     - target: {fileID: 1921779215097119929, guid: e300fa04153ae664ca02ad9339483019,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808502126616173507, guid: e300fa04153ae664ca02ad9339483019,
+        type: 3}
+      propertyPath: m_text
+      value: 'Level 1
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808502126616173507, guid: e300fa04153ae664ca02ad9339483019,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808502126616173507, guid: e300fa04153ae664ca02ad9339483019,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808502126616173507, guid: e300fa04153ae664ca02ad9339483019,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -498,31 +498,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6808502126616173507, guid: e300fa04153ae664ca02ad9339483019,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6808502126616173507, guid: e300fa04153ae664ca02ad9339483019,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6808502126616173507, guid: e300fa04153ae664ca02ad9339483019,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6808502126616173507, guid: e300fa04153ae664ca02ad9339483019,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6808502126616173507, guid: e300fa04153ae664ca02ad9339483019,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1921779215097119929, guid: e300fa04153ae664ca02ad9339483019,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -554,6 +529,31 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6808502126616173507, guid: e300fa04153ae664ca02ad9339483019,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808502126616173507, guid: e300fa04153ae664ca02ad9339483019,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808502126616173507, guid: e300fa04153ae664ca02ad9339483019,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808502126616173507, guid: e300fa04153ae664ca02ad9339483019,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808502126616173507, guid: e300fa04153ae664ca02ad9339483019,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e300fa04153ae664ca02ad9339483019, type: 3}
 --- !u!224 &6827946769838456772 stripped
@@ -569,11 +569,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2449610537204840996}
     m_Modifications:
-    - target: {fileID: 656167654627039680, guid: 2644ae672af4b4240acf6ead00d8abfc,
-        type: 3}
-      propertyPath: m_Name
-      value: Darken
-      objectReference: {fileID: 0}
     - target: {fileID: 3131037221052063231, guid: 2644ae672af4b4240acf6ead00d8abfc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -678,6 +673,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 656167654627039680, guid: 2644ae672af4b4240acf6ead00d8abfc,
+        type: 3}
+      propertyPath: m_Name
+      value: Darken
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2644ae672af4b4240acf6ead00d8abfc, type: 3}
