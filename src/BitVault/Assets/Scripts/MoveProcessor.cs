@@ -25,6 +25,8 @@ public sealed class MoveProcessor : MonoBehaviour
     {
         piece.Selected.IfPresent(activePiece =>
         {
+            if (MoveIsInvalid(m)) return;
+            
             var pos = activePiece.transform.position;
             var destination = m.Delta.Plus(pos);
             var twoSquaresAway = m.Delta.Plus(m.Delta).Plus(pos);
@@ -37,5 +39,15 @@ public sealed class MoveProcessor : MonoBehaviour
                 Message.Publish(new TileJumped(new TilePoint(destination)));
             }
         });
+    }
+
+    private bool MoveIsInvalid(MoveByRequested m)
+    {
+        var t = m.Delta;
+        if (!t.IsCardinal())
+            return true;
+        if (t.TotalMagnitude() > 2)
+            return true;
+        return false;
     }
 }

@@ -21,6 +21,9 @@ public class TilePoint
         Y = y;
     }
 
+    public bool IsCardinal() => (X == 0 && Y != 0) || (X != 0 && Y == 0);
+    public int TotalMagnitude() => Math.Abs(X) + Math.Abs(Y);
+    
     public override string ToString() => $"{X},{Y}";
     public override int GetHashCode() => ToString().GetHashCode();
     public override bool Equals(object obj) => obj is TilePoint point && Equals(point);
@@ -30,4 +33,5 @@ public class TilePoint
     public TilePoint Plus(TilePoint t) => t + this;
     public static TilePoint operator +(TilePoint t, TilePoint t2) => new TilePoint(t.X + t2.X, t.Y + t2.Y);
     public static TilePoint operator -(TilePoint t, TilePoint t2) => new TilePoint(t.X - t2.X, t.Y - t2.Y);
+
 }
