@@ -27,5 +27,7 @@ public class TilePoint
     private bool Equals(TilePoint other) => other.X == X && other.Y == Y;
 
     public Vector3 Plus(Vector3 v) => v + new Vector3(X, Y, 0);
-    public TilePoint Plus(TilePoint t) => new TilePoint(t.X + X, t.Y + Y);
+    public TilePoint Plus(TilePoint t) => t + this;
+    public static TilePoint operator +(TilePoint t, TilePoint t2) => new TilePoint(t.X + t2.X, t.Y + t2.Y);
+    public static TilePoint operator -(TilePoint t, TilePoint t2) => new TilePoint(t.X - t2.X, t.Y - t2.Y);
 }

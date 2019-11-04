@@ -2,14 +2,13 @@ using UnityEngine;
 
 public sealed class MoveProcessor : MonoBehaviour
 {
+    [SerializeField] private CurrentSelectedPiece piece;
     [SerializeField] private CurrentLevelMap map;
-    [ReadOnly, SerializeField] private GameObject activePiece;
     
     private void OnEnable()
     {
-        Message.Subscribe<PieceSelected>(e => activePiece = e.Piece, this);
-        Message.Subscribe<MoveToRequested>(ProcessMoveToRequest, this);
         Message.Subscribe<MoveByRequested>(ProcessMoveByRequest, this);
+        Message.Subscribe<TileIndicated>(ProcessTileIndicated, this);
     }
     
     private void OnDisable()
@@ -17,28 +16,26 @@ public sealed class MoveProcessor : MonoBehaviour
         Message.Unsubscribe(this);
     }
 
+    private void ProcessTileIndicated(TileIndicated t)
+    {
+        piece.Selected.IfPresent(p => Message.Publish(new MoveByRequested(t.Tile - new TilePoint(p.gameObject))));
+    }
+    
     private void ProcessMoveByRequest(MoveByRequested m)
     {
-        if (activePiece == null) return;
-
-        var pos = activePiece.transform.position;
-        var destination = m.Delta.Plus(pos);
-        var twoSquaresAway = m.Delta.Plus(m.Delta).Plus(pos);
-        
-        if (map.IsWalkable(destination))
-            activePiece.transform.position = destination;
-        else if (map.IsJumpable(destination) && map.IsWalkable(twoSquaresAway))
+        piece.Selected.IfPresent(activePiece =>
         {
-            activePiece.transform.position = twoSquaresAway;
-            Message.Publish(new TileJumped(new TilePoint(destination)));
-        }
-    }
+            var pos = activePiece.transform.position;
+            var destination = m.Delta.Plus(pos);
+            var twoSquaresAway = m.Delta.Plus(m.Delta).Plus(pos);
 
-    private void ProcessMoveToRequest(MoveToRequested m)
-    {
-        if (activePiece == null) return;
-        
-        if (map.IsWalkable(m.Destination))
-            activePiece.transform.position = new Vector3(m.Destination.X, m.Destination.Y, activePiece.transform.position.z);
+            if (map.IsWalkable(destination))
+                activePiece.transform.position = destination;
+            else if (map.IsJumpable(destination) && map.IsWalkable(twoSquaresAway))
+            {
+                activePiece.transform.position = twoSquaresAway;
+                Message.Publish(new TileJumped(new TilePoint(destination)));
+            }
+        });
     }
 }
