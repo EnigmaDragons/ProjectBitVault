@@ -8,8 +8,7 @@ public sealed class DestroyOnJumped : OnMessage<TileJumped>
     {
         if (!e.Tile.Equals(new TilePoint(gameObject))) return;
         
-        map.RemoveJumpable(gameObject);
-        map.RemoveBlocking(gameObject);
+        map.Remove(gameObject);
         Destroy(gameObject);
     }
 }

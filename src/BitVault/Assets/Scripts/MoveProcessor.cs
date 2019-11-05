@@ -34,10 +34,14 @@ public sealed class MoveProcessor : MonoBehaviour
             var twoSquaresAway = oneSquareDelta.Plus(oneSquareDelta).Plus(pos);
 
             if (map.IsWalkable(destination))
+            {
                 activePiece.transform.position = destination;
+                Message.Publish(new PieceMoved(activePiece, new TilePoint(pos), new TilePoint(destination)));
+            }
             else if (map.IsJumpable(destination) && map.IsWalkable(twoSquaresAway))
             {
                 activePiece.transform.position = twoSquaresAway;
+                Message.Publish(new PieceMoved(activePiece, new TilePoint(pos), new TilePoint(twoSquaresAway)));
                 Message.Publish(new TileJumped(new TilePoint(destination)));
             }
         });
