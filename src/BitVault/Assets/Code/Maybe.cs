@@ -26,5 +26,7 @@ public sealed class Maybe<T> where T : class
 
     public T OrDefault(Func<T> createDefault) => IsPresent ? Value : createDefault();
     
+    public static Maybe<T> Missing() => new Maybe<T>();
+    
     public static implicit operator Maybe<T>(T obj) => new Maybe<T>(obj);
 }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class MouseClickHandler : MonoBehaviour
+public class MouseLeftClickProcessor : MonoBehaviour
 {
     private Camera _mainCamera;
     

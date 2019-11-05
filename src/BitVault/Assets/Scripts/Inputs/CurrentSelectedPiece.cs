@@ -7,5 +7,5 @@ public class CurrentSelectedPiece : ScriptableObject
     public Maybe<GameObject> Selected => selected;
 
     public void Select(GameObject obj) => selected = obj;
-    public void Deselect() => selected = null;
+    public void Deselect() => selected = new Maybe<GameObject>();
 }
