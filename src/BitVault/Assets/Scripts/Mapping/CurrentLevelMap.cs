@@ -11,9 +11,12 @@ public class CurrentLevelMap : ScriptableObject
     [SerializeField] private List<TilePoint> blockedTiles = new List<TilePoint>();
     [SerializeField] private List<TilePoint> jumpableObjects = new List<TilePoint>();
     [SerializeField] private List<GameObject> selectableObjects = new List<GameObject>();
+    
+    [SerializeField] private List<MovementRule> movementRules = new List<MovementRule>();
 
     public TilePoint BitVaultLocation => bitVaultLocation;
     public int NumSelectableObjects => selectableObjects.Count;
+    public List<MovementRule> MovementRules => movementRules;
 
     public void InitLevel()
     {
@@ -22,8 +25,11 @@ public class CurrentLevelMap : ScriptableObject
         blockedTiles = new List<TilePoint>();
         jumpableObjects = new List<TilePoint>();
         selectableObjects = new List<GameObject>();
+        movementRules = new List<MovementRule>();
     }
 
+    public void AddMovementRule(MovementRule rule) => movementRules.Add(rule);
+    
     public void RegisterAsSelectable(GameObject obj) => selectableObjects.Add(obj);
     public void RegisterAsJumpable(GameObject obj) => jumpableObjects.Add(new TilePoint(obj));
     public void RegisterBitVault(GameObject obj) => bitVaultLocation = new TilePoint(obj);
