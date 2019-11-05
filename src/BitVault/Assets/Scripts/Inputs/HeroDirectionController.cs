@@ -9,6 +9,7 @@ public class HeroDirectionController : MonoBehaviour
 
     private void Start()
     {
+        currentLevelMap.RegisterAsSelectable(gameObject);
         Message.Publish(new PieceSelected(gameObject));
     }
 
