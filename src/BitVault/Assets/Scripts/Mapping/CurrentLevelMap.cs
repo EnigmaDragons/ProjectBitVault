@@ -17,7 +17,8 @@ public class CurrentLevelMap : ScriptableObject
     public Maybe<GameObject> Hero => hero;
     public Maybe<TilePoint> BitVaultLocation => bitVaultLocation;
     public int NumSelectableObjects => selectableObjects.Count;
-    public List<MovementRule> MovementRules => movementRules;
+    public IEnumerable<MovementRule> MovementRules => movementRules;
+    public IEnumerable<GameObject> Selectables => selectableObjects;
 
     public void InitLevel()
     {
