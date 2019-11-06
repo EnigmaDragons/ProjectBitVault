@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 6405741065567500957}
   - component: {fileID: 4580061829480840169}
   m_Layer: 0
-  m_Name: Level1
+  m_Name: Proto1-HeroJumpBitVault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,7 +126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1950795187274357710}
-  - component: {fileID: 5982420944216870099}
+  - component: {fileID: 3383547124085204042}
   m_Layer: 0
   m_Name: Rules
   m_TagString: Untagged
@@ -148,7 +148,7 @@ Transform:
   m_Father: {fileID: 6405741065567500957}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5982420944216870099
+--- !u!114 &3383547124085204042
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,12 +157,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6515935370374563245}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07602bcdf72848f99406c6b195766b06, type: 3}
+  m_Script: {fileID: 11500000, guid: c80a5d89d183477ea4e7f539625faa73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onEntered: {fileID: 11400000, guid: b82cf7c4f0b7ba9449dbb1ebe8f75a18, type: 2}
-  levelMap: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
-  hero: {fileID: 3751676540978632778}
+  map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
+  conditions:
+  - {fileID: 11400000, guid: 0bafbcfeb2001bb4eba446b69e936249, type: 2}
+  win: {fileID: 11400000, guid: b82cf7c4f0b7ba9449dbb1ebe8f75a18, type: 2}
 --- !u!1001 &4074356887793660212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -232,12 +233,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b75d99e0d3d5e940849c7f3ca18023f, type: 3}
---- !u!1 &3751676540978632778 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 908504396800321918, guid: 3b75d99e0d3d5e940849c7f3ca18023f,
-    type: 3}
-  m_PrefabInstance: {fileID: 4074356887793660212}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5737077062891361522 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8580825351162504646, guid: 3b75d99e0d3d5e940849c7f3ca18023f,
@@ -701,6 +696,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8294603379249306136}
     m_Modifications:
+    - target: {fileID: 5666270788351618785, guid: 36129413272ae754ba17c1cb4c98256f,
+        type: 3}
+      propertyPath: m_Name
+      value: DataPacket (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -756,11 +756,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5666270788351618785, guid: 36129413272ae754ba17c1cb4c98256f,
-        type: 3}
-      propertyPath: m_Name
-      value: DataPacket (1)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36129413272ae754ba17c1cb4c98256f, type: 3}
 --- !u!4 &498493976075778600 stripped
@@ -776,6 +771,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8294603379249306136}
     m_Modifications:
+    - target: {fileID: 7513623614757099273, guid: 9d2fd084446131241abb3a0782bb1517,
+        type: 3}
+      propertyPath: m_Name
+      value: BitVault
+      objectReference: {fileID: 0}
     - target: {fileID: 4534637599029900136, guid: 9d2fd084446131241abb3a0782bb1517,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -831,11 +831,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7513623614757099273, guid: 9d2fd084446131241abb3a0782bb1517,
-        type: 3}
-      propertyPath: m_Name
-      value: BitVault
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d2fd084446131241abb3a0782bb1517, type: 3}
 --- !u!4 &6282529161007434545 stripped
@@ -851,6 +846,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8294603379249306136}
     m_Modifications:
+    - target: {fileID: 5666270788351618785, guid: 36129413272ae754ba17c1cb4c98256f,
+        type: 3}
+      propertyPath: m_Name
+      value: DataPacket
+      objectReference: {fileID: 0}
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -905,11 +905,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5666270788351618785, guid: 36129413272ae754ba17c1cb4c98256f,
-        type: 3}
-      propertyPath: m_Name
-      value: DataPacket
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36129413272ae754ba17c1cb4c98256f, type: 3}

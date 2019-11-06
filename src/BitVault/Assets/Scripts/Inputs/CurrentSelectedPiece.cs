@@ -2,7 +2,7 @@
 
 public class CurrentSelectedPiece : ScriptableObject
 {
-    [SerializeField] private Maybe<GameObject> selected = new Maybe<GameObject>();
+    [DTValidator.Optional, SerializeField] private Maybe<GameObject> selected = new Maybe<GameObject>();
 
     public Maybe<GameObject> Selected => selected;
 

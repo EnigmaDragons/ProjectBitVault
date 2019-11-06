@@ -44,8 +44,8 @@ public sealed class MoveProcessor : MonoBehaviour
             else if (map.IsJumpable(destination) && map.IsWalkable(twoSquaresAway) && map.MovementRules.All(r => r.IsValid(activePiece, new MoveByRequested(twoSquareDelta))))
             {
                 activePiece.transform.position = twoSquaresAway;
-                Message.Publish(new PieceMoved(activePiece, new TilePoint(pos), new TilePoint(twoSquaresAway)));
                 Message.Publish(new TileJumped(new TilePoint(destination)));
+                Message.Publish(new PieceMoved(activePiece, new TilePoint(pos), new TilePoint(twoSquaresAway)));
             }
         });
     }

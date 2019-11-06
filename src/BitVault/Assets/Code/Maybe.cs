@@ -24,6 +24,8 @@ public sealed class Maybe<T> where T : class
             action(value);
     }
 
+    public bool IsPresentAnd(Func<T, bool> condition) => IsPresent && condition(value);
+
     public T OrDefault(Func<T> createDefault) => IsPresent ? Value : createDefault();
     
     public static Maybe<T> Missing() => new Maybe<T>();

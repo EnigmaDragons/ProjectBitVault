@@ -2,24 +2,26 @@
 using System.Linq;
 using UnityEngine;
 
-[CreateAssetMenu]
 public class CurrentLevelMap : ScriptableObject
 {
-    [SerializeField] private TilePoint bitVaultLocation;
+    [DTValidator.Optional, SerializeField] private GameObject hero;
+    [DTValidator.Optional, SerializeField] private TilePoint bitVaultLocation;
     [SerializeField] private List<TilePoint> walkableTiles = new List<TilePoint>();
     
     [SerializeField] private List<TilePoint> blockedTiles = new List<TilePoint>();
     [SerializeField] private List<TilePoint> jumpableObjects = new List<TilePoint>();
-    [SerializeField] private List<GameObject> selectableObjects = new List<GameObject>();
+    [DTValidator.Optional, SerializeField] private List<GameObject> selectableObjects = new List<GameObject>();
     
     [SerializeField] private List<MovementRule> movementRules = new List<MovementRule>();
 
-    public TilePoint BitVaultLocation => bitVaultLocation;
+    public Maybe<GameObject> Hero => hero;
+    public Maybe<TilePoint> BitVaultLocation => bitVaultLocation;
     public int NumSelectableObjects => selectableObjects.Count;
     public List<MovementRule> MovementRules => movementRules;
 
     public void InitLevel()
     {
+        hero = null;
         bitVaultLocation = null;
         walkableTiles = new List<TilePoint>();
         blockedTiles = new List<TilePoint>();
@@ -28,6 +30,7 @@ public class CurrentLevelMap : ScriptableObject
         movementRules = new List<MovementRule>();
     }
 
+    public void RegisterHero(GameObject obj) => hero = obj;
     public void AddMovementRule(MovementRule rule) => movementRules.Add(rule);
     
     public void RegisterAsSelectable(GameObject obj) => selectableObjects.Add(obj);

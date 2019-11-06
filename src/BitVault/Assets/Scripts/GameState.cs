@@ -5,7 +5,7 @@ public class GameState : ScriptableObject
     [SerializeField] private CurrentLevelMap currentLevelMap;
     [SerializeField] private CurrentSelectedPiece currentPiece;
     [SerializeField] private GameObject selectedLevel;
-    [SerializeField] private GameObject activeLevel;
+    [DTValidator.Optional, SerializeField] private GameObject activeLevel;
     
     public void SelectLevel(GameObject level) => selectedLevel = level;
 
