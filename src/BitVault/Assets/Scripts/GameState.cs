@@ -3,9 +3,17 @@ using UnityEngine;
 public class GameState : ScriptableObject
 {
     [SerializeField] private CurrentLevelMap currentLevelMap;
+    [SerializeField] private CurrentSelectedPiece currentPiece;
     [SerializeField] private GameObject selectedLevel;
+    [SerializeField] private GameObject activeLevel;
     
-    public GameObject SelectedLevel => selectedLevel;
-
     public void SelectLevel(GameObject level) => selectedLevel = level;
+
+    public void InitLevel()
+    {
+        currentLevelMap.InitLevel();
+        currentPiece.Deselect();
+        DestroyImmediate(activeLevel);
+        activeLevel = Instantiate(selectedLevel);
+    }
 }

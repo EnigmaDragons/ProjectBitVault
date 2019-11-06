@@ -4,8 +4,5 @@ public sealed class LoadLevelOnAwake : MonoBehaviour
 {
     [SerializeField] private GameState state;
 
-    private void Awake()
-    {
-        Instantiate(state.SelectedLevel);
-    }
+    private void Awake() => state.InitLevel();
 }
