@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class DisappearIfJumped : OnMessage<PieceMoved>
+public class DestroyIfJumped : OnMessage<PieceMoved>
 {
     [SerializeField] private CurrentLevelMap map;
 

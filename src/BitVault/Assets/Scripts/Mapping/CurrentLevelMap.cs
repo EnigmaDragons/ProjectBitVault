@@ -6,6 +6,7 @@ public class CurrentLevelMap : ScriptableObject
 {
     [DTValidator.Optional, SerializeField] private TilePoint bitVaultLocation;
     [SerializeField] private List<GameObject> heroes = new List<GameObject>();
+    [SerializeField] private List<GameObject> ice = new List<GameObject>();
     [SerializeField] private List<TilePoint> walkableTiles = new List<TilePoint>();
     [SerializeField] private List<TilePoint> blockedTiles = new List<TilePoint>();
     [SerializeField] private List<TilePoint> jumpableObjects = new List<TilePoint>();
@@ -25,6 +26,7 @@ public class CurrentLevelMap : ScriptableObject
     {
         bitVaultLocation = null;
         heroes = new List<GameObject>();
+        ice = new List<GameObject>();
         walkableTiles = new List<TilePoint>();
         blockedTiles = new List<TilePoint>();
         jumpableObjects = new List<TilePoint>();
@@ -42,13 +44,15 @@ public class CurrentLevelMap : ScriptableObject
     public void RegisterBitVault(GameObject obj) => bitVaultLocation = new TilePoint(obj);
     public void RegisterWalkableTile(GameObject obj) => walkableTiles.Add(new TilePoint(obj));
     public void RegisterBlockingObject(GameObject obj) => blockedTiles.Add(new TilePoint(obj));
-    
+    public void RegisterIce(GameObject obj) => ice.Add(obj);
+
     public void Remove(GameObject obj)
     {
         var tile = new TilePoint(obj);
         jumpableObjects.RemoveAll(o => o.Equals(tile));
         blockedTiles.RemoveAll(o => o.Equals(tile));
         selectableObjects.Remove(obj);
+        ice.Remove(obj);
     }
 
     public Maybe<GameObject> GetSelectable(TilePoint tile) => selectableObjects.FirstAsMaybe(o => new TilePoint(o).Equals(tile));
@@ -57,6 +61,7 @@ public class CurrentLevelMap : ScriptableObject
     public bool IsWalkable(Vector3 position) => IsWalkable(new TilePoint(position)) && !IsBlocked(new TilePoint(position)); // Perf
     public bool IsWalkable(TilePoint tile) => walkableTiles.Any(t => t.Equals(tile));
     public bool IsBlocked(TilePoint tile) => blockedTiles.Any(t => t.Equals(tile));
+    public bool IsIcePresent() => ice.Count > 0;
 
     public void Move(GameObject obj, TilePoint from, TilePoint to)
     {

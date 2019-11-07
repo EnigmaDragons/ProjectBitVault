@@ -6,4 +6,3 @@ public class RegisterAsHero : MonoBehaviour
 
     private void Awake() => map.RegisterHero(gameObject);
 }
-  
