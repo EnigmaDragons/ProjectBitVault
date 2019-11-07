@@ -15,5 +15,6 @@ public class GameState : ScriptableObject
         currentPiece.Deselect();
         DestroyImmediate(activeLevel);
         activeLevel = Instantiate(selectedLevel);
+        Message.Publish(new LevelReset());
     }
 }
