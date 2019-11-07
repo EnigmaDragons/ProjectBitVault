@@ -26,14 +26,10 @@ public sealed class MoveProcessor : MonoBehaviour
     {
         piece.Selected.IfPresent(activePiece =>
         {
-            var pos = activePiece.transform.position;
-            var destination = m.Delta.Plus(pos);
-
-            // TODO: Convert IsWalkable Check to a rule
-            if (map.IsWalkable(destination) && map.MovementRules.All(r => r.IsValid(activePiece, m)))
+            if (map.MovementRules.All(r => r.IsValid(activePiece, m)))
             {
-                activePiece.transform.position = destination;
-                Message.Publish(new PieceMoved(activePiece, new TilePoint(pos), new TilePoint(destination)));
+                activePiece.transform.position = new Vector3(m.To.X, m.To.Y, 0);
+                Message.Publish(new PieceMoved(activePiece, m.From, m.To));
             }
         });
     }
