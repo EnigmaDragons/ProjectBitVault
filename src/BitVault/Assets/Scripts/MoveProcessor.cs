@@ -8,7 +8,7 @@ public sealed class MoveProcessor : MonoBehaviour
     
     private void OnEnable()
     {
-        Message.Subscribe<MoveByRequested>(ProcessMoveByRequest, this);
+        Message.Subscribe<MoveToRequested>(ProcessMoveByRequest, this);
         Message.Subscribe<TileIndicated>(ProcessTileIndicated, this);
     }
     
@@ -19,46 +19,22 @@ public sealed class MoveProcessor : MonoBehaviour
 
     private void ProcessTileIndicated(TileIndicated t)
     {
-        piece.Selected.IfPresent(p => Message.Publish(new MoveByRequested(t.Tile - new TilePoint(p.gameObject))));
+        piece.Selected.IfPresent(p => Message.Publish(new MoveToRequested(p, new TilePoint(p.gameObject), t.Tile)));
     }
     
-    private void ProcessMoveByRequest(MoveByRequested m)
+    private void ProcessMoveByRequest(MoveToRequested m)
     {
         piece.Selected.IfPresent(activePiece =>
         {
-            if (MoveIsInvalid(m)) return;
-            
             var pos = activePiece.transform.position;
-            
-            var oneSquareDelta = m.Delta / m.Delta.TotalMagnitude();
-            var twoSquareDelta = oneSquareDelta * 2;
-            var destination = oneSquareDelta.Plus(pos);
-            var twoSquaresAway = oneSquareDelta.Plus(oneSquareDelta).Plus(pos);
+            var destination = m.Delta.Plus(pos);
 
             // TODO: Convert IsWalkable Check to a rule
-            if (map.IsWalkable(destination) && map.MovementRules.All(r => r.IsValid(activePiece, new MoveByRequested(oneSquareDelta))))
+            if (map.IsWalkable(destination) && map.MovementRules.All(r => r.IsValid(activePiece, m)))
             {
                 activePiece.transform.position = destination;
                 Message.Publish(new PieceMoved(activePiece, new TilePoint(pos), new TilePoint(destination)));
             }
-            else if (map.IsJumpable(destination) && map.IsWalkable(twoSquaresAway) && map.MovementRules.All(r => r.IsValid(activePiece, new MoveByRequested(twoSquareDelta))))
-            {
-                activePiece.transform.position = twoSquaresAway;
-                Message.Publish(new TileJumped(new TilePoint(destination)));
-                Message.Publish(new PieceMoved(activePiece, new TilePoint(pos), new TilePoint(twoSquaresAway)));
-            }
         });
-    }
-
-    private bool MoveIsInvalid(MoveByRequested m)
-    {
-        // TODO: Convert IsCardinal to a Movement Rule
-        var t = m.Delta;
-        if (!t.IsCardinal())
-            return true;
-        // TODO: Convert MaxDistance to a Movement Rule
-        if (t.TotalMagnitude() > 2)
-            return true;
-        return false;
     }
 }
