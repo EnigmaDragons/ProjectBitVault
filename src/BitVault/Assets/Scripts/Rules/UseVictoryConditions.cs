@@ -1,18 +1,14 @@
 using System.Linq;
 using UnityEngine;
 
-public class UseVictoryConditions : MonoBehaviour
+public class UseVictoryConditions : OnMessage<PieceMoved>
 {
     [SerializeField] private CurrentLevelMap map;
     [SerializeField] private VictoryCondition[] conditions;
-    [SerializeField] private GameEvent win;
     
-    private void OnEnable() => Message.Subscribe<PieceMoved>(_ => CheckForVictory(), this);
-    private void OnDisable() => Message.Unsubscribe(this);
-
-    private void CheckForVictory()
+    protected override void Execute(PieceMoved msg)
     {
-        if (conditions.All(x => x.HasCompletedLevel(map)))
-            win.Publish();
+        if (conditions.All(x => x.HasCompletedLevel(map))) 
+            Message.Publish(new LevelCompleted());
     }
 }

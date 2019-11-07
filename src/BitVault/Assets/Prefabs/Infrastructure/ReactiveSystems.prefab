@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8953835720049182759}
   - component: {fileID: 968141869890842329}
   - component: {fileID: 3570818430969507750}
-  - component: {fileID: 3946381790283045180}
+  - component: {fileID: 6753987424021116251}
   m_Layer: 0
   m_Name: ReactiveSystems
   m_TagString: Untagged
@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
---- !u!114 &3946381790283045180
+--- !u!114 &6753987424021116251
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,23 +97,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5606890674040241735}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7d4c3c39484597899571e932184560, type: 3}
+  m_Script: {fileID: 11500000, guid: 98808a2f266742868e9375b374883018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: b82cf7c4f0b7ba9449dbb1ebe8f75a18, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 9ff41b1c7e54dd34d86e0faa800274fc, type: 2}
-        m_MethodName: NavigateToLevelSelect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  navigator: {fileID: 11400000, guid: 9ff41b1c7e54dd34d86e0faa800274fc, type: 2}
