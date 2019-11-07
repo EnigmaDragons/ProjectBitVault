@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.WSA;
 
 [Serializable]
 public class TilePoint
@@ -40,5 +42,21 @@ public class TilePoint
     {
         var delta = this - other;
         return delta.IsCardinal() && delta.TotalMagnitude() == 1;
+    }
+
+    public List<TilePoint> InBetween(TilePoint other)
+    {
+        var results = new List<TilePoint>();
+        var minX = X > other.X ? other.X : X;
+        var maxX = X > other.X ? X : other.X;
+        var minY = Y > other.Y ? other.Y : Y;
+        var maxY = Y > other.Y ? Y : other.Y;
+        for (var x = minX; x <= maxX; x++)
+            for (var y = minY; y <= maxY; y++)
+                if ((minX != maxX || minY != maxY)
+                    && (minX == maxX || (x != minX && x != maxX)) 
+                    && (minY == maxY || (y != minY && y != maxY)))
+                    results.Add(new TilePoint(x, y));
+        return results;
     }
 }
