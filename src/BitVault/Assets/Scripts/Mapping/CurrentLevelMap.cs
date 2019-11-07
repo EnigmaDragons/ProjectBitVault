@@ -11,13 +11,15 @@ public class CurrentLevelMap : ScriptableObject
     [SerializeField] private List<TilePoint> blockedTiles = new List<TilePoint>();
     [SerializeField] private List<TilePoint> jumpableObjects = new List<TilePoint>();
     [DTValidator.Optional, SerializeField] private List<GameObject> selectableObjects = new List<GameObject>();
-    
-    [SerializeField] private List<MovementRule> movementRules = new List<MovementRule>();
+
+    [SerializeField] private List<MovementOptionRule> movementOptionRules = new List<MovementOptionRule>();
+    [SerializeField] private List<MovementRestrictionRule> movementRestrictionRules = new List<MovementRestrictionRule>();
 
     public Maybe<GameObject> Hero => hero;
     public Maybe<TilePoint> BitVaultLocation => bitVaultLocation;
     public int NumSelectableObjects => selectableObjects.Count;
-    public IEnumerable<MovementRule> MovementRules => movementRules;
+    public IEnumerable<MovementOptionRule> MovementOptionRules => movementOptionRules;
+    public IEnumerable<MovementRestrictionRule> MovementRestrictionRules => movementRestrictionRules;
     public IEnumerable<GameObject> Selectables => selectableObjects;
 
     public void InitLevel()
@@ -28,12 +30,14 @@ public class CurrentLevelMap : ScriptableObject
         blockedTiles = new List<TilePoint>();
         jumpableObjects = new List<TilePoint>();
         selectableObjects = new List<GameObject>();
-        movementRules = new List<MovementRule>();
+        movementOptionRules = new List<MovementOptionRule>();
+        movementRestrictionRules = new List<MovementRestrictionRule>();
     }
 
     public void RegisterHero(GameObject obj) => hero = obj;
-    public void AddMovementRule(MovementRule rule) => movementRules.Add(rule);
-    
+    public void AddMovementOptionRule(MovementOptionRule optionRule) => movementOptionRules.Add(optionRule);
+    public void AddMovementRestrictionRule(MovementRestrictionRule restrictionRule) => movementRestrictionRules.Add(restrictionRule);
+
     public void RegisterAsSelectable(GameObject obj) => selectableObjects.Add(obj);
     public void RegisterAsJumpable(GameObject obj) => jumpableObjects.Add(new TilePoint(obj));
     public void RegisterBitVault(GameObject obj) => bitVaultLocation = new TilePoint(obj);

@@ -24,13 +24,17 @@ public sealed class MoveProcessor : MonoBehaviour
     
     private void ProcessMoveByRequest(MoveToRequested m)
     {
-        piece.Selected.IfPresent(activePiece =>
+        var movementProposals = map.MovementOptionRules.Where(x => x.IsPossible(m))
+            .Select(x => new MovementProposed(x.Type, m.Piece, m.From, m.To));
+
+        foreach (var proposal in movementProposals)
         {
-            if (map.MovementRules.All(r => r.IsValid(activePiece, m)))
+            if (map.MovementRestrictionRules.All(x => x.IsValid(proposal)))
             {
-                activePiece.transform.position = new Vector3(m.To.X, m.To.Y, 0);
-                Message.Publish(new PieceMoved(activePiece, m.From, m.To));
+                proposal.Piece.transform.position = new Vector3(m.To.X, m.To.Y, 0);
+                Message.Publish(new PieceMoved(proposal.Piece, m.From, m.To));
+                return;
             }
-        });
+        }
     }
 }
