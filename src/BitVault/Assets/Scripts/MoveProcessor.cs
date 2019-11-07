@@ -24,8 +24,16 @@ public sealed class MoveProcessor : MonoBehaviour
     
     private void ProcessMoveByRequest(MoveToRequested m)
     {
-        var movementProposals = map.MovementOptionRules.Where(x => x.IsPossible(m))
-            .Select(x => new MovementProposed(x.Type, m.Piece, m.From, m.To));
+        if (m.Piece.GetComponent<MovementEnabled>() == null)
+            return;
+
+        var movementProposals = map.MovementOptionRules
+            .Where(r => m.Piece.GetComponent<MovementEnabled>().Types.Any(t => r.Type == t))
+            .Where(x => x.IsPossible(m))
+            .Select(x =>
+            {
+                return new MovementProposed(x.Type, m.Piece, m.From, m.To);
+            }).ToList();
 
         foreach (var proposal in movementProposals)
         {

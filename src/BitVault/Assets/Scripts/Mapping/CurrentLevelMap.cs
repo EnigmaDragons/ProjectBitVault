@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class CurrentLevelMap : ScriptableObject
 {
-    [DTValidator.Optional, SerializeField] private GameObject hero;
     [DTValidator.Optional, SerializeField] private TilePoint bitVaultLocation;
+    [SerializeField] private List<GameObject> heroes = new List<GameObject>();
     [SerializeField] private List<TilePoint> walkableTiles = new List<TilePoint>();
-    
     [SerializeField] private List<TilePoint> blockedTiles = new List<TilePoint>();
     [SerializeField] private List<TilePoint> jumpableObjects = new List<TilePoint>();
     [DTValidator.Optional, SerializeField] private List<GameObject> selectableObjects = new List<GameObject>();
@@ -15,7 +14,7 @@ public class CurrentLevelMap : ScriptableObject
     [SerializeField] private List<MovementOptionRule> movementOptionRules = new List<MovementOptionRule>();
     [SerializeField] private List<MovementRestrictionRule> movementRestrictionRules = new List<MovementRestrictionRule>();
 
-    public Maybe<GameObject> Hero => hero;
+    public List<GameObject> Heroes => heroes;
     public Maybe<TilePoint> BitVaultLocation => bitVaultLocation;
     public int NumSelectableObjects => selectableObjects.Count;
     public IEnumerable<MovementOptionRule> MovementOptionRules => movementOptionRules;
@@ -24,8 +23,8 @@ public class CurrentLevelMap : ScriptableObject
 
     public void InitLevel()
     {
-        hero = null;
         bitVaultLocation = null;
+        heroes = new List<GameObject>();
         walkableTiles = new List<TilePoint>();
         blockedTiles = new List<TilePoint>();
         jumpableObjects = new List<TilePoint>();
@@ -34,7 +33,7 @@ public class CurrentLevelMap : ScriptableObject
         movementRestrictionRules = new List<MovementRestrictionRule>();
     }
 
-    public void RegisterHero(GameObject obj) => hero = obj;
+    public void RegisterHero(GameObject obj) => heroes.Add(obj);
     public void AddMovementOptionRule(MovementOptionRule optionRule) => movementOptionRules.Add(optionRule);
     public void AddMovementRestrictionRule(MovementRestrictionRule restrictionRule) => movementRestrictionRules.Add(restrictionRule);
 
