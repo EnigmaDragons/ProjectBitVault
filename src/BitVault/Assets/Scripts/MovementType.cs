@@ -1,5 +1,6 @@
 ﻿public enum MovementType
 {
     Walk,
-    Jump
+    Jump,
+    Attack
 }
