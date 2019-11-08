@@ -73,10 +73,15 @@ public class CurrentLevelMap : ScriptableObject
 
     public void Move(GameObject obj, TilePoint from, TilePoint to)
     {
-        jumpableObjects.RemoveAll(o => o.Equals(from));
+        var isBlocking = blockedTiles.Any(o => o.Equals(from));
         blockedTiles.RemoveAll(o => o.Equals(from));
-        blockedTiles.Add(to);
-        jumpableObjects.Add(to);
+        if (isBlocking)
+            blockedTiles.Add(to);
+        
+        var isJumpable = jumpableObjects.Any(o => o.Equals(from));
+        jumpableObjects.RemoveAll(o => o.Equals(from));
+        if (isJumpable)
+            jumpableObjects.Add(to);
     }
 }
 
