@@ -57,6 +57,7 @@ public class CurrentLevelMap : ScriptableObject
         blockedTiles.RemoveAll(o => o.Equals(tile));
         selectableObjects.Remove(obj);
         ice.Remove(obj);
+        heroes.Remove(obj);
         activatables.RemoveAll(a => a.GameObject.Equals(obj));
     }
 
@@ -70,6 +71,7 @@ public class CurrentLevelMap : ScriptableObject
     public bool IsBlocked(TilePoint tile) => blockedTiles.Any(t => t.Equals(tile));
     public bool IsIcePresent() => ice.Count > 0;
     public bool IsIce(TilePoint tile) => ice.Any(i => new TilePoint(i).Equals(tile));
+    public void DestroyIce(TilePoint tile) => ice.Where(x => tile.Equals(new TilePoint(x))).ForEach(x => Message.Publish(new ObjectDestroyed(x)));
 
     public void Move(GameObject obj, TilePoint from, TilePoint to)
     {
