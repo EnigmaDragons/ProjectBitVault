@@ -77,6 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee00cd8a2c114f6e9e5fb5939daef11e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStars: {fileID: 11400000, guid: 2ae4308fec58df94b863c1ed4ec4dc3a, type: 2}
   stars:
   - {fileID: 679013385127309325}
   - {fileID: 7417057305694710063}
@@ -88,11 +89,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 297405247927982281}
     m_Modifications:
-    - target: {fileID: 4587818035302322763, guid: 99f1c4efdaf19aa42a24e24c1158bce4,
-        type: 3}
-      propertyPath: m_Name
-      value: StarCounter
-      objectReference: {fileID: 0}
     - target: {fileID: 6519961961130748526, guid: 99f1c4efdaf19aa42a24e24c1158bce4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -197,6 +193,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587818035302322763, guid: 99f1c4efdaf19aa42a24e24c1158bce4,
+        type: 3}
+      propertyPath: m_Name
+      value: StarCounter
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99f1c4efdaf19aa42a24e24c1158bce4, type: 3}
@@ -225,11 +226,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 297405247927982281}
     m_Modifications:
-    - target: {fileID: 4587818035302322763, guid: 99f1c4efdaf19aa42a24e24c1158bce4,
-        type: 3}
-      propertyPath: m_Name
-      value: StarCounter (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 6519961961130748526, guid: 99f1c4efdaf19aa42a24e24c1158bce4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -335,6 +331,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4587818035302322763, guid: 99f1c4efdaf19aa42a24e24c1158bce4,
+        type: 3}
+      propertyPath: m_Name
+      value: StarCounter (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99f1c4efdaf19aa42a24e24c1158bce4, type: 3}
 --- !u!224 &673227915205001769 stripped
@@ -362,11 +363,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 297405247927982281}
     m_Modifications:
-    - target: {fileID: 4587818035302322763, guid: 99f1c4efdaf19aa42a24e24c1158bce4,
-        type: 3}
-      propertyPath: m_Name
-      value: StarCounter (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 6519961961130748526, guid: 99f1c4efdaf19aa42a24e24c1158bce4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -471,6 +467,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587818035302322763, guid: 99f1c4efdaf19aa42a24e24c1158bce4,
+        type: 3}
+      propertyPath: m_Name
+      value: StarCounter (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99f1c4efdaf19aa42a24e24c1158bce4, type: 3}
