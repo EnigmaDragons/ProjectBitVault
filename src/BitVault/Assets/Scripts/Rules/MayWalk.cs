@@ -1,7 +1,6 @@
 ﻿using System;
 using UnityEngine;
 
-[CreateAssetMenu]
 public sealed class MayWalk : MovementOptionRule
 {
     public override MovementType Type => MovementType.Walk;

@@ -31,6 +31,8 @@ public class TilePoint
     public override bool Equals(object obj) => obj is TilePoint point && Equals(point);
     private bool Equals(TilePoint other) => other.X == X && other.Y == Y;
 
+    public int DistanceFrom(TilePoint other) => (this - other).Distance();
+    public int Distance() => X + Y;
     public Vector3 Plus(Vector3 v) => v + new Vector3(X, Y, 0);
     public TilePoint Plus(TilePoint t) => t + this;
     public static TilePoint operator +(TilePoint t, TilePoint t2) => new TilePoint(t.X + t2.X, t.Y + t2.Y);

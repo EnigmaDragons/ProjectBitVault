@@ -62,6 +62,7 @@ public class CurrentLevelMap : ScriptableObject
     public bool IsWalkable(TilePoint tile) => walkableTiles.Any(t => t.Equals(tile));
     public bool IsBlocked(TilePoint tile) => blockedTiles.Any(t => t.Equals(tile));
     public bool IsIcePresent() => ice.Count > 0;
+    public bool IsIce(TilePoint tile) => ice.Any(i => new TilePoint(i).Equals(tile));
 
     public void Move(GameObject obj, TilePoint from, TilePoint to)
     {
