@@ -11,6 +11,7 @@ public class GameState : ScriptableObject
 
     public void InitLevel()
     {
+        Message.Publish(new PieceDeselected());
         currentLevelMap.InitLevel();
         currentPiece.Deselect();
         DestroyImmediate(activeLevel);
