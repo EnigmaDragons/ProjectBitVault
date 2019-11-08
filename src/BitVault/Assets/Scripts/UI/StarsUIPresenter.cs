@@ -10,11 +10,17 @@ public class StarsUIPresenter : MonoBehaviour
     private void OnEnable()
     {
         Message.Subscribe<StarCollected>(_ => AddCollectedStar(), this);
-        Message.Subscribe<LevelReset>(_ => stars.ForEach(s => s.SetState(false)), this);
+        Message.Subscribe<LevelReset>(_ => Reset(), this);
     }
 
     private void OnDisable() => Message.Unsubscribe(this);
 
+    private void Reset()
+    {
+        stars.ForEach(s => s.SetState(false));
+        _numStarsCollected = 0;
+    }
+    
     private void AddCollectedStar()
     {
         _numStarsCollected++;
