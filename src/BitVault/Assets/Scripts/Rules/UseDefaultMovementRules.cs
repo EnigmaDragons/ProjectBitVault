@@ -6,14 +6,9 @@ public sealed class UseDefaultMovementRules : OnMessage<LevelReset>
     [SerializeField] private MovementOptionRule[] optionRules;
     [SerializeField] private MovementRestrictionRule[] restrictionRules;
 
-    private void Start()
+    protected override void Execute(LevelReset msg)
     {
         optionRules.ForEach(r => map.AddMovementOptionRule(r));
         restrictionRules.ForEach(r => map.AddMovementRestrictionRule(r));
-    }
-
-    protected override void Execute(LevelReset msg)
-    {
-        Start();
     }
 }
