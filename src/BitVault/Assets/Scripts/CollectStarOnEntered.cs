@@ -5,6 +5,6 @@ public sealed class CollectStarOnEntered : OnMessage<PieceMoved>
         if (!new TilePoint(gameObject).Equals(msg.To)) return;
         
         Message.Publish(new StarCollected());
-        Destroy(gameObject);
+        Message.Publish(new ObjectDestroyed(gameObject));
     }
 }
