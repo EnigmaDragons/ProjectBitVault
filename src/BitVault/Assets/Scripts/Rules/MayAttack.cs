@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu]
 public class MayAttack : MovementOptionRule
 {
     [SerializeField] private CurrentLevelMap map;
