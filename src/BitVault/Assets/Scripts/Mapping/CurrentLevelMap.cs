@@ -10,6 +10,7 @@ public class CurrentLevelMap : ScriptableObject
     [SerializeField] private List<TilePoint> walkableTiles = new List<TilePoint>();
     [SerializeField] private List<TilePoint> blockedTiles = new List<TilePoint>();
     [SerializeField] private List<TilePoint> jumpableObjects = new List<TilePoint>();
+    [SerializeField] private List<Activatable> activatables = new List<Activatable>();
     [DTValidator.Optional, SerializeField] private List<GameObject> selectableObjects = new List<GameObject>();
 
     [SerializeField] private List<MovementOptionRule> movementOptionRules = new List<MovementOptionRule>();
@@ -31,10 +32,12 @@ public class CurrentLevelMap : ScriptableObject
         blockedTiles = new List<TilePoint>();
         jumpableObjects = new List<TilePoint>();
         selectableObjects = new List<GameObject>();
+        activatables = new List<Activatable>();
         movementOptionRules = new List<MovementOptionRule>();
         movementRestrictionRules = new List<MovementRestrictionRule>();
     }
 
+    public void RegisterActivatable(Activatable a) => activatables.Add(a);
     public void RegisterHero(GameObject obj) => heroes.Add(obj);
     public void AddMovementOptionRule(MovementOptionRule optionRule) => movementOptionRules.Add(optionRule);
     public void AddMovementRestrictionRule(MovementRestrictionRule restrictionRule) => movementRestrictionRules.Add(restrictionRule);
@@ -53,9 +56,11 @@ public class CurrentLevelMap : ScriptableObject
         blockedTiles.RemoveAll(o => o.Equals(tile));
         selectableObjects.Remove(obj);
         ice.Remove(obj);
+        activatables.RemoveAll(a => a.GameObject.Equals(obj));
     }
 
     public Maybe<GameObject> GetSelectable(TilePoint tile) => selectableObjects.FirstAsMaybe(o => new TilePoint(o).Equals(tile));
+    public Maybe<Activatable> GetActivatable(TilePoint tile) => activatables.FirstAsMaybe(a => a.Tile().Equals(tile));
     public bool IsJumpable(Vector3 position) => IsJumpable(new TilePoint(position));
     public bool IsJumpable(TilePoint tile) => jumpableObjects.Any(t => t.Equals(tile));
     public bool IsWalkable(Vector3 position) => IsWalkable(new TilePoint(position)) && !IsBlocked(new TilePoint(position)); // Perf
