@@ -5,12 +5,12 @@ using UnityEngine;
 public class CurrentLevelMap : ScriptableObject
 {
     [DTValidator.Optional, SerializeField] private TilePoint bitVaultLocation;
-    [SerializeField] private List<GameObject> heroes = new List<GameObject>();
-    [SerializeField] private List<GameObject> ice = new List<GameObject>();
-    [SerializeField] private List<GameObject> walkableTiles = new List<GameObject>();
+    [DTValidator.Optional, SerializeField] private List<GameObject> heroes = new List<GameObject>();
+    [DTValidator.Optional, SerializeField] private List<GameObject> ice = new List<GameObject>();
+    [DTValidator.Optional, SerializeField] private List<GameObject> walkableTiles = new List<GameObject>();
     [SerializeField] private List<TilePoint> blockedTiles = new List<TilePoint>();
     [SerializeField] private List<TilePoint> jumpableObjects = new List<TilePoint>();
-    [SerializeField] private List<Activatable> activatables = new List<Activatable>();
+    [DTValidator.Optional, SerializeField] private List<Activatable> activatables = new List<Activatable>();
     [DTValidator.Optional, SerializeField] private List<GameObject> selectableObjects = new List<GameObject>();
 
     [SerializeField] private List<MovementOptionRule> movementOptionRules = new List<MovementOptionRule>();
