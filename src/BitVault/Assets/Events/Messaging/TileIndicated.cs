@@ -1,5 +1,4 @@
-﻿
-public class TileIndicated
+﻿public class TileIndicated
 {
     public TilePoint Tile { get; }
 

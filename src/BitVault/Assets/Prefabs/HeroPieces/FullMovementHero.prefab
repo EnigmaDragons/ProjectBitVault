@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2350352800287410739}
   - component: {fileID: 8784965106601803862}
   - component: {fileID: 609598257570392302}
+  - component: {fileID: 8856509315983471528}
   m_Layer: 0
   m_Name: FullMovementHero
   m_TagString: Player
@@ -87,6 +88,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   types: 0000000001000000
+--- !u!114 &8856509315983471528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908504396800321918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e17e55a3f334e98488023efc83521a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  piece: {fileID: 11400000, guid: d282e5116cb67fc4ea25819f6057bab2, type: 2}
 --- !u!1001 &3055919790821773940
 PrefabInstance:
   m_ObjectHideFlags: 0

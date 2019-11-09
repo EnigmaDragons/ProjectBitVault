@@ -9,7 +9,6 @@ public class PlayerAttackAgainstIce : OnMessage<PieceMoved>
         if (map.IsIce(msg.To))
         {
             map.DestroyIce(msg.To);
-            Message.Publish(new PieceDeselected());
             Message.Publish(new ObjectDestroyed(gameObject));
         }
     }
