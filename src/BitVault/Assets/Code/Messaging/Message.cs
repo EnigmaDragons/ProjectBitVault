@@ -5,10 +5,10 @@ using System.Linq;
 public static class Message 
 {
     private static readonly List<MessageSubscription> EventSubs = new List<MessageSubscription>();
-    private static readonly Messages Msgs = new Messages();
+    private static readonly MessageQueue Msgs = new MessageQueue();
 
     public static int SubscriptionCount => Msgs.SubscriptionCount;
-    public static void Publish(object payload) => Msgs.Publish(payload);
+    public static void Publish(object payload) => Msgs.Enqueue(payload);
     public static void Subscribe<T>(Action<T> onEvent, object owner) => Subscribe(MessageSubscription.Create(onEvent, owner));
 
     private static void Subscribe(MessageSubscription subscription)
@@ -20,26 +20,23 @@ public static class Message
     public static void Unsubscribe(object owner)
     {
         Msgs.Unsubscribe(owner);
-        EventSubs.Where(x => x.Owner.Equals(owner)).ForEach(x =>
-        {
-            EventSubs.Remove(x);
-        });
+        EventSubs.Where(x => x.Owner.Equals(owner)).ForEach(x => EventSubs.Remove(x));
     }
     
-    private sealed class Messages
+    private sealed class MessageQueue
     {
         private readonly Dictionary<Type, List<object>> _eventActions = new Dictionary<Type, List<object>>();
         private readonly Dictionary<object, List<MessageSubscription>> _ownerSubscriptions = new Dictionary<object, List<MessageSubscription>>();
 
-        private List<object> _eventQueue = new List<object>();
+        private readonly Queue<object> _eventQueue = new Queue<object>();
         private bool _isPublishing;
 
         public int SubscriptionCount => _eventActions.Sum(e => e.Value.Count);
 
-        public void Publish(object payload)
+        public void Enqueue(object payload)
         {
-            _eventQueue.Add(payload);
-            PublishLoop();
+            _eventQueue.Enqueue(payload);
+            ProcessQueuedMessages();
         }
 
         public void Subscribe(MessageSubscription subscription)
@@ -63,21 +60,17 @@ public static class Message
             _ownerSubscriptions.Remove(owner);
         }
 
-        private void PublishLoop()
+        private void ProcessQueuedMessages()
         {
-            if (_isPublishing)
-                return;
+            if (_isPublishing) return;
+            
             _isPublishing = true;
-            while (_eventQueue.Any())
-            {
-                var nextEvent = _eventQueue[0];
-                _eventQueue = _eventQueue.Where(x => x != nextEvent).ToList();
-                InstantPublish(nextEvent);
-            }
+            while (_eventQueue.Any()) 
+                Publish(_eventQueue.Dequeue());
             _isPublishing = false;
         }
 
-        private void InstantPublish(object payload)
+        private void Publish(object payload)
         {
             var eventType = payload.GetType();
 

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -49,18 +50,6 @@ public class CurrentLevelMap : ScriptableObject
     public void RegisterBlockingObject(GameObject obj) => blockedTiles.Add(new TilePoint(obj));
     public void RegisterIce(GameObject obj) => ice.Add(obj);
 
-    public void Remove(GameObject obj)
-    {
-        var tile = new TilePoint(obj);
-        walkableTiles.Remove(obj);
-        jumpableObjects.RemoveAll(o => o.Equals(tile));
-        blockedTiles.RemoveAll(o => o.Equals(tile));
-        selectableObjects.Remove(obj);
-        ice.Remove(obj);
-        heroes.Remove(obj);
-        activatables.RemoveAll(a => a.GameObject.Equals(obj));
-    }
-
     public Maybe<GameObject> GetTile(TilePoint tile) => walkableTiles.FirstAsMaybe(o => new TilePoint(o).Equals(tile));
     public Maybe<GameObject> GetSelectable(TilePoint tile) => selectableObjects.FirstAsMaybe(o => new TilePoint(o).Equals(tile));
     public Maybe<Activatable> GetActivatable(TilePoint tile) => activatables.FirstAsMaybe(a => a.Tile().Equals(tile));
@@ -71,15 +60,38 @@ public class CurrentLevelMap : ScriptableObject
     public bool IsBlocked(TilePoint tile) => blockedTiles.Any(t => t.Equals(tile));
     public bool IsIcePresent() => ice.Count > 0;
     public bool IsIce(TilePoint tile) => ice.Any(i => new TilePoint(i).Equals(tile));
-    public void DestroyIce(TilePoint tile) => ice.Where(x => tile.Equals(new TilePoint(x))).ForEach(x => Message.Publish(new ObjectDestroyed(x)));
+    
+    public void DestroyIce(TilePoint tile) => Notify(() => ice.Where(x => tile.Equals(new TilePoint(x))).ForEach(x => Message.Publish(new ObjectDestroyed(x))));
 
     public void Move(GameObject obj, TilePoint from, TilePoint to)
-    {
-        if (blockedTiles.RemoveAll(o => o.Equals(from)) > 0)
-            blockedTiles.Add(to);
+        => Notify(() =>
+        {
+            if (blockedTiles.RemoveAll(o => o.Equals(from)) > 0)
+                blockedTiles.Add(to);
         
-        if (jumpableObjects.RemoveAll(o => o.Equals(from)) > 0)
-            jumpableObjects.Add(to);
+            if (jumpableObjects.RemoveAll(o => o.Equals(from)) > 0)
+                jumpableObjects.Add(to);
+        });
+    
+    public void Remove(GameObject obj)
+    {
+        Notify(() =>
+        {
+            var tile = new TilePoint(obj);
+            walkableTiles.Remove(obj);
+            jumpableObjects.RemoveAll(o => o.Equals(tile));
+            blockedTiles.RemoveAll(o => o.Equals(tile));
+            selectableObjects.Remove(obj);
+            ice.Remove(obj);
+            heroes.Remove(obj);
+            activatables.RemoveAll(a => a.GameObject.Equals(obj));
+        });
+    }
+    
+    private void Notify(Action a)
+    {
+        a();
+        Message.Publish(new LevelStateChanged());
     }
 }
 
