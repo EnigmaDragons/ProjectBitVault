@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8598567726933653569}
   - component: {fileID: 489751688213254393}
   - component: {fileID: 4336862972062931468}
+  - component: {fileID: -4888195124014012150}
   m_Layer: 0
   m_Name: WalkingHero
   m_TagString: Player
@@ -101,6 +102,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   piece: {fileID: 11400000, guid: d282e5116cb67fc4ea25819f6057bab2, type: 2}
+--- !u!114 &-4888195124014012150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154792670485451113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9ac1a660a3f735448bb28153ba1a69b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
 --- !u!1001 &2654456544123677283
 PrefabInstance:
   m_ObjectHideFlags: 0

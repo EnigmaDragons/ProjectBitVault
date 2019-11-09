@@ -39,8 +39,7 @@ public sealed class MoveProcessor : MonoBehaviour
         {
             if (map.MovementRestrictionRules.All(x => x.IsValid(proposal)))
             {
-                proposal.Piece.transform.position = new Vector3(m.To.X, m.To.Y, 0);
-                Message.Publish(new PieceMoved(proposal.Piece, m.From, m.To));
+                Message.Publish(new PieceMoved(proposal.Piece, m.From, m.To), new PieceMoveFinished());
                 return;
             }
         }

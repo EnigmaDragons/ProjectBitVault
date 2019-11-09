@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4822073195471130930}
   - component: {fileID: 6481712502304330412}
   - component: {fileID: 5123850318714198972}
+  - component: {fileID: 60067735364810616}
   m_Layer: 0
   m_Name: AttackingHero
   m_TagString: Player
@@ -115,6 +116,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   piece: {fileID: 11400000, guid: d282e5116cb67fc4ea25819f6057bab2, type: 2}
+--- !u!114 &60067735364810616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5045561587696046242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9ac1a660a3f735448bb28153ba1a69b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
 --- !u!1001 &6986779279335353256
 PrefabInstance:
   m_ObjectHideFlags: 0
