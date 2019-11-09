@@ -31,15 +31,15 @@ public static class Message
         private readonly Dictionary<Type, List<object>> _eventActions = new Dictionary<Type, List<object>>();
         private readonly Dictionary<object, List<MessageSubscription>> _ownerSubscriptions = new Dictionary<object, List<MessageSubscription>>();
 
+        private List<object> _eventQueue = new List<object>();
+        private bool _isPublishing;
+
         public int SubscriptionCount => _eventActions.Sum(e => e.Value.Count);
 
         public void Publish(object payload)
         {
-            var eventType = payload.GetType();
-
-            if (_eventActions.ContainsKey(eventType))
-                foreach (var action in _eventActions[eventType].ToList())
-                    ((Action<object>)action)(payload);
+            _eventQueue.Add(payload);
+            PublishLoop();
         }
 
         public void Subscribe(MessageSubscription subscription)
@@ -61,6 +61,29 @@ public static class Message
             for (var i = 0; i < _eventActions.Count; i++)
                 _eventActions.ElementAt(i).Value.RemoveAll(x => events.Any(y => y.OnEvent.Equals(x)));
             _ownerSubscriptions.Remove(owner);
+        }
+
+        private void PublishLoop()
+        {
+            if (_isPublishing)
+                return;
+            _isPublishing = true;
+            while (_eventQueue.Any())
+            {
+                var nextEvent = _eventQueue[0];
+                _eventQueue = _eventQueue.Where(x => x != nextEvent).ToList();
+                InstantPublish(nextEvent);
+            }
+            _isPublishing = false;
+        }
+
+        private void InstantPublish(object payload)
+        {
+            var eventType = payload.GetType();
+
+            if (_eventActions.ContainsKey(eventType))
+                foreach (var action in _eventActions[eventType].ToList())
+                    ((Action<object>)action)(payload);
         }
     }
 }
