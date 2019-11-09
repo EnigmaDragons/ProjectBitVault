@@ -7,8 +7,8 @@ public static class Message
     private static readonly List<MessageSubscription> EventSubs = new List<MessageSubscription>();
     private static readonly Messages Msgs = new Messages();
 
-    public static int SubscriptionCount => Msgs.SubscriptionCount;
-    public static void Publish(object payload) => Msgs.Publish(payload);
+    public static void Publish<T>(T payload) => Msgs.Publish(payload);
+
     public static void Subscribe<T>(Action<T> onEvent, object owner) => Subscribe(MessageSubscription.Create(onEvent, owner));
 
     private static void Subscribe(MessageSubscription subscription)
@@ -25,15 +25,20 @@ public static class Message
             EventSubs.Remove(x);
         });
     }
-    
+
     private sealed class Messages
     {
         private readonly Dictionary<Type, List<object>> _eventActions = new Dictionary<Type, List<object>>();
         private readonly Dictionary<object, List<MessageSubscription>> _ownerSubscriptions = new Dictionary<object, List<MessageSubscription>>();
 
-        public int SubscriptionCount => _eventActions.Sum(e => e.Value.Count);
+        public void Publish<T>(T payload)
+        {
+            InnerPublish(new BeforeProcessing<T>());
+            InnerPublish(payload);
+            InnerPublish(new AfterProcessing<T>());
+        }
 
-        public void Publish(object payload)
+        private void InnerPublish<T>(T payload)
         {
             var eventType = payload.GetType();
 
