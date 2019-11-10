@@ -11,6 +11,6 @@ public sealed class Navigator : ScriptableObject
     private void NavigateTo(string name)
     {
         Debug.Log($"Navigating to {name}");
-        SceneManager.LoadScene(name);
+        var progress = SceneManager.LoadSceneAsync(name);
     }
 }

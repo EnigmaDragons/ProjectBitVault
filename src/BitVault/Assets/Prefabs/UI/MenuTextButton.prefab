@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7937832446565093007}
   - component: {fileID: 2634969868266609157}
   - component: {fileID: 1921779215097119929}
+  - component: {fileID: 7267321146166243068}
+  - component: {fileID: 8855587969743688937}
   m_Layer: 5
   m_Name: MenuTextButton
   m_TagString: Untagged
@@ -121,6 +123,41 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &7267321146166243068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3511904837439593242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35eba71011d4f0bbe846565f92bf6d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 4724f1b4a0038ef4997f2e26fffbab82, type: 3}
+  player: {fileID: 11400000, guid: 86eac65d09e3f1643a51c753e9397bf6, type: 2}
+--- !u!114 &8855587969743688937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3511904837439593242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 546122eb00e6415a97369a2564bc0f37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay:
+    UseConstant: 1
+    ConstantValue: 0.1
+    FloatVariable: {fileID: 0}
+  action:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &8069614445770884043
 GameObject:
