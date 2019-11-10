@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2449610536887202073}
   - component: {fileID: 2449610536887202074}
   - component: {fileID: 8303842162455106912}
+  - component: {fileID: 3007886367426549999}
   m_Layer: 5
   m_Name: LevelSelect
   m_TagString: Untagged
@@ -95,6 +96,20 @@ MonoBehaviour:
   levelButton: {fileID: 7574926177044181173, guid: dbe0ffb888f2b754f9fa04296ad1d074,
     type: 3}
   buttonPanel: {fileID: 3992514972671942260}
+--- !u!114 &3007886367426549999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2449610536887202077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6a0d1bd6792492baa7c922d69e2f839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 2449610536887202074}
+  variant: {fileID: 21300000, guid: 31f7d888828065e418b12edcba4f5fb7, type: 3}
 --- !u!1 &2449610537204841432
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,6 +468,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2449610537204840996}
     m_Modifications:
+    - target: {fileID: 656167654627039680, guid: 2644ae672af4b4240acf6ead00d8abfc,
+        type: 3}
+      propertyPath: m_Name
+      value: Darken
+      objectReference: {fileID: 0}
     - target: {fileID: 3131037221052063231, guid: 2644ae672af4b4240acf6ead00d8abfc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -557,11 +577,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 656167654627039680, guid: 2644ae672af4b4240acf6ead00d8abfc,
-        type: 3}
-      propertyPath: m_Name
-      value: Darken
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2644ae672af4b4240acf6ead00d8abfc, type: 3}
