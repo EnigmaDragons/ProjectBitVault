@@ -6,7 +6,7 @@ public class PlayerAttackAgainstIce : OnMessage<PieceMoved>
 
     protected override void Execute(PieceMoved msg)
     {
-        if (map.IsIce(msg.To))
+        if (msg.Piece == gameObject && map.IsIce(msg.To))
         {
             map.DestroyIce(msg.To);
             Message.Publish(new ObjectDestroyed(gameObject));

@@ -28,10 +28,7 @@ public sealed class MoveProcessor : MonoBehaviour
             return;
 
         var movementProposals = map.MovementOptionRules
-            .Where(r =>
-            {
-                return m.Piece.GetComponent<MovementEnabled>().Types.Any(t => r.Type == t);
-            })
+            .Where(r => m.Piece.GetComponent<MovementEnabled>().Types.Any(t => r.Type == t))
             .Where(x => x.IsPossible(m))
             .Select(x => new MovementProposed(x.Type, m.Piece, m.From, m.To)).ToList();
 
