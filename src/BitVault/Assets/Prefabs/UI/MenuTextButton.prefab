@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1921779215097119929}
   - component: {fileID: 7267321146166243068}
   - component: {fileID: 8855587969743688937}
+  - component: {fileID: 32954349140287102}
   m_Layer: 5
   m_Name: MenuTextButton
   m_TagString: Untagged
@@ -152,13 +153,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay:
     UseConstant: 1
-    ConstantValue: 0.1
+    ConstantValue: 0.24
     FloatVariable: {fileID: 0}
   action:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &32954349140287102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3511904837439593242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b02e62ef4b4c479a77afa5222d551a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inner: {fileID: 8069614445770884043}
+  numFlashes: 3
+  singleFlashDuration: 0.08
 --- !u!1 &8069614445770884043
 GameObject:
   m_ObjectHideFlags: 0
