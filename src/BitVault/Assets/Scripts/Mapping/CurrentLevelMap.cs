@@ -18,7 +18,7 @@ public class CurrentLevelMap : ScriptableObject
     [SerializeField] private List<MovementRestrictionRule> movementRestrictionRules = new List<MovementRestrictionRule>();
 
     public List<GameObject> Heroes => heroes;
-    public Maybe<TilePoint> BitVaultLocation => bitVaultLocation;
+    public TilePoint BitVaultLocation => bitVaultLocation;
     public int NumSelectableObjects => selectableObjects.Count;
     public IEnumerable<MovementOptionRule> MovementOptionRules => movementOptionRules;
     public IEnumerable<MovementRestrictionRule> MovementRestrictionRules => movementRestrictionRules;
