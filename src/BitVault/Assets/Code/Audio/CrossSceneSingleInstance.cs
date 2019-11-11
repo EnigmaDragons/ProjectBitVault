@@ -12,7 +12,6 @@ public abstract class CrossSceneSingleInstance : MonoBehaviour
         }
 
         OnAwake();
-        Debug.Log("Awoken", gameObject);
         DontDestroyOnLoad(gameObject);
     }
 

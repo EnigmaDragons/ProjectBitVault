@@ -9,8 +9,8 @@ public class CurrentLevelMap : ScriptableObject
     [DTValidator.Optional, SerializeField] private List<GameObject> heroes = new List<GameObject>();
     [DTValidator.Optional, SerializeField] private List<GameObject> ice = new List<GameObject>();
     [DTValidator.Optional, SerializeField] private List<GameObject> walkableTiles = new List<GameObject>();
-    [SerializeField] private List<TilePoint> blockedTiles = new List<TilePoint>();
-    [SerializeField] private List<TilePoint> jumpableObjects = new List<TilePoint>();
+    [DTValidator.Optional, SerializeField] private List<GameObject> blockedTiles = new List<GameObject>();
+    [DTValidator.Optional, SerializeField] private List<GameObject> jumpableObjects = new List<GameObject>();
     [DTValidator.Optional, SerializeField] private List<Activatable> activatables = new List<Activatable>();
     [DTValidator.Optional, SerializeField] private List<GameObject> selectableObjects = new List<GameObject>();
 
@@ -30,8 +30,8 @@ public class CurrentLevelMap : ScriptableObject
         heroes = new List<GameObject>();
         ice = new List<GameObject>();
         walkableTiles = new List<GameObject>();
-        blockedTiles = new List<TilePoint>();
-        jumpableObjects = new List<TilePoint>();
+        blockedTiles = new List<GameObject>();
+        jumpableObjects = new List<GameObject>();
         selectableObjects = new List<GameObject>();
         activatables = new List<Activatable>();
         movementOptionRules = new List<MovementOptionRule>();
@@ -44,43 +44,33 @@ public class CurrentLevelMap : ScriptableObject
     public void AddMovementRestrictionRule(MovementRestrictionRule restrictionRule) => movementRestrictionRules.Add(restrictionRule);
 
     public void RegisterAsSelectable(GameObject obj) => selectableObjects.Add(obj);
-    public void RegisterAsJumpable(GameObject obj) => jumpableObjects.Add(new TilePoint(obj));
+    public void RegisterAsJumpable(GameObject obj) => jumpableObjects.Add(obj);
     public void RegisterBitVault(GameObject obj) => bitVaultLocation = new TilePoint(obj);
     public void RegisterWalkableTile(GameObject obj) => walkableTiles.Add(obj);
-    public void RegisterBlockingObject(GameObject obj) => blockedTiles.Add(new TilePoint(obj));
+    public void RegisterBlockingObject(GameObject obj) => blockedTiles.Add(obj);
     public void RegisterIce(GameObject obj) => ice.Add(obj);
 
     public Maybe<GameObject> GetTile(TilePoint tile) => walkableTiles.FirstAsMaybe(o => new TilePoint(o).Equals(tile));
     public Maybe<GameObject> GetSelectable(TilePoint tile) => selectableObjects.FirstAsMaybe(o => new TilePoint(o).Equals(tile));
     public Maybe<Activatable> GetActivatable(TilePoint tile) => activatables.FirstAsMaybe(a => a.Tile().Equals(tile));
-    public bool IsJumpable(Vector3 position) => IsJumpable(new TilePoint(position));
-    public bool IsJumpable(TilePoint tile) => jumpableObjects.Any(t => t.Equals(tile));
-    public bool IsWalkable(Vector3 position) => IsWalkable(new TilePoint(position)) && !IsBlocked(new TilePoint(position)); // Perf
+    public bool IsJumpable(TilePoint tile) => jumpableObjects.Any(t => new TilePoint(t).Equals(tile));
     public bool IsWalkable(TilePoint tile) => walkableTiles.Any(w => new TilePoint(w).Equals(tile));
-    public bool IsBlocked(TilePoint tile) => blockedTiles.Any(t => t.Equals(tile));
+    public bool IsBlocked(TilePoint tile) => blockedTiles.Any(t => new TilePoint(t).Equals(tile));
     public bool IsIcePresent() => ice.Count > 0;
     public bool IsIce(TilePoint tile) => ice.Any(i => new TilePoint(i).Equals(tile));
     
     public void DestroyIce(TilePoint tile) => Notify(() => ice.Where(x => tile.Equals(new TilePoint(x))).ForEach(x => Message.Publish(new ObjectDestroyed(x))));
 
     public void Move(GameObject obj, TilePoint from, TilePoint to)
-        => Notify(() =>
-        {
-            if (blockedTiles.RemoveAll(o => o.Equals(from)) > 0)
-                blockedTiles.Add(to);
-        
-            if (jumpableObjects.RemoveAll(o => o.Equals(from)) > 0)
-                jumpableObjects.Add(to);
-        });
+        => Notify(() => {});
     
     public void Remove(GameObject obj)
     {
         Notify(() =>
         {
-            var tile = new TilePoint(obj);
             walkableTiles.Remove(obj);
-            jumpableObjects.RemoveAll(o => o.Equals(tile));
-            blockedTiles.RemoveAll(o => o.Equals(tile));
+            jumpableObjects.Remove(obj);
+            blockedTiles.Remove(obj);
             selectableObjects.Remove(obj);
             ice.Remove(obj);
             heroes.Remove(obj);
