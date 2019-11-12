@@ -9,7 +9,7 @@ public class CurrentLevel : ScriptableObject
     [SerializeField] private int currentZoneNum;
     [SerializeField] private int currentLevelNum;
 
-    public string ActiveLevelName => selectedLevel.name.Split('-').Last().WithSpaceBetweenWords();
+    public string ActiveLevelName => StringValues.LevelName(selectedLevel);
     public int ZoneNumber => currentZoneNum;
     public int LevelNumber => currentLevelNum;
 

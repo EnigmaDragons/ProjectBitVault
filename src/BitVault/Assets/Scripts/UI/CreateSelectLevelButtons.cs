@@ -10,15 +10,15 @@ public class CreateSelectLevelButtons : MonoBehaviour
     [SerializeField] private LevelButton levelButton;
     [SerializeField] private MultiGridLayoutGroup groups;
 
-    private void Awake() => groups.Init(levelButton.gameObject, zones.Value.Select((zone, zoneNum) => zone.Value.Select((_, levelNum) => InitLevelButton(zoneNum, levelNum)).ToList()).ToList());
+    private void Awake() => groups.Init(levelButton.gameObject, zones.Value.Select((zone, zoneNum) => zone.Value.Select((level, levelNum) => InitLevelButton(zoneNum, levelNum, level)).ToList()).ToList());
 
-    private Action<GameObject> InitLevelButton(int zone, int level)
+    private Action<GameObject> InitLevelButton(int zone, int levelNum, GameObject level)
     {
-        Action<GameObject> init = button => button.GetComponent<LevelButton>().Init($"Level {level + 1}", () =>
+        Action<GameObject> init = button => button.GetComponent<LevelButton>().Init($"Level {levelNum + 1}", () =>
         {
-            currentLevel.SelectLevel(zones.Value[zone].Value[level], zone, level);
+            currentLevel.SelectLevel(zones.Value[zone].Value[levelNum], zone, levelNum);
             navigator.NavigateToGameScene();
-        });
+        }, level);
         return init;
     }
 }
