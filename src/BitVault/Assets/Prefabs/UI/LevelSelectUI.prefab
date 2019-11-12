@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navigator: {fileID: 11400000, guid: 9ff41b1c7e54dd34d86e0faa800274fc, type: 2}
-  state: {fileID: 11400000, guid: 26b78a62af3d8984a985383c5b9f59d8, type: 2}
+  currentLevel: {fileID: 11400000, guid: f81c10460cdb9464397ed5864a15114b, type: 2}
   levels: {fileID: 11400000, guid: 3e2fbcd9a0964004f8268315f80eadeb, type: 2}
   levelButton: {fileID: 7574926177044181173, guid: dbe0ffb888f2b754f9fa04296ad1d074,
     type: 3}
@@ -213,7 +213,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1080, y: 1920}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96

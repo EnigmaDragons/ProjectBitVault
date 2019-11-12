@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class CurrentLevelStars : ScriptableObject
+[CreateAssetMenu]
+public class CurrentMoveCounter : ScriptableObject
 {
     [SerializeField] private int count;
 
