@@ -4,20 +4,18 @@ public class GameState : ScriptableObject
 {
     [SerializeField] private CurrentLevelMap currentLevelMap;
     [SerializeField] private CurrentSelectedPiece currentPiece;
-    [SerializeField] private GameObject selectedLevel;
     [SerializeField] private CurrentLevelStars currentLevelStars;
-    [DTValidator.Optional, SerializeField] private GameObject activeLevel;
-    
-    public void SelectLevel(GameObject level) => selectedLevel = level;
-    
+    [SerializeField] private CurrentMoveCounter currentMoveCounter;
+    [SerializeField] private CurrentLevel currentLevel;
+
     public void InitLevel()
     {
         Message.Publish(new PieceDeselected());
         currentLevelStars.Reset();
+        currentMoveCounter.Reset();
         currentLevelMap.InitLevel();
         currentPiece.Deselect();
-        DestroyImmediate(activeLevel);
-        activeLevel = Instantiate(selectedLevel);
+        currentLevel.Init();
         Message.Publish(new LevelReset());
     }
 }

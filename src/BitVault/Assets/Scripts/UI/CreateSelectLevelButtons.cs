@@ -5,7 +5,7 @@ using UnityEngine;
 public class CreateSelectLevelButtons : MonoBehaviour
 {
     [SerializeField] private Navigator navigator;
-    [SerializeField] private GameState state;
+    [SerializeField] private CurrentLevel currentLevel;
     [SerializeField] private GameLevels levels;
     [SerializeField] private LevelButton levelButton;
     [SerializeField] private MultiGridLayoutGroup groups;
@@ -16,7 +16,7 @@ public class CreateSelectLevelButtons : MonoBehaviour
     {
         Action<GameObject> init = button => button.GetComponent<LevelButton>().Init($"Level {i + 1}", () =>
         {
-            state.SelectLevel(levels.Value[i]);
+            currentLevel.SelectLevel(levels.Value[i], i);
             navigator.NavigateToGameScene();
         });
         return init;
