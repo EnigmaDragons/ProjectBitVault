@@ -93,7 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   navigator: {fileID: 11400000, guid: 9ff41b1c7e54dd34d86e0faa800274fc, type: 2}
   currentLevel: {fileID: 11400000, guid: f81c10460cdb9464397ed5864a15114b, type: 2}
-  levels: {fileID: 11400000, guid: 3e2fbcd9a0964004f8268315f80eadeb, type: 2}
+  zones: {fileID: 11400000, guid: da6d9607955f7a04cac5744764d95f85, type: 2}
   levelButton: {fileID: 7574926177044181173, guid: dbe0ffb888f2b754f9fa04296ad1d074,
     type: 3}
   groups: {fileID: 7990056287901288560}
@@ -126,11 +126,6 @@ MonoBehaviour:
   parent: {fileID: 2449610536887202076}
   gridLayoutGroup: {fileID: 4424622809369549228, guid: 1f5e3c5f3c9c66d4a9dc19fe8de6fe51,
     type: 3}
-  elementsPerGroup:
-    UseConstant: 1
-    ConstantValue: 12
-    Variable: {fileID: 0}
-  shouldHaveAtLeastOneDefault: 0
   controls: {fileID: 4863575667429148967}
   previousPageButton: {fileID: 2423565885436217073}
   pageNumText: {fileID: 3771263700790305118}

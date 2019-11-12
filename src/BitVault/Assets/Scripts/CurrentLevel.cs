@@ -6,14 +6,17 @@ public class CurrentLevel : ScriptableObject
 {
     [SerializeField] private GameObject selectedLevel;
     [DTValidator.Optional, SerializeField] private GameObject activeLevel;
+    [SerializeField] private int currentZoneNum;
     [SerializeField] private int currentLevelNum;
 
     public string ActiveLevelName => selectedLevel.name.Split('-').Last().WithSpaceBetweenWords();
-    public int NextLevel => currentLevelNum + 1;
+    public int ZoneNumber => currentZoneNum;
+    public int LevelNumber => currentLevelNum;
 
-    public void SelectLevel(GameObject level, int levelNum)
+    public void SelectLevel(GameObject level, int zoneNum, int levelNum)
     {
         selectedLevel = level;
+        currentZoneNum = zoneNum;
         currentLevelNum = levelNum;
     }
 

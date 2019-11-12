@@ -8,8 +8,6 @@ public class MultiGridLayoutGroup : MonoBehaviour
 {
     [SerializeField] private Transform parent;
     [SerializeField] private GameObject gridLayoutGroup;
-    [SerializeField] private IntReference elementsPerGroup;
-    [SerializeField] private bool shouldHaveAtLeastOneDefault;
     [SerializeField] private GameObject controls;
     [SerializeField] private GameObject previousPageButton;
     [SerializeField] private TextMeshProUGUI pageNumText;
@@ -18,29 +16,32 @@ public class MultiGridLayoutGroup : MonoBehaviour
     private List<GameObject> _groups;
     private int _groupIndex;
 
-    public void Init(GameObject elementTemplate, List<Action<GameObject>> initElement) => Init(elementTemplate, initElement, new GameObject("default"), x => { });
-    public void Init(GameObject elementTemplate, List<Action<GameObject>> initElement, GameObject defaultElementTemplate, Action<GameObject> initDefaultElement)
+    public void Init(GameObject elementTemplate, List<Action<GameObject>> initElement, int elementsPerGroup)
+    {
+        var list = new List<List<Action<GameObject>>>();
+        for (var i = 0; i < initElement.Count; i += elementsPerGroup)
+            list.Add(initElement.Skip(i).Take(elementsPerGroup).ToList());
+        Init(elementTemplate, list);
+    }
+
+    public void Init(GameObject elementTemplate, List<List<Action<GameObject>>> initElementGroups)
     {
         _groups?.ForEach(Destroy);
         _groups = new List<GameObject>();
-        for (var i = 0; i < (initElement.Count + (shouldHaveAtLeastOneDefault || initElement.Count == 0 ? 1 : 0)); i += elementsPerGroup.Value)
-            AddGroup(elementTemplate, defaultElementTemplate, initElement.Skip(i).Take(elementsPerGroup.Value).ToList(), initDefaultElement);
+        initElementGroups.ForEach(x => AddGroup(elementTemplate, x));
         _groupIndex = 0;
         _groups[_groupIndex].SetActive(true);
         UpdatePageControls();
     }
 
-    private void AddGroup(GameObject elementTemplate, GameObject defaultElementTemplate, List<Action<GameObject>> initElement, Action<GameObject> initDefaultElement)
+    private void AddGroup(GameObject elementTemplate, List<Action<GameObject>> initElement)
     {
         var group = Instantiate(gridLayoutGroup, parent);
-        for (var i = 0; i < elementsPerGroup.Value; i++)
+        initElement.ForEach(x =>
         {
-            var element = Instantiate(i < initElement.Count ? elementTemplate : defaultElementTemplate, group.transform);
-            if (i < initElement.Count)
-                initElement[i](element);
-            else
-                initDefaultElement(element);
-        }
+            var element = Instantiate(elementTemplate, group.transform);
+            x(element);
+        });
         group.SetActive(false);
         _groups.Add(group);
     }
