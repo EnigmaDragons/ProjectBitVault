@@ -21,7 +21,7 @@ public class LevelButton : MonoBehaviour
     {
         var key = StringValues.StarsForLevel(level);
         if (PlayerPrefs.HasKey(key))
-            for (var i = 0; i < PlayerPrefs.GetInt(key); i++)
+            for (var i = 0; i < PlayerPrefs.GetInt(key) && i < stars.Length; i++)
                 stars[i].sprite = star;
     }
 }
