@@ -1,3 +1,5 @@
+using System;
+using System.Linq;
 using UnityEngine;
 
 public class CreateSelectLevelButtons : MonoBehaviour
@@ -6,20 +8,18 @@ public class CreateSelectLevelButtons : MonoBehaviour
     [SerializeField] private GameState state;
     [SerializeField] private GameLevels levels;
     [SerializeField] private LevelButton levelButton;
-    [SerializeField] private GameObject buttonPanel;
+    [SerializeField] private MultiGridLayoutGroup groups;
 
-    private void Awake()
+    private void Awake() => groups.Init(levelButton.gameObject, levels.Value.Select((_, i) => InitLevelButton(i)).ToList());
+
+    private Action<GameObject> InitLevelButton(int i)
     {
-        for (var i = 0; i < levels.Value.Length; i++)
+        Action<GameObject> init = button => button.GetComponent<LevelButton>().Init($"Level {i + 1}", () =>
         {
-            var level = levels.Value[i];
-            var button = Instantiate(levelButton, buttonPanel.transform);
-            button.Init($"Level {i + 1}", () =>
-            {
-                state.SelectLevel(level);
-                navigator.NavigateToGameScene();
-            });
-        }
+            state.SelectLevel(levels.Value[i]);
+            navigator.NavigateToGameScene();
+        });
+        return init;
     }
 }
   
