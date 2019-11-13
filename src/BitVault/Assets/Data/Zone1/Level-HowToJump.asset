@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090681d0cad653b4ba4bd3c63f4beb4d, type: 3}
+  m_Name: Level-HowToJump
+  m_EditorClassIdentifier: 
+  levelName: How To Jump
+  prefab: {fileID: 7885011920191593552, guid: ccedee5d24c41e84480cde750b9fbac6, type: 3}
+  starObjectives:
+  - {fileID: 11400000, guid: 9c9956192ce5d14449243607a6f97f2b, type: 2}
+  - {fileID: 11400000, guid: f4ace5f67f63d324ba8170b167be3fb8, type: 2}
+  - {fileID: 11400000, guid: 1661252d50dae194482f749ddaeeeb1a, type: 2}
+  openingDialogue:
+  - text: Welcome to your hacker training
+    character: {fileID: 21300000, guid: d48bc162f0f364c45b35cf8bc01c0ad4, type: 3}
+  - text: The objective is to get through their security, by getting the blue node
+      over to the bit vault
+    character: {fileID: 21300000, guid: d48bc162f0f364c45b35cf8bc01c0ad4, type: 3}
+  - text: And I'm sure your gonna tell me how to do that?
+    character: {fileID: 21300000, guid: d246cc4d26edb124aa595ba32aa14c17, type: 3}
+  - text: The only way for the blue node to move is for it to jump over these green
+      nodes
+    character: {fileID: 21300000, guid: d48bc162f0f364c45b35cf8bc01c0ad4, type: 3}
+  - text: Sounds simple
+    character: {fileID: 21300000, guid: d246cc4d26edb124aa595ba32aa14c17, type: 3}
+  closingDialogue:
+  - text: Good job now your training is gonna get a bit more trickier
+    character: {fileID: 21300000, guid: d48bc162f0f364c45b35cf8bc01c0ad4, type: 3}
+  - text: I certainly hope so
+    character: {fileID: 21300000, guid: d246cc4d26edb124aa595ba32aa14c17, type: 3}

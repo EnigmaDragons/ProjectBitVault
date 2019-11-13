@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public sealed class GameLevels : ScriptableObject
 {
-    [SerializeField] private GameObject[] value;
+    [SerializeField] private GameLevel[] value;
 
-    public GameObject[] Value => value;
+    public GameLevel[] Value => value;
 }
