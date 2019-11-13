@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class StarObjectiveText : MonoBehaviour
@@ -8,7 +9,7 @@ public class StarObjectiveText : MonoBehaviour
 
     private void Awake()
     {
-        var starObjectives = currentLevel.ActiveLevel.StarObjectives;
+        var starObjectives = currentLevel.ActiveLevel.StarObjectives.OrderBy(s => s.DisplayOrder).ToArray();
         for (var i = 0; i < starObjectiveTexts.Length && i < starObjectives.Length; i++)
             starObjectiveTexts[i].text = starObjectives[i].Objective;
     }
