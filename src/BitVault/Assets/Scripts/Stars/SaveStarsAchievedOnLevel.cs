@@ -4,11 +4,7 @@ public class SaveStarsAchievedOnLevel : MonoBehaviour
 {
     [SerializeField] private CurrentLevelStars stars;
     [SerializeField] private CurrentLevel level;
+    [SerializeField] private SaveStorage storage;
 
-    private void Awake()
-    {
-        var key = StringValues.StarsForLevel(level.ActiveLevel.Name);
-        if (!PlayerPrefs.HasKey(key) || PlayerPrefs.GetInt(key) < stars.Count)
-            PlayerPrefs.SetInt(key, stars.Count);
-    } 
+    private void Awake() => storage.SaveStars(level.ActiveLevel, stars.Count);
 }

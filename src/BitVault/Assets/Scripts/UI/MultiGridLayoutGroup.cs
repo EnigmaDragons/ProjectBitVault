@@ -16,22 +16,23 @@ public class MultiGridLayoutGroup : MonoBehaviour
     private List<GameObject> _groups;
     private int _groupIndex;
 
-    public void Init(GameObject elementTemplate, List<Action<GameObject>> initElement, int elementsPerGroup)
+    public void Init(GameObject elementTemplate, List<Action<GameObject>> initElement, int elementsPerGroup, int startingGroup = 0)
     {
         var list = new List<List<Action<GameObject>>>();
         for (var i = 0; i < initElement.Count; i += elementsPerGroup)
             list.Add(initElement.Skip(i).Take(elementsPerGroup).ToList());
-        Init(elementTemplate, list);
+        Init(elementTemplate, list, startingGroup);
     }
 
-    public void Init(GameObject elementTemplate, List<List<Action<GameObject>>> initElementGroups)
+    public void Init(GameObject elementTemplate, List<List<Action<GameObject>>> initElementGroups, int startingGroup = 0)
     {
         _groups?.ForEach(Destroy);
         _groups = new List<GameObject>();
         initElementGroups.ForEach(x => AddGroup(elementTemplate, x));
-        _groupIndex = 0;
+        _groupIndex = startingGroup;
         _groups[_groupIndex].SetActive(true);
         UpdatePageControls();
+
     }
 
     private void AddGroup(GameObject elementTemplate, List<Action<GameObject>> initElement)
