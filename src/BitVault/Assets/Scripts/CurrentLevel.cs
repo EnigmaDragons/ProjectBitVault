@@ -4,16 +4,16 @@ using UnityEngine;
 [CreateAssetMenu]
 public class CurrentLevel : ScriptableObject
 {
-    [SerializeField] private GameObject selectedLevel;
-    [DTValidator.Optional, SerializeField] private GameObject activeLevel;
+    [SerializeField] private GameLevel selectedLevel;
+    [DTValidator.Optional, SerializeField] private GameObject activeLevelPrefab;
     [SerializeField] private int currentZoneNum;
     [SerializeField] private int currentLevelNum;
 
-    public string ActiveLevelName => StringValues.LevelName(selectedLevel);
+    public GameLevel ActiveLevel => selectedLevel;
     public int ZoneNumber => currentZoneNum;
     public int LevelNumber => currentLevelNum;
 
-    public void SelectLevel(GameObject level, int zoneNum, int levelNum)
+    public void SelectLevel(GameLevel level, int zoneNum, int levelNum)
     {
         selectedLevel = level;
         currentZoneNum = zoneNum;
@@ -22,7 +22,7 @@ public class CurrentLevel : ScriptableObject
 
     public void Init()
     {
-        DestroyImmediate(activeLevel);
-        activeLevel = Instantiate(selectedLevel);
+        DestroyImmediate(activeLevelPrefab);
+        activeLevelPrefab = Instantiate(selectedLevel.Prefab);
     } 
 }
