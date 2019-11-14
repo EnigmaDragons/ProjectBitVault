@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 449368865}
   - component: {fileID: 1714102321}
   - component: {fileID: 189053914726833484}
+  - component: {fileID: 1809233104639694109}
   m_Layer: 0
   m_Name: ReactiveSystems
   m_TagString: Untagged
@@ -185,3 +186,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 11400000, guid: 26b78a62af3d8984a985383c5b9f59d8, type: 2}
+--- !u!114 &1809233104639694109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5606890674040241735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a423b464c5bc48fa82506a8515090f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
