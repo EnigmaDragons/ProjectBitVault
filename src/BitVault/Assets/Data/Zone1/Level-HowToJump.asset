@@ -19,20 +19,51 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f4ace5f67f63d324ba8170b167be3fb8, type: 2}
   - {fileID: 11400000, guid: 1661252d50dae194482f749ddaeeeb1a, type: 2}
   openingDialogue:
-  - text: Welcome to your hacker training
-    character: {fileID: 21300000, guid: d48bc162f0f364c45b35cf8bc01c0ad4, type: 3}
-  - text: The objective is to get through their security, by getting the blue node
-      over to the bit vault
-    character: {fileID: 21300000, guid: d48bc162f0f364c45b35cf8bc01c0ad4, type: 3}
-  - text: And I'm sure your gonna tell me how to do that?
-    character: {fileID: 21300000, guid: d246cc4d26edb124aa595ba32aa14c17, type: 3}
-  - text: The only way for the blue node to move is for it to jump over these green
-      nodes
-    character: {fileID: 21300000, guid: d48bc162f0f364c45b35cf8bc01c0ad4, type: 3}
-  - text: Sounds simple
-    character: {fileID: 21300000, guid: d246cc4d26edb124aa595ba32aa14c17, type: 3}
+  - text: Welcome to hacker training
+    canvasDisplay: {fileID: 5024263604147630789, guid: 97a149e36ca304041a1ec2c6c968bcaa,
+      type: 3}
+    nonCanvasDisplay: {fileID: 0}
+  - text: First let me explain your interface
+    canvasDisplay: {fileID: 5024263604147630789, guid: 97a149e36ca304041a1ec2c6c968bcaa,
+      type: 3}
+    nonCanvasDisplay: {fileID: 0}
+  - text: This button located in the top left corner opens the in game menu
+    canvasDisplay: {fileID: 1781936059128245100, guid: 13d52e7e49b31144f9eff580693b2ebd,
+      type: 3}
+    nonCanvasDisplay: {fileID: 0}
+  - text: This button located in the bottom right corner resets the puzzle
+    canvasDisplay: {fileID: 5618929589385882312, guid: a5be683efe029954f972598c034cbf6e,
+      type: 3}
+    nonCanvasDisplay: {fileID: 0}
+  - text: These stars will fill when you earn a star
+    canvasDisplay: {fileID: 9013623081557633005, guid: edaa6c0e0a3e1e8469974adefdadf13a,
+      type: 3}
+    nonCanvasDisplay: {fileID: 0}
+  - text: You may see how to earn stars on this server by checking your in game menu
+    canvasDisplay: {fileID: 5024263604147630789, guid: 97a149e36ca304041a1ec2c6c968bcaa,
+      type: 3}
+    nonCanvasDisplay: {fileID: 0}
+  - text: This blue node represents your connection in the server
+    canvasDisplay: {fileID: 7814623011832653987, guid: 0d57795c344119f4ebc15eaf82c59e65,
+      type: 3}
+    nonCanvasDisplay: {fileID: 4698547826158629756, guid: 9468c44eb5547c24f8fb1e899572bcba,
+      type: 3}
+  - text: Your blue node may move by jumping over these green nodes
+    canvasDisplay: {fileID: 545697194803941559, guid: c305f0f789c6370428eaddd4a6380249,
+      type: 3}
+    nonCanvasDisplay: {fileID: 1199240027018545396, guid: 99fa62adacb1e5c43a0189d8aba17fb6,
+      type: 3}
+  - text: Your objective is to hack into the bit vault with your blue node by going
+      next to it
+    canvasDisplay: {fileID: 545697194803941559, guid: c305f0f789c6370428eaddd4a6380249,
+      type: 3}
+    nonCanvasDisplay: {fileID: 0}
   closingDialogue:
   - text: Good job now your training is gonna get a bit more trickier
-    character: {fileID: 21300000, guid: d48bc162f0f364c45b35cf8bc01c0ad4, type: 3}
+    canvasDisplay: {fileID: 5024263604147630789, guid: 97a149e36ca304041a1ec2c6c968bcaa,
+      type: 3}
+    nonCanvasDisplay: {fileID: 0}
   - text: I certainly hope so
-    character: {fileID: 21300000, guid: d246cc4d26edb124aa595ba32aa14c17, type: 3}
+    canvasDisplay: {fileID: 1723114268465068204, guid: 97a1af4947b6c1649baad457f9f35164,
+      type: 3}
+    nonCanvasDisplay: {fileID: 0}

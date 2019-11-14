@@ -5,6 +5,10 @@ public class SaveStorage : ScriptableObject
 {
     private const string _totalStarsKey = "TotalStars";
     private const string _zoneKey = "ZoneKey";
+    private const string _versionKey = "Version";
+    private const string _version = "0.1";
+
+    private void Awake() => PlayerPrefs.SetString(_versionKey, _version);
 
     public void SaveStars(GameLevel level, int stars)
     {

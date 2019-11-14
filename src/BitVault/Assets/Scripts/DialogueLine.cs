@@ -5,8 +5,10 @@ using UnityEngine;
 public class DialogueLine
 {
     [SerializeField] private string text;
-    [SerializeField] private Sprite character;
+    [SerializeField] [DTValidator.Optional] private GameObject canvasDisplay;
+    [SerializeField] [DTValidator.Optional] private GameObject nonCanvasDisplay;
 
     public string Text => text;
-    public Sprite Character => character;
+    public Maybe<GameObject> CanvasDisplay => canvasDisplay ? canvasDisplay : new Maybe<GameObject>(); 
+    public Maybe<GameObject> NonCanvasDisplay => nonCanvasDisplay ? nonCanvasDisplay : new Maybe<GameObject>();
 }

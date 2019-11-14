@@ -7,15 +7,19 @@ using UnityEngine.UI;
 public class InGameDialogue : MonoBehaviour
 {
     [SerializeField] private CurrentLevel level;
-    [SerializeField] private Image character;
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private Navigator navigator;
-    [SerializeField] private GameObject dialogueParent;
+    [SerializeField] private GameObject canvasDialogue;
+    [SerializeField] private GameObject nonCanvasDialogue;
+    [SerializeField] private Button continueButton;
 
+    private GameObject _activeCanvasDisplay;
+    private GameObject _activeNonCanvasDisplay;
     private DialogueLine[] _currentDialogue;
     private int _nextIndex = 0;
     private Action _onDialogueFinished;
 
+    private void Awake() => continueButton.onClick.AddListener(Continue);
     private void OnEnable() => Message.Subscribe<LevelCompleted>(e => End(), this);
     private void OnDisable() => Message.Unsubscribe(this);
 
@@ -23,12 +27,12 @@ public class InGameDialogue : MonoBehaviour
     {
         var openingDialogue = level.ActiveLevel.OpeningDialogue;
         if (openingDialogue.Length == 0)
-            dialogueParent.SetActive(false);
+            SetDialogueActive(false);
         else
         {
             _currentDialogue = openingDialogue;
             _nextIndex = 0;
-            _onDialogueFinished = () => dialogueParent.SetActive(false);
+            _onDialogueFinished = () => SetDialogueActive(false);
             Continue();
         }
     }
@@ -40,7 +44,7 @@ public class InGameDialogue : MonoBehaviour
             StartCoroutine(NavigateAfterDelay());
         else
         {
-            dialogueParent.SetActive(true);
+            SetDialogueActive(true);
             _currentDialogue = closingDialogue;
             _nextIndex = 0;
             _onDialogueFinished = () => navigator.NavigateToRewards();
@@ -54,10 +58,27 @@ public class InGameDialogue : MonoBehaviour
             _onDialogueFinished();
         else
         {
-            character.sprite = _currentDialogue[_nextIndex].Character;
-            text.text = _currentDialogue[_nextIndex].Text;
+            CleanUpCurrentDisplay();
+            var line = _currentDialogue[_nextIndex];
+            line.CanvasDisplay.IfPresent(x => _activeCanvasDisplay = Instantiate(x, canvasDialogue.transform));
+            line.NonCanvasDisplay.IfPresent(x => _activeNonCanvasDisplay = Instantiate(x, nonCanvasDialogue.transform));
+            text.text = line.Text;
             _nextIndex++;
         }
+    }
+
+    private void SetDialogueActive(bool isActive)
+    {
+        canvasDialogue.SetActive(isActive);
+        nonCanvasDialogue.SetActive(isActive);
+    }
+
+    private void CleanUpCurrentDisplay()
+    {
+        if (_activeCanvasDisplay != null)
+            Destroy(_activeCanvasDisplay);
+        if (_activeNonCanvasDisplay != null)
+            Destroy(_activeNonCanvasDisplay);
     }
 
     private IEnumerator NavigateAfterDelay()
