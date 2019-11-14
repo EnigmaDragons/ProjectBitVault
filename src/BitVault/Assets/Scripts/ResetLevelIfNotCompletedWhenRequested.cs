@@ -9,7 +9,7 @@ public sealed class ResetLevelIfNotCompletedWhenRequested : MonoBehaviour
     private void OnEnable()
     {
         Message.Subscribe<LevelResetRequested>(_ => Reset(), this);
-        Message.Subscribe<LevelCompleted>(_ => _isCompleted = false, this);
+        Message.Subscribe<LevelCompleted>(_ => _isCompleted = true, this);
     }
 
     private void OnDisable() => Message.Unsubscribe(this);
