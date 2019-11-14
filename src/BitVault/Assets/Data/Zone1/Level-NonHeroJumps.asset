@@ -19,10 +19,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f4ace5f67f63d324ba8170b167be3fb8, type: 2}
   - {fileID: 11400000, guid: 1661252d50dae194482f749ddaeeeb1a, type: 2}
   openingDialogue:
-  - text: This time you will have to manipulate the other nodes to help you
-    character: {fileID: 21300000, guid: d48bc162f0f364c45b35cf8bc01c0ad4, type: 3}
-  - text: You may have green nodes jump over other green nodes to help make a path
-    character: {fileID: 21300000, guid: d48bc162f0f364c45b35cf8bc01c0ad4, type: 3}
-  - text: More jumping, greeeeattt....
-    character: {fileID: 21300000, guid: d246cc4d26edb124aa595ba32aa14c17, type: 3}
-  closingDialogue: []
+  - text: You will also need to control yellow nodes to jump over other yellow nodes
+    canvasDisplay: {fileID: 0}
+    nonCanvasDisplay: {fileID: 1614885099314201825, guid: ebba31360f39fc94893b14ba6b74538e,
+      type: 3}
+  closingDialogue:
+  - text: 'You''re already showing more promise than my last trainee '
+    canvasDisplay: {fileID: 5024263604147630789, guid: 97a149e36ca304041a1ec2c6c968bcaa,
+      type: 3}
+    nonCanvasDisplay: {fileID: 0}

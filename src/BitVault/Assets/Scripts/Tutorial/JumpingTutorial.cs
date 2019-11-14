@@ -41,7 +41,7 @@ public class JumpingTutorial : MonoBehaviour
                 selected.gameObject.SetActive(false);
                 jumper.transform.localPosition = _jumperStartPosition;
                 jumped.gameObject.SetActive(true);
-                _mouseTarget = jumper.transform.position;
+                _mouseTarget = jumper.transform.localPosition;
             }
             else if (_step == 1)
             {
