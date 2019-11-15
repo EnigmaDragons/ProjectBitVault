@@ -2,7 +2,8 @@ using UnityEngine;
 
 public sealed class SelectedTilePresenter : MonoBehaviour
 {
-    [SerializeField] private GameObject selectionIndicator;
+    [SerializeField] private GameObject indicatorPrototype;
+    private GameObject _selectionIndicator;
 
     private void OnEnable()
     {
@@ -14,17 +15,22 @@ public sealed class SelectedTilePresenter : MonoBehaviour
     {
         Message.Unsubscribe(this);
     }
-
+    
     private void Hide()
     {
-        selectionIndicator.transform.SetParent(transform);
-        selectionIndicator.SetActive(false);
+        if (!_selectionIndicator)
+            _selectionIndicator = Instantiate(indicatorPrototype, transform);
+        _selectionIndicator.transform.SetParent(transform);
+        _selectionIndicator.SetActive(false);
     }
-
+    
     private void Show(GameObject p)
     {
-        selectionIndicator.transform.position = p.transform.position + new Vector3(0, 0, selectionIndicator.transform.position.z);
-        selectionIndicator.transform.SetParent(p.transform);
-        selectionIndicator.SetActive(true);
+        if (!_selectionIndicator)
+            _selectionIndicator = Instantiate(indicatorPrototype, transform);
+        
+        _selectionIndicator.transform.position = p.transform.position + new Vector3(0, 0, _selectionIndicator.transform.position.z);
+        _selectionIndicator.transform.SetParent(p.transform);
+        _selectionIndicator.SetActive(true);
     }
 }
