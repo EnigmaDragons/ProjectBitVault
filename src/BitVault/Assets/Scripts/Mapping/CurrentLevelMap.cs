@@ -6,7 +6,7 @@ using UnityEngine;
 public class CurrentLevelMap : ScriptableObject
 {
     [DTValidator.Optional, SerializeField] private TilePoint bitVaultLocation;
-    [DTValidator.Optional, SerializeField] private List<GameObject> heroes = new List<GameObject>();
+    [DTValidator.Optional, SerializeField] private GameObject hero;
     [DTValidator.Optional, SerializeField] private List<GameObject> ice = new List<GameObject>();
     [DTValidator.Optional, SerializeField] private List<GameObject> walkableTiles = new List<GameObject>();
     [DTValidator.Optional, SerializeField] private List<GameObject> blockedTiles = new List<GameObject>();
@@ -17,7 +17,7 @@ public class CurrentLevelMap : ScriptableObject
     [SerializeField] private List<MovementOptionRule> movementOptionRules = new List<MovementOptionRule>();
     [SerializeField] private List<MovementRestrictionRule> movementRestrictionRules = new List<MovementRestrictionRule>();
 
-    public List<GameObject> Heroes => heroes;
+    public GameObject Hero => hero;
     public TilePoint BitVaultLocation => bitVaultLocation;
     public int NumSelectableObjects => selectableObjects.Count;
     public IEnumerable<MovementOptionRule> MovementOptionRules => movementOptionRules;
@@ -27,7 +27,7 @@ public class CurrentLevelMap : ScriptableObject
     public void InitLevel()
     {
         bitVaultLocation = null;
-        heroes = new List<GameObject>();
+        hero = null;
         ice = new List<GameObject>();
         walkableTiles = new List<GameObject>();
         blockedTiles = new List<GameObject>();
@@ -39,7 +39,7 @@ public class CurrentLevelMap : ScriptableObject
     }
 
     public void RegisterActivatable(Activatable a) => activatables.Add(a);
-    public void RegisterHero(GameObject obj) => heroes.Add(obj);
+    public void RegisterHero(GameObject obj) => hero = obj;
     public void AddMovementOptionRule(MovementOptionRule optionRule) => movementOptionRules.Add(optionRule);
     public void AddMovementRestrictionRule(MovementRestrictionRule restrictionRule) => movementRestrictionRules.Add(restrictionRule);
 
@@ -73,7 +73,6 @@ public class CurrentLevelMap : ScriptableObject
             blockedTiles.Remove(obj);
             selectableObjects.Remove(obj);
             ice.Remove(obj);
-            heroes.Remove(obj);
             activatables.RemoveAll(a => a.GameObject.Equals(obj));
         });
     }

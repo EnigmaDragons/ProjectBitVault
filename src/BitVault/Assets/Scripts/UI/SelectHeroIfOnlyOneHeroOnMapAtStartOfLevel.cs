@@ -9,7 +9,6 @@ public class SelectHeroIfOnlyOneHeroOnMapAtStartOfLevel : OnMessage<LevelReset>
     protected override void Execute(LevelReset msg) => Execute();
     private void Execute()
     {
-        if (map.Heroes.Count == 1)
-            Message.Publish(new PieceSelected(map.Heroes[0]));
+        Message.Publish(new PieceSelected(map.Hero));
     }
 }

@@ -22,7 +22,7 @@ public class BitVaultOnLevelCompleted : OnMessage<LevelCompleted>
     {
         gameInputActive.Lock(gameObject);
         _isUnlocking = true;
-        _heroObject = map.Heroes[0].gameObject;
+        _heroObject = map.Hero.gameObject;
         _heroStartPosition = _heroObject.transform.position;
         _t1 = 0;
         _t2 = 0;
