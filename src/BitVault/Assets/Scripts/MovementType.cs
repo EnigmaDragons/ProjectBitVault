@@ -2,5 +2,6 @@
 {
     Walk,
     Jump,
-    Attack
+    Attack,
+    Leap,
 }
