@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4534637599029900136}
   - component: {fileID: 9196646626864782064}
-  - component: {fileID: 1438312648945937158}
   - component: {fileID: -6579248514674523112}
   m_Layer: 0
   m_Name: RootAccessPrefab
@@ -47,19 +46,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
---- !u!114 &1438312648945937158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7513623614757099273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 987a62245d3744639b56da41f49f88ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentLevelMap: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
 --- !u!114 &-6579248514674523112
 MonoBehaviour:
   m_ObjectHideFlags: 0
