@@ -7,6 +7,7 @@ public class ProcessObjectDestruction : OnMessage<ObjectDestroyed>
     protected override void Execute(ObjectDestroyed msg)
     {
         map.Remove(msg.Object);
-        Destroy(msg.Object);
+        if (!msg.IsGameObjectDestructionHandled)
+            Destroy(msg.Object);
     }
 }
