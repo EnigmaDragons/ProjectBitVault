@@ -37,7 +37,7 @@ public class UnlockNewZoneRequirements : MonoBehaviour
         }
         else if (storage.GetStars(zones.Value[_zone].Value.Last()) == 0)
         {
-            text.text = "Complete All Levels";
+            text.text = "Complete Levels";
             locked.SetActive(true);
             nextZoneButton.interactable = false;
         }

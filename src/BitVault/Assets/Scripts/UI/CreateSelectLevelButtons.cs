@@ -20,7 +20,7 @@ public class CreateSelectLevelButtons : MonoBehaviour
 
     private Action<GameObject> InitLevelButton(int zone, int levelNum, GameLevel level)
     {
-        Action<GameObject> init = button => button.GetComponent<LevelButton>().Init($"Level {levelNum + 1}", () =>
+        Action<GameObject> init = button => button.GetComponent<LevelButton>().Init($"{levelNum + 1}", () =>
         {
             currentLevel.SelectLevel(zones.Value[zone].Value[levelNum], zone, levelNum);
             navigator.NavigateToGameScene();
