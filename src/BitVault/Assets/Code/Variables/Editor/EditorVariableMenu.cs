@@ -38,4 +38,13 @@ static class EditorVariableMenu
         path += $"/New{nameof(BoolVariable)}.asset";
         ProjectWindowUtil.CreateAsset(asset, path);
     }
+
+    [MenuItem("Assets/Create/Variable/Vector3 Variable")]
+    static void Vector3Variable()
+    {
+        var asset = ScriptableObject.CreateInstance<Vector3Variable>();
+        var path = AssetDatabase.GetAssetPath(Selection.activeObject);
+        path += $"/New{nameof(Vector3Variable)}.asset";
+        ProjectWindowUtil.CreateAsset(asset, path);
+    }
 }

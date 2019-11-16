@@ -20,7 +20,7 @@ public class InGameDialogue : MonoBehaviour
     private Action _onDialogueFinished;
 
     private void Awake() => continueButton.onClick.AddListener(Continue);
-    private void OnEnable() => Message.Subscribe<LevelCompleted>(e => End(), this);
+    private void OnEnable() => Message.Subscribe<EndingLevelAnimationFinished>(e => End(), this);
     private void OnDisable() => Message.Unsubscribe(this);
 
     private void Start()
@@ -41,7 +41,7 @@ public class InGameDialogue : MonoBehaviour
     {
         var closingDialogue = level.ActiveLevel.ClosingDialogue;
         if (closingDialogue.Length == 0)
-            StartCoroutine(NavigateAfterDelay());
+            navigator.NavigateToRewards();
         else
         {
             SetDialogueActive(true);
@@ -79,12 +79,6 @@ public class InGameDialogue : MonoBehaviour
             Destroy(_activeCanvasDisplay);
         if (_activeNonCanvasDisplay != null)
             Destroy(_activeNonCanvasDisplay);
-    }
-
-    private IEnumerator NavigateAfterDelay()
-    {
-        yield return new WaitForSeconds(1);
-        navigator.NavigateToRewards();
     }
 }
 

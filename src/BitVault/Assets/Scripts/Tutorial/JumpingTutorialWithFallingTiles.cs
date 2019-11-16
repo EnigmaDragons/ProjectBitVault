@@ -6,7 +6,9 @@ public class JumpingTutorialWithFallingTiles : MonoBehaviour
     [SerializeField] private GameObject jumper;
     [SerializeField] private GameObject selected;
     [SerializeField] private GameObject jumped;
-    [SerializeField] private GameObject fallingTile;
+    [SerializeField] private Renderer fallingTile;
+    [SerializeField] private Material dormantMaterial;
+    [SerializeField] private Material dangerousMaterial;
     [SerializeField] private Vector3 jumpToPosition;
     [SerializeField] private Vector3 mouseStartPosition;
     [SerializeField] private float secondsPerTransition;
@@ -42,7 +44,7 @@ public class JumpingTutorialWithFallingTiles : MonoBehaviour
                 selected.gameObject.SetActive(false);
                 jumper.transform.localPosition = _jumperStartPosition;
                 jumped.gameObject.SetActive(true);
-                fallingTile.gameObject.SetActive(true);
+                fallingTile.material = dormantMaterial;
                 _mouseTarget = jumper.transform.localPosition;
             }
             else if (_step == 1)
@@ -57,7 +59,7 @@ public class JumpingTutorialWithFallingTiles : MonoBehaviour
             {
                 jumper.transform.localPosition = jumpToPosition;
                 jumped.gameObject.SetActive(false);
-                fallingTile.gameObject.SetActive(false);
+                fallingTile.material = dangerousMaterial;
             }
             else if (_step == 4)
             {
