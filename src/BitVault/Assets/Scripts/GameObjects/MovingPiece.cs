@@ -4,7 +4,7 @@ using UnityEngine;
 public class MovingPiece : MonoBehaviour
 {
     [SerializeField] private LockBoolVariable gameInputActive;
-    [SerializeField] private float secondsToTravel;
+    [SerializeField] private FloatReference secondsToTravel;
     [SerializeField] private CurrentLevelMap map;
 
     private bool _moving = false;
