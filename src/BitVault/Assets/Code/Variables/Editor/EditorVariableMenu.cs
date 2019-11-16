@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if UNITY_EDITOR
+using UnityEngine;
 using UnityEditor;
 
 static class EditorVariableMenu
@@ -38,7 +39,7 @@ static class EditorVariableMenu
         path += $"/New{nameof(BoolVariable)}.asset";
         ProjectWindowUtil.CreateAsset(asset, path);
     }
-
+    
     [MenuItem("Assets/Create/Variable/Vector3 Variable")]
     static void Vector3Variable()
     {
@@ -48,3 +49,4 @@ static class EditorVariableMenu
         ProjectWindowUtil.CreateAsset(asset, path);
     }
 }
+#endif

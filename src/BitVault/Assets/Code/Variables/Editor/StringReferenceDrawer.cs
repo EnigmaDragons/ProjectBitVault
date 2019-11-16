@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR
+using UnityEditor;
 using UnityEngine;
 
 [CustomPropertyDrawer(typeof(StringReference))]
@@ -55,3 +56,4 @@ public class StringReferenceDrawer : PropertyDrawer
         EditorGUI.EndProperty();
     }
 }
+#endif

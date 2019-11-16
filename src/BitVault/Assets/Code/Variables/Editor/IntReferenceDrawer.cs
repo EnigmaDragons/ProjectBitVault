@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR
+using UnityEditor;
 using UnityEngine;
 
 [CustomPropertyDrawer(typeof(IntReference))]
@@ -55,3 +56,4 @@ public class IntReferenceDrawer : PropertyDrawer
         EditorGUI.EndProperty();
     }
 }
+#endif
