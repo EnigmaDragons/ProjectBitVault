@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if UNITY_EDITOR
+using UnityEngine;
 using UnityEditor;
 
 static class EditorVariableMenu
@@ -39,3 +40,4 @@ static class EditorVariableMenu
         ProjectWindowUtil.CreateAsset(asset, path);
     }
 }
+#endif

@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
  
@@ -32,3 +33,4 @@ public class EndReadOnlyGroupDrawer : DecoratorDrawer
  
     public override void OnGUI(Rect position) => EditorGUI.EndDisabledGroup();
 }
+#endif
