@@ -7,8 +7,7 @@ public class LevelButton : MonoBehaviour
 {
     [SerializeField] private Button button;
     [SerializeField] private TextMeshProUGUI textField;
-    [SerializeField] private Sprite star;
-    [SerializeField] private Image[] stars;
+    [SerializeField] private GameObject[] stars;
     [SerializeField] private GameObject locked;
     [SerializeField] private SaveStorage storage;
 
@@ -17,7 +16,7 @@ public class LevelButton : MonoBehaviour
         textField.text = text;
         button.onClick.AddListener(() => onClick());
         for (var i = 0; i < storage.GetStars(level) && i < stars.Length; i++)
-            stars[i].sprite = star;
+            stars[i].SetActive(true);
         button.interactable = available;
         locked.SetActive(!available);
     }
