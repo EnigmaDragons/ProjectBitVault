@@ -58,6 +58,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TileLeaveCounter
       objectReference: {fileID: 0}
+    - target: {fileID: 8373018356361657566, guid: 89e4ad0a5cbeba04e84b90fe6a53fb2c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6621806784179306193, guid: 89e4ad0a5cbeba04e84b90fe6a53fb2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -153,11 +158,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8901094397418523576}
     m_Modifications:
-    - target: {fileID: 80600633153242083, guid: 1db2655f4242c454e8c0d399cb49f082,
-        type: 3}
-      propertyPath: m_Name
-      value: ServerFloorBody
-      objectReference: {fileID: 0}
     - target: {fileID: 6833668775695962937, guid: 1db2655f4242c454e8c0d399cb49f082,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -212,6 +212,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 80600633153242083, guid: 1db2655f4242c454e8c0d399cb49f082,
+        type: 3}
+      propertyPath: m_Name
+      value: ServerFloorBody
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1db2655f4242c454e8c0d399cb49f082, type: 3}
