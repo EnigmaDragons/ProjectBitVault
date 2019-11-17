@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7543190252413985136}
   - component: {fileID: 158946090939478101}
+  - component: {fileID: 3175629837784005644}
   m_Layer: 0
   m_Name: Star1
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424875035222135967}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4, z: 10}
+  m_LocalPosition: {x: 0, y: 4, z: 12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3077604469308427818}
@@ -44,6 +45,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   variable: {fileID: 11400000, guid: dd674962d3219a844bc5eae299811367, type: 2}
+--- !u!114 &3175629837784005644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424875035222135967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 781258b7cd88c6843b961345eafe7fe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layout: {fileID: 11400000, guid: 32c0440eab8835c4780ee58adacf09a2, type: 2}
+  tallPosition: {x: 2.8, y: 5.8, z: 0}
+  tallRotation: {x: 0, y: 0, z: 0}
+  widePosition: {x: 6.5, y: 4.2, z: 0}
+  wideRotation: {x: 0, y: 0, z: 0}
+  effectsRotation: 0
+  effectsX: 1
+  effectsY: 1
+  effectsZ: 0
 --- !u!1 &2230261992025685313
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,6 +109,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2663081995527948004}
   - component: {fileID: 6864650860335588502}
+  - component: {fileID: 4572617669045650367}
   m_Layer: 0
   m_Name: Star2
   m_TagString: Untagged
@@ -102,7 +125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3895284492111395723}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 4, z: 10}
+  m_LocalPosition: {x: 1, y: 4, z: 12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3077604469308427818}
@@ -121,6 +144,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   variable: {fileID: 11400000, guid: ecee86e2569926542a342897f1bff800, type: 2}
+--- !u!114 &4572617669045650367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3895284492111395723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 781258b7cd88c6843b961345eafe7fe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layout: {fileID: 11400000, guid: 32c0440eab8835c4780ee58adacf09a2, type: 2}
+  tallPosition: {x: 1.8, y: 5.8, z: 0}
+  tallRotation: {x: 0, y: 0, z: 0}
+  widePosition: {x: 5.5, y: 4.2, z: 0}
+  wideRotation: {x: 0, y: 0, z: 0}
+  effectsRotation: 0
+  effectsX: 1
+  effectsY: 1
+  effectsZ: 0
 --- !u!1 &5246372917112760836
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,6 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6708856523681279767}
   - component: {fileID: 2956531303646430944}
+  - component: {fileID: 3269267096979854305}
   m_Layer: 0
   m_Name: Star3
   m_TagString: Untagged
@@ -146,7 +191,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5246372917112760836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 4, z: 10}
+  m_LocalPosition: {x: 2, y: 4, z: 12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3077604469308427818}
@@ -165,6 +210,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   variable: {fileID: 11400000, guid: 4e8cbd51d361c4f40bdcad9d07529975, type: 2}
+--- !u!114 &3269267096979854305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5246372917112760836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 781258b7cd88c6843b961345eafe7fe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layout: {fileID: 11400000, guid: 32c0440eab8835c4780ee58adacf09a2, type: 2}
+  tallPosition: {x: 0.8, y: 5.8, z: 0}
+  tallRotation: {x: 0, y: 0, z: 0}
+  widePosition: {x: 4.5, y: 4.2, z: 0}
+  wideRotation: {x: 0, y: 0, z: 0}
+  effectsRotation: 0
+  effectsX: 1
+  effectsY: 1
+  effectsZ: 0
 --- !u!1 &8083673590709299084
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +273,8 @@ GameObject:
   - component: {fileID: 8978527316404083250}
   - component: {fileID: 8978527316404083249}
   - component: {fileID: 5378395585200565124}
+  - component: {fileID: 4103619895827501766}
+  - component: {fileID: 6230166525131131711}
   m_Layer: 0
   m_Name: GameCamera
   m_TagString: MainCamera
@@ -294,3 +362,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: {fileID: 11400000, guid: f81c10460cdb9464397ed5864a15114b, type: 2}
+--- !u!114 &4103619895827501766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8978527316404083248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 781258b7cd88c6843b961345eafe7fe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layout: {fileID: 11400000, guid: 32c0440eab8835c4780ee58adacf09a2, type: 2}
+  tallPosition: {x: 0, y: 0, z: 0}
+  tallRotation: {x: 0, y: 0, z: 0}
+  widePosition: {x: 0, y: 0, z: 0}
+  wideRotation: {x: 0, y: 0, z: 90}
+  effectsRotation: 1
+  effectsX: 0
+  effectsY: 0
+  effectsZ: 0
+--- !u!114 &6230166525131131711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8978527316404083248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dac4e8c0a01493469d1d0717a20f356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 8978527316404083250}
+  layout: {fileID: 11400000, guid: 32c0440eab8835c4780ee58adacf09a2, type: 2}
+  tallFieldOfView: 60
+  widFieldOfView: 40
