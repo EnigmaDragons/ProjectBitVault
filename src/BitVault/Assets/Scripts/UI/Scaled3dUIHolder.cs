@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using UnityEngine;
 
 public class Scaled3dUIHolder : MonoBehaviour
@@ -8,26 +7,13 @@ public class Scaled3dUIHolder : MonoBehaviour
     [SerializeField] private RectTransform rectTransform;
     [SerializeField] private GameObject thingToScale;
 
-    private void OnEnable()
+    private void Update()
     {
-        StartCoroutine(UpdateScale());
-    }
-
-    private IEnumerator UpdateScale()
-    {
-        while (true)
-        {
-            yield return new WaitForEndOfFrame();
-            var rect = RectTransformToScreenSpace(rectTransform);
-            var xScale = rect.width / pixelsPerScale;
-            var yScale = rect.height / pixelsPerScale;
-            var scale = 0f;
-            if (xScale > yScale)
-                scale = yScale;
-            else if (xScale < yScale)
-                scale = xScale;
-            thingToScale.transform.localScale = new Vector3(scale, scale, scale);
-        }
+        var rect = RectTransformToScreenSpace(rectTransform);
+        var xScale = rect.width / pixelsPerScale;
+        var yScale = rect.height / pixelsPerScale;
+        var scale = Math.Min(xScale, yScale);
+        thingToScale.transform.localScale = new Vector3(scale, scale, scale);
     }
 
     public static Rect RectTransformToScreenSpace(RectTransform transform)
