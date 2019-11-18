@@ -24,14 +24,18 @@ public class LogoController : MonoBehaviour
         BeginAnim();
     }
 
+    private bool AnyRelevantButtonPress() => Input.GetButton("Fire1") || Input.GetButton("Cancel") ||
+                                             Input.GetButton("Submit") || Input.GetButton("Jump") ||
+                                             Input.GetButton("Fire2");
+    private bool AnyMouseButtonDown() => Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1);
+    
     private void FixedUpdate()
     {
         UpdateCounters();
         UpdatePresentation();
-        if (_finishedCurrent)
+        if (_finishedCurrent || AnyMouseButtonDown() || AnyRelevantButtonPress())
             NavigateToMainMenu();
     }
-
 
     private void BeginAnim()
     {
