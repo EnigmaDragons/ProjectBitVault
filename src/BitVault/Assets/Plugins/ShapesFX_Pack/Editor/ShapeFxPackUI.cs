@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿#if UNITY_EDITOR
+
+using UnityEngine;
 using UnityEditor;
 
 public class ShapeFxPackUI : ShaderGUI
@@ -176,3 +178,4 @@ public class ShapeFxPackUI : ShaderGUI
         
     }
 }
+#endif

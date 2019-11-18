@@ -1,4 +1,6 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR
+
+using UnityEditor;
 using UnityEngine;
 
 [CustomPropertyDrawer(typeof(Vector3Reference))]
@@ -55,3 +57,4 @@ public class Vector3ReferenceDrawer : PropertyDrawer
         EditorGUI.EndProperty();
     }
 }
+#endif
