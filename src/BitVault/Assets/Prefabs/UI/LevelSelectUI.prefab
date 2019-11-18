@@ -101,7 +101,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eb598c8d3653d14f96afab90b8a978e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pixelsPerScale: 0.04
+  pixelsPerScale:
+    UseConstant: 0
+    ConstantValue: 10
+    FloatVariable: {fileID: 11400000, guid: 00c091fff4be0d84ea6036af9ef3a594, type: 2}
   rectTransform: {fileID: 4536307668481500240}
   thingToScale: {fileID: 4536786795625422567}
 --- !u!1 &2423565885436217073
@@ -1062,10 +1065,10 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 134.4
-  m_fontSizeBase: 60
+  m_fontSize: 128
+  m_fontSizeBase: 128
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 9
   m_fontSizeMax: 999
   m_fontStyle: 0

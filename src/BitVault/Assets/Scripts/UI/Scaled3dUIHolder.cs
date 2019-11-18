@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Scaled3dUIHolder : MonoBehaviour
 {
-    [SerializeField] private float pixelsPerScale = 10;
+    [SerializeField] private FloatReference pixelsPerScale = new FloatReference(10);
     [SerializeField] private RectTransform rectTransform;
     [SerializeField] private GameObject thingToScale;
 

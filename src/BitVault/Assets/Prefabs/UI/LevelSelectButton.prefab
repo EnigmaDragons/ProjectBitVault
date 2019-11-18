@@ -580,7 +580,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eb598c8d3653d14f96afab90b8a978e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pixelsPerScale: 0.04
+  pixelsPerScale:
+    UseConstant: 0
+    ConstantValue: 10
+    FloatVariable: {fileID: 11400000, guid: 00c091fff4be0d84ea6036af9ef3a594, type: 2}
   rectTransform: {fileID: 2897728163901673707}
   thingToScale: {fileID: 5887319233014360906}
 --- !u!222 &2804646828410827098
@@ -651,7 +654,7 @@ PrefabInstance:
     - target: {fileID: 3556287782801383742, guid: 207293ab9f05dc343af2441d168b83c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.3
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 3556287782801383742, guid: 207293ab9f05dc343af2441d168b83c2,
         type: 3}
@@ -737,7 +740,7 @@ PrefabInstance:
     - target: {fileID: 3556287782801383742, guid: 207293ab9f05dc343af2441d168b83c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.3
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 3556287782801383742, guid: 207293ab9f05dc343af2441d168b83c2,
         type: 3}
@@ -823,7 +826,7 @@ PrefabInstance:
     - target: {fileID: 3556287782801383742, guid: 207293ab9f05dc343af2441d168b83c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.3
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 3556287782801383742, guid: 207293ab9f05dc343af2441d168b83c2,
         type: 3}
