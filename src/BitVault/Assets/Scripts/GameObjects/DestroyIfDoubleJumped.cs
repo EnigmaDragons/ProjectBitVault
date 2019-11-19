@@ -51,7 +51,7 @@ public class DestroyIfDoubleJumped : OnMessage<PieceMoved>
         if (_t == 1)
         {
             if (numJumpsRemaining == 0)
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             else
                 _isDying = false;
         }

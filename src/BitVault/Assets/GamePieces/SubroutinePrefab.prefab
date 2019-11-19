@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -9209112106747393781}
   - component: {fileID: 4786803971238221265}
   - component: {fileID: 4182503920713057085}
+  - component: {fileID: 2680498843062657573}
   m_Layer: 0
   m_Name: SubroutinePrefab
   m_TagString: Untagged
@@ -152,7 +153,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 4182503920713057085}
   clip: {fileID: 8300000, guid: 913123003fd507d49985e10ed30de12b, type: 3}
-  volume: 0.5
+  volume:
+    UseConstant: 1
+    ConstantValue: 0.5
+    FloatVariable: {fileID: 0}
 --- !u!82 &4182503920713057085
 AudioSource:
   m_ObjectHideFlags: 0
@@ -250,6 +254,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2680498843062657573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5666270788351618785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f9f1df7b80b4d4d8c6c40b78c5a1248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 4182503920713057085}
+  clip: {fileID: 8300000, guid: 54ebf1997a4f10c4b8c6751c170d2f40, type: 3}
+  volume:
+    UseConstant: 0
+    ConstantValue: 0.5
+    FloatVariable: {fileID: 11400000, guid: 5e9c6de895418b34e913796d060f5793, type: 2}
 --- !u!1001 &4674272128199395681
 PrefabInstance:
   m_ObjectHideFlags: 0

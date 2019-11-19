@@ -38,6 +38,6 @@ public class DestroyIfJumped : OnMessage<PieceMoved>
         renderer.material.SetFloat("_DefaultShrink", _t);
         renderer.material.SetFloat("_NormalPush", _t);
         if (_t == 1)
-            Destroy(gameObject);
+            gameObject.SetActive(false);
     }
 }

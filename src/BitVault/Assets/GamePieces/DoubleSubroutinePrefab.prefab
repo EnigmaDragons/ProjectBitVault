@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7199367384586594132}
   - component: {fileID: 3956810862601137722}
   - component: {fileID: 293801813005103269}
+  - component: {fileID: -3532366647575882076}
   m_Layer: 0
   m_Name: DoubleSubroutinePrefab
   m_TagString: Untagged
@@ -255,6 +256,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-3532366647575882076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5894204537112890656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f9f1df7b80b4d4d8c6c40b78c5a1248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 293801813005103269}
+  clip: {fileID: 8300000, guid: 54ebf1997a4f10c4b8c6751c170d2f40, type: 3}
+  volume:
+    UseConstant: 0
+    ConstantValue: 0.5
+    FloatVariable: {fileID: 11400000, guid: 5e9c6de895418b34e913796d060f5793, type: 2}
 --- !u!1 &6186823641356467059
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,11 +342,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1001955404663001913}
     m_Modifications:
-    - target: {fileID: 8747868138699255275, guid: 1afadf85ddb5bca43821f331610f0742,
-        type: 3}
-      propertyPath: m_Name
-      value: DoubleSubroutineBody
-      objectReference: {fileID: 0}
     - target: {fileID: 7993068155163929772, guid: 1afadf85ddb5bca43821f331610f0742,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -383,6 +397,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8747868138699255275, guid: 1afadf85ddb5bca43821f331610f0742,
+        type: 3}
+      propertyPath: m_Name
+      value: DoubleSubroutineBody
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1afadf85ddb5bca43821f331610f0742, type: 3}
 --- !u!4 &6261895455384573581 stripped
@@ -404,11 +423,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1001955404663001913}
     m_Modifications:
-    - target: {fileID: 8747868138699255275, guid: 1afadf85ddb5bca43821f331610f0742,
-        type: 3}
-      propertyPath: m_Name
-      value: DoubleSubroutineBody
-      objectReference: {fileID: 0}
     - target: {fileID: 7993068155163929772, guid: 1afadf85ddb5bca43821f331610f0742,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -463,6 +477,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747868138699255275, guid: 1afadf85ddb5bca43821f331610f0742,
+        type: 3}
+      propertyPath: m_Name
+      value: DoubleSubroutineBody
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1afadf85ddb5bca43821f331610f0742, type: 3}

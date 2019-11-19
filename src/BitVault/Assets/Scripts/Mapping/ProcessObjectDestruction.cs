@@ -8,6 +8,6 @@ public class ProcessObjectDestruction : OnMessage<ObjectDestroyed>
     {
         map.Remove(msg.Object);
         if (!msg.IsGameObjectDestructionHandled)
-            Destroy(msg.Object);
+            msg.Object.SetActive(false);
     }
 }
