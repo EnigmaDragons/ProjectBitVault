@@ -10,7 +10,6 @@ public class GameState : ScriptableObject
 
     public void InitLevel()
     {
-        Message.Publish(new PieceDeselected());
         currentLevelStars.Reset();
         currentMoveCounter.Reset();
         currentLevelMap.InitLevel();
