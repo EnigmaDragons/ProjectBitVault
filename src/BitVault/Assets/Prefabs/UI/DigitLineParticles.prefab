@@ -4800,6 +4800,8 @@ GameObject:
   - component: {fileID: 794591977187816574}
   - component: {fileID: 705266626924276998}
   - component: {fileID: 705412271618083782}
+  - component: {fileID: 2724027324082803679}
+  - component: {fileID: 8499791033432833055}
   m_Layer: 0
   m_Name: DigitLineParticles
   m_TagString: Untagged
@@ -8549,7 +8551,7 @@ ParticleSystem:
     - serializedVersion: 3
       emitter: {fileID: 705028486898489064}
       type: 0
-      properties: 0
+      properties: 4
       emitProbability: 1
   LightsModule:
     enabled: 0
@@ -9525,3 +9527,40 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &2724027324082803679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796503286028939448}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fda4991e3ccef4418618a6c89f37c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleSystem: {fileID: 705266626924276998}
+  layoutMode: {fileID: 11400000, guid: 32c0440eab8835c4780ee58adacf09a2, type: 2}
+  tallRotation: 0
+  wideRotation: -90
+--- !u!114 &8499791033432833055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796503286028939448}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 781258b7cd88c6843b961345eafe7fe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layout: {fileID: 11400000, guid: 32c0440eab8835c4780ee58adacf09a2, type: 2}
+  tallPosition: {x: 0, y: 0, z: 0}
+  tallRotation: {x: 0, y: 0, z: 0}
+  widePosition: {x: 0, y: 0, z: 0}
+  wideRotation: {x: 0, y: 0, z: 90}
+  effectsRotation: 1
+  effectsX: 0
+  effectsY: 0
+  effectsZ: 0
