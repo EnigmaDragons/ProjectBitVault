@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3724315831321357458}
   - component: {fileID: 3448327055437459308}
+  - component: {fileID: 7249042006787880617}
   m_Layer: 0
   m_Name: SelectedTilePresenter
   m_TagString: Untagged
@@ -45,3 +46,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indicatorPrototype: {fileID: 5361803214917917785, guid: 606e2ed040c8f0a48bf9073b299cd497,
     type: 3}
+--- !u!114 &7249042006787880617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928251193778733859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee4c54aec7e4d0db37f1ae9ed4e4d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: 86eac65d09e3f1643a51c753e9397bf6, type: 2}
+  clip: {fileID: 8300000, guid: 661472511643ecf4da7e0481a173454f, type: 3}
+  volume:
+    UseConstant: 1
+    ConstantValue: 0.5
+    FloatVariable: {fileID: 0}
