@@ -12,4 +12,7 @@ public sealed class PieceMoved
         From = from;
         To = to;
     }
+
+    public bool HasJumpedOver(GameObject other) => From.IsAdjacentTo(new TilePoint(other)) && To.IsAdjacentTo(new TilePoint(other))
+                                                && (To.X == From.X || To.Y == From.Y);
 }
