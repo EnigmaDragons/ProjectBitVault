@@ -8,6 +8,8 @@ public class GameState : ScriptableObject
     [SerializeField] private CurrentMoveCounter currentMoveCounter;
     [SerializeField] private CurrentLevel currentLevel;
 
+    public CurrentLevel CurrentLevel => currentLevel;
+
     public void InitLevel()
     {
         currentLevelStars.Reset();
