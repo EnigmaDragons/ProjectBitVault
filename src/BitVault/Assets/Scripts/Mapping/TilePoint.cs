@@ -11,7 +11,7 @@ public class TilePoint
     public TilePoint() {}
 
     public TilePoint(GameObject o)
-        : this(o.transform.position) {}
+        : this(o.transform.localPosition) {}
     
     public TilePoint(Vector3 v)
         : this(v.x.FlooredInt(), v.y.FlooredInt()) {}

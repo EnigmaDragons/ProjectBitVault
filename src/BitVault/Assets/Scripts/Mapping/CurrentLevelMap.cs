@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+[CreateAssetMenu]
 public class CurrentLevelMap : ScriptableObject
 {
     [DTValidator.Optional, SerializeField] private TilePoint bitVaultLocation;
@@ -52,7 +53,8 @@ public class CurrentLevelMap : ScriptableObject
     public void RegisterIce(GameObject obj) => ice.Add(obj);
 
     public Maybe<GameObject> GetTile(TilePoint tile) => walkableTiles.FirstAsMaybe(o => new TilePoint(o).Equals(tile));
-    public Maybe<GameObject> GetSelectable(TilePoint tile) => selectableObjects.FirstAsMaybe(o => new TilePoint(o).Equals(tile));
+
+    public Maybe<GameObject> GetSelectable(TilePoint tile) =>  selectableObjects.FirstAsMaybe(o => new TilePoint(o).Equals(tile));
     public Maybe<Activatable> GetActivatable(TilePoint tile) => activatables.FirstAsMaybe(a => a.Tile().Equals(tile));
     public bool IsJumpable(TilePoint tile) => jumpableObjects.Any(t => new TilePoint(t).Equals(tile));
     public bool IsWalkable(TilePoint tile) => walkableTiles.Any(w => new TilePoint(w).Equals(tile));

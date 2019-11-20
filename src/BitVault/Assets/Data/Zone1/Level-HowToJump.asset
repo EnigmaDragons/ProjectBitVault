@@ -19,46 +19,75 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f4ace5f67f63d324ba8170b167be3fb8, type: 2}
   - {fileID: 11400000, guid: 1661252d50dae194482f749ddaeeeb1a, type: 2}
   openingDialogue:
-  - text: Welcome to hacker training
-    canvasDisplay: {fileID: 5024263604147630789, guid: 97a149e36ca304041a1ec2c6c968bcaa,
+  - text: You must be the new hire
+    character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
+    customDisplay: {fileID: 0}
+  - text: I'm so glad to have such an accomplished talent joining us
+    character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
+    customDisplay: {fileID: 0}
+  - text: '...but I have no experience'
+    character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+    customDisplay: {fileID: 0}
+  - text: What I meant was such POTENTIAL talent
+    character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
+    customDisplay: {fileID: 0}
+  - text: "I don\u2019t want you to think of me as your boss here at SECR"
+    character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
+    customDisplay: {fileID: 0}
+  - text: Think of me as your friend, who also happens to control your raises
+    character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
+    customDisplay: {fileID: 0}
+  - text: '...um'
+    character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+    customDisplay: {fileID: 0}
+  - text: "You don\u2019t need to worry about a thing"
+    character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
+    customDisplay: {fileID: 0}
+  - text: Siri is gonna hook you right up with our synergetic tool
+    character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
+    customDisplay: {fileID: 0}
+  - text: Synergetic is a good buzzword, right? Not really sure what it means
+    character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
+    customDisplay: {fileID: 0}
+  - text: Anyway, got to go do important work or something
+    character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
+    customDisplay: {fileID: 0}
+  - text: Hello newbie, I'll show you how to pen test servers here
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 0}
+  - text: This is a Root Key, needed to gain Root Access
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 1652203710627614264, guid: 13f4367fcf39e1044a0291e3395bfb56,
       type: 3}
-    nonCanvasDisplay: {fileID: 0}
-  - text: First let me explain your interface
-    canvasDisplay: {fileID: 5024263604147630789, guid: 97a149e36ca304041a1ec2c6c968bcaa,
+  - text: This is a Subroutine, useful tools for hacking servers
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 7093627245569292302, guid: 478eb6b707d519b459b81e6ead25ddb9,
       type: 3}
-    nonCanvasDisplay: {fileID: 0}
-  - text: This button located in the top left corner opens the in game menu
-    canvasDisplay: {fileID: 1781936059128245100, guid: 13d52e7e49b31144f9eff580693b2ebd,
+  - text: A Root Key can move by going through Subroutines
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 4746139025129621525, guid: f8ef9d794c967ba4e9143b4d9445a54e,
       type: 3}
-    nonCanvasDisplay: {fileID: 0}
-  - text: This button located in the bottom right corner resets the puzzle
-    canvasDisplay: {fileID: 5618929589385882312, guid: a5be683efe029954f972598c034cbf6e,
+  - text: This is a Data Cube, storing valuable information
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 263933570673384498, guid: 91fa008c011f52d45a8f06c181b759b3,
       type: 3}
-    nonCanvasDisplay: {fileID: 0}
-  - text: You may see how to earn stars on this server by checking your in game menu
-    canvasDisplay: {fileID: 5024263604147630789, guid: 97a149e36ca304041a1ec2c6c968bcaa,
+  - text: When possible collect them
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 1691976217201633641, guid: 6f7a75f3511c1b049970e7805a5fe046,
       type: 3}
-    nonCanvasDisplay: {fileID: 0}
-  - text: This blue node represents your connection in the server
-    canvasDisplay: {fileID: 7814623011832653987, guid: 0d57795c344119f4ebc15eaf82c59e65,
+  - text: This is Root Access, taking control of this is the objective
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 9148362506228817878, guid: fa989a033120e2e4d8c067e8badb5f76,
       type: 3}
-    nonCanvasDisplay: {fileID: 4698547826158629756, guid: 9468c44eb5547c24f8fb1e899572bcba,
+  - text: You can take control of Root Access, by getting A Root Key to it
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 6139968206641466040, guid: 930958a90799d7f449bef549e2c2697c,
       type: 3}
-  - text: Your blue node may move by jumping over these green nodes
-    canvasDisplay: {fileID: 0}
-    nonCanvasDisplay: {fileID: 1199240027018545396, guid: 99fa62adacb1e5c43a0189d8aba17fb6,
-      type: 3}
-  - text: Your objective is to hack into the bit vault with your blue node by going
-      next to it
-    canvasDisplay: {fileID: 0}
-    nonCanvasDisplay: {fileID: 7187727939394081538, guid: f8c698e3787704f4ab0252c3b948f2f5,
-      type: 3}
+  - text: If you get stuck... I will send you out of date documentation or links to
+      useless resources
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 0}
   closingDialogue:
-  - text: Good job now your training is gonna get a bit more trickier
-    canvasDisplay: {fileID: 5024263604147630789, guid: 97a149e36ca304041a1ec2c6c968bcaa,
-      type: 3}
-    nonCanvasDisplay: {fileID: 0}
-  - text: I certainly hope so
-    canvasDisplay: {fileID: 1723114268465068204, guid: 97a1af4947b6c1649baad457f9f35164,
-      type: 3}
-    nonCanvasDisplay: {fileID: 0}
+  - text: That was fast! Guess I'm great at teaching
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 0}

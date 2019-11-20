@@ -5,11 +5,18 @@ using System.Linq;
 public static class Message 
 {
     private static readonly List<MessageSubscription> EventSubs = new List<MessageSubscription>();
-    private static readonly MessageQueue Msgs = new MessageQueue();
+    private static MessageQueue Msgs = new MessageQueue();
 
     public static int SubscriptionCount => Msgs.SubscriptionCount;
     public static void Publish(object payload) => Msgs.Enqueue(payload);
     public static void Subscribe<T>(Action<T> onEvent, object owner) => Subscribe(MessageSubscription.Create(onEvent, owner));
+
+    public static MessageQueue SwapMessageQueues(MessageQueue newQueue)
+    {
+        var msgs = Msgs;
+        Msgs = newQueue;
+        return msgs;
+    }
 
     private static void Subscribe(MessageSubscription subscription)
     {
@@ -23,7 +30,7 @@ public static class Message
         EventSubs.Where(x => x.Owner.Equals(owner)).ForEach(x => EventSubs.Remove(x));
     }
     
-    private sealed class MessageQueue
+    public sealed class MessageQueue
     {
         private readonly Dictionary<Type, List<object>> _eventActions = new Dictionary<Type, List<object>>();
         private readonly Dictionary<object, List<MessageSubscription>> _ownerSubscriptions = new Dictionary<object, List<MessageSubscription>>();

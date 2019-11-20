@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[CreateAssetMenu]
 public sealed class MayJump : MovementOptionRule
 {
     [SerializeField] private CurrentLevelMap map;

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[CreateAssetMenu]
 public class CurrentSelectedPiece : ScriptableObject
 {
     [DTValidator.Optional, SerializeField] private Maybe<GameObject> selected = new Maybe<GameObject>();

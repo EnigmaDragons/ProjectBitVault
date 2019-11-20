@@ -11,6 +11,7 @@ public class BitVaultOnLevelCompleted : OnMessage<LevelCompleted>
     [SerializeField] private float _secondsForEachSegment = 1;
     [SerializeField] private GameObject collectedStar;
     [SerializeField] private LockBoolVariable gameInputActive;
+    [SerializeField] private BoolVariable tutorialActive;
 
     private bool _isUnlocking = false;
     private GameObject _heroObject;
@@ -54,6 +55,8 @@ public class BitVaultOnLevelCompleted : OnMessage<LevelCompleted>
             {
                 _isUnlocking = false;
                 gameObject.GetChildren().ForEach(x => x.SetActive(false));
+                if (tutorialActive.Value)
+                    return;
                 var star = Instantiate(collectedStar, transform.parent);
                 star.transform.localPosition = transform.localPosition;
                 Message.Publish(new StarCollected());
