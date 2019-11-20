@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 92899193781168720}
   - component: {fileID: 9121410540537576000}
   - component: {fileID: 9115140955110814802}
+  - component: {fileID: 3672043311448300671}
   m_Layer: 0
   m_Name: FailsafePrefab
   m_TagString: Untagged
@@ -63,9 +64,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   renderer: {fileID: 4529034785770872475}
   dangerousMaterial: {fileID: 2100000, guid: eb0e07c8847526343ad73ce91af92dbc, type: 2}
+  dangerousGoalMaterial: {fileID: 2100000, guid: e45c6fd2901a8df45b95db525c3847b8,
+    type: 2}
   gameState: {fileID: 11400000, guid: 26b78a62af3d8984a985383c5b9f59d8, type: 2}
   gameInputActive: {fileID: 11400000, guid: 24002322d985f6d4087239253827123b, type: 2}
   _lossDelay: 0.5
+  map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
 --- !u!114 &92899193781168720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,6 +203,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3672043311448300671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6512836932547775040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2eaf2d88b42f4346b6af8d32f975c66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
+  meshRenderer: {fileID: 4529034785770872475}
+  swapTo: {fileID: 2100000, guid: 0850cae255fd13e41a4fa341d9e6cf76, type: 2}
 --- !u!1001 &7724111914043776253
 PrefabInstance:
   m_ObjectHideFlags: 0
