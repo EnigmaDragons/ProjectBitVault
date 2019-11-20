@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4534637599029900136}
   - component: {fileID: 9196646626864782064}
   - component: {fileID: -6579248514674523112}
+  - component: {fileID: -1357032350420398089}
   m_Layer: 0
   m_Name: RootAccessPrefab
   m_TagString: Untagged
@@ -65,6 +66,24 @@ MonoBehaviour:
   collectedStar: {fileID: 3908371975002010264, guid: 6b349472827e05d479e875450ab1cebd,
     type: 3}
   gameInputActive: {fileID: 11400000, guid: 24002322d985f6d4087239253827123b, type: 2}
+--- !u!114 &-1357032350420398089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7513623614757099273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c208fb9133e0d25488495a2d7022736a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
+  options:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &8504034257164299978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72,11 +91,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4534637599029900136}
     m_Modifications:
-    - target: {fileID: 7347664051520376382, guid: 13d7e74f49f399748bcf03890fceea6a,
-        type: 3}
-      propertyPath: m_Name
-      value: RootAccessBody
-      objectReference: {fileID: 0}
     - target: {fileID: 499002101084633027, guid: 13d7e74f49f399748bcf03890fceea6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -131,6 +145,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7347664051520376382, guid: 13d7e74f49f399748bcf03890fceea6a,
+        type: 3}
+      propertyPath: m_Name
+      value: RootAccessBody
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13d7e74f49f399748bcf03890fceea6a, type: 3}

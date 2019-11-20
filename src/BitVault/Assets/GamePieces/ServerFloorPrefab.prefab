@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8901094397418523576}
   - component: {fileID: 9024444320318326732}
+  - component: {fileID: -1638450818461384611}
   m_Layer: 0
   m_Name: ServerFloorPrefab
   m_TagString: Untagged
@@ -46,6 +47,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevelMap: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
+--- !u!114 &-1638450818461384611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5163599651945541683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2eaf2d88b42f4346b6af8d32f975c66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
+  meshRenderer: {fileID: 1525231157149815717}
+  swapTo: {fileID: 2100000, guid: da916097e741a4d4699072c2d0894f46, type: 2}
 --- !u!1001 &2593447785636701812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -223,6 +239,12 @@ PrefabInstance:
 --- !u!4 &804201903387702518 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6833668775695962937, guid: 1db2655f4242c454e8c0d399cb49f082,
+    type: 3}
+  m_PrefabInstance: {fileID: 6196681324734228431}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1525231157149815717 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4671848534399612010, guid: 1db2655f4242c454e8c0d399cb49f082,
     type: 3}
   m_PrefabInstance: {fileID: 6196681324734228431}
   m_PrefabAsset: {fileID: 0}
