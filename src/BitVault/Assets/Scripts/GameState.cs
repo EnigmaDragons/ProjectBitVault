@@ -7,11 +7,13 @@ public class GameState : ScriptableObject
     [SerializeField] private CurrentLevelStars currentLevelStars;
     [SerializeField] private CurrentMoveCounter currentMoveCounter;
     [SerializeField] private CurrentLevel currentLevel;
+    [SerializeField] private CurrentZone currentZone;
 
     public CurrentLevel CurrentLevel => currentLevel;
 
     public void InitLevel()
     {
+        currentZone.Init(currentLevel.ZoneNumber);
         currentLevelStars.Reset();
         currentMoveCounter.Reset();
         currentLevelMap.InitLevel();

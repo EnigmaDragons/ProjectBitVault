@@ -1,7 +1,5 @@
-﻿using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 
-[CreateAssetMenu]
 public class CurrentLevel : ScriptableObject
 {
     [SerializeField] private GameLevel selectedLevel;
