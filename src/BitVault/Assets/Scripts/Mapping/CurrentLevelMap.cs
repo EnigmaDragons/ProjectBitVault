@@ -23,6 +23,7 @@ public class CurrentLevelMap : ScriptableObject
     public IEnumerable<MovementOptionRule> MovementOptionRules => movementOptionRules;
     public IEnumerable<MovementRestrictionRule> MovementRestrictionRules => movementRestrictionRules;
     public IEnumerable<GameObject> Selectables => selectableObjects;
+    public int NumOfJumpables => jumpableObjects.Count;
 
     public void InitLevel()
     {

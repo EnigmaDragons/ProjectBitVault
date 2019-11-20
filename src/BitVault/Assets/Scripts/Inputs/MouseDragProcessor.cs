@@ -36,11 +36,15 @@ public class MouseDragProcessor : MonoBehaviour
     private TilePoint GetReleasedTilePoint(TilePoint releasedTilePointRaw)
     {
         var movement = piece.Selected.Value.GetComponent<MovementEnabled>();
+        if (movement == null || movement.Types.Count != 1)
+            return releasedTilePointRaw;
         var delta = releasedTilePointRaw - _clickedTile;
         if (Math.Abs(delta.X) > Math.Abs(delta.Y))
             delta.Y = 0;
         else if (Math.Abs(delta.X) < Math.Abs(delta.Y))
             delta.X = 0;
+        if (Math.Abs(delta.X) + Math.Abs(delta.Y) < 2 || !delta.IsCardinal())
+            return releasedTilePointRaw;
         if (delta.X > 0)
             delta.X = 1;
         if (delta.X < 0)
@@ -49,8 +53,6 @@ public class MouseDragProcessor : MonoBehaviour
             delta.Y = 1;
         if (delta.Y < 0)
             delta.Y = -1;
-        if (movement == null || movement.Types.Count != 1 || !delta.IsCardinal())
-            return releasedTilePointRaw;
         if (movement.Types[0] == MovementType.Leap)
         {
             delta.X *= 3;
@@ -63,7 +65,6 @@ public class MouseDragProcessor : MonoBehaviour
             delta.Y *= 2;
             return _clickedTile + delta;
         }
-
         return _clickedTile + delta;
     }
 }
