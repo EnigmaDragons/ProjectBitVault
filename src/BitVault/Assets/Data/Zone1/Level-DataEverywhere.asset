@@ -12,11 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090681d0cad653b4ba4bd3c63f4beb4d, type: 3}
   m_Name: Level-DataEverywhere
   m_EditorClassIdentifier: 
-  levelName: Data Everywhere
+  levelName: Hole in the Wall
   prefab: {fileID: 1145836501769799829, guid: b1f937282603d6545a1db3bb19586513, type: 3}
   starObjectives:
   - {fileID: 11400000, guid: 9c9956192ce5d14449243607a6f97f2b, type: 2}
   - {fileID: 11400000, guid: f4ace5f67f63d324ba8170b167be3fb8, type: 2}
   - {fileID: 11400000, guid: 1661252d50dae194482f749ddaeeeb1a, type: 2}
-  openingDialogue: []
-  closingDialogue: []
+  openingDialogue:
+  - text: Did you know we have a Wiffle Ball court
+    character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
+    customDisplay: {fileID: 0}
+  - text: "It is kinda big\u2026 hard to miss"
+    character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+    customDisplay: {fileID: 0}
+  - text: "I\u2019ve never spent so much time out of my office"
+    character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
+    customDisplay: {fileID: 0}
+  - text: Well best of luck with the firewall server
+    character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
+    customDisplay: {fileID: 0}
+  closingDialogue:
+  - text: "I\u2019ve caught you, looks like you are hooking up our CTO with access
+      to \u201Cunproductive sites\u201D"
+    character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
+    customDisplay: {fileID: 0}
+  - text: Red-handed
+    character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+    customDisplay: {fileID: 0}
+  - text: "Well don\u2019t let me stop you, assuming I get a firewall hole too"
+    character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
+    customDisplay: {fileID: 0}

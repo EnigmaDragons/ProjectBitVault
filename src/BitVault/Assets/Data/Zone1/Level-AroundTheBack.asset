@@ -12,11 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090681d0cad653b4ba4bd3c63f4beb4d, type: 3}
   m_Name: Level-AroundTheBack
   m_EditorClassIdentifier: 
-  levelName: Around The Back
+  levelName: Break In
   prefab: {fileID: 2660690398467137115, guid: 0c593d668fae8f640880b314f3782929, type: 3}
   starObjectives:
   - {fileID: 11400000, guid: 9c9956192ce5d14449243607a6f97f2b, type: 2}
   - {fileID: 11400000, guid: f4ace5f67f63d324ba8170b167be3fb8, type: 2}
   - {fileID: 11400000, guid: 1661252d50dae194482f749ddaeeeb1a, type: 2}
-  openingDialogue: []
-  closingDialogue: []
+  openingDialogue:
+  - text: Our boss is just chilling in the break room
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 0}
+  - text: Does he even do any real work?
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 0}
+  - text: Here is a new design for you to test
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 0}
+  closingDialogue:
+  - text: "I think I\u2019ll have a security update for our site soon"
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 0}
