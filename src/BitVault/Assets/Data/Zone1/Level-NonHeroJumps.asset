@@ -12,11 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090681d0cad653b4ba4bd3c63f4beb4d, type: 3}
   m_Name: Level-NonHeroJumps
   m_EditorClassIdentifier: 
-  levelName: Non Hero Jumps
+  levelName: Remaining Training
   prefab: {fileID: 5932372047481030826, guid: bc52c5f9b34b7fe4b84967c316a18416, type: 3}
   starObjectives:
   - {fileID: 11400000, guid: 9c9956192ce5d14449243607a6f97f2b, type: 2}
   - {fileID: 11400000, guid: f4ace5f67f63d324ba8170b167be3fb8, type: 2}
   - {fileID: 11400000, guid: 1661252d50dae194482f749ddaeeeb1a, type: 2}
-  openingDialogue: []
-  closingDialogue: []
+  openingDialogue:
+  - text: Alright newbie, just a couple more things you need to know
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 0}
+  - text: A subroutine can also move by going through another subroutine
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 2696256684016738363, guid: f415f5d36da3fda498bacd6a3becfeae,
+      type: 3}
+  - text: "If you have made a horrible mistake, just press this reset button located
+      in the bottom right corner, or press \x18r\x19 if you have a keyboard"
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 3789263977918018921, guid: 8d0fdd6ce9086c44c8ca51a290dd116b,
+      type: 3}
+  - text: You also can gain a data cube by removing every subroutine
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 4433120613413305565, guid: 356340893b4b5fc4eb91ec3b8d49f773,
+      type: 3}
+  - text: If you get stuck... I will send you out of date documentation or links to
+      useless resources
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 0}
+  closingDialogue:
+  - text: Now you know the rules, but that does not make you a master like me!
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 0}
+  - text: I will set up practice servers for you to penetrate
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 0}

@@ -8,6 +8,6 @@ public class InitLevelInfo : MonoBehaviour
 
     private void Awake()
     {
-        label.text = $"Z{level.ZoneNumber + 1}-{level.LevelNumber + 1}";
+        label.text = $"{level.ActiveLevel.Name}";
     }
 }

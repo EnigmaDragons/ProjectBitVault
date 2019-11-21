@@ -12,11 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090681d0cad653b4ba4bd3c63f4beb4d, type: 3}
   m_Name: Level-ClearTheHalls
   m_EditorClassIdentifier: 
-  levelName: Clear The Halls
+  levelName: Snack Attack
   prefab: {fileID: 7305874418919503882, guid: d7a3bd81f4a09f140b57e3a780c5e1b2, type: 3}
   starObjectives:
   - {fileID: 11400000, guid: 9c9956192ce5d14449243607a6f97f2b, type: 2}
   - {fileID: 11400000, guid: f4ace5f67f63d324ba8170b167be3fb8, type: 2}
   - {fileID: 11400000, guid: 1661252d50dae194482f749ddaeeeb1a, type: 2}
-  openingDialogue: []
-  closingDialogue: []
+  openingDialogue:
+  - text: "Heya friend! I\x19ve got a favor to ask you"
+    character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
+    customDisplay: {fileID: 0}
+  - text: The company decided to add some new vending machines
+    character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
+    customDisplay: {fileID: 0}
+  - text: And I was thinking we should, uh, pen test them to see if we can get free
+      snacks, what do you say?
+    character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
+    customDisplay: {fileID: 0}
+  - text: Why are you asking me?
+    character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+    customDisplay: {fileID: 0}
+  - text: Well Siri is uptight and if I ask Ruby it might be considered harassment
+    character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
+    customDisplay: {fileID: 0}
+  - text: "At least that\x19s what I got from all these mandatory workplace harassment
+      training videos"
+    character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
+    customDisplay: {fileID: 0}
+  - text: Anyway, important work or something calls, look forward to seeing your results
+    character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
+    customDisplay: {fileID: 0}
+  closingDialogue:
+  - text: MMM& These test results are delicious, thanks!
+    character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
+    customDisplay: {fileID: 0}

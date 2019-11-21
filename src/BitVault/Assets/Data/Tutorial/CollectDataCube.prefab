@@ -361,8 +361,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: DataCubePrefab
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 9155385327629319075, guid: fa336d9be762cf045a312251cc0e98b9, type: 3}
+    - target: {fileID: 9155385327629319075, guid: fa336d9be762cf045a312251cc0e98b9,
+        type: 3}
+      propertyPath: collectedStar
+      value: 
+      objectReference: {fileID: 3972359594438496840, guid: 88be299740ee48c47ab916280240a371,
+        type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa336d9be762cf045a312251cc0e98b9, type: 3}
 --- !u!4 &8910609543791433627 stripped
 Transform:

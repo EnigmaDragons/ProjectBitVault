@@ -2,7 +2,7 @@ using UnityEngine;
 
 public sealed class CollectStarOnEntered : OnMessage<PieceMoved>
 {
-    [SerializeField] private InGameCollectedStar collectedStar;
+    [SerializeField] private GameObject collectedStar;
 
     protected override void Execute(PieceMoved msg)
     {

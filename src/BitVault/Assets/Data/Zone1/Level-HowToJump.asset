@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090681d0cad653b4ba4bd3c63f4beb4d, type: 3}
   m_Name: Level-HowToJump
   m_EditorClassIdentifier: 
-  levelName: How To Jump
+  levelName: Welcome to SECR
   prefab: {fileID: 7885011920191593552, guid: ccedee5d24c41e84480cde750b9fbac6, type: 3}
   starObjectives:
   - {fileID: 11400000, guid: 9c9956192ce5d14449243607a6f97f2b, type: 2}
@@ -55,6 +55,10 @@ MonoBehaviour:
   - text: Hello newbie, I'll show you how to pen test servers here
     character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
     customDisplay: {fileID: 0}
+  - text: Pen test is short for penetration testing, which is hacking but for testing
+      purposes
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 0}
   - text: This is a Root Key, needed to gain Root Access
     character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
     customDisplay: {fileID: 1652203710627614264, guid: 13f4367fcf39e1044a0291e3395bfb56,
@@ -83,8 +87,13 @@ MonoBehaviour:
     character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
     customDisplay: {fileID: 6139968206641466040, guid: 930958a90799d7f449bef549e2c2697c,
       type: 3}
-  - text: If you get stuck... I will send you out of date documentation or links to
-      useless resources
+  - text: If you missed any of that, just open your menu located in the bottom left
+      corner and go back to level select
+    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
+    customDisplay: {fileID: 829683661179441264, guid: a9cf7237690757344b7036cd3bd3e4bf,
+      type: 3}
+  - text: "Don\u2019t ask me what level select or is why that would help, I can already
+      sense some form of wall breaking"
     character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
     customDisplay: {fileID: 0}
   closingDialogue:
