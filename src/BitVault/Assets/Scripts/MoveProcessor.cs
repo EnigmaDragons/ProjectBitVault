@@ -1,29 +1,12 @@
 using System.Linq;
 using UnityEngine;
 
-public sealed class MoveProcessor : MonoBehaviour
+public sealed class MoveProcessor : OnMessage<MoveToRequested>
 {
-    [SerializeField] private CurrentSelectedPiece piece;
     [SerializeField] private CurrentLevelMap map;
     
-    private void OnEnable()
-    {
-        Message.Subscribe<MoveToRequested>(ProcessMoveByRequest, this);
-        Message.Subscribe<TileIndicated>(ProcessTileIndicated, this);
-    }
-    
-    private void OnDisable()
-    {
-        Message.Unsubscribe(this);
-    }
-
-    private void ProcessTileIndicated(TileIndicated t)
-    {
-        piece.Selected.IfPresent(p => Message.Publish(new MoveToRequested(p, new TilePoint(p.gameObject), t.Tile)));
-    }
-    
-    private void ProcessMoveByRequest(MoveToRequested m)
-    {
+    protected override void Execute(MoveToRequested m)
+    {        
         if (m.Piece.GetComponent<MovementEnabled>() == null)
             return;
 
