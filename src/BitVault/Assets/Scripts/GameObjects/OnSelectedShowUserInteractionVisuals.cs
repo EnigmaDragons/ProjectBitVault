@@ -1,12 +1,13 @@
 ﻿using System.Linq;
 using UnityEngine;
 
-public class OnSelected : MonoBehaviour
+public class OnSelectedShowUserInteractionVisuals : MonoBehaviour
 {
     [SerializeField] private GameObject[] options;
     [SerializeField] private CurrentLevelMap map;
     [SerializeField] private MovementEnabled movement;
     [SerializeField] private BoolVariable gameInputActive;
+    [SerializeField] private BoolVariable showMovementOptions;
 
     private bool _selected;
     private bool _gameInputActive;
@@ -51,6 +52,12 @@ public class OnSelected : MonoBehaviour
 
     private void ProcessOption(GameObject option)
     {
+        if (!showMovementOptions.Value)
+        {
+            option.SetActive(false);
+            return;
+        }
+    
         var from = new TilePoint(gameObject);
         var to = new TilePoint(
             (int) (gameObject.transform.localPosition.x + option.transform.localPosition.x),

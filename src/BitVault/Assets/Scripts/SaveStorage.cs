@@ -7,6 +7,7 @@ public class SaveStorage : ScriptableObject
     private const string _zoneKey = "ZoneKey";
     private const string _versionKey = "Version";
     private const string _version = "0.1";
+    private const string _showMovementHints = "ShowMovementHints";
 
     private void Awake() => PlayerPrefs.SetString(_versionKey, _version);
 
@@ -39,4 +40,7 @@ public class SaveStorage : ScriptableObject
     }
 
     private string StarsKey(GameLevel level) => $"{level.Name}Stars";
+
+    public bool GetShowMovementHints() => PlayerPrefs.HasKey(_showMovementHints) ? PlayerPrefs.GetInt(_showMovementHints) > 0 : true;
+    public void SetShowMovementHints(bool active) => PlayerPrefs.SetInt(_showMovementHints, active ? 1 : 0);
 }

@@ -293,6 +293,8 @@ MonoBehaviour:
   map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
   movement: {fileID: 1733426506781924261}
   gameInputActive: {fileID: 11400000, guid: eebaf394924070845bc9896cb2a4d42c, type: 2}
+  showMovementOptions: {fileID: 11400000, guid: d3f991c0394ed7341b98019f306694f6,
+    type: 2}
 --- !u!1001 &4184735208954732863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -300,6 +302,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7453126887534007949}
     m_Modifications:
+    - target: {fileID: 6608256565195802282, guid: bea3d0331ef8a4541aa977129a314d07,
+        type: 3}
+      propertyPath: m_Name
+      value: RootKeyBody
+      objectReference: {fileID: 0}
     - target: {fileID: 6608256565195802286, guid: bea3d0331ef8a4541aa977129a314d07,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -354,11 +361,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6608256565195802282, guid: bea3d0331ef8a4541aa977129a314d07,
-        type: 3}
-      propertyPath: m_Name
-      value: RootKeyBody
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bea3d0331ef8a4541aa977129a314d07, type: 3}
