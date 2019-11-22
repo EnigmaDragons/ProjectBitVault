@@ -5,6 +5,8 @@ using UnityEngine;
 public class IntroLoopAudioPlayer : ScriptableObject
 {
     private IntroloopAudio _currentClip;
+
+    public void Init() => _currentClip = null;
     
     public void PlaySelectedMusicLooping(IntroloopAudio clipToPlay)
     {
