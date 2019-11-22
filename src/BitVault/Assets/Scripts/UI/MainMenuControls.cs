@@ -5,17 +5,16 @@ public class MainMenuControls : MonoBehaviour
 {
     [SerializeField] private Navigator navigator;
     [SerializeField] private Button playButton;
-    [SerializeField] private Button optionsButton;
     [SerializeField] private Button creditsButton;
     [SerializeField] private Button exitButton;
+    [SerializeField] private GameObject exitButtonObject;
 
     private void Awake()
     {
         if (Application.isMobilePlatform || Application.platform == RuntimePlatform.WebGLPlayer)
-            exitButton.enabled = false;
+            exitButtonObject.SetActive(false);
         playButton.onClick.AddListener(navigator.NavigateToLevelSelect);
         creditsButton.onClick.AddListener(navigator.NavigateToCredits);
-        optionsButton.onClick.AddListener(() => Debug.Log("Options Button was Pressed"));
         exitButton.onClick.AddListener(Application.Quit);
     }
 }
