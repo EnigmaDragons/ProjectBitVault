@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 449368862}
   - component: {fileID: 449368863}
   - component: {fileID: 449368865}
-  - component: {fileID: 1714102321}
   - component: {fileID: 189053914726833484}
+  - component: {fileID: 998014594998745595}
   m_Layer: 0
   m_Name: ReactiveSystems
   m_TagString: Untagged
@@ -51,7 +51,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277e606ca0814bad82702c6c046d8cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  piece: {fileID: 11400000, guid: d282e5116cb67fc4ea25819f6057bab2, type: 2}
   map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
 --- !u!114 &8953835720049182759
 MonoBehaviour:
@@ -132,19 +131,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stars: {fileID: 11400000, guid: 2ae4308fec58df94b863c1ed4ec4dc3a, type: 2}
---- !u!114 &1714102321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5606890674040241735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97e3ae8f1b624f84a165a6616625d0b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
 --- !u!114 &189053914726833484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,3 +144,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 11400000, guid: 26b78a62af3d8984a985383c5b9f59d8, type: 2}
+--- !u!114 &998014594998745595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5606890674040241735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde7f671570e4c75aa989d988a6ed57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  piece: {fileID: 11400000, guid: d282e5116cb67fc4ea25819f6057bab2, type: 2}
+  map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
