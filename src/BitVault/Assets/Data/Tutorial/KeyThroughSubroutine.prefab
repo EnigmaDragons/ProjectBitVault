@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 886654850220459948}
   - component: {fileID: 5545193763184339852}
   - component: {fileID: 1544088320025822223}
-  - component: {fileID: 7898894561163186691}
   - component: {fileID: 7231876597059700896}
   - component: {fileID: -3046761093299340883}
   - component: {fileID: 3659285754854291008}
+  - component: {fileID: 7283967643223250107}
   m_Layer: 0
   m_Name: KeyThroughSubroutine
   m_TagString: Untagged
@@ -74,20 +74,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277e606ca0814bad82702c6c046d8cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  piece: {fileID: 11400000, guid: 09675bfe07eaa3647808666f7f373fe2, type: 2}
-  map: {fileID: 11400000, guid: 8782db3e840a8a44989454c66cdb9490, type: 2}
---- !u!114 &7898894561163186691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6953052094352097728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97e3ae8f1b624f84a165a6616625d0b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   map: {fileID: 11400000, guid: 8782db3e840a8a44989454c66cdb9490, type: 2}
 --- !u!114 &7231876597059700896
 MonoBehaviour:
@@ -128,6 +114,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d42dca9acba4ed4b63f1c0ccabd1983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  map: {fileID: 11400000, guid: 8782db3e840a8a44989454c66cdb9490, type: 2}
+--- !u!114 &7283967643223250107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6953052094352097728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde7f671570e4c75aa989d988a6ed57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  piece: {fileID: 11400000, guid: 09675bfe07eaa3647808666f7f373fe2, type: 2}
   map: {fileID: 11400000, guid: 8782db3e840a8a44989454c66cdb9490, type: 2}
 --- !u!1001 &132686848223645743
 PrefabInstance:
