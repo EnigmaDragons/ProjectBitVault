@@ -11,6 +11,7 @@ public class InGameDialogue : MonoBehaviour
     [SerializeField] private Image bust;
     [SerializeField] private Navigator navigator;
     [SerializeField] private Button continueButton;
+    [SerializeField] private Button skipButton;
     [SerializeField] private GameObject dialogueParent;
 
     private DialogueLine[] _currentDialogue;
@@ -18,7 +19,11 @@ public class InGameDialogue : MonoBehaviour
     private Action _onDialogueFinished;
     private GameObject _customDisplayInstance;
 
-    private void Awake() => continueButton.onClick.AddListener(Continue);
+    private void Awake()
+    {
+        continueButton.onClick.AddListener(Continue);
+        skipButton.onClick.AddListener(Skip);
+    } 
     private void OnEnable() => Message.Subscribe<EndingLevelAnimationFinished>(e => End(), this);
     private void OnDisable() => Message.Unsubscribe(this);
 
@@ -72,6 +77,11 @@ public class InGameDialogue : MonoBehaviour
                 bust.gameObject.SetActive(true);
             _nextIndex++;
         }
+    }
+
+    public void Skip()
+    {
+        _onDialogueFinished();
     }
 }
 
