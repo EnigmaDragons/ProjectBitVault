@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed685f8f2b2143dda5e175dec4f46ca4, type: 3}
-  m_Name: CurrentZone
+  m_Script: {fileID: 11500000, guid: 649c4bb637ff470084aa20424d0e06f0, type: 3}
+  m_Name: IsLevelUnlockedCondition
   m_EditorClassIdentifier: 
   zones: {fileID: 11400000, guid: da6d9607955f7a04cac5744764d95f85, type: 2}
-  zone: {fileID: 11400000, guid: 3e2fbcd9a0964004f8268315f80eadeb, type: 2}
-  onCurrentZoneChanged: {fileID: 11400000, guid: a37264a735c07894dae454f282156a6f,
-    type: 2}
+  storage: {fileID: 11400000, guid: 1458f9b8798b4f147b62b7883c2ba217, type: 2}
+  isDevelopmentMode: {fileID: 11400000, guid: 49114531547a09c44aa9bf753a5a07f7, type: 2}

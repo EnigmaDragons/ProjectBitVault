@@ -10,7 +10,19 @@ public class LevelButton : MonoBehaviour
     [SerializeField] private GameObject[] stars;
     [SerializeField] private GameObject locked;
     [SerializeField] private SaveStorage storage;
-
+    [SerializeField] private Navigator navigator;
+    [SerializeField] private CurrentLevel currentLevel;
+    [SerializeField] private IsLevelUnlockedCondition levelUnlocked;
+    
+    public void Init(int zoneNumber, int levelNum, GameLevel level)
+    {
+        Init($"{levelNum + 1}", () =>
+        {
+            currentLevel.SelectLevel(level, zoneNumber, levelNum);
+            navigator.NavigateToGameScene();
+        }, level, levelUnlocked.IsLevelUnlocked(zoneNumber, levelNum));
+    }    
+    
     public void Init(string text, Action onClick, GameLevel level, bool available)
     {
         textField.text = text;
@@ -21,4 +33,3 @@ public class LevelButton : MonoBehaviour
         locked.SetActive(!available);
     }
 }
-  
