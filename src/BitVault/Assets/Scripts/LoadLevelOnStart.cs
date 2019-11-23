@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public sealed class LoadLevelOnAwake : MonoBehaviour
+public sealed class LoadLevelOnStart : MonoBehaviour
 {
     [SerializeField] private GameState state;
 

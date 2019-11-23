@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
-public class SaveStarsAchievedOnLevel : MonoBehaviour
+public class SaveStarsAchievedOnLevel : OnMessage<EndingLevelAnimationFinished>
 {
     [SerializeField] private CurrentLevelStars stars;
     [SerializeField] private CurrentLevel level;
     [SerializeField] private SaveStorage storage;
 
-    private void Awake() => storage.SaveStars(level.ActiveLevel, stars.Count);
+    protected override void Execute(EndingLevelAnimationFinished msg) => storage.SaveStars(level.ActiveLevel, stars.Count);
 }
