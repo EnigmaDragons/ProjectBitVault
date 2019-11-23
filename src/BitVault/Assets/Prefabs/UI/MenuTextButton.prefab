@@ -139,6 +139,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sound: {fileID: 8300000, guid: 4724f1b4a0038ef4997f2e26fffbab82, type: 3}
   player: {fileID: 11400000, guid: 86eac65d09e3f1643a51c753e9397bf6, type: 2}
+  volume:
+    UseConstant: 1
+    ConstantValue: 0.5
+    FloatVariable: {fileID: 0}
 --- !u!114 &8855587969743688937
 MonoBehaviour:
   m_ObjectHideFlags: 0
