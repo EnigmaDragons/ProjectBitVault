@@ -4,7 +4,7 @@ public class DeselectOnDeath : MonoBehaviour
 {
     [SerializeField] private CurrentSelectedPiece piece;
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         piece.Selected.IfPresent(p =>
         {

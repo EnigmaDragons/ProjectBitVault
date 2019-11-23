@@ -91,6 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indicatorPrototype: {fileID: 4534945980460334753, guid: 57bc45ce059190a42841419a7e1c7a51,
     type: 3}
+  piece: {fileID: 11400000, guid: 09675bfe07eaa3647808666f7f373fe2, type: 2}
 --- !u!114 &4189410719177838600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,18 +215,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SubroutinePrefab
       objectReference: {fileID: 0}
-    - target: {fileID: 6753869008907228048, guid: 36129413272ae754ba17c1cb4c98256f,
-        type: 3}
-      propertyPath: piece
-      value: 
-      objectReference: {fileID: 11400000, guid: 09675bfe07eaa3647808666f7f373fe2,
-        type: 2}
-    - target: {fileID: 3476885767068668910, guid: 36129413272ae754ba17c1cb4c98256f,
-        type: 3}
-      propertyPath: map
-      value: 
-      objectReference: {fileID: 11400000, guid: 8782db3e840a8a44989454c66cdb9490,
-        type: 2}
     - target: {fileID: 8174199022817812765, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: map
@@ -233,6 +222,12 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 8782db3e840a8a44989454c66cdb9490,
         type: 2}
     - target: {fileID: 1059105254986648213, guid: 36129413272ae754ba17c1cb4c98256f,
+        type: 3}
+      propertyPath: map
+      value: 
+      objectReference: {fileID: 11400000, guid: 8782db3e840a8a44989454c66cdb9490,
+        type: 2}
+    - target: {fileID: 3476885767068668910, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: map
       value: 
@@ -249,6 +244,12 @@ PrefabInstance:
       propertyPath: map
       value: 
       objectReference: {fileID: 11400000, guid: 8782db3e840a8a44989454c66cdb9490,
+        type: 2}
+    - target: {fileID: 6753869008907228048, guid: 36129413272ae754ba17c1cb4c98256f,
+        type: 3}
+      propertyPath: piece
+      value: 
+      objectReference: {fileID: 11400000, guid: 09675bfe07eaa3647808666f7f373fe2,
         type: 2}
     - target: {fileID: 6295999075420405747, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
@@ -420,24 +421,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RootKeyPrefab
       objectReference: {fileID: 0}
-    - target: {fileID: 7607023302739391261, guid: 06a8110c0fdedc247a2ee96d19b4c351,
-        type: 3}
-      propertyPath: map
-      value: 
-      objectReference: {fileID: 11400000, guid: 8782db3e840a8a44989454c66cdb9490,
-        type: 2}
-    - target: {fileID: 9083317851340695971, guid: 06a8110c0fdedc247a2ee96d19b4c351,
-        type: 3}
-      propertyPath: gameInputActive
-      value: 
-      objectReference: {fileID: 11400000, guid: 44b927fa10d7e384aad27ccc937ffb7f,
-        type: 2}
-    - target: {fileID: 9083317851340695971, guid: 06a8110c0fdedc247a2ee96d19b4c351,
-        type: 3}
-      propertyPath: map
-      value: 
-      objectReference: {fileID: 11400000, guid: 8782db3e840a8a44989454c66cdb9490,
-        type: 2}
     - target: {fileID: 3523439096375310712, guid: 06a8110c0fdedc247a2ee96d19b4c351,
         type: 3}
       propertyPath: map
@@ -451,6 +434,24 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 09675bfe07eaa3647808666f7f373fe2,
         type: 2}
     - target: {fileID: 1540182821294564217, guid: 06a8110c0fdedc247a2ee96d19b4c351,
+        type: 3}
+      propertyPath: map
+      value: 
+      objectReference: {fileID: 11400000, guid: 8782db3e840a8a44989454c66cdb9490,
+        type: 2}
+    - target: {fileID: 7607023302739391261, guid: 06a8110c0fdedc247a2ee96d19b4c351,
+        type: 3}
+      propertyPath: map
+      value: 
+      objectReference: {fileID: 11400000, guid: 8782db3e840a8a44989454c66cdb9490,
+        type: 2}
+    - target: {fileID: 9083317851340695971, guid: 06a8110c0fdedc247a2ee96d19b4c351,
+        type: 3}
+      propertyPath: gameInputActive
+      value: 
+      objectReference: {fileID: 11400000, guid: 44b927fa10d7e384aad27ccc937ffb7f,
+        type: 2}
+    - target: {fileID: 9083317851340695971, guid: 06a8110c0fdedc247a2ee96d19b4c351,
         type: 3}
       propertyPath: map
       value: 
@@ -543,12 +544,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RootAccessPrefab
       objectReference: {fileID: 0}
-    - target: {fileID: 9196646626864782064, guid: 9d2fd084446131241abb3a0782bb1517,
-        type: 3}
-      propertyPath: map
-      value: 
-      objectReference: {fileID: 11400000, guid: 8782db3e840a8a44989454c66cdb9490,
-        type: 2}
     - target: {fileID: -6579248514674523112, guid: 9d2fd084446131241abb3a0782bb1517,
         type: 3}
       propertyPath: map
@@ -567,6 +562,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3972359594438496840, guid: 88be299740ee48c47ab916280240a371,
         type: 3}
+    - target: {fileID: 9196646626864782064, guid: 9d2fd084446131241abb3a0782bb1517,
+        type: 3}
+      propertyPath: map
+      value: 
+      objectReference: {fileID: 11400000, guid: 8782db3e840a8a44989454c66cdb9490,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d2fd084446131241abb3a0782bb1517, type: 3}
 --- !u!4 &6681840916857392689 stripped

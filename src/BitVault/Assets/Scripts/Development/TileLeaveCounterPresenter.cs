@@ -12,8 +12,10 @@ public class TileLeaveCounterPresenter : OnMessage<PieceMoved>
     private void Awake()
     {
         _pos = new TilePoint(gameObject);
-        if (!Debug.isDebugBuild || !isEnabled)
-            Destroy(gameObject);
+        if (Debug.isDebugBuild && isEnabled) return;
+        
+        text.enabled = false;
+        enabled = false;
     }
 
     protected override void Execute(PieceMoved msg)

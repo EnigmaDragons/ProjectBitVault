@@ -269,7 +269,6 @@ namespace E7.Introloop
             if (!usingAndPlaying && !isSameSongAsAboutToPlay)
             {
                 //If not, it is now safe to unload it
-                //Debug.Log("Unloading");
                 twoTracks[trackNumber].Unload();
             }
         }

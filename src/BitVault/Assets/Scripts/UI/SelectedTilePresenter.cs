@@ -3,17 +3,28 @@ using UnityEngine;
 public sealed class SelectedTilePresenter : MonoBehaviour
 {
     [SerializeField] private GameObject indicatorPrototype;
+    [SerializeField] private CurrentSelectedPiece piece;
     private GameObject _selectionIndicator;
 
     private void OnEnable()
     {
-        Message.Subscribe<PieceSelected>(p => Show(p.Piece), this);
-        Message.Subscribe<PieceDeselected>(_ => Hide(), this);
+        piece.OnChanged.Subscribe(UpdatePieceState, this);
+        //Message.Subscribe<PieceSelected>(p => Show(p.Piece), this);
+        //Message.Subscribe<PieceDeselected>(_ => Hide(), this);
     }
 
     private void OnDisable()
     {
-        Message.Unsubscribe(this);
+        piece.OnChanged.Unsubscribe(this);
+        //Message.Unsubscribe(this);
+    }
+
+    private void UpdatePieceState()
+    {
+        if (piece.Selected.IsPresent)
+            Show(piece.Selected.Value);
+        else
+            Hide();
     }
     
     private void Hide()

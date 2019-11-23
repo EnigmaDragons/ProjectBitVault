@@ -268,8 +268,6 @@ namespace E7.Introloop
 
         private void ScheduleNextLoop()
         {
-            //note : (nextSourceToPlay + 1) % 2 is not always the same as "currently playing source" even though we have 2 tracks in total, because this "nextSourceToPlay" updates when next loop is "scheduled".
-
             SetScheduledEndTime((nextSourceToPlay + 1) % 2, nextTransitionTime);
             PlayScheduled(nextSourceToPlay, nextTransitionTime);
             twoSources[nextSourceToPlay].time = music.UnscaledIntroLength;
@@ -277,7 +275,6 @@ namespace E7.Introloop
             nextTransitionTime = nextTransitionTime + (music.loopWholeAudio ? music.ClipLength : music.LoopingLength);
 
             nextSourceToPlay = (nextSourceToPlay + 1) % 2;
-            //Debug.Log("IntroloopTrack : Next loop scheduled.");
         }
 
         internal void Stop()
@@ -286,7 +283,6 @@ namespace E7.Introloop
             twoSources[1].Stop();
             pauseDspTimestamp = AudioSettings.dspTime;
 
-            //This is so that the schedule won't cancel the stop by itself
             isPlaying = false;
             isPausing = false;
         }
@@ -661,7 +657,6 @@ namespace E7.Introloop
 
         private void PlayScheduled(int sourceNumber, double absoluteTime)
         {
-            //Debug.Log("Source " +  sourceNumber + " play at " + absoluteTime);
             twoSources[sourceNumber].PlayScheduled(absoluteTime);
             sourceWillPlayTime[sourceNumber] = absoluteTime;
         }
