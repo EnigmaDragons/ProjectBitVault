@@ -4,15 +4,15 @@ using UnityEngine;
 [CreateAssetMenu]
 public class IntroLoopAudioPlayer : ScriptableObject
 {
-    private IntroloopAudio _currentClip;
+    [SerializeField] private IntroloopAudio currentClip;
 
-    public void Init() => _currentClip = null;
+    public void Init() => currentClip = null;
     
     public void PlaySelectedMusicLooping(IntroloopAudio clipToPlay)
     {
-        if (_currentClip != null && _currentClip.name == clipToPlay.name) return;
+        if (currentClip != null && currentClip.name == clipToPlay.name) return;
         
-        _currentClip = clipToPlay;
+        currentClip = clipToPlay;
         IntroloopPlayer.Instance.Play(clipToPlay);
     }
 }

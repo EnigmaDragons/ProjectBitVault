@@ -2,7 +2,7 @@
 
 public class CurrentLevel : ScriptableObject
 {
-    [SerializeField] private GameLevel selectedLevel;
+    [DTValidator.Optional, SerializeField] private GameLevel selectedLevel;
     [DTValidator.Optional, SerializeField] private GameObject activeLevelPrefab;
     [SerializeField] private int currentZoneNum;
     [SerializeField] private int currentLevelNum;

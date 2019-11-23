@@ -346,18 +346,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1138708043597606668}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: UpdateZone
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &2449610536887202077
@@ -1311,7 +1300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1710,18 +1699,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1602784370744800612}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: UpdateZone
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1001 &4560644689977876632
@@ -1731,6 +1709,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2449610537204840996}
     m_Modifications:
+    - target: {fileID: 3511904837439593242, guid: e300fa04153ae664ca02ad9339483019,
+        type: 3}
+      propertyPath: m_Name
+      value: MenuTextButton
+      objectReference: {fileID: 0}
     - target: {fileID: 7028737241003859804, guid: e300fa04153ae664ca02ad9339483019,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1835,11 +1818,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3511904837439593242, guid: e300fa04153ae664ca02ad9339483019,
-        type: 3}
-      propertyPath: m_Name
-      value: MenuTextButton
       objectReference: {fileID: 0}
     - target: {fileID: 8855587969743688937, guid: e300fa04153ae664ca02ad9339483019,
         type: 3}
@@ -1955,6 +1933,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2413264749904772464}
     m_Modifications:
+    - target: {fileID: 8709949814233554820, guid: 207293ab9f05dc343af2441d168b83c2,
+        type: 3}
+      propertyPath: m_Name
+      value: DataCubeUIBody
+      objectReference: {fileID: 0}
     - target: {fileID: 3556287782801383742, guid: 207293ab9f05dc343af2441d168b83c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2010,11 +1993,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8709949814233554820, guid: 207293ab9f05dc343af2441d168b83c2,
-        type: 3}
-      propertyPath: m_Name
-      value: DataCubeUIBody
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 207293ab9f05dc343af2441d168b83c2, type: 3}
 --- !u!1001 &7322857898186279204
@@ -2024,11 +2002,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2449610536887202076}
     m_Modifications:
-    - target: {fileID: 4007992159401717330, guid: 1d09dd3c8e74f514985073c1c276433a,
-        type: 3}
-      propertyPath: m_Name
-      value: StaticLevelSelectGroup
-      objectReference: {fileID: 0}
     - target: {fileID: 7524559016057768000, guid: 1d09dd3c8e74f514985073c1c276433a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2133,6 +2106,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007992159401717330, guid: 1d09dd3c8e74f514985073c1c276433a,
+        type: 3}
+      propertyPath: m_Name
+      value: StaticLevelSelectGroup
       objectReference: {fileID: 0}
     - target: {fileID: 5802497726190297091, guid: 1d09dd3c8e74f514985073c1c276433a,
         type: 3}
