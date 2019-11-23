@@ -13,13 +13,15 @@ public class LevelButton : MonoBehaviour
     [SerializeField] private Navigator navigator;
     [SerializeField] private CurrentLevel currentLevel;
     [SerializeField] private IsLevelUnlockedCondition levelUnlocked;
+    [SerializeField] private BoolVariable isLevelStart;
     
     public void Init(int zoneNumber, int levelNum, GameLevel level)
     {
         Init($"{levelNum + 1}", () =>
         {
             currentLevel.SelectLevel(level, zoneNumber, levelNum);
-            navigator.NavigateToGameScene();
+            isLevelStart.Value = true;
+            navigator.NavigateToDialogue();
         }, level, levelUnlocked.IsLevelUnlocked(zoneNumber, levelNum));
     }    
     

@@ -9,6 +9,7 @@ namespace Assets.Scripts.UI
         [SerializeField] private Navigator navigator;
         [SerializeField] private GameObject button;
         [SerializeField] private SaveStorage storage;
+        [SerializeField] private BoolVariable isLevelStart;
 
         private void Awake() => button.SetActive(!IsLastLevel || (!IsLastZone && IsNextZoneUnlocked));
 
@@ -21,8 +22,9 @@ namespace Assets.Scripts.UI
             var nextZone = level.LevelNumber + 1 == zones.Value[level.ZoneNumber].Value.Length ? level.ZoneNumber + 1 : level.ZoneNumber;
             var nextLevel = level.LevelNumber + 1 == zones.Value[level.ZoneNumber].Value.Length ? 0 : level.LevelNumber + 1;
             level.SelectLevel(zones.Value[nextZone].Value[nextLevel], nextZone, nextLevel);
+            isLevelStart.Value = true;
             storage.SaveZone(nextZone);
-            navigator.NavigateToGameScene();
+            navigator.NavigateToDialogue();
         }
     }
 }

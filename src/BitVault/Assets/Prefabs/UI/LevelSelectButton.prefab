@@ -225,6 +225,7 @@ MonoBehaviour:
   navigator: {fileID: 11400000, guid: 9ff41b1c7e54dd34d86e0faa800274fc, type: 2}
   currentLevel: {fileID: 11400000, guid: f81c10460cdb9464397ed5864a15114b, type: 2}
   levelUnlocked: {fileID: 11400000, guid: 6204bae6b2cb3234cbe22457103ab084, type: 2}
+  isLevelStart: {fileID: 11400000, guid: 88418d1442fdadb4ab469f94a2b79527, type: 2}
 --- !u!1 &3655132352191685227
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,6 +689,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 666715952751355326, guid: 220bf6dc8b8a32743be2856db678f65e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5296366940714652378, guid: 220bf6dc8b8a32743be2856db678f65e,
         type: 3}
       propertyPath: m_Enabled
@@ -701,11 +707,6 @@ PrefabInstance:
     - target: {fileID: 5296366940714652378, guid: 220bf6dc8b8a32743be2856db678f65e,
         type: 3}
       propertyPath: m_ChildControlHeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 666715952751355326, guid: 220bf6dc8b8a32743be2856db678f65e,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4276693750488818814, guid: 220bf6dc8b8a32743be2856db678f65e,

@@ -1,5 +1,4 @@
-﻿using System;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,54 +11,43 @@ public class InGameDialogue : MonoBehaviour
     [SerializeField] private Navigator navigator;
     [SerializeField] private Button continueButton;
     [SerializeField] private Button skipButton;
-    [SerializeField] private GameObject dialogueParent;
+    [SerializeField] private BoolReference IsLevelStart;
 
     private DialogueLine[] _currentDialogue;
     private int _nextIndex = 0;
-    private Action _onDialogueFinished;
     private GameObject _customDisplayInstance;
 
     private void Awake()
     {
         continueButton.onClick.AddListener(Continue);
         skipButton.onClick.AddListener(Skip);
-    } 
-    private void OnEnable() => Message.Subscribe<EndingLevelAnimationFinished>(e => End(), this);
-    private void OnDisable() => Message.Unsubscribe(this);
+    }
 
     private void Start()
     {
-        var openingDialogue = level.ActiveLevel.OpeningDialogue;
-        if (openingDialogue.Length == 0)
-            dialogueParent.SetActive(false);
+        var dialogue = IsLevelStart.Value ? level.ActiveLevel.OpeningDialogue : level.ActiveLevel.ClosingDialogue;
+        if (dialogue.Length == 0)
+            Finish();
         else
         {
-            _currentDialogue = openingDialogue;
+            _currentDialogue = dialogue;
             _nextIndex = 0;
-            _onDialogueFinished = () => dialogueParent.SetActive(false);
             Continue();
         }
     }
 
-    private void End()
+    private void Finish()
     {
-        var closingDialogue = level.ActiveLevel.ClosingDialogue;
-        if (closingDialogue.Length == 0)
-            navigator.NavigateToRewards();
+        if (IsLevelStart.Value)
+            navigator.NavigateToGameScene();
         else
-        {
-            dialogueParent.SetActive(true);
-            _currentDialogue = closingDialogue;
-            _nextIndex = 0;
-            _onDialogueFinished = () => navigator.NavigateToRewards();
-            Continue();
-        }
+            navigator.NavigateToRewards();
     }
 
     public void Continue()
     {
         if (_nextIndex == _currentDialogue.Length)
-            _onDialogueFinished();
+            Finish();
         else
         {
             if (_customDisplayInstance)
@@ -81,7 +69,7 @@ public class InGameDialogue : MonoBehaviour
 
     public void Skip()
     {
-        _onDialogueFinished();
+        Finish();
     }
 }
 
