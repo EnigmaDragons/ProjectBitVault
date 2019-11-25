@@ -13,7 +13,7 @@ public class MixerVolumeSlider : MonoBehaviour
         slider.value = PlayerPrefs.GetFloat(valueName, 0.75f);
     }
     
-    public void SetLevel (float sliderValue)
+    public void SetLevel(float sliderValue)
     {
         mixer.SetFloat(valueName, Mathf.Log10(sliderValue) * 20);
         PlayerPrefs.SetFloat(valueName, sliderValue);
