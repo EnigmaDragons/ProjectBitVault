@@ -7,7 +7,7 @@ public class RewardStars : MonoBehaviour
 
     private void Awake()
     {
-        for (var i = 0; i < stars.Count; i++)
-            starObjects[i].SetActive(true);
+        for (var i = 0; i < starObjects.Length; i++)
+            starObjects[i].SetActive(i < stars.Count);
     }
 }
