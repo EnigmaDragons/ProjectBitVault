@@ -23,10 +23,11 @@ public class LevelButton : MonoBehaviour
             isLevelStart.Value = true;
             navigator.NavigateToDialogue();
         }, level, levelUnlocked.IsLevelUnlocked(zoneNumber, levelNum));
-    }    
-    
-    public void Init(string text, Action onClick, GameLevel level, bool available)
+    }
+
+    private void Init(string text, Action onClick, GameLevel level, bool available)
     {
+        gameObject.SetActive(true);
         textField.text = text;
         button.onClick.AddListener(() => onClick());
         for (var i = 0; i < storage.GetStars(level) && i < stars.Length; i++)

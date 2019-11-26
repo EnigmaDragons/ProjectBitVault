@@ -9,8 +9,10 @@ public sealed class LevelZoneButtons : MonoBehaviour
         for (var i = 0; i < buttons.Length; i++)
         {
             var button = buttons[i];
-            button.gameObject.SetActive(i < zone.Value.Length);
-            button.Init(zoneNumber, i, zone.Value[i]);
+            var hasLevel = i < zone.Value.Length;
+            button.gameObject.SetActive(hasLevel);
+            if (hasLevel)
+                button.Init(zoneNumber, i, zone.Value[i]);
         }
     }
 }

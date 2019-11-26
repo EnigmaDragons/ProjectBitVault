@@ -7,9 +7,5 @@ public class ZoneBorderColor : GameEventTrigger
     [SerializeField] private Image image;
 
     protected override GameEvent Trigger => zone.OnCurrentZoneChanged;
-    protected override void Execute()
-    {
-        Debug.Log("Updated Color");
-        image.color = zone.Zone.BackgroundColor;
-    }
+    protected override void Execute() => image.color = zone.Zone.BackgroundColor;
 }
