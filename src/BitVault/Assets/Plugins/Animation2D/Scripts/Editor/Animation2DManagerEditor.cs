@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if UNITY_EDITOR
+using UnityEngine;
 using UnityEditor;
 
 [CustomEditor(typeof(Animation2DManager))]
@@ -39,3 +40,4 @@ public class Animation2DManagerEditor : Editor
         EditorGUILayout.HelpBox("Note that you can add more than 1 animation to this gameobject, manager will detect all and control them by their name, please use different names otherwise they'll be played at the same time.", MessageType.Info);
     }
 }
+#endif

@@ -10,6 +10,7 @@ public class InGameDialogue : MonoBehaviour
     [SerializeField] private Image bust;
     [SerializeField] private Navigator navigator;
     [SerializeField] private Button continueButton;
+    [SerializeField] private Button alternateContinueButton;
     [SerializeField] private Button skipButton;
     [SerializeField] private BoolReference IsLevelStart;
 
@@ -20,6 +21,7 @@ public class InGameDialogue : MonoBehaviour
     private void Awake()
     {
         continueButton.onClick.AddListener(Continue);
+        alternateContinueButton.onClick.AddListener(Continue);
         skipButton.onClick.AddListener(Skip);
     }
 
