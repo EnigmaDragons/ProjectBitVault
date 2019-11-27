@@ -9,6 +9,7 @@ public sealed class Navigator : ScriptableObject
     public void NavigateToLevelSelect() => NavigateTo("LevelSelectScene");
     public void NavigateToCredits() => NavigateTo("CreditsScene");
     public void NavigateToDialogue() => NavigateTo("DialogueScene");
+    public void ExitGame() => Application.Quit();
     
     private void NavigateTo(string name)
     {
