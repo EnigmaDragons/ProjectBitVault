@@ -163,6 +163,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  alternateKeys: 
 --- !u!1 &6462482207534114938
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.7529412}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.627451}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -923,7 +924,7 @@ PrefabInstance:
     - target: {fileID: 2327720667991872325, guid: 506441fbe38aa3c4092e2f3430f30574,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.76862746
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 506441fbe38aa3c4092e2f3430f30574, type: 3}
