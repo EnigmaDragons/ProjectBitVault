@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7408844143108933189}
   - component: {fileID: 1326165581653608367}
   - component: {fileID: 1013242949515757510}
+  - component: {fileID: 1903629545265122778}
   m_Layer: 0
   m_Name: DialogueUI
   m_TagString: Untagged
@@ -120,11 +121,42 @@ MonoBehaviour:
   bust: {fileID: 784576840980051949}
   navigator: {fileID: 11400000, guid: 9ff41b1c7e54dd34d86e0faa800274fc, type: 2}
   continueButton: {fileID: 6452790182540260574}
+  alternateContinueButton: {fileID: 5620242189595677312}
   skipButton: {fileID: 3616079234865360021}
   IsLevelStart:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 88418d1442fdadb4ab469f94a2b79527, type: 2}
+--- !u!114 &1903629545265122778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096350206656118937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d642554f8e774700924def0280669fb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 32
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1013242949515757510}
+        m_MethodName: Continue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  alternateKeys: 0d0000001301000064000000
 --- !u!1 &1749354190004258670
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,6 +707,18 @@ MonoBehaviour:
 --- !u!114 &3616079234865360021 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7835401794308876882, guid: 2e8222a5fe5bf934881762a5bb868432,
+    type: 3}
+  m_PrefabInstance: {fileID: 6814531781181425351}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5620242189595677312 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1399784897633997895, guid: 2e8222a5fe5bf934881762a5bb868432,
     type: 3}
   m_PrefabInstance: {fileID: 6814531781181425351}
   m_PrefabAsset: {fileID: 0}
