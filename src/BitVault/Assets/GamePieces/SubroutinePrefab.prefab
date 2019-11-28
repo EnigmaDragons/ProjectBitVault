@@ -95,7 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d49ccbe76d0114ba686f31bba68a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 6465409904685554135}
+  renderers:
+  - {fileID: 6465409904685554135}
   deathMask: {fileID: 2800000, guid: 81288d7272d26f747883b10535bd88de, type: 3}
   secondsTilDeath: 1
 --- !u!114 &5179455558645058790
@@ -611,11 +612,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8030467830039979414}
     m_Modifications:
-    - target: {fileID: 8298080340945689110, guid: 818fbbfea245c7647a60c461dafc7386,
-        type: 3}
-      propertyPath: m_Name
-      value: SubroutineBody
-      objectReference: {fileID: 0}
     - target: {fileID: 7251651373569170257, guid: 818fbbfea245c7647a60c461dafc7386,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -670,6 +666,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8298080340945689110, guid: 818fbbfea245c7647a60c461dafc7386,
+        type: 3}
+      propertyPath: m_Name
+      value: SubroutineBody
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 818fbbfea245c7647a60c461dafc7386, type: 3}

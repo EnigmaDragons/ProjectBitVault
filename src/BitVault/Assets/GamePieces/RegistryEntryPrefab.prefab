@@ -97,7 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d49ccbe76d0114ba686f31bba68a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 401280126264798865}
+  renderers:
+  - {fileID: 401280126264798865}
+  - {fileID: 2746357589784149074}
   deathMask: {fileID: 2800000, guid: 81288d7272d26f747883b10535bd88de, type: 3}
   secondsTilDeath: 1
 --- !u!114 &2150940620113341988
