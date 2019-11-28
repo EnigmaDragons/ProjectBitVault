@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7528635021232137636}
   - component: {fileID: 6102483502647685846}
   - component: {fileID: 8628105697271066178}
+  - component: {fileID: 2322392468783669551}
   m_Layer: 0
   m_Name: GameUI
   m_TagString: Untagged
@@ -164,6 +165,21 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   alternateKeys: 
+--- !u!114 &2322392468783669551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5683166394976038797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 798647a8760e4347aad1bfdacfb4c7a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMusic: {fileID: 11400000, guid: 5f60b7897728c064c80ff627b85a09ac, type: 2}
+  currentZone: {fileID: 11400000, guid: e8fc69fe1d2656a4c8f02b9da95abb99, type: 2}
+  player: {fileID: 11400000, guid: 664a2e5161969124bb812fe3f99baaba, type: 2}
 --- !u!1 &6462482207534114938
 GameObject:
   m_ObjectHideFlags: 0

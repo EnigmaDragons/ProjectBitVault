@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1326165581653608367}
   - component: {fileID: 1013242949515757510}
   - component: {fileID: 1903629545265122778}
+  - component: {fileID: 8905336342155193214}
   m_Layer: 0
   m_Name: DialogueUI
   m_TagString: Untagged
@@ -157,6 +158,21 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   alternateKeys: 0d0000001301000064000000
+--- !u!114 &8905336342155193214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096350206656118937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 798647a8760e4347aad1bfdacfb4c7a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMusic: {fileID: 11400000, guid: 5f60b7897728c064c80ff627b85a09ac, type: 2}
+  currentZone: {fileID: 11400000, guid: e8fc69fe1d2656a4c8f02b9da95abb99, type: 2}
+  player: {fileID: 11400000, guid: 664a2e5161969124bb812fe3f99baaba, type: 2}
 --- !u!1 &1749354190004258670
 GameObject:
   m_ObjectHideFlags: 0
