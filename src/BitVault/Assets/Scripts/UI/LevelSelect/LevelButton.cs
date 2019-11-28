@@ -30,8 +30,8 @@ public class LevelButton : MonoBehaviour
         gameObject.SetActive(true);
         textField.text = text;
         button.onClick.AddListener(() => onClick());
-        for (var i = 0; i < storage.GetStars(level) && i < stars.Length; i++)
-            stars[i].SetActive(true);
+        for (var i = 0; i < stars.Length; i++)
+            stars[i].SetActive(storage.GetStars(level) > i);
         button.interactable = available;
         locked.SetActive(!available);
     }
