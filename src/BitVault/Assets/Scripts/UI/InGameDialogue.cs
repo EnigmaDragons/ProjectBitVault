@@ -1,4 +1,6 @@
-﻿using TMPro;
+﻿using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +14,9 @@ public class InGameDialogue : MonoBehaviour
     [SerializeField] private Button continueButton;
     [SerializeField] private Button alternateContinueButton;
     [SerializeField] private Button skipButton;
-    [SerializeField] private BoolReference IsLevelStart;
+    [SerializeField] private BoolVariable IsLevelStart;
+    [SerializeField] private BoolReference OnlyStory;
+    [SerializeField] private DialogueLine BetweenLevelDialogue;
 
     private DialogueLine[] _currentDialogue;
     private int _nextIndex = 0;
@@ -27,7 +31,7 @@ public class InGameDialogue : MonoBehaviour
 
     private void Start()
     {
-        var dialogue = IsLevelStart.Value ? level.ActiveLevel.OpeningDialogue : level.ActiveLevel.ClosingDialogue;
+        var dialogue = IsLevelStart.Value ? OnlyStory.Value ? level.ActiveLevel.OpeningDialogue.Concat(new List<DialogueLine> { BetweenLevelDialogue }).ToArray() : level.ActiveLevel.OpeningDialogue : level.ActiveLevel.ClosingDialogue;
         if (dialogue.Length == 0)
             Finish();
         else
@@ -40,7 +44,12 @@ public class InGameDialogue : MonoBehaviour
 
     private void Finish()
     {
-        if (IsLevelStart.Value)
+        if (IsLevelStart.Value && OnlyStory.Value)
+        {
+            IsLevelStart.Value = false;
+            navigator.NavigateToDialogue();
+        }
+        else if (IsLevelStart.Value) 
             navigator.NavigateToGameScene();
         else
             navigator.NavigateToRewards();
