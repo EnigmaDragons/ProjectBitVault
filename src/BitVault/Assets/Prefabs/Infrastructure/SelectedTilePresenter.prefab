@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3724315831321357458}
   - component: {fileID: 893458879910965754}
+  - component: {fileID: 2983105883524751284}
   m_Layer: 0
   m_Name: SelectedTilePresenter
   m_TagString: Untagged
@@ -46,9 +47,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration:
     UseConstant: 1
-    ConstantValue: 1
+    ConstantValue: 0.99
     FloatVariable: {fileID: 0}
   target: {fileID: 8809391085772053885}
+--- !u!114 &2983105883524751284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928251193778733859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50e3eeed0ddc413fa2d9b209d33c89ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
+  delayDuration: 1
 --- !u!1 &8809391085772053885
 GameObject:
   m_ObjectHideFlags: 0
