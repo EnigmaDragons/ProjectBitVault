@@ -16,6 +16,7 @@ public class InGameDialogue : MonoBehaviour
     [SerializeField] private Button skipButton;
     [SerializeField] private BoolVariable IsLevelStart;
     [SerializeField] private BoolReference OnlyStory;
+    [SerializeField] private BoolReference developmentToolsActive;
     [SerializeField] private DialogueLine BetweenLevelDialogue;
 
     private DialogueLine[] _currentDialogue;
@@ -31,7 +32,11 @@ public class InGameDialogue : MonoBehaviour
 
     private void Start()
     {
-        var dialogue = IsLevelStart.Value ? OnlyStory.Value ? level.ActiveLevel.OpeningDialogue.Concat(new List<DialogueLine> { BetweenLevelDialogue }).ToArray() : level.ActiveLevel.OpeningDialogue : level.ActiveLevel.ClosingDialogue;
+        var dialogue = IsLevelStart.Value 
+            ? developmentToolsActive && OnlyStory.Value 
+                ? level.ActiveLevel.OpeningDialogue.Concat(new List<DialogueLine> { BetweenLevelDialogue }).ToArray() 
+                : level.ActiveLevel.OpeningDialogue 
+            : level.ActiveLevel.ClosingDialogue;
         if (dialogue.Length == 0)
             Finish();
         else
