@@ -16,8 +16,6 @@ public class StringReference
         ConstantValue = value;
     }
 
-    public static implicit operator string(StringReference reference)
-    {
-        return reference.Value;
-    }
+    public static implicit operator string(StringReference reference) => reference.ToString();
+    public override string ToString() => Value;
 }
