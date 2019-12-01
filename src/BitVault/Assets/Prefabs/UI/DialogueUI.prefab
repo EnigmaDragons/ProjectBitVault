@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1013242949515757510}
   - component: {fileID: 1903629545265122778}
   - component: {fileID: 8905336342155193214}
+  - component: {fileID: 4727824055561516408}
   m_Layer: 0
   m_Name: DialogueUI
   m_TagString: Untagged
@@ -182,6 +183,36 @@ MonoBehaviour:
   defaultMusic: {fileID: 11400000, guid: 5f60b7897728c064c80ff627b85a09ac, type: 2}
   currentZone: {fileID: 11400000, guid: e8fc69fe1d2656a4c8f02b9da95abb99, type: 2}
   player: {fileID: 11400000, guid: 664a2e5161969124bb812fe3f99baaba, type: 2}
+--- !u!114 &4727824055561516408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096350206656118937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d642554f8e774700924def0280669fb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 27
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1013242949515757510}
+        m_MethodName: Skip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  alternateKeys: 
 --- !u!1 &1749354190004258670
 GameObject:
   m_ObjectHideFlags: 0
