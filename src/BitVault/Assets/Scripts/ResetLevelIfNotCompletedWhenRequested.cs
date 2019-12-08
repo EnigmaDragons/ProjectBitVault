@@ -1,10 +1,13 @@
+using System.Collections;
 using UnityEngine;
 
 public sealed class ResetLevelIfNotCompletedWhenRequested : MonoBehaviour
 {
     [SerializeField] private GameState state;
+    [SerializeField] private FloatReference resetDuration;
 
     private bool _isCompleted;
+    private bool _readyToReset = true;
 
     private void OnEnable()
     {
@@ -16,7 +19,16 @@ public sealed class ResetLevelIfNotCompletedWhenRequested : MonoBehaviour
 
     private void Reset()
     {
-        if (!_isCompleted)
-            state.InitLevel();
+        if (!_readyToReset || _isCompleted) return;
+        
+        StartCoroutine(ResetCooldown());
+    }
+
+    private IEnumerator ResetCooldown()
+    {
+        _readyToReset = false;
+        state.InitLevel();
+        yield return new WaitForSeconds(resetDuration);
+        _readyToReset = true;
     }
 }
