@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 2322392468783669551}
   - component: {fileID: 430385434283786326}
   - component: {fileID: 3495025815960986049}
+  - component: {fileID: 2959485816349617722}
   m_Layer: 0
   m_Name: GameUI
   m_TagString: Untagged
@@ -217,6 +218,21 @@ MonoBehaviour:
     ConstantValue: 1
     FloatVariable: {fileID: 11400000, guid: 9e232b5ee6066a4428f975f27970236d, type: 2}
   target: {fileID: 8423267294219998454}
+--- !u!114 &2959485816349617722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5683166394976038797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d47cbf2aa949c2bd4581b5a5382d65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets:
+  - {fileID: 8423267294219998454}
+  - {fileID: 2446941907694919903}
 --- !u!1 &6462482207534114938
 GameObject:
   m_ObjectHideFlags: 0
