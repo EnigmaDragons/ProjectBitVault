@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090681d0cad653b4ba4bd3c63f4beb4d, type: 3}
   m_Name: Z5-RedCarpet
   m_EditorClassIdentifier: 
-  levelName: The Red Carpet
+  levelName: Slade's Server
   prefab: {fileID: 832605618936295680, guid: a3b62a90e4360f04985ab7b8e08736c0, type: 3}
   starObjectives:
   - {fileID: 11400000, guid: f4ace5f67f63d324ba8170b167be3fb8, type: 2}
@@ -42,41 +42,26 @@ MonoBehaviour:
       massive failure?
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
     customDisplay: {fileID: 0}
-  - text: You just try and break in!
+  - text: You just try and break in
     character: {fileID: 11400000, guid: 2fb337bf7fc8ebd4895067e36415fc42, type: 2}
     customDisplay: {fileID: 0}
   closingDialogue:
-  - text: Wow that is a lot of money, alright draining his account
-    character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: You have ruined everything! I will hunt you down, you will have to sleep
-      with one eye open!
+  - text: Congratulations Morgan, you fell for my trap! I wanted you to hack into
+      my server so I could trace you
     character: {fileID: 11400000, guid: 2fb337bf7fc8ebd4895067e36415fc42, type: 2}
     customDisplay: {fileID: 0}
-  - text: Disconnected and hiring a private security team to capture and turn Slade
-      in...
-    character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Sending money to Titan Security to help with the damages...
-    character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: It looks like there is a lot of money left over, I think some form of split
-      is in order
+  - text: I knew you were going to trace Morgan, so I traced your tracing message
+      back to you!
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
     customDisplay: {fileID: 0}
-  - text: Alright you did help a little
-    character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - text: Ruby?! Oh... I see now, that explains so much. I should have known, you
+      two had teamed up
+    character: {fileID: 11400000, guid: 2fb337bf7fc8ebd4895067e36415fc42, type: 2}
     customDisplay: {fileID: 0}
-  - text: 50/50
-    character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
+  - text: No matter, I knew my message was going to be traced, so I sent that message
+      to a different server
+    character: {fileID: 11400000, guid: 2fb337bf7fc8ebd4895067e36415fc42, type: 2}
     customDisplay: {fileID: 0}
-  - text: "That\u2019s absurd I did all the heavy lifting 80/20"
-    character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: I got you out of a pinch 40/60
-    character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "I\u2019m sending you 30 and I\u2019m keeping 70, just be happy I\u2019m
-      feeling generous"
-    character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - text: Now I just need to hack that server to get it
+    character: {fileID: 11400000, guid: 2fb337bf7fc8ebd4895067e36415fc42, type: 2}
     customDisplay: {fileID: 0}

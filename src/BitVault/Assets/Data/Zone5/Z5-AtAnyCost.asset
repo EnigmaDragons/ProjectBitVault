@@ -12,11 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090681d0cad653b4ba4bd3c63f4beb4d, type: 3}
   m_Name: Z5-AtAnyCost
   m_EditorClassIdentifier: 
-  levelName: At Any Cost
+  levelName: Storm the Gates
   prefab: {fileID: 4395713519451969914, guid: ad9c311ca73558747a6c52b5ca19fd56, type: 3}
   starObjectives:
   - {fileID: 11400000, guid: f4ace5f67f63d324ba8170b167be3fb8, type: 2}
   - {fileID: 11400000, guid: 9c9956192ce5d14449243607a6f97f2b, type: 2}
   - {fileID: 11400000, guid: 1661252d50dae194482f749ddaeeeb1a, type: 2}
-  openingDialogue: []
-  closingDialogue: []
+  openingDialogue:
+  - text: Can you hack this weather forecast?
+    character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
+    customDisplay: {fileID: 0}
+  - text: How would it make a difference WHEATHER I hacked it or not?
+    character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+    customDisplay: {fileID: 0}
+  - text: If we are to weather the storm, you will need to hack it
+    character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
+    customDisplay: {fileID: 0}
+  - text: Alright then, time to storm the gates of this server
+    character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+    customDisplay: {fileID: 0}
+  closingDialogue:
+  - text: What are we changing the weather prediction to?
+    character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+    customDisplay: {fileID: 0}
+  - text: Non-stop blizzards in our area
+    character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
+    customDisplay: {fileID: 0}
+  - text: How cold hearted of you
+    character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+    customDisplay: {fileID: 0}
