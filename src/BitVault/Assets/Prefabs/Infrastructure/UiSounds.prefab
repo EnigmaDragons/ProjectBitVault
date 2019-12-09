@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6161710953660445880}
   - component: {fileID: 2353165945301154259}
   - component: {fileID: 7539596079999589032}
+  - component: {fileID: 3088017671450944195}
+  - component: {fileID: 3879489092946689559}
   m_Layer: 0
   m_Name: UiSounds
   m_TagString: UiSounds
@@ -143,3 +145,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3088017671450944195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238499321687046426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4647ce80edc48bbb01b24f827b5bd5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 44d15a14bea7a214eb3bc3739c813508, type: 2}
+  valueName: MusicVolume
+--- !u!114 &3879489092946689559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238499321687046426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4647ce80edc48bbb01b24f827b5bd5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 44d15a14bea7a214eb3bc3739c813508, type: 2}
+  valueName: SoundVolume
