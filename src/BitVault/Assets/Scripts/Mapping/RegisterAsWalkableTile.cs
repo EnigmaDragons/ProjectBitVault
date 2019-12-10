@@ -1,12 +1,8 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 
 public class RegisterAsWalkableTile : MonoBehaviour
 {
     [SerializeField] private CurrentLevelMap currentLevelMap;
 
-    void Start()
-    {
-        currentLevelMap.RegisterWalkableTile(gameObject);
-    }
+    private void Awake() => currentLevelMap.RegisterWalkableTile(gameObject);
 }

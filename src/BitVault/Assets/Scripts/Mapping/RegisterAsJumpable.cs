@@ -4,5 +4,5 @@ public class RegisterAsJumpable : MonoBehaviour
 {
     [SerializeField] private CurrentLevelMap map;
 
-    void Start() => map.RegisterAsJumpable(gameObject);
+    private void Awake() => map.RegisterAsJumpable(gameObject);
 }
