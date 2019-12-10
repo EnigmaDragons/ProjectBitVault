@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 
+[Serializable]
 public sealed class PieceMoved
 {
     public GameObject Piece { get; }
@@ -16,4 +18,6 @@ public sealed class PieceMoved
 
     public bool HasJumpedOver(GameObject other) => From.IsAdjacentTo(new TilePoint(other)) && To.IsAdjacentTo(new TilePoint(other))
                                                 && (To.X == From.X || To.Y == From.Y);
+    
+    public void Undo() => Message.Publish(new UndoPieceMoved(Piece, From, To));
 }

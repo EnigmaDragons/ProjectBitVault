@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class ProcessObjectDestruction : OnMessage<ObjectDestroyed>
+public class ProcessObjectDestruction : OnMessage<ObjectDestroyed, UndoObjectDestroyed>
 {
     [SerializeField] private CurrentLevelMap map;
 
@@ -10,4 +10,6 @@ public class ProcessObjectDestruction : OnMessage<ObjectDestroyed>
         if (!msg.IsGameObjectDestructionHandled)
             msg.Object.SetActive(false);
     }
+
+    protected override void Execute(UndoObjectDestroyed msg) => map.RestoreDestroyed(msg.Object);
 }

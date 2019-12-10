@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MovingPiece : MonoBehaviour
 {
@@ -12,6 +11,16 @@ public class MovingPiece : MonoBehaviour
     private Vector3 _start;
     private Vector3 _end;
     private float _t;
+
+    private void Execute(UndoPieceMoved msg)
+    {
+        if (msg.Piece == gameObject)
+        {
+            transform.localPosition = new Vector3(msg.From.X, msg.From.Y, transform.localPosition.z);
+            Message.Publish(new PieceDeselected());
+            Message.Publish(new PieceSelected(gameObject));
+        }
+    }
 
     private void Execute(PieceMoved msg)
     {
@@ -46,6 +55,7 @@ public class MovingPiece : MonoBehaviour
     {
         _moving = false;
         Message.Subscribe<PieceMoved>(Execute, this);
+        Message.Subscribe<UndoPieceMoved>(Execute, this);
     }
 
     private void OnDisable()

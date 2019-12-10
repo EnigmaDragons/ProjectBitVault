@@ -8,13 +8,19 @@ public class MainMenuControls : MonoBehaviour
     [SerializeField] private Button tutorialButton;
     [SerializeField] private Button exitButton;
     [SerializeField] private GameObject exitButtonObject;
+    [SerializeField] private CurrentTutorial tutorial;
+    [SerializeField] private Dialogue masterTutorial;
 
     private void Awake()
     {
         if (Application.isMobilePlatform || Application.platform == RuntimePlatform.WebGLPlayer)
             exitButtonObject.SetActive(false);
         playButton.onClick.AddListener(navigator.NavigateToLevelSelect);
-        tutorialButton.onClick.AddListener(navigator.NavigateToTutorial);
+        tutorialButton.onClick.AddListener(() =>
+        {
+            tutorial.Set(masterTutorial);
+            navigator.NavigateToTutorial();
+        });
         exitButton.onClick.AddListener(Application.Quit);
     }
 }

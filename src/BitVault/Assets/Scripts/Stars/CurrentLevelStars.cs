@@ -6,5 +6,6 @@ public class CurrentLevelStars : ScriptableObject
 
     public int Count => count;
     public void Increment() => count++;
+    public void Decrement() => count--;
     public void Reset() => count = 0;
 }
