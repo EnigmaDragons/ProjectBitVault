@@ -5,6 +5,7 @@ public class Tutorial : MonoBehaviour
     [SerializeField] private float secondsBeforeReset;
     [SerializeField] private GameObject innerTutorial;
     [SerializeField] private CurrentLevelMap tutorialMap;
+    [SerializeField] private CurrentLevelStars tutorialStars;
     [SerializeField] private CurrentSelectedPiece selectedPiece;
     [SerializeField] private BoolVariable tutorialActive;
 
@@ -22,6 +23,7 @@ public class Tutorial : MonoBehaviour
             if (_innerTutorialInstance != null)
                 Destroy(_innerTutorialInstance);
             tutorialMap.InitLevel();
+            tutorialStars.Reset();
             selectedPiece.Deselect();
             _secondsLeft = secondsBeforeReset;
             _innerTutorialInstance = Instantiate(innerTutorial, transform);

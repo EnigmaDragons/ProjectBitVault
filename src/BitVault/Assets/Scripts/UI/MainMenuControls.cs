@@ -5,6 +5,7 @@ public class MainMenuControls : MonoBehaviour
 {
     [SerializeField] private Navigator navigator;
     [SerializeField] private Button playButton;
+    [SerializeField] private Button tutorialButton;
     [SerializeField] private Button exitButton;
     [SerializeField] private GameObject exitButtonObject;
 
@@ -13,6 +14,7 @@ public class MainMenuControls : MonoBehaviour
         if (Application.isMobilePlatform || Application.platform == RuntimePlatform.WebGLPlayer)
             exitButtonObject.SetActive(false);
         playButton.onClick.AddListener(navigator.NavigateToLevelSelect);
+        tutorialButton.onClick.AddListener(navigator.NavigateToTutorial);
         exitButton.onClick.AddListener(Application.Quit);
     }
 }
