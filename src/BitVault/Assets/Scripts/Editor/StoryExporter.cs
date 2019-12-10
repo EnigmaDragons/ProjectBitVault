@@ -5,7 +5,8 @@ using UnityEditor;
 
 public class StoryExporter
 {
-    private const string StartLevel = "STARTING LEVEL";
+    //CANT SOLVE HOW TO EXCLUDE FROM BUILD SO COMMENTED OUT WHEN NOT USING IT
+    /*private const string StartLevel = "STARTING LEVEL";
     private const string DoingLevel = "LEVEL COMPLETED";
 
     [MenuItem("EnigmaDragons/Export Story")]
@@ -31,5 +32,5 @@ public class StoryExporter
     private static List<string> DialogueToStrings(DialogueLine[] dialogue)
     {
         return dialogue.Select(x => $"{x.Character.Name}: {x.Text}").ToList();
-    }
+    }*/
 }
