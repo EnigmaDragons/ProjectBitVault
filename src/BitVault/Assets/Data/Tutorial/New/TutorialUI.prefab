@@ -620,7 +620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 879d58132d46eba4e8633de21e9e4a2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
+  canvas: {fileID: 2072502486349607520}
   layout: {fileID: 11400000, guid: 32c0440eab8835c4780ee58adacf09a2, type: 2}
   tallPlaneDistance: 10
   widePlaneDistance: 5
@@ -1312,7 +1312,8 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1409726873482082679, guid: 9316145631b19a54b893f4ed0d89a0c9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9316145631b19a54b893f4ed0d89a0c9, type: 3}
 --- !u!224 &8365333388077311893 stripped
 RectTransform:
