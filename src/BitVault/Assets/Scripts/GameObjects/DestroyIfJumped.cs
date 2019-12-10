@@ -6,7 +6,7 @@ public class DestroyIfJumped : OnMessage<PieceMoved>
     [SerializeField] private Renderer[] renderers;
     [SerializeField] private Texture deathMask;
     [SerializeField] private float secondsTilDeath = 1;
-
+    
     private bool _isDying = false;
     private float _t;
     private Texture _lifeMask;
@@ -29,11 +29,10 @@ public class DestroyIfJumped : OnMessage<PieceMoved>
 
     protected override void Execute(PieceMoved msg)
     {
-        if (msg.HasJumpedOver(gameObject))
-        {
-            Message.Publish(new ObjectDestroyed(gameObject, true));
-            StartDying();
-        }
+        if (!msg.HasJumpedOver(gameObject)) return;
+        
+        Message.Publish(new ObjectDestroyed(gameObject, true));
+        StartDying();
     }
 
     private void StartDying()

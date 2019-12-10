@@ -38,16 +38,18 @@ public class DestroyIfDoubleJumped : OnMessage<PieceMoved>
 
     protected override void Execute(PieceMoved msg)
     {
-        if (msg.From.IsAdjacentTo(new TilePoint(gameObject)) && msg.To.IsAdjacentTo(new TilePoint(gameObject)) && (msg.To.X == msg.From.X || msg.To.Y == msg.From.Y))
+        if (!msg.HasJumpedOver(gameObject)) return;
+        
+        numJumpsRemaining--;
+        if (numJumpsRemaining == 0)
         {
-            numJumpsRemaining--;
-            if (numJumpsRemaining == 0)
-            {
-                Message.Publish(new ObjectDestroyed(gameObject, true));
-                StartDying(renderer2);
-            }
-            else
-                StartDying(renderer1);
+            Message.Publish(new ObjectDestroyed(gameObject, true));
+            StartDying(renderer2);
+        }
+        else
+        {
+            Message.Publish(new PieceJumped(gameObject));
+            StartDying(renderer1);
         }
     }
 
