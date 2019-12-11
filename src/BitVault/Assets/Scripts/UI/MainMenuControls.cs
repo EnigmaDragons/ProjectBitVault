@@ -15,7 +15,6 @@ public class MainMenuControls : MonoBehaviour
     {
         if (Application.isMobilePlatform || Application.platform == RuntimePlatform.WebGLPlayer)
             exitButtonObject.SetActive(false);
-        playButton.onClick.AddListener(navigator.NavigateToLevelSelect);
         tutorialButton.onClick.AddListener(() =>
         {
             tutorial.Set(masterTutorial);
