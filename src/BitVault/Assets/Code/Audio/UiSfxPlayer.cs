@@ -10,6 +10,6 @@ public sealed class UiSfxPlayer : ScriptableObject
     public void Play(AudioClip c, float volume = 1f)
     {
         if (source != null)
-         source.PlayOneShot(c, volume);
+            source.PlayOneShot(c, volume);
     }
 }

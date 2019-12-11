@@ -8,7 +8,7 @@ public sealed class InitAudioVolumeLevel : MonoBehaviour
     
     private void Awake()
     {
-        var volume = PlayerPrefs.GetFloat(valueName, 0.75f);
+        var volume = PlayerPrefs.GetFloat(valueName, 0.5f);
         mixer.SetFloat(valueName, Mathf.Log10(volume) * 20);
     }
 }
