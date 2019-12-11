@@ -10,37 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 090681d0cad653b4ba4bd3c63f4beb4d, type: 3}
-  m_Name: Level-WaltzingIn
+  m_Name: Z1-NonHeroJumps
   m_EditorClassIdentifier: 
-  levelName: Waltzing In
-  prefab: {fileID: 7395829058629687936, guid: 3da8376267d170f4cae7d2a12f89d8d0, type: 3}
+  levelName: Remaining Training
+  prefab: {fileID: 5932372047481030826, guid: bc52c5f9b34b7fe4b84967c316a18416, type: 3}
   starObjectives:
   - {fileID: 11400000, guid: 9c9956192ce5d14449243607a6f97f2b, type: 2}
   - {fileID: 11400000, guid: f4ace5f67f63d324ba8170b167be3fb8, type: 2}
   - {fileID: 11400000, guid: 1661252d50dae194482f749ddaeeeb1a, type: 2}
   openingDialogue:
-  - text: I just got a response for my compaint about Ruby from human resources
+  - text: This will be your first REAL practice server
     character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
     customDisplay: {fileID: 0}
-  - text: Human resources said that I should refer to the cyber security team
-    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Those idiots! I AM the cyber security team
-    character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Anyway, here is a new practice server I built. Give it a test
+  - text: If you get stuck; I'll send you out-of-date documentation or links to useless
+      resources
     character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
     customDisplay: {fileID: 0}
   closingDialogue:
-  - text: This server needs more work. You are pretty good at this
+  - text: You understand the basic rules, but you are not an expert like me!
     character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
     customDisplay: {fileID: 0}
-  - text: I agree on both accounts
-    character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
+  - text: I guess your skills RULE
+    character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
     customDisplay: {fileID: 0}
-  - text: "I should just invite you to these calls; you\u2019re present anyway"
+  - text: You're not funny, I will set up practice servers for you to penetrate
     character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "That\u2019s so considerate of you"
-    character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
     customDisplay: {fileID: 0}
