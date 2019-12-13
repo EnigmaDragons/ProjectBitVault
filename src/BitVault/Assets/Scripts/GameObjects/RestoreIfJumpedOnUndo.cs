@@ -7,6 +7,7 @@ public sealed class RestoreIfJumpedOnUndo : OnMessage<UndoPieceMoved, ObjectDest
     
     protected override void Execute(UndoPieceMoved msg)
     {
+        RestoreAllCollectedStars();
         var obj = _damagedObjects.Peek();
         if (!msg.HadJumpedOver(obj)) return;
         
@@ -22,6 +23,18 @@ public sealed class RestoreIfJumpedOnUndo : OnMessage<UndoPieceMoved, ObjectDest
         if (destroyIfDoubleJumpedComponent != null)
         {
             destroyIfDoubleJumpedComponent.Revert();
+            Message.Publish(new UndoObjectDestroyed(obj));
+            _damagedObjects.Pop();
+        }
+    }
+
+    private void RestoreAllCollectedStars()
+    {
+        var obj = _damagedObjects.Peek();
+        var collectedStartComponent = obj.GetComponent<CollectStarOnEntered>();
+        if (collectedStartComponent != null)
+        {
+            collectedStartComponent.Revert();
             Message.Publish(new UndoObjectDestroyed(obj));
             _damagedObjects.Pop();
         }

@@ -57,7 +57,7 @@ public class BitVaultOnLevelCompleted : OnMessage<LevelCompleted>
                 gameObject.GetChildren().ForEach(x => x.SetActive(false));
                 var star = Instantiate(collectedStar, transform.parent);
                 star.transform.localPosition = transform.localPosition;
-                Message.Publish(new StarCollected());
+                Message.Publish(StarCollected.LevelComplete);
                 if (tutorialActive.Value)
                     return;
                 StartCoroutine(DelayedCompletion());
