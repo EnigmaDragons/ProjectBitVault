@@ -300,6 +300,8 @@ MonoBehaviour:
   currentLevel: {fileID: 11400000, guid: f81c10460cdb9464397ed5864a15114b, type: 2}
   levelUnlocked: {fileID: 11400000, guid: 6204bae6b2cb3234cbe22457103ab084, type: 2}
   isLevelStart: {fileID: 11400000, guid: 88418d1442fdadb4ab469f94a2b79527, type: 2}
+  currentDialogue: {fileID: 11400000, guid: b9a604ab247fc6b46b102d550e48e5fc, type: 2}
+  zones: {fileID: 11400000, guid: da6d9607955f7a04cac5744764d95f85, type: 2}
 --- !u!1 &3655132352191685227
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,6 +901,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6226386018843366077}
     m_Modifications:
+    - target: {fileID: 8251874896424653464, guid: 68cb2c4ef63a25542aaee71f78055ff9,
+        type: 3}
+      propertyPath: m_Name
+      value: DataCubeBody
+      objectReference: {fileID: 0}
     - target: {fileID: 4251681376232025122, guid: 68cb2c4ef63a25542aaee71f78055ff9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -953,11 +960,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251874896424653464, guid: 68cb2c4ef63a25542aaee71f78055ff9,
-        type: 3}
-      propertyPath: m_Name
-      value: DataCubeBody
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68cb2c4ef63a25542aaee71f78055ff9, type: 3}
@@ -974,6 +976,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4430387920231657606}
     m_Modifications:
+    - target: {fileID: 8251874896424653464, guid: 68cb2c4ef63a25542aaee71f78055ff9,
+        type: 3}
+      propertyPath: m_Name
+      value: DataCubeBody
+      objectReference: {fileID: 0}
     - target: {fileID: 4251681376232025122, guid: 68cb2c4ef63a25542aaee71f78055ff9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1028,11 +1035,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251874896424653464, guid: 68cb2c4ef63a25542aaee71f78055ff9,
-        type: 3}
-      propertyPath: m_Name
-      value: DataCubeBody
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68cb2c4ef63a25542aaee71f78055ff9, type: 3}
@@ -1049,6 +1051,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9010665690655744137}
     m_Modifications:
+    - target: {fileID: 8251874896424653464, guid: 68cb2c4ef63a25542aaee71f78055ff9,
+        type: 3}
+      propertyPath: m_Name
+      value: DataCubeBody
+      objectReference: {fileID: 0}
     - target: {fileID: 4251681376232025122, guid: 68cb2c4ef63a25542aaee71f78055ff9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1103,11 +1110,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251874896424653464, guid: 68cb2c4ef63a25542aaee71f78055ff9,
-        type: 3}
-      propertyPath: m_Name
-      value: DataCubeBody
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68cb2c4ef63a25542aaee71f78055ff9, type: 3}

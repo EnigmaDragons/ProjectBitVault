@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a87094399f0cede499e45d815fb5a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zone: {fileID: 11400000, guid: e8fc69fe1d2656a4c8f02b9da95abb99, type: 2}
+  currentDialogue: {fileID: 11400000, guid: b9a604ab247fc6b46b102d550e48e5fc, type: 2}
   name: {fileID: 3773110196872911876}
   text: {fileID: 6295389559059151034}
   bust: {fileID: 784576840980051949}
@@ -130,13 +130,9 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: c20eedda8d1d74b4ea5bd70d400c2891, type: 2}
-  developmentToolsActive:
-    UseConstant: 0
-    ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 49114531547a09c44aa9bf753a5a07f7, type: 2}
   BetweenLevelDialogue:
     text: LEVEL COMPLETED
-    character: {fileID: 11400000, guid: aba9d7dbacc565941bc9f6a9d3bcde22, type: 2}
+    character: {fileID: 11400000, guid: 1c91b221c21d143489c307a7318c33f8, type: 2}
     customDisplay: {fileID: 0}
 --- !u!114 &1903629545265122778
 MonoBehaviour:

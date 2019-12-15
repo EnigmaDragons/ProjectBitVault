@@ -14,6 +14,8 @@ public class LevelButton : MonoBehaviour
     [SerializeField] private CurrentLevel currentLevel;
     [SerializeField] private IsLevelUnlockedCondition levelUnlocked;
     [SerializeField] private BoolVariable isLevelStart;
+    [SerializeField] private CurrentDialogue currentDialogue;
+    [SerializeField] private GameZones zones;
     
     public void Init(int zoneNumber, int levelNum, GameLevel level)
     {
@@ -21,6 +23,7 @@ public class LevelButton : MonoBehaviour
         {
             currentLevel.SelectLevel(level, zoneNumber, levelNum);
             isLevelStart.Value = true;
+            currentDialogue.Set(zones.Value[zoneNumber].CurrentStory());
             navigator.NavigateToDialogue();
         }, level, levelUnlocked.IsLevelUnlocked(zoneNumber, levelNum));
     }

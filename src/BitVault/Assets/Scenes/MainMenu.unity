@@ -459,11 +459,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 796503286028939448, guid: ffa0d08c728a77641ad9bb0c8ff02715,
-        type: 3}
-      propertyPath: m_Name
-      value: DigitLineParticles
-      objectReference: {fileID: 0}
     - target: {fileID: 794591977187816574, guid: ffa0d08c728a77641ad9bb0c8ff02715,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -518,6 +513,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 796503286028939448, guid: ffa0d08c728a77641ad9bb0c8ff02715,
+        type: 3}
+      propertyPath: m_Name
+      value: DigitLineParticles
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffa0d08c728a77641ad9bb0c8ff02715, type: 3}
@@ -1401,6 +1401,56 @@ PrefabInstance:
     - target: {fileID: 498524597838497739, guid: 8975afca44f838f48a877dd7a17f2150,
         type: 3}
       propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5736791591517132078, guid: 8975afca44f838f48a877dd7a17f2150,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5736791591517132078, guid: 8975afca44f838f48a877dd7a17f2150,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5736791591517132078, guid: 8975afca44f838f48a877dd7a17f2150,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5736791591517132078, guid: 8975afca44f838f48a877dd7a17f2150,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5736791591517132078, guid: 8975afca44f838f48a877dd7a17f2150,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100447774928622001, guid: 8975afca44f838f48a877dd7a17f2150,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100447774928622001, guid: 8975afca44f838f48a877dd7a17f2150,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100447774928622001, guid: 8975afca44f838f48a877dd7a17f2150,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100447774928622001, guid: 8975afca44f838f48a877dd7a17f2150,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100447774928622001, guid: 8975afca44f838f48a877dd7a17f2150,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

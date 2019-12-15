@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class InGameDialogue : MonoBehaviour
 {
-    [SerializeField] private CurrentZone zone;
+    [SerializeField] private CurrentDialogue currentDialogue;
     [SerializeField] private TextMeshProUGUI name;
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private Image bust;
@@ -16,7 +16,6 @@ public class InGameDialogue : MonoBehaviour
     [SerializeField] private Button skipButton;
     [SerializeField] private BoolVariable IsLevelStart;
     [SerializeField] private BoolReference OnlyStory;
-    [SerializeField] private BoolReference developmentToolsActive;
     [SerializeField] private DialogueLine BetweenLevelDialogue;
 
     private DialogueLine[] _currentDialogue;
@@ -32,12 +31,11 @@ public class InGameDialogue : MonoBehaviour
 
     private void Start()
     {
-        var story = zone.Zone.CurrentStory();
         var dialogue = IsLevelStart.Value 
-            ? developmentToolsActive && OnlyStory.Value 
-                ? story.Intro.Lines.Concat(new List<DialogueLine> { BetweenLevelDialogue }).ToArray() 
-                : story.Intro.Lines 
-            : story.Outro.Lines;
+            ? OnlyStory.Value 
+                ? currentDialogue.Dialogue.Intro.Lines.Concat(new List<DialogueLine> { BetweenLevelDialogue }).ToArray() 
+                : currentDialogue.Dialogue.Intro.Lines 
+            : currentDialogue.Dialogue.Outro.Lines;
         if (dialogue.Length == 0)
             Finish();
         else
@@ -55,6 +53,8 @@ public class InGameDialogue : MonoBehaviour
             IsLevelStart.Value = false;
             navigator.NavigateToDialogue();
         }
+        else if (OnlyStory.Value)
+            navigator.NavigateToArchive();
         else if (IsLevelStart.Value) 
             navigator.NavigateToGameScene();
         else

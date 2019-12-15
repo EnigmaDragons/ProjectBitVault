@@ -10,6 +10,7 @@ namespace Assets.Scripts.UI
         [SerializeField] private GameObject button;
         [SerializeField] private SaveStorage storage;
         [SerializeField] private BoolVariable isLevelStart;
+        [SerializeField] private CurrentDialogue currentDialogue;
 
         private void Awake() => button.SetActive(!IsLastLevel || (!IsLastZone && IsNextZoneUnlocked));
 
@@ -23,6 +24,7 @@ namespace Assets.Scripts.UI
             var nextLevel = level.LevelNumber + 1 == zones.Value[level.ZoneNumber].Value.Length ? 0 : level.LevelNumber + 1;
             level.SelectLevel(zones.Value[nextZone].Value[nextLevel], nextZone, nextLevel);
             isLevelStart.Value = true;
+            currentDialogue.Set(zones.Value[nextZone].CurrentStory());
             storage.SaveZone(nextZone);
             navigator.NavigateToDialogue();
         }
