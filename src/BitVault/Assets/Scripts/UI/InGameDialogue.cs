@@ -34,9 +34,9 @@ public class InGameDialogue : MonoBehaviour
     {
         var dialogue = IsLevelStart.Value 
             ? developmentToolsActive && OnlyStory.Value 
-                ? level.ActiveLevel.OpeningDialogue.Concat(new List<DialogueLine> { BetweenLevelDialogue }).ToArray() 
-                : level.ActiveLevel.OpeningDialogue 
-            : level.ActiveLevel.ClosingDialogue;
+                ? level.ActiveLevel.OpeningDialogue.Lines.Concat(new List<DialogueLine> { BetweenLevelDialogue }).ToArray() 
+                : level.ActiveLevel.OpeningDialogue.Lines 
+            : level.ActiveLevel.ClosingDialogue.Lines;
         if (dialogue.Length == 0)
             Finish();
         else

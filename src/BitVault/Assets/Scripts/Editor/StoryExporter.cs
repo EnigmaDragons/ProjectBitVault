@@ -23,9 +23,9 @@ public class StoryExporter
         File.WriteAllLines(path, zones.Value
             .SelectMany((zone, zoneI) => zone.Value
                 .SelectMany((level, levelI) => new List<string> { $"SELECTED LEVEL {zoneI + 1}-{levelI + 1}: {level.Name}", "" }
-                    .Concat(DialogueToStrings(level.OpeningDialogue))
+                    .Concat(DialogueToStrings(level.OpeningDialogue.Lines))
                     .Concat(new List<string> { "", $"COMPLETED LEVEL {zoneI + 1}-{levelI + 1}: {level.Name}", "" })
-                    .Concat(DialogueToStrings(level.ClosingDialogue))
+                    .Concat(DialogueToStrings(level.ClosingDialogue.Lines))
                     .Concat(new List<string> { "" } ))));
     }
 
