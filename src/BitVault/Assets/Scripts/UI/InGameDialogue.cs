@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class InGameDialogue : MonoBehaviour
 {
-    [SerializeField] private CurrentLevel level;
+    [SerializeField] private CurrentZone zone;
     [SerializeField] private TextMeshProUGUI name;
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private Image bust;
@@ -32,11 +32,12 @@ public class InGameDialogue : MonoBehaviour
 
     private void Start()
     {
+        var story = zone.Zone.CurrentStory();
         var dialogue = IsLevelStart.Value 
             ? developmentToolsActive && OnlyStory.Value 
-                ? level.ActiveLevel.OpeningDialogue.Lines.Concat(new List<DialogueLine> { BetweenLevelDialogue }).ToArray() 
-                : level.ActiveLevel.OpeningDialogue.Lines 
-            : level.ActiveLevel.ClosingDialogue.Lines;
+                ? story.Intro.Lines.Concat(new List<DialogueLine> { BetweenLevelDialogue }).ToArray() 
+                : story.Intro.Lines 
+            : story.Outro.Lines;
         if (dialogue.Length == 0)
             Finish();
         else

@@ -3,11 +3,15 @@ using UnityEngine;
 
 public class InitLevelInfo : MonoBehaviour
 {
-    [SerializeField] private CurrentLevel level;
+    [SerializeField] private CurrentZone zone;
+    [SerializeField] private BoolReference isLevelStart;
     [SerializeField] private TextMeshProUGUI label;
 
     private void Awake()
     {
-        label.text = $"{level.ActiveLevel.Name}";
+        var name = isLevelStart.Value
+            ? zone.Zone.CurrentStory().Intro.DialogueName
+            : zone.Zone.CurrentStory().Outro.DialogueName;
+        label.text = $"{name}";
     }
 }

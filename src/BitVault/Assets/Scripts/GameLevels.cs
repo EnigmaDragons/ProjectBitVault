@@ -1,3 +1,4 @@
+using System.Linq;
 using E7.Introloop;
 using UnityEngine;
 
@@ -5,6 +6,7 @@ using UnityEngine;
 public sealed class GameLevels : ScriptableObject
 {
     [SerializeField] private GameLevel[] value;
+    [SerializeField] private ConjoinedDialogues[] story; 
     [SerializeField] private IntReference starsRequired;
     [SerializeField] private string name;
     [SerializeField] private Sprite logo;
@@ -12,8 +14,10 @@ public sealed class GameLevels : ScriptableObject
     [SerializeField] private Color logoColor;
     [SerializeField] private Color backgroundColor;
     [SerializeField] private IntroloopAudio musicTheme;
+    [SerializeField] private SaveStorage saveStorage;
 
     public GameLevel[] Value => value;
+    public ConjoinedDialogues[] Story => story;
     public int StarsRequired => starsRequired;
     public string Name => name;
     public Sprite Logo => logo;
@@ -21,4 +25,10 @@ public sealed class GameLevels : ScriptableObject
     public Color LogoColor => logoColor;
     public Color BackgroundColor => backgroundColor;
     public IntroloopAudio MusicTheme => musicTheme;
+
+    public ConjoinedDialogues CurrentStory()
+    {
+        var index = value.Count(level => saveStorage.GetStars(level) > 0);
+        return index >= story.Length ? new ConjoinedDialogues() : story[index];
+    }
 }

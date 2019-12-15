@@ -216,7 +216,7 @@ MonoBehaviour:
     spaceCount: 0
     wordCount: 1
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -284,5 +284,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a9968a4cd6640bda1f8b6c212ba0421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: {fileID: 11400000, guid: f81c10460cdb9464397ed5864a15114b, type: 2}
+  zone: {fileID: 11400000, guid: e8fc69fe1d2656a4c8f02b9da95abb99, type: 2}
+  isLevelStart:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
   label: {fileID: 766531008756051266}
