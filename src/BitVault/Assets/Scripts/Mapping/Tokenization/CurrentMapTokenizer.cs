@@ -23,7 +23,7 @@ public sealed class CurrentMapTokenizer : ScriptableObject
     public void ExportToFile()
     {
         var path = Path.Combine(Application.dataPath, $"{Guid.NewGuid().ToString()}");
-        var levelString = new LevelMapAsString(_builder.Build()).ToString();
+        var levelString = new TokenizedLevelMap(_builder.Build()).ToString();
         File.WriteAllBytes(path, Encoding.UTF8.GetBytes(levelString));
         Debug.Log($"Wrote Level to {path}");
     }
