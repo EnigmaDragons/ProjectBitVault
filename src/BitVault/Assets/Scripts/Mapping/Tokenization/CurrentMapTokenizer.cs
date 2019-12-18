@@ -2,7 +2,10 @@ using System;
 using System.IO;
 using System.Text;
 using UnityEngine;
+
+#if UNITY_EDITOR
 using File = UnityEngine.Windows.File;
+#endif
 
 [CreateAssetMenu]
 public sealed class CurrentMapTokenizer : ScriptableObject
@@ -16,6 +19,7 @@ public sealed class CurrentMapTokenizer : ScriptableObject
 
     public void RegisterAsMapPiece(GameObject obj, MapPiece piece) => _builder = _builder.With(new TilePoint(obj), piece);
 
+    #if UNITY_EDITOR
     public void ExportToFile()
     {
         var path = Path.Combine(Application.dataPath, $"{Guid.NewGuid().ToString()}");
@@ -23,4 +27,5 @@ public sealed class CurrentMapTokenizer : ScriptableObject
         File.WriteAllBytes(path, Encoding.UTF8.GetBytes(levelString));
         Debug.Log($"Wrote Level to {path}");
     }
+    #endif
 }
