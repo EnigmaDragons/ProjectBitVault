@@ -55,7 +55,6 @@ GameObject:
   - component: {fileID: -3532366647575882076}
   - component: {fileID: -2839197879285969549}
   - component: {fileID: 8539268815006437213}
-  - component: {fileID: 52070640994111003}
   m_Layer: 0
   m_Name: DoubleSubroutinePrefab
   m_TagString: Untagged
@@ -352,21 +351,6 @@ MonoBehaviour:
   gameInputActive: {fileID: 11400000, guid: eebaf394924070845bc9896cb2a4d42c, type: 2}
   showMovementOptions: {fileID: 11400000, guid: d3f991c0394ed7341b98019f306694f6,
     type: 2}
---- !u!114 &52070640994111003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5894204537112890656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 982ca3aeec565574eaef39e407529296, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dataCube: {fileID: 2405230820137474140, guid: c2ea297f3ca448947902b3e663ff4efd,
-    type: 3}
-  map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
 --- !u!1 &6186823641356467059
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,15 +906,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1afadf85ddb5bca43821f331610f0742, type: 3}
---- !u!23 &7736654245275934166 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1380782173344147275, guid: 1afadf85ddb5bca43821f331610f0742,
-    type: 3}
-  m_PrefabInstance: {fileID: 8680574042302724765}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1628769499184780849 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7993068155163929772, guid: 1afadf85ddb5bca43821f331610f0742,
+    type: 3}
+  m_PrefabInstance: {fileID: 8680574042302724765}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &7736654245275934166 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1380782173344147275, guid: 1afadf85ddb5bca43821f331610f0742,
     type: 3}
   m_PrefabInstance: {fileID: 8680574042302724765}
   m_PrefabAsset: {fileID: 0}

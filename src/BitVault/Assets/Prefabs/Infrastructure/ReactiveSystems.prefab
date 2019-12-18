@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 8612439314080727059}
   - component: {fileID: 6138795322213667701}
   - component: {fileID: 5642486032032017775}
+  - component: {fileID: 6510534704027860042}
   m_Layer: 0
   m_Name: ReactiveSystems
   m_TagString: Untagged
@@ -196,3 +197,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   history: {fileID: 11400000, guid: 95f27b9e96dd64443a8255b0eda723b2, type: 2}
+--- !u!114 &6510534704027860042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5606890674040241735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6ea3c08f0aec574993a80174c9b10d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataCube: {fileID: 1207161415011134732, guid: fa336d9be762cf045a312251cc0e98b9,
+    type: 3}
+  map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}

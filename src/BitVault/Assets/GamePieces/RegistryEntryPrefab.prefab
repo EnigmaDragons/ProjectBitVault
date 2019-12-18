@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 2063787145391606254}
   - component: {fileID: 1173651753798308264}
   - component: {fileID: 7070022540621593827}
-  - component: {fileID: 4278846173141708347}
   m_Layer: 0
   m_Name: RegistryEntryPrefab
   m_TagString: Untagged
@@ -321,21 +320,6 @@ MonoBehaviour:
   gameInputActive: {fileID: 11400000, guid: eebaf394924070845bc9896cb2a4d42c, type: 2}
   showMovementOptions: {fileID: 11400000, guid: d3f991c0394ed7341b98019f306694f6,
     type: 2}
---- !u!114 &4278846173141708347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1484517962356919331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 982ca3aeec565574eaef39e407529296, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dataCube: {fileID: 2405230820137474140, guid: c2ea297f3ca448947902b3e663ff4efd,
-    type: 3}
-  map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
 --- !u!1 &8321828120504871592
 GameObject:
   m_ObjectHideFlags: 0
