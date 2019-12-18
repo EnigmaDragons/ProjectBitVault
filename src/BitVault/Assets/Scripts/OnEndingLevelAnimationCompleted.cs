@@ -4,10 +4,14 @@ public class OnEndingLevelAnimationCompleted : OnMessage<EndingLevelAnimationFin
 {
     [SerializeField] private Navigator navigator;
     [SerializeField] private BoolVariable isLevelStart;
+    [SerializeField] private BoolReference AutoSkipStory;
 
     protected override void Execute(EndingLevelAnimationFinished msg)
     {
         isLevelStart.Value = false;
-        navigator.NavigateToDialogue();
+        if (AutoSkipStory.Value)
+            navigator.NavigateToRewards();
+        else
+            navigator.NavigateToDialogue();
     }
 }

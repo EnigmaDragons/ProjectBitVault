@@ -8,6 +8,7 @@ public class SaveStorage : ScriptableObject
     private const string _versionKey = "Version";
     private const string _version = "0.1";
     private const string _showMovementHints = "ShowMovementHints";
+    private const string _autoSkipStory = "AutoSkipStory"; 
     
     private PlayerPrefsKeyValueStore _store = new PlayerPrefsKeyValueStore();
     
@@ -39,4 +40,7 @@ public class SaveStorage : ScriptableObject
 
     public bool GetShowMovementHints() => _store.GetOrDefault(_showMovementHints, true);
     public void SetShowMovementHints(bool active) => _store.Put(_showMovementHints, active);
+
+    public bool GetAutoSkipStory() => _store.GetOrDefault(_autoSkipStory, false);
+    public void SetAutoSkipStory(bool active) => _store.Put(_autoSkipStory, active);
 }

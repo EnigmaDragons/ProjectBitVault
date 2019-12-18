@@ -11,6 +11,7 @@ namespace Assets.Scripts.UI
         [SerializeField] private SaveStorage storage;
         [SerializeField] private BoolVariable isLevelStart;
         [SerializeField] private CurrentDialogue currentDialogue;
+        [SerializeField] private BoolReference AutoSkipStory;
 
         private void Awake() => button.SetActive(!IsLastLevel || (!IsLastZone && IsNextZoneUnlocked));
 
@@ -26,7 +27,10 @@ namespace Assets.Scripts.UI
             isLevelStart.Value = true;
             currentDialogue.Set(zones.Value[nextZone].CurrentStory());
             storage.SaveZone(nextZone);
-            navigator.NavigateToDialogue();
+            if (AutoSkipStory.Value) 
+                navigator.NavigateToGameScene();
+            else
+                navigator.NavigateToDialogue();
         }
     }
 }

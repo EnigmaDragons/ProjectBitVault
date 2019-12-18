@@ -16,6 +16,7 @@ public class LevelButton : MonoBehaviour
     [SerializeField] private BoolVariable isLevelStart;
     [SerializeField] private CurrentDialogue currentDialogue;
     [SerializeField] private GameZones zones;
+    [SerializeField] private BoolReference AutoSkipStory;
     
     public void Init(int zoneNumber, int levelNum, GameLevel level)
     {
@@ -24,7 +25,10 @@ public class LevelButton : MonoBehaviour
             currentLevel.SelectLevel(level, zoneNumber, levelNum);
             isLevelStart.Value = true;
             currentDialogue.Set(zones.Value[zoneNumber].CurrentStory());
-            navigator.NavigateToDialogue();
+            if (AutoSkipStory.Value)
+                navigator.NavigateToGameScene();
+            else
+                navigator.NavigateToDialogue();
         }, level, levelUnlocked.IsLevelUnlocked(zoneNumber, levelNum));
     }
 
