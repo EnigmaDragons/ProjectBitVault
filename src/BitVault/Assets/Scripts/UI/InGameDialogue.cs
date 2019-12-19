@@ -10,6 +10,7 @@ public class InGameDialogue : MonoBehaviour
     [SerializeField] private TextMeshProUGUI name;
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private Image bust;
+    [SerializeField] private GameObject staticVfx;
     [SerializeField] private Navigator navigator;
     [SerializeField] private Button continueButton;
     [SerializeField] private Button alternateContinueButton;
@@ -73,6 +74,7 @@ public class InGameDialogue : MonoBehaviour
             text.text = line.Text;
             name.text = line.Character.Name;
             bust.sprite = line.Character.Bust;
+            staticVfx.SetActive(line.Character.UseStatic);
             if (line.CustomDisplay.IsPresent)
             {
                 bust.gameObject.SetActive(false);

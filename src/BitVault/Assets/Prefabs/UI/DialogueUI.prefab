@@ -121,6 +121,7 @@ MonoBehaviour:
   name: {fileID: 3773110196872911876}
   text: {fileID: 6295389559059151034}
   bust: {fileID: 784576840980051949}
+  staticVfx: {fileID: 5181242588934806611}
   navigator: {fileID: 11400000, guid: 9ff41b1c7e54dd34d86e0faa800274fc, type: 2}
   continueButton: {fileID: 1939029738888753178}
   alternateContinueButton: {fileID: 5620242189595677312}
@@ -459,15 +460,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3999868533893958139}
     m_Modifications:
-    - target: {fileID: 3988675812109841899, guid: 2e8222a5fe5bf934881762a5bb868432,
+    - target: {fileID: 7696321048428305091, guid: 2e8222a5fe5bf934881762a5bb868432,
         type: 3}
-      propertyPath: m_Name
-      value: StoryDisplay
+      propertyPath: m_textInfo.characterCount
+      value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 5608030216915307937, guid: 2e8222a5fe5bf934881762a5bb868432,
+    - target: {fileID: 7696321048428305091, guid: 2e8222a5fe5bf934881762a5bb868432,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -50
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696321048428305091, guid: 2e8222a5fe5bf934881762a5bb868432,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696321048428305091, guid: 2e8222a5fe5bf934881762a5bb868432,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 706963985781603965, guid: 2e8222a5fe5bf934881762a5bb868432,
         type: 3}
@@ -492,32 +503,22 @@ PrefabInstance:
     - target: {fileID: 706963985781603965, guid: 2e8222a5fe5bf934881762a5bb868432,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 706963985781603965, guid: 2e8222a5fe5bf934881762a5bb868432,
         type: 3}
       propertyPath: m_firstOverflowCharacterIndex
       value: -1
       objectReference: {fileID: 0}
-    - target: {fileID: 7696321048428305091, guid: 2e8222a5fe5bf934881762a5bb868432,
+    - target: {fileID: 3988675812109841899, guid: 2e8222a5fe5bf934881762a5bb868432,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 4
+      propertyPath: m_Name
+      value: StoryDisplay
       objectReference: {fileID: 0}
-    - target: {fileID: 7696321048428305091, guid: 2e8222a5fe5bf934881762a5bb868432,
+    - target: {fileID: 5608030216915307937, guid: 2e8222a5fe5bf934881762a5bb868432,
         type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7696321048428305091, guid: 2e8222a5fe5bf934881762a5bb868432,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7696321048428305091, guid: 2e8222a5fe5bf934881762a5bb868432,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
+      propertyPath: m_AnchoredPosition.y
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 3323280299587902464, guid: 2e8222a5fe5bf934881762a5bb868432,
         type: 3}
@@ -725,6 +726,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5181242588934806611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1834491317170231956, guid: 2e8222a5fe5bf934881762a5bb868432,
+    type: 3}
+  m_PrefabInstance: {fileID: 6814531781181425351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1939029738888753178 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4934473816946259677, guid: 2e8222a5fe5bf934881762a5bb868432,
