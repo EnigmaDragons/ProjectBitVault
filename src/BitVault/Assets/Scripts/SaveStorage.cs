@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Linq;
 
 [CreateAssetMenu]
 public class SaveStorage : ScriptableObject
@@ -31,7 +32,9 @@ public class SaveStorage : ScriptableObject
             AddToTotalStars(stars - previousStars);
         }
     }
-    
+
+    public int GetLevelsCompletedInZone(GameLevels zone) => zone.Value.Count(level => GetStars(level) > 0);
+
     public int GetZone() => _store.GetOrDefault(_zoneKey, 0);
     public void SaveZone(int zone) => _store.Put(_zoneKey, zone);
 

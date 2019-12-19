@@ -9,10 +9,9 @@ public sealed class IsLevelUnlockedCondition : ScriptableObject
     
     public bool IsLevelUnlocked(int zoneNumber, int levelNumber)
     {
-        if ((zoneNumber == 0 && levelNumber == 0) || isDevelopmentMode.Value)
+        if (levelNumber == 0 || isDevelopmentMode.Value)
             return true;
-        var previousZone = levelNumber == 0 ? zoneNumber - 1 : zoneNumber;
-        var previousLevel = levelNumber == 0 ? zones.Value[previousZone].Value.Length - 1 : levelNumber - 1;
-        return storage.GetStars(zones.Value[previousZone].Value[previousLevel]) > 0 && storage.GetTotalStars() >= zones.Value[zoneNumber].StarsRequired;
+        var levelsCompleted = storage.GetLevelsCompletedInZone(zones.Value[zoneNumber]);
+        return levelsCompleted > 0 && levelsCompleted > levelNumber - 3;
     }
 }

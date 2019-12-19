@@ -28,7 +28,7 @@ public sealed class GameLevels : ScriptableObject
 
     public ConjoinedDialogues CurrentStory()
     {
-        var index = value.Count(level => saveStorage.GetStars(level) > 0);
+        var index = saveStorage.GetLevelsCompletedInZone(this);
         return index >= story.Length ? new ConjoinedDialogues() : story[index];
     }
 }
