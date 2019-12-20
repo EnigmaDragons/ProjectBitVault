@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 6084684237068421921}
   - component: {fileID: 2895248715118068723}
   - component: {fileID: 4361791749050748431}
+  - component: {fileID: 6346061106767253433}
   m_Layer: 5
   m_Name: GradientColor
   m_TagString: Untagged
@@ -165,3 +166,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6346061106767253433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850770175220210544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d99bc8cb1a7249fba7d7f180b41db01d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: {fileID: 11400000, guid: ddd47553d52c5d24cb73a21b41dd0734, type: 2}
+  image: {fileID: 4361791749050748431}
+  element: 10

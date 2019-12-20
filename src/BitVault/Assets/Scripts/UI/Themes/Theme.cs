@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -15,10 +16,20 @@ public sealed class Theme : ScriptableObject
     {
         var colors = new DictionaryWithDefault<ThemeElement, Color>(defaultColor)
         {
-            { ThemeElement.PrimaryTextColor, menuButtonTextTint },
+            { ThemeElement.ButtonTextTint, menuButtonTextTint },
             { ThemeElement.SecondaryTextColor, dialogueButtonTextTint },
+            { ThemeElement.PrimaryBorderColor, borderTint },
             { ThemeElement.PanelTint, panelTint },
         };
         return colors[element];
+    }
+
+    public TMP_ColorGradient GradientFor(ThemeElement element)
+    {
+        var gradients = new Dictionary<ThemeElement, TMP_ColorGradient>
+        {
+            { ThemeElement.ButtonTextGradient, menuButtonTextGradient },
+        };
+        return gradients[element];
     }
 }

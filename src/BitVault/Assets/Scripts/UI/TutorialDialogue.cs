@@ -31,12 +31,14 @@ public class TutorialDialogue : MonoBehaviour
     public void Next()
     {
         _index++;
+        _index = Mathf.Min(_index, level.Tutorial.Lines.Length);
         UpdateTutorial();
     }
 
     public void Previous()
     {
         _index--;
+        _index = Mathf.Max(_index, 0);
         UpdateTutorial();
     }
 

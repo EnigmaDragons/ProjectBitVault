@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16cb0b47eef849f080d35ed8c36d2c39, type: 3}
-  m_Name: BitVaultClassic
+  m_Name: BitVaultClassicTheme
   m_EditorClassIdentifier: 
   defaultColor:
     UseConstant: 1
@@ -26,9 +26,10 @@ MonoBehaviour:
     Variable: {fileID: 0}
   menuButtonTextTint:
     UseConstant: 1
-    ConstantValue: {r: 1, g: 0, b: 1, a: 1}
+    ConstantValue: {r: 0.7843138, g: 0.27058825, b: 0.6509804, a: 1}
     Variable: {fileID: 0}
-  menuButtonTextGradient: {fileID: 0}
+  menuButtonTextGradient: {fileID: 11400000, guid: 77c259b6798c77742aaa1ca477e274e7,
+    type: 2}
   panelTint:
     UseConstant: 1
     ConstantValue: {r: 1, g: 1, b: 1, a: 0.39215687}
