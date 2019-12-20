@@ -19,6 +19,16 @@ public class TeleportingPiece : MonoBehaviour
     private float _t;
     private List<Texture2D> _activeTextures;
 
+    private void Execute(UndoPieceMoved msg)
+    {
+        if (msg.Piece == gameObject)
+        {
+            transform.localPosition = new Vector3(msg.From.X, msg.From.Y, transform.localPosition.z);
+            Message.Publish(new PieceDeselected());
+            Message.Publish(new PieceSelected(gameObject));
+        }
+    }
+
     private void Execute(PieceMoved msg)
     {
         if (msg.Piece == gameObject)
@@ -94,6 +104,7 @@ public class TeleportingPiece : MonoBehaviour
         _renderer = renderer;
         _goToPosition = goToPosition;
         Message.Subscribe<PieceMoved>(Execute, this);
+        Message.Subscribe<UndoPieceMoved>(Execute, this);
     }
 
     private void OnDisable()
