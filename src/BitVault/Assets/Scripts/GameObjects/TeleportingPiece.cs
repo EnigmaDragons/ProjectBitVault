@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -10,6 +9,7 @@ public class TeleportingPiece : MonoBehaviour
     [SerializeField] private CurrentLevelMap map;
 
     [SerializeField] private Renderer renderer;
+    [SerializeField] private ParticleSystem rendererParticles;
     [SerializeField] private Renderer goToPosition;
 
     private Renderer _renderer;
@@ -27,8 +27,11 @@ public class TeleportingPiece : MonoBehaviour
             _msg = msg;
             gameInputActive.Lock(gameObject);
             _t = 0;
-            _goToPosition.gameObject.transform.localPosition = new Vector3(msg.Delta.X + 0.5f, msg.Delta.Y + 0.5f, _goToPosition.transform.localPosition.z);
+            _goToPosition.transform.localPosition = new Vector3(msg.Delta.X + 0.5f, msg.Delta.Y + 0.5f, _goToPosition.transform.localPosition.z);
             _goToPosition.gameObject.SetActive(true);
+            rendererParticles.transform.localPosition = _renderer.transform.localPosition;
+            rendererParticles.transform.rotation = Quaternion.LookRotation(_goToPosition.transform.position - _renderer.transform.position);
+            rendererParticles.Play();
         }
     }
 
@@ -40,7 +43,9 @@ public class TeleportingPiece : MonoBehaviour
             UpdateTextures(Generate(255, Mathf.Max(0, _t - 0.5f) * 2, Mathf.Min(1, _t * 2)), Generate(255, Mathf.Max(0, (1 - _t) - 0.5f) * 2, Mathf.Min(1, (1 - _t) * 2)));
             if (_t == 1)
             {
+                var tempPosition = _renderer.transform.position;
                 transform.localPosition = new Vector3(_msg.To.X, _msg.To.Y, transform.localPosition.z);
+                rendererParticles.transform.position = tempPosition;
                 _goToPosition.gameObject.transform.localPosition = _renderer.gameObject.transform.localPosition;
                 var temp = _renderer;
                 _renderer = _goToPosition;
