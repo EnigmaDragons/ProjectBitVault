@@ -22,7 +22,8 @@ public sealed class PlayerPrefsKeyValueStore
     public bool Exists(string key) => PlayerPrefs.HasKey(key);
     public T GetOrDefault<T>(string key, T defaultValue) => ForType(typeof(T)).GetOrDefaultAsType(key, defaultValue);
     public void Put(string key, object obj) => ForType(obj.GetType()).Put(key, obj);
-    public void Remove(string key) => PlayerPrefs.DeleteKey(key);
+    public void Remove<T>(string key) => ForType(typeof(T)).Remove(key);
+    public void Clear() => _stores.ForEach(x => x.Value.Clear());
     public void Update<T>(string key, T defaultValue, Func<T, T> getNewValue)
     {
         var existing = GetOrDefault(key, defaultValue);
@@ -45,6 +46,7 @@ public sealed class PlayerPrefsIntStore : IKeyValueStore<int>
     private int Get(string key) => PlayerPrefs.GetInt(key);
     public void Put(string key, int obj) => PlayerPrefs.SetInt(key, obj);
     public void Remove(string key) => PlayerPrefs.DeleteKey(key);
+    public void Clear() => PlayerPrefs.DeleteAll();
 }
 
 public sealed class PlayerPrefsBoolStore : IKeyValueStore<bool>
@@ -54,6 +56,7 @@ public sealed class PlayerPrefsBoolStore : IKeyValueStore<bool>
     private bool Get(string key) => PlayerPrefs.GetInt(key) > 0;
     public void Put(string key, bool obj) => PlayerPrefs.SetInt(key, obj ? 1 : 0);
     public void Remove(string key) => PlayerPrefs.DeleteKey(key);
+    public void Clear() => PlayerPrefs.DeleteAll();
 }
 
 public sealed class PlayerPrefsStringStore : IKeyValueStore<string>
@@ -63,6 +66,7 @@ public sealed class PlayerPrefsStringStore : IKeyValueStore<string>
     private string Get(string key) => PlayerPrefs.GetString(key);
     public void Put(string key, string obj) => PlayerPrefs.SetString(key, obj);
     public void Remove(string key) => PlayerPrefs.DeleteKey(key);
+    public void Clear() => PlayerPrefs.DeleteAll();
 }
 
 public sealed class PlayerPrefsFloatStore : IKeyValueStore<float>
@@ -72,5 +76,6 @@ public sealed class PlayerPrefsFloatStore : IKeyValueStore<float>
     private float Get(string key) => PlayerPrefs.GetFloat(key);
     public void Put(string key, float obj) => PlayerPrefs.SetFloat(key, obj);
     public void Remove(string key) => PlayerPrefs.DeleteKey(key);
+    public void Clear() => PlayerPrefs.DeleteAll();
 }
 

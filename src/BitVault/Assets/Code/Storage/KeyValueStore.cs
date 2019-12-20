@@ -6,6 +6,7 @@ public interface IKeyValueStore<TKey, TValue>
     TValue GetOrDefault(TKey key, Func<TValue> getDefaultValue);
     void Put(TKey key, TValue obj);
     void Remove(TKey key);
+    void Clear();
 }
 
 public interface IKeyValueStore<T> : IKeyValueStore<string, T> {}

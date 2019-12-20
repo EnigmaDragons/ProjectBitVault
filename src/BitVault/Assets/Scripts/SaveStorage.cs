@@ -9,7 +9,8 @@ public class SaveStorage : ScriptableObject
     private const string _versionKey = "Version";
     private const string _version = "0.1";
     private const string _showMovementHints = "ShowMovementHints";
-    private const string _autoSkipStory = "AutoSkipStory"; 
+    private const string _autoSkipStory = "AutoSkipStory";
+    private const string _useFemale = "UseFemale"; 
     
     private PlayerPrefsKeyValueStore _store = new PlayerPrefsKeyValueStore();
     
@@ -46,4 +47,15 @@ public class SaveStorage : ScriptableObject
 
     public bool GetAutoSkipStory() => _store.GetOrDefault(_autoSkipStory, false);
     public void SetAutoSkipStory(bool active) => _store.Put(_autoSkipStory, active);
+
+    public bool HasChosenGender() => _store.Exists(_useFemale);
+    public bool GetUseFemale() => _store.GetOrDefault(_useFemale, false);
+    public void SetUseFemale(bool active) => _store.Put(_useFemale, active);
+
+    public void Reset()
+    {
+        var showMovementHints = GetShowMovementHints();
+        _store.Clear();
+        SetShowMovementHints(showMovementHints);
+    }
 }

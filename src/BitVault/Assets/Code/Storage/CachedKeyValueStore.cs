@@ -29,4 +29,10 @@ public sealed class CachedKeyValueStore<TValue> : IKeyValueStore<TValue>
         _cache.Remove(key);
         _inner.Remove(key);
     }
+
+    public void Clear()
+    {
+        _cache.Clear();
+        _inner.Clear();
+    }
 }

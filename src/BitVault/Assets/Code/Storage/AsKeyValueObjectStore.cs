@@ -8,6 +8,7 @@
 
         public object GetOrDefault(string key, Func<object> getDefaultValue) => _inner.GetOrDefault(key, () => (T)getDefaultValue());
         public void Remove(string key) => _inner.Remove(key);
+        public void Clear() => _inner.Clear();
         public void Put(string key, object obj)
         {
             if (obj.GetType() != typeof(T))
