@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 
-public class SpawnDataCubeIfOnlyOneSubroutine : OnMessage<LevelStateChanged>
+public class SpawnDataCubeIfOnlyOneSubroutine : OnMessage<LevelStateChanged, UndoPieceMoved>
 {
     [SerializeField] private GameObject dataCube;
     [SerializeField] private CurrentLevelMap map;
 
     private bool _spawned;
+    private GameObject _cube;
 
     protected override void Execute(LevelStateChanged msg)
     {
@@ -23,10 +24,19 @@ public class SpawnDataCubeIfOnlyOneSubroutine : OnMessage<LevelStateChanged>
         }
     }
 
+    protected override void Execute(UndoPieceMoved msg)
+    {
+        if (map.NumOfJumpables == 1 && _spawned)
+        {
+            Destroy(_cube);
+            _spawned = false;
+        }
+    }
+
     private void SpawnDataCube(TilePoint position)
     {
-        var cube = Instantiate(dataCube);
-        cube.transform.localPosition = new Vector3(position.X, position.Y, cube.transform.localPosition.z);
+        _cube = Instantiate(dataCube);
+        _cube.transform.localPosition = new Vector3(position.X, position.Y, _cube.transform.localPosition.z);
         _spawned = true;
     }
 }
