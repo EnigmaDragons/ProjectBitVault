@@ -460,25 +460,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3999868533893958139}
     m_Modifications:
-    - target: {fileID: 7696321048428305091, guid: 2e8222a5fe5bf934881762a5bb868432,
+    - target: {fileID: 3988675812109841899, guid: 2e8222a5fe5bf934881762a5bb868432,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 4
+      propertyPath: m_Name
+      value: StoryDisplay
       objectReference: {fileID: 0}
-    - target: {fileID: 7696321048428305091, guid: 2e8222a5fe5bf934881762a5bb868432,
+    - target: {fileID: 5608030216915307937, guid: 2e8222a5fe5bf934881762a5bb868432,
         type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7696321048428305091, guid: 2e8222a5fe5bf934881762a5bb868432,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7696321048428305091, guid: 2e8222a5fe5bf934881762a5bb868432,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
+      propertyPath: m_AnchoredPosition.y
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 706963985781603965, guid: 2e8222a5fe5bf934881762a5bb868432,
         type: 3}
@@ -510,15 +500,25 @@ PrefabInstance:
       propertyPath: m_firstOverflowCharacterIndex
       value: -1
       objectReference: {fileID: 0}
-    - target: {fileID: 3988675812109841899, guid: 2e8222a5fe5bf934881762a5bb868432,
+    - target: {fileID: 7696321048428305091, guid: 2e8222a5fe5bf934881762a5bb868432,
         type: 3}
-      propertyPath: m_Name
-      value: StoryDisplay
+      propertyPath: m_textInfo.characterCount
+      value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 5608030216915307937, guid: 2e8222a5fe5bf934881762a5bb868432,
+    - target: {fileID: 7696321048428305091, guid: 2e8222a5fe5bf934881762a5bb868432,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -50
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696321048428305091, guid: 2e8222a5fe5bf934881762a5bb868432,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696321048428305091, guid: 2e8222a5fe5bf934881762a5bb868432,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3323280299587902464, guid: 2e8222a5fe5bf934881762a5bb868432,
         type: 3}
