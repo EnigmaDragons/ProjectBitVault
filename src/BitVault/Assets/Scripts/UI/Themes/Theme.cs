@@ -7,6 +7,7 @@ public sealed class Theme : ScriptableObject
 {
     [SerializeField] public ColorReference defaultColor;
     [SerializeField] public ColorReference borderTint;
+    [SerializeField] public ColorReference headerTextColor;
     [SerializeField] public ColorReference dialogueButtonTextTint;
     [SerializeField] public ColorReference menuButtonTextTint;
     [SerializeField] public TMP_ColorGradient menuButtonTextGradient;
@@ -17,6 +18,7 @@ public sealed class Theme : ScriptableObject
         var colors = new DictionaryWithDefault<ThemeElement, Color>(defaultColor)
         {
             { ThemeElement.ButtonTextTint, menuButtonTextTint },
+            { ThemeElement.PrimaryTextColor, headerTextColor },
             { ThemeElement.SecondaryTextColor, dialogueButtonTextTint },
             { ThemeElement.PrimaryBorderColor, borderTint },
             { ThemeElement.PanelTint, panelTint },
