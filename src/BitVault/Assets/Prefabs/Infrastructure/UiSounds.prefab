@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2353165945301154259}
   - component: {fileID: 7539596079999589032}
   - component: {fileID: 3879489092946689559}
+  - component: {fileID: 5521230024933449204}
   m_Layer: 0
   m_Name: UiSounds
   m_TagString: UiSounds
@@ -160,3 +161,17 @@ MonoBehaviour:
   valueName: SoundVolume
   player: {fileID: 7539596079999589032}
   demoSound: {fileID: 8300000, guid: 0123c78c3faf05f4d8e02306842a8f7b, type: 3}
+--- !u!114 &5521230024933449204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238499321687046426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a33e227a03bf184f83524d0315029a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 4724f1b4a0038ef4997f2e26fffbab82, type: 3}
+  player: {fileID: 7539596079999589032}

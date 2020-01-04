@@ -17,5 +17,6 @@ public class MixerVolumeSlider : MonoBehaviour
     {
         mixer.SetFloat(valueName, Mathf.Log10(sliderValue) * 20);
         PlayerPrefs.SetFloat(valueName, sliderValue);
+        Message.Publish(new MixerVolumeChanged(valueName));
     }
 }
