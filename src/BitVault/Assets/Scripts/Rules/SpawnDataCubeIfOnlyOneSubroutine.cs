@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class SpawnDataCubeIfOnlyOneSubroutine : OnMessage<LevelStateChanged, UndoPieceMoved>
+public class SpawnDataCubeIfOnlyOneSubroutine : OnMessage<LevelStateChanged, UndoPieceMoved, LevelReset>
 {
     [SerializeField] private GameObject dataCube;
     [SerializeField] private CurrentLevelMap map;
@@ -27,6 +27,15 @@ public class SpawnDataCubeIfOnlyOneSubroutine : OnMessage<LevelStateChanged, Und
     protected override void Execute(UndoPieceMoved msg)
     {
         if (map.NumOfJumpables == 1 && _spawned)
+        {
+            Destroy(_cube);
+            _spawned = false;
+        }
+    }
+
+    protected override void Execute(LevelReset msg)
+    {
+        if (_spawned)
         {
             Destroy(_cube);
             _spawned = false;

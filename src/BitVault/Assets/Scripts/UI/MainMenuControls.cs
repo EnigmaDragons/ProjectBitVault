@@ -8,6 +8,7 @@ public class MainMenuControls : MonoBehaviour
     [SerializeField] private Button continueButton;
     [SerializeField] private Button tutorialButton;
     [SerializeField] private Button storyArchiveButton;
+    [SerializeField] private Button creditsButton;
     [SerializeField] private Button exitButton;
     [SerializeField] private GameObject exitButtonObject;
     [SerializeField] private CurrentTutorial tutorial;
@@ -26,6 +27,7 @@ public class MainMenuControls : MonoBehaviour
             tutorial.Set(masterTutorial);
             navigator.NavigateToTutorial();
         });
+        creditsButton.onClick.AddListener(() => navigator.NavigateToCredits());
         exitButton.onClick.AddListener(Application.Quit);
     }
 }
