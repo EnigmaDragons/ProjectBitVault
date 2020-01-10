@@ -17,6 +17,7 @@ public class StoryArchiveUI : MonoBehaviour
     [SerializeField] private BoolVariable isLevelStart;
     [SerializeField] private CurrentDialogue dialogue;
     [SerializeField] private Navigator navigator;
+    [SerializeField] private CurrentZone zone;
 
     private List<List<StoryChoice>> unlockedStories;
     private int _index;
@@ -34,7 +35,7 @@ public class StoryArchiveUI : MonoBehaviour
         unlockedStories = new List<List<StoryChoice>>();
         for (var i = 0; i < stories.Count; i += buttons.Length)
             unlockedStories.Add(stories.Skip(i).Take(buttons.Length).ToList());
-        _index = 0;
+        _index = zone.ZoneIndex * 2;
         isStoryOnly.Value = false;
         UpdateButtons();
     }

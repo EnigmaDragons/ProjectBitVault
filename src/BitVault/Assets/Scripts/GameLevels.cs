@@ -1,4 +1,3 @@
-using System.Linq;
 using E7.Introloop;
 using UnityEngine;
 
@@ -9,6 +8,7 @@ public sealed class GameLevels : ScriptableObject
     [SerializeField] private ConjoinedDialogues[] story; 
     [SerializeField] private IntReference starsRequired;
     [SerializeField] private string name;
+    [SerializeField] private string description;
     [SerializeField] private Sprite logo;
     [SerializeField] private Sprite logoTiled;
     [SerializeField] private Color logoColor;
@@ -20,6 +20,7 @@ public sealed class GameLevels : ScriptableObject
     public ConjoinedDialogues[] Story => story;
     public int StarsRequired => starsRequired;
     public string Name => name;
+    public string Description => description;
     public Sprite Logo => logo;
     public Sprite LogoTiled => logoTiled;
     public Color LogoColor => logoColor;
