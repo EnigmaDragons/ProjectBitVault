@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class NewGameButtons : MonoBehaviour
 {
     [SerializeField] private Navigator navigator;
-    [SerializeField] private Toggle skipStory;
-    [SerializeField] private Button male;
-    [SerializeField] private Button female;
+    [SerializeField] private Toggle storyMode;
+    [SerializeField] private Toggle onlyPuzzles;
+    [SerializeField] private Toggle male;
+    [SerializeField] private Toggle female;
     [SerializeField] private Button start;
     [SerializeField] private BoolVariable autoSkip;
     [SerializeField] private BoolVariable useFemale;
@@ -18,42 +18,50 @@ public class NewGameButtons : MonoBehaviour
 
     private void Awake()
     {
-        skipStory.onValueChanged.AddListener(SetValue);
-        male.onClick.AddListener(SelectMale);
-        female.onClick.AddListener(SelectFemale);
+        storyMode.onValueChanged.AddListener(_ => SelectStoryMode());
+        onlyPuzzles.onValueChanged.AddListener(_ => SelectOnlyPuzzles());
+        male.onValueChanged.AddListener(_ => SelectMale());
+        female.onValueChanged.AddListener(_ => SelectFemale());
         start.onClick.AddListener(StartCommand);
         OnEnable();
     }
 
     private void OnEnable()
     {
-        skipStory.isOn = false;
         _autoSkip = false;
         _useFemale = useFemale.Value;
-        UpdateHighlight();
+        storyMode.SetIsOnWithoutNotify(!_autoSkip);
+        onlyPuzzles.SetIsOnWithoutNotify(_autoSkip);
+        male.SetIsOnWithoutNotify(!_useFemale);
+        female.SetIsOnWithoutNotify(_useFemale);
     }
 
-    private void UpdateHighlight()
+    private void SelectStoryMode()
     {
-        EventSystem.current.SetSelectedGameObject(_useFemale ? female.gameObject : male.gameObject);
+        _autoSkip = false;
+        storyMode.SetIsOnWithoutNotify(true);
+        onlyPuzzles.SetIsOnWithoutNotify(false);
     }
 
-    private void SetValue(bool isActive)
+    private void SelectOnlyPuzzles()
     {
-        _autoSkip = isActive;
-        UpdateHighlight();
+        _autoSkip = true;
+        storyMode.SetIsOnWithoutNotify(false);
+        onlyPuzzles.SetIsOnWithoutNotify(true);
     }
 
     private void SelectMale()
     {
         _useFemale = false;
-        UpdateHighlight();
+        male.SetIsOnWithoutNotify(true);
+        female.SetIsOnWithoutNotify(false);
     }
 
     private void SelectFemale()
     {
         _useFemale = true;
-        UpdateHighlight();
+        male.SetIsOnWithoutNotify(false);
+        female.SetIsOnWithoutNotify(true);
     }
 
     private void StartCommand()
