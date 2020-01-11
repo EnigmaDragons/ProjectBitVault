@@ -7,11 +7,15 @@ public class Scaled3dUIHolder : MonoBehaviour
     [SerializeField] private RectTransform rectTransform;
     [SerializeField] private GameObject thingToScale;
 
+    private FloatReference _pixelsPerScale;
+
+    private void Start() => _pixelsPerScale = pixelsPerScale;
+
     private void Update()
     {
         var rect = RectTransformToScreenSpace(rectTransform);
-        var xScale = rect.width / pixelsPerScale;
-        var yScale = rect.height / pixelsPerScale;
+        var xScale = rect.width / _pixelsPerScale;
+        var yScale = rect.height / _pixelsPerScale;
         var scale = Math.Min(xScale, yScale);
         thingToScale.transform.localScale = new Vector3(scale, scale, scale);
     }
@@ -24,4 +28,6 @@ public class Scaled3dUIHolder : MonoBehaviour
 
         return new Rect(x, y, size.x, size.y);
     }
+
+    public void SetPixelsPerScale(FloatReference newPixelsPerScale) => _pixelsPerScale = newPixelsPerScale;
 }
