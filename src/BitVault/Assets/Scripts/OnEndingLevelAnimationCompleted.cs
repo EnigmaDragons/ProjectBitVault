@@ -5,11 +5,12 @@ public class OnEndingLevelAnimationCompleted : OnMessage<EndingLevelAnimationFin
     [SerializeField] private Navigator navigator;
     [SerializeField] private BoolVariable isLevelStart;
     [SerializeField] private BoolReference AutoSkipStory;
+    [SerializeField] private CurrentDialogue dialogue;
 
     protected override void Execute(EndingLevelAnimationFinished msg)
     {
         isLevelStart.Value = false;
-        if (AutoSkipStory.Value)
+        if (AutoSkipStory.Value || !dialogue.Dialogue.IsPresent)
             navigator.NavigateToRewards();
         else
             navigator.NavigateToDialogue();

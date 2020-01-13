@@ -10,8 +10,8 @@ public class InitLevelInfo : MonoBehaviour
     private void Awake()
     {
         var name = isLevelStart.Value
-            ? dialogue.Dialogue.Intro.DialogueName
-            : dialogue.Dialogue.Outro.DialogueName;
+            ? dialogue.Dialogue.Value.Intro.DialogueName
+            : dialogue.Dialogue.Value.Outro.DialogueName;
         label.text = $"{name}";
     }
 }

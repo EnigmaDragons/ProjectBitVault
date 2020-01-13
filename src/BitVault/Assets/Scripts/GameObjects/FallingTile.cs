@@ -10,7 +10,6 @@ public class FallingTile : OnMessage<PieceMoved, UndoPieceMoved>
     [SerializeField] private LockBoolVariable gameInputActive;
     [SerializeField] private float _lossDelay;
     [SerializeField] private CurrentLevelMap map;
-    [SerializeField] private BoolReference tutorialActive;
 
     private bool _isDangerous = false;
     private Material _originalMaterial;
@@ -31,15 +30,12 @@ public class FallingTile : OnMessage<PieceMoved, UndoPieceMoved>
         if (msg.From.Equals(new TilePoint(gameObject)) && !_isDangerous)
         {
             _isDangerous = true;
-            if (tutorialActive)
-                renderer.material = dangerousMaterial;
-            else
-                renderer.material = map.BitVaultLocation.IsAdjacentTo(new TilePoint(gameObject)) ? dangerousGoalMaterial : dangerousMaterial;
+            renderer.material = map.BitVaultLocation.IsAdjacentTo(new TilePoint(gameObject)) ? dangerousGoalMaterial : dangerousMaterial;
         }
         else if (msg.To.Equals(new TilePoint(gameObject)) && _isDangerous)
         {
             gameInputActive.Lock(gameObject);
-            StartCoroutine(DelayedLoss(tutorialActive.Value));
+            StartCoroutine(DelayedLoss());
         }
     }
 
@@ -49,11 +45,10 @@ public class FallingTile : OnMessage<PieceMoved, UndoPieceMoved>
             Revert();
     }
 
-    private IEnumerator DelayedLoss(bool isTutorialActive)
+    private IEnumerator DelayedLoss()
     {
         yield return new WaitForSeconds(_lossDelay);
         gameInputActive.Unlock(gameObject);
-        if (!isTutorialActive)
-            gameState.InitLevel();
+        Message.Publish(new LevelResetRequested());
     }
 }

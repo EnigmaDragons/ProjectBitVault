@@ -15,6 +15,7 @@ public sealed class GameLevels : ScriptableObject
     [SerializeField] private Color backgroundColor;
     [SerializeField] private IntroloopAudio musicTheme;
     [SerializeField] private SaveStorage saveStorage;
+    [SerializeField] private GameLevel tutorial;
 
     public GameLevel[] Value => value;
     public ConjoinedDialogues[] Story => story;
@@ -26,10 +27,11 @@ public sealed class GameLevels : ScriptableObject
     public Color LogoColor => logoColor;
     public Color BackgroundColor => backgroundColor;
     public IntroloopAudio MusicTheme => musicTheme;
+    public Maybe<GameLevel> Tutorial => tutorial;
 
-    public ConjoinedDialogues CurrentStory()
+    public Maybe<ConjoinedDialogues> CurrentStory()
     {
         var index = saveStorage.GetLevelsCompletedInZone(this);
-        return index >= story.Length ? new ConjoinedDialogues() : story[index];
+        return index >= story.Length ? new Maybe<ConjoinedDialogues>() : story[index];
     }
 }

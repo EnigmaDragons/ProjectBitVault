@@ -12,7 +12,6 @@ public sealed class Navigator : ScriptableObject
     public void NavigateToLevelSelect() => NavigateTo("LevelSelectScene");
     public void NavigateToCredits() => NavigateTo("CreditsScene");
     public void NavigateToDialogue() => NavigateTo("DialogueScene");
-    public void NavigateToTutorial() => NavigateTo("TutorialScene");
     public void NavigateToArchive() => NavigateTo("StoryArchive");
     public void NavigateBack() => NavigateTo(_previousScene);
     public void ExitGame() => Application.Quit();

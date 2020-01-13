@@ -27,7 +27,7 @@ namespace Assets.Scripts.UI
             isLevelStart.Value = true;
             currentDialogue.Set(zones.Value[nextZone].CurrentStory());
             storage.SaveZone(nextZone);
-            if (AutoSkipStory.Value) 
+            if (AutoSkipStory.Value || !currentDialogue.Dialogue.IsPresent) 
                 navigator.NavigateToGameScene();
             else
                 navigator.NavigateToDialogue();

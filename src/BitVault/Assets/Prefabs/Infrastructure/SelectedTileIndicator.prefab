@@ -38,6 +38,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 198331972731192618}
     m_Modifications:
+    - target: {fileID: 8198922761669877492, guid: cc3f1d36dfa85bb4baa5338ca06646d7,
+        type: 3}
+      propertyPath: m_Name
+      value: SelectedPrefab
+      objectReference: {fileID: 0}
     - target: {fileID: 3351202940257609182, guid: cc3f1d36dfa85bb4baa5338ca06646d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -93,18 +98,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8198922761669877492, guid: cc3f1d36dfa85bb4baa5338ca06646d7,
-        type: 3}
-      propertyPath: m_Name
-      value: SelectedPrefab
-      objectReference: {fileID: 0}
     - target: {fileID: 3205899155044295798, guid: cc3f1d36dfa85bb4baa5338ca06646d7,
         type: 3}
       propertyPath: tutorialActive
       value: 
       objectReference: {fileID: 11400000, guid: ae80cddbf2326a84f996892181849701,
         type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3205899155044295798, guid: cc3f1d36dfa85bb4baa5338ca06646d7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc3f1d36dfa85bb4baa5338ca06646d7, type: 3}
 --- !u!4 &2854201068190487591 stripped
 Transform:

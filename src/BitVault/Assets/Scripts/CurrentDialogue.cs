@@ -3,9 +3,9 @@
 [CreateAssetMenu]
 public class CurrentDialogue : ScriptableObject
 {
-    [SerializeField] private ConjoinedDialogues dialogue;
+    [SerializeField] private Maybe<ConjoinedDialogues> dialogue;
 
-    public ConjoinedDialogues Dialogue => dialogue;
+    public Maybe<ConjoinedDialogues> Dialogue => dialogue;
 
-    public void Set(ConjoinedDialogues story) => dialogue = story;
+    public void Set(Maybe<ConjoinedDialogues> story) => dialogue = story;
 }
