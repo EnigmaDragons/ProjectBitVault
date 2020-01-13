@@ -1,11 +1,15 @@
 ﻿using System.Linq;
 using UnityEngine;
 
-public class CenterOnLevel : MonoBehaviour
+public class CenterOnLevel : OnMessage<LevelReset>
 {
     [SerializeField] private CurrentLevel level;
 
-    private void Start()
+    private void Start() => Center();
+
+    protected override void Execute(LevelReset msg) => Center();
+
+    private void Center()
     {
         var bounds = level.ActiveLevel.Prefab.GetComponentsInChildren<Renderer>().Select(x => x.bounds);
         var boundsCombined = bounds.First();
