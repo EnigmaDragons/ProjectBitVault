@@ -371,10 +371,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Button
+  m_text: 120
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: db3ec8bc3c8fc2d4c9dac5f706240b2a, type: 2}
-  m_sharedMaterial: {fileID: 1138825969167257164, guid: db3ec8bc3c8fc2d4c9dac5f706240b2a,
+  m_fontAsset: {fileID: 11400000, guid: 9255dc1d8e2942e459320760bf20d547, type: 2}
+  m_sharedMaterial: {fileID: 7586977207837182458, guid: 9255dc1d8e2942e459320760bf20d547,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -401,8 +401,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 48
-  m_fontSizeBase: 48
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -442,12 +442,12 @@ MonoBehaviour:
   m_margin: {x: 20, y: 0, z: 20, w: 0}
   m_textInfo:
     textComponent: {fileID: 2877349849758691167}
-    characterCount: 6
+    characterCount: 3
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
     linkCount: 0
-    lineCount: 3
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -905,11 +905,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6226386018843366077}
     m_Modifications:
-    - target: {fileID: 8251874896424653464, guid: 68cb2c4ef63a25542aaee71f78055ff9,
-        type: 3}
-      propertyPath: m_Name
-      value: DataCubeBody
-      objectReference: {fileID: 0}
     - target: {fileID: 4251681376232025122, guid: 68cb2c4ef63a25542aaee71f78055ff9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -964,6 +959,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251874896424653464, guid: 68cb2c4ef63a25542aaee71f78055ff9,
+        type: 3}
+      propertyPath: m_Name
+      value: DataCubeBody
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68cb2c4ef63a25542aaee71f78055ff9, type: 3}
@@ -980,11 +980,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4430387920231657606}
     m_Modifications:
-    - target: {fileID: 8251874896424653464, guid: 68cb2c4ef63a25542aaee71f78055ff9,
-        type: 3}
-      propertyPath: m_Name
-      value: DataCubeBody
-      objectReference: {fileID: 0}
     - target: {fileID: 4251681376232025122, guid: 68cb2c4ef63a25542aaee71f78055ff9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1039,6 +1034,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251874896424653464, guid: 68cb2c4ef63a25542aaee71f78055ff9,
+        type: 3}
+      propertyPath: m_Name
+      value: DataCubeBody
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68cb2c4ef63a25542aaee71f78055ff9, type: 3}
@@ -1055,11 +1055,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9010665690655744137}
     m_Modifications:
-    - target: {fileID: 8251874896424653464, guid: 68cb2c4ef63a25542aaee71f78055ff9,
-        type: 3}
-      propertyPath: m_Name
-      value: DataCubeBody
-      objectReference: {fileID: 0}
     - target: {fileID: 4251681376232025122, guid: 68cb2c4ef63a25542aaee71f78055ff9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1114,6 +1109,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251874896424653464, guid: 68cb2c4ef63a25542aaee71f78055ff9,
+        type: 3}
+      propertyPath: m_Name
+      value: DataCubeBody
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68cb2c4ef63a25542aaee71f78055ff9, type: 3}
