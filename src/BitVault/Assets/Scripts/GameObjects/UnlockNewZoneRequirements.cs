@@ -31,7 +31,8 @@ public class UnlockNewZoneRequirements : MonoBehaviour
 
         if (zones.Value.Length == _zone + 1 || developmentToolsEnabled.Value)
         {
-            text.text = "";
+            if (text != null)
+                text.text = "";
             locked.SetActive(false);
             nextZoneButton.interactable = true;
         }
@@ -44,7 +45,8 @@ public class UnlockNewZoneRequirements : MonoBehaviour
         }
         else if (storage.GetTotalStars() < zones.Value[_zone + 1].StarsRequired)
         {
-            text.text = $"{zones.Value[_zone + 1].StarsRequired} Stars Required";
+            if (text != null)
+                text.text = $"{zones.Value[_zone + 1].StarsRequired} Stars Required";
             locked.SetActive(true);
             nextZoneButton.interactable = false;
         }
