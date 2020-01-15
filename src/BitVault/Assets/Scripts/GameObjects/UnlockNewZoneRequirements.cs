@@ -37,7 +37,8 @@ public class UnlockNewZoneRequirements : MonoBehaviour
         }
         else if (storage.GetLevelsCompletedInZone(zones.Value[_zone]) < zones.Value[_zone].Value.Length)
         {
-            text.text = "Complete Levels";
+            if (text != null)
+                text.text = "Complete Levels";
             locked.SetActive(true);
             nextZoneButton.interactable = false;
         }
@@ -49,7 +50,8 @@ public class UnlockNewZoneRequirements : MonoBehaviour
         }
         else
         {
-            text.text = "";
+            if (text != null)
+                text.text = "";
             locked.SetActive(false);
             nextZoneButton.interactable = true;
         }
