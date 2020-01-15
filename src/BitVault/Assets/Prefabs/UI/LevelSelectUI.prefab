@@ -786,6 +786,7 @@ GameObject:
   - component: {fileID: 2449610537204840998}
   - component: {fileID: 2449610537204840999}
   - component: {fileID: 1068236768758764371}
+  - component: {fileID: 1641806736139854960}
   m_Layer: 5
   m_Name: LevelSelectUI
   m_TagString: Untagged
@@ -888,6 +889,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   music: {fileID: 11400000, guid: 3b69961baff99e947b3cb28ccf0b6b14, type: 2}
   musicPlayer: {fileID: 11400000, guid: 664a2e5161969124bb812fe3f99baaba, type: 2}
+--- !u!114 &1641806736139854960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2449610537204841432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e99f69ea24100742b4f19b98ebeedc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasThatNeedsACamera: {fileID: 2449610537204840997}
 --- !u!1 &2780828434263610179
 GameObject:
   m_ObjectHideFlags: 0
@@ -4632,6 +4646,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 396524b6eedafe543a60489ae4eaa543, type: 3}
+--- !u!224 &8123896951405995469 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2744418662061603482, guid: 396524b6eedafe543a60489ae4eaa543,
+    type: 3}
+  m_PrefabInstance: {fileID: 6245299745918328663}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7648222106230640984 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4361791749050748431, guid: 396524b6eedafe543a60489ae4eaa543,
@@ -4650,12 +4670,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6245299745918328663}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &8123896951405995469 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2744418662061603482, guid: 396524b6eedafe543a60489ae4eaa543,
-    type: 3}
-  m_PrefabInstance: {fileID: 6245299745918328663}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7085611482342706643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4663,11 +4677,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7529389948691850032}
     m_Modifications:
-    - target: {fileID: 55574238756666051, guid: 1f6d26852b970884eac9e43aacd9cba4,
-        type: 3}
-      propertyPath: fullyOpaque
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5786079237351775404, guid: 1f6d26852b970884eac9e43aacd9cba4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4772,6 +4781,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 55574238756666051, guid: 1f6d26852b970884eac9e43aacd9cba4,
+        type: 3}
+      propertyPath: fullyOpaque
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6594990342589299908, guid: 1f6d26852b970884eac9e43aacd9cba4,
         type: 3}
