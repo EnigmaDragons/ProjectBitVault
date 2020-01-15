@@ -14,6 +14,7 @@ public class LevelZonePagination : MonoBehaviour
     [SerializeField] private SaveStorage storage;
     [SerializeField] private CurrentZone zone;
     [SerializeField] private TutorialButton tutorialButton;
+    [SerializeField] private GoToStoryButton storyButton;
 
     private int ZoneCount => zones.Value.Length;
     private int _zoneIndex;
@@ -40,6 +41,7 @@ public class LevelZonePagination : MonoBehaviour
     {
         buttons.Init(_zoneIndex, zones.Value[_zoneIndex]);
         tutorialButton.Init(_zoneIndex);
+        storyButton.Init(zones.Value[_zoneIndex]);
         controls.SetActive(ZoneCount > 1);
         previousPageButton.interactable = _zoneIndex != 0;
         nextPageButton.interactable = _zoneIndex != ZoneCount - 1;

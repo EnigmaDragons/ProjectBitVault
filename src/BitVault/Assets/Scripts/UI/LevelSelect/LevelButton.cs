@@ -24,7 +24,7 @@ public class LevelButton : MonoBehaviour
         {
             currentLevel.SelectLevel(level, zoneNumber, levelNum);
             isLevelStart.Value = true;
-            currentDialogue.Set(zones.Value[zoneNumber].CurrentStory());
+            currentDialogue.Set(storage.GetStars(level) == 0 ? zones.Value[zoneNumber].CurrentStory() : new Maybe<ConjoinedDialogues>());
             if (AutoSkipStory.Value || !currentDialogue.Dialogue.IsPresent)
                 navigator.NavigateToGameScene();
             else

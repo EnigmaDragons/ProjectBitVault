@@ -699,6 +699,7 @@ MonoBehaviour:
   storage: {fileID: 11400000, guid: 1458f9b8798b4f147b62b7883c2ba217, type: 2}
   zone: {fileID: 11400000, guid: e8fc69fe1d2656a4c8f02b9da95abb99, type: 2}
   tutorialButton: {fileID: 2511954634012865678}
+  storyButton: {fileID: 8345650299851698526}
 --- !u!114 &2772650298776022994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1166,6 +1167,7 @@ GameObject:
   - component: {fileID: 6456124752021476163}
   - component: {fileID: 7476676331682578157}
   - component: {fileID: 3549706837711507519}
+  - component: {fileID: 8345650299851698526}
   m_Layer: 5
   m_Name: ViewStoryButton
   m_TagString: Untagged
@@ -1289,6 +1291,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &8345650299851698526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3681227333482821649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9733deb6a4f9c41b99648efefd6258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storage: {fileID: 11400000, guid: 1458f9b8798b4f147b62b7883c2ba217, type: 2}
 --- !u!1 &4536786795625422567
 GameObject:
   m_ObjectHideFlags: 0
