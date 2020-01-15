@@ -46,8 +46,8 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0.68}
+  m_AnchorMax: {x: 1, y: 0.18}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_CellSize: {x: 180, y: 180}
   m_Spacing: {x: 20, y: 20}
   m_Constraint: 1
-  m_ConstraintCount: 3
+  m_ConstraintCount: 4
 --- !u!114 &5009099733588953850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
   wideColumns: 6
   tallSize: {x: 180, y: 180}
   tallPadding: {x: 20, y: 20}
-  tallColumns: 3
+  tallColumns: 4
 --- !u!114 &3744462941052036997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,26 +140,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelSelectButton (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 365705860081474770, guid: dbe0ffb888f2b754f9fa04296ad1d074,
         type: 3}
@@ -266,6 +246,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbe0ffb888f2b754f9fa04296ad1d074, type: 3}
 --- !u!224 &492164891380435722 stripped
@@ -297,26 +297,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelSelectButton (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 365705860081474770, guid: dbe0ffb888f2b754f9fa04296ad1d074,
         type: 3}
@@ -423,6 +403,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbe0ffb888f2b754f9fa04296ad1d074, type: 3}
 --- !u!224 &495886990711553470 stripped
@@ -454,26 +454,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelSelectButton (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 365705860081474770, guid: dbe0ffb888f2b754f9fa04296ad1d074,
         type: 3}
@@ -580,6 +560,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbe0ffb888f2b754f9fa04296ad1d074, type: 3}
 --- !u!224 &1081177831897121717 stripped
@@ -611,26 +611,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelSelectButton (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 365705860081474770, guid: dbe0ffb888f2b754f9fa04296ad1d074,
         type: 3}
@@ -737,6 +717,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbe0ffb888f2b754f9fa04296ad1d074, type: 3}
 --- !u!224 &2809481331386207709 stripped
@@ -768,26 +768,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelSelectButton (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 365705860081474770, guid: dbe0ffb888f2b754f9fa04296ad1d074,
         type: 3}
@@ -894,6 +874,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbe0ffb888f2b754f9fa04296ad1d074, type: 3}
 --- !u!114 &5778875600332325290 stripped
@@ -925,26 +925,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelSelectButton (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 365705860081474770, guid: dbe0ffb888f2b754f9fa04296ad1d074,
         type: 3}
@@ -1051,6 +1031,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbe0ffb888f2b754f9fa04296ad1d074, type: 3}
 --- !u!114 &5994521616791838511 stripped
@@ -1082,26 +1082,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelSelectButton (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 365705860081474770, guid: dbe0ffb888f2b754f9fa04296ad1d074,
         type: 3}
@@ -1208,6 +1188,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbe0ffb888f2b754f9fa04296ad1d074, type: 3}
 --- !u!224 &4503470679061108856 stripped
@@ -1239,26 +1239,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelSelectButton (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 365705860081474770, guid: dbe0ffb888f2b754f9fa04296ad1d074,
         type: 3}
@@ -1365,6 +1345,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbe0ffb888f2b754f9fa04296ad1d074, type: 3}
 --- !u!114 &2927601599653125750 stripped
@@ -1396,26 +1396,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelSelectButton (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 365705860081474770, guid: dbe0ffb888f2b754f9fa04296ad1d074,
         type: 3}
@@ -1522,6 +1502,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbe0ffb888f2b754f9fa04296ad1d074, type: 3}
 --- !u!224 &5092658734089552296 stripped
@@ -1553,26 +1553,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelSelectButton (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 365705860081474770, guid: dbe0ffb888f2b754f9fa04296ad1d074,
         type: 3}
@@ -1679,6 +1659,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbe0ffb888f2b754f9fa04296ad1d074, type: 3}
 --- !u!224 &5299593257898016257 stripped
@@ -1710,26 +1710,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelSelectButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 365705860081474770, guid: dbe0ffb888f2b754f9fa04296ad1d074,
         type: 3}
@@ -1836,6 +1816,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbe0ffb888f2b754f9fa04296ad1d074, type: 3}
 --- !u!224 &5802497726190297091 stripped
@@ -1867,26 +1867,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelSelectButton (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 365705860081474770, guid: dbe0ffb888f2b754f9fa04296ad1d074,
         type: 3}
@@ -1992,6 +1972,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877349849758691167, guid: dbe0ffb888f2b754f9fa04296ad1d074,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbe0ffb888f2b754f9fa04296ad1d074, type: 3}

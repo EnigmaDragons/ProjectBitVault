@@ -7,9 +7,9 @@ public class LevelZonePagination : MonoBehaviour
 {
     [SerializeField] private LevelZoneButtons buttons;
     [SerializeField] private GameObject controls;
-    [SerializeField] private GameObject previousPageButton;
+    [SerializeField] private Button previousPageButton;
     [SerializeField] private TextMeshProUGUI pageNumText;
-    [SerializeField] private GameObject nextPageButton;
+    [SerializeField] private Button nextPageButton;
     [SerializeField] private GameZones zones;
     [SerializeField] private SaveStorage storage;
     [SerializeField] private CurrentZone zone;
@@ -41,8 +41,9 @@ public class LevelZonePagination : MonoBehaviour
         buttons.Init(_zoneIndex, zones.Value[_zoneIndex]);
         tutorialButton.Init(_zoneIndex);
         controls.SetActive(ZoneCount > 1);
-        previousPageButton.SetActive(_zoneIndex != 0);
-        nextPageButton.SetActive(_zoneIndex != ZoneCount - 1);
-        pageNumText.text = (_zoneIndex + 1).ToString();
+        previousPageButton.interactable = _zoneIndex != 0;
+        nextPageButton.interactable = _zoneIndex != ZoneCount - 1;
+        if (pageNumText != null)
+            pageNumText.text = (_zoneIndex + 1).ToString();
     }
 }

@@ -31,25 +31,29 @@ public class UnlockNewZoneRequirements : MonoBehaviour
 
         if (zones.Value.Length == _zone + 1 || developmentToolsEnabled.Value)
         {
-            text.text = "";
+            if (text != null)
+                text.text = "";
             locked.SetActive(false);
             nextZoneButton.interactable = true;
         }
         else if (storage.GetLevelsCompletedInZone(zones.Value[_zone]) < zones.Value[_zone].Value.Length)
         {
-            text.text = "Complete Levels";
+            if (text != null)
+                text.text = "Complete Levels";
             locked.SetActive(true);
             nextZoneButton.interactable = false;
         }
         else if (storage.GetTotalStars() < zones.Value[_zone + 1].StarsRequired)
         {
-            text.text = $"{zones.Value[_zone + 1].StarsRequired} Stars Required";
+            if (text != null)
+                text.text = $"{zones.Value[_zone + 1].StarsRequired} Stars Required";
             locked.SetActive(true);
             nextZoneButton.interactable = false;
         }
         else
         {
-            text.text = "";
+            if (text != null)
+                text.text = "";
             locked.SetActive(false);
             nextZoneButton.interactable = true;
         }
