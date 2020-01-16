@@ -39,14 +39,14 @@ public class UnlockNewZoneRequirements : MonoBehaviour
         else if (storage.GetLevelsCompletedInZone(zones.Value[_zone]) < zones.Value[_zone].Value.Length)
         {
             if (text != null)
-                text.text = "Complete Levels";
+                text.text = $"{zones.Value[_zone].Value.Length - storage.GetLevelsCompletedInZone(zones.Value[_zone])} Levels";
             locked.SetActive(true);
             nextZoneButton.interactable = false;
         }
         else if (storage.GetTotalStars() < zones.Value[_zone + 1].StarsRequired)
         {
             if (text != null)
-                text.text = $"{zones.Value[_zone + 1].StarsRequired} Stars Required";
+                text.text = $"{zones.Value[_zone + 1].StarsRequired} Data Cubes";
             locked.SetActive(true);
             nextZoneButton.interactable = false;
         }
