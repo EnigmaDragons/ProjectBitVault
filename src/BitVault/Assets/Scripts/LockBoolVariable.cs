@@ -23,7 +23,7 @@ public class LockBoolVariable : ScriptableObject
 
     public void Unlock(GameObject obj)
     {
-        _locks.Remove(obj);
+        _locks.RemoveAll(x => x == obj);
         _locks.RemoveAll(x => !x);
         innerVariable.Value = !_locks.Any();
     }

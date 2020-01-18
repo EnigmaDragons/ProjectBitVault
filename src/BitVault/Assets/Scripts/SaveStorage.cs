@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Linq;
+using JetBrains.Annotations;
 
 [CreateAssetMenu]
 public class SaveStorage : ScriptableObject
@@ -10,7 +12,11 @@ public class SaveStorage : ScriptableObject
     private const string _version = "0.1";
     private const string _showMovementHints = "ShowMovementHints";
     private const string _autoSkipStory = "AutoSkipStory";
-    private const string _useFemale = "UseFemale"; 
+    private const string _useFemale = "UseFemale";
+    private const string _useHints = "UseHints";
+    private const string _hintPoints = "HintPoints";
+    private const string _dailyBonusDate = "DailyBonusDate";
+    private const string _minutesTilHintBonus = "MinutesTilHintBonus";
     
     private PlayerPrefsKeyValueStore _store = new PlayerPrefsKeyValueStore();
     
@@ -51,6 +57,19 @@ public class SaveStorage : ScriptableObject
     public bool HasChosenGender() => _store.Exists(_useFemale);
     public bool GetUseFemale() => _store.GetOrDefault(_useFemale, false);
     public void SetUseFemale(bool active) => _store.Put(_useFemale, active);
+
+    private string HintsKey(GameLevel level) => $"{level.Name}Hints";
+    public int GetHints(GameLevel level) => _store.GetOrDefault(HintsKey(level), 0);
+    public void AddHintToLevel(GameLevel level) => _store.Put(HintsKey(level), GetHints(level) + 1);
+    public void ClearHints(GameLevel level) => _store.Put(HintsKey(level), 0);
+    public bool GetUseHints() => _store.GetOrDefault(_useHints, true);
+    public void SetUseHints(bool active) => _store.Put(_useHints, active);
+    public int GetHintPoints() => _store.GetOrDefault(_hintPoints, 0);
+    public void SetHintPoints(int hintPoints) => _store.Put(_hintPoints, hintPoints);
+    public bool HasDailyBonusBeenGiven() => _store.GetOrDefault(_dailyBonusDate, -1) == DateTime.Today.DayOfYear;
+    public void GiveDailyBonus() => _store.Put(_dailyBonusDate, DateTime.Today.DayOfYear);
+    public int MinutesTilNextHintBonus() => _store.GetOrDefault(_minutesTilHintBonus, 0);
+    public void SetMinutesTilNextHintBonus(int minutes) => _store.Put(_minutesTilHintBonus, minutes);
 
     public void Reset()
     {
