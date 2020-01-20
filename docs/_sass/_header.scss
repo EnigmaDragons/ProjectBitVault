@@ -81,12 +81,13 @@
   height: 100%;  
   width: auto;
   margin-bottom: 0;
+  padding-right: 1em;
 
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s; /* Firefox < 16 */
-   -ms-animation: fadein 2s; /* Internet Explorer */
-    -o-animation: fadein 2s; /* Opera < 12.1 */
-       animation: fadein 2s;
+  // -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  // -moz-animation: fadein 2s; /* Firefox < 16 */
+  //  -ms-animation: fadein 2s; /* Internet Explorer */
+  //   -o-animation: fadein 2s; /* Opera < 12.1 */
+  //      animation: fadein 2s;
 }
 
 @keyframes fadein {
@@ -122,17 +123,18 @@ nav {
   flex-direction: row;
   justify-items: center;
   
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s; /* Firefox < 16 */
-   -ms-animation: fadein 2s; /* Internet Explorer */
-    -o-animation: fadein 2s; /* Opera < 12.1 */
-       animation: fadein 2s;
+  // -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  // -moz-animation: fadein 2s; /* Firefox < 16 */
+  //  -ms-animation: fadein 2s; /* Internet Explorer */
+  //   -o-animation: fadein 2s; /* Opera < 12.1 */
+  //      animation: fadein 2s;
 }
 nav ul {
   list-style: none;
   text-align: center;
   margin: 8px 0px 8px 0;
   display: flex;
+  padding-left: 0;
   flex-direction: row;
   justify-content: space-between;
 }
