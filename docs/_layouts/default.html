@@ -2,18 +2,10 @@
 <html>
   {% include head.html %}
   <body>
-    {% if site.google_tag_manager %}
-    <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
-          height="0" width="0" style="display:none;visibility:hidden">
-      </iframe>
-    </noscript>
-    {% endif %}
-
     <div class="site-wrap">
       {% include header.html %}
 
-      <div class="body-content p-responsive wrap" role="main">
+      <div class="body-content p-responsive wrap hero-bg" role="main">
         <div class="measure py2">
           {{ content }}
         </div>

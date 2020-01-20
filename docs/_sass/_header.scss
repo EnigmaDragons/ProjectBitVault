@@ -1,12 +1,13 @@
 .site-header {  
 	max-width: 100%;
-	background-color: $header-bg-color;
+	// background-color: $header-bg-color;
   box-shadow: 0 4px 8px 0 $shadow;
   padding-top: 0;
   padding-bottom: 0;
   text-align: center;
   z-index: 999;
-  position: relative;
+  position: relative;  
+  width: 100vw;
 }
 
 .site-header .site-nav {
@@ -77,8 +78,9 @@
 
 .logo {
   max-height: 220px;
-  height: 100%;
+  height: 100%;  
   width: auto;
+  margin-bottom: 0;
 
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */

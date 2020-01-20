@@ -4,12 +4,12 @@ html, body {
   height: auto;
   min-height: 100%;
   background: $site-bg-color no-repeat center center fixed;
-  background-image: linear-gradient(down, #1ec0ec, #277e24);
 }
 
 img {
   max-width: 100%;
   height: auto;
+  margin: 0.5em auto;
 }
 
 em img {
@@ -22,7 +22,7 @@ body {
   overflow-y: scroll;
           box-sizing: border-box;
      -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+  -webkit-box-sizing: border-box;  
 }
 
 h1, h2, h3, h4, h5, h6 {
