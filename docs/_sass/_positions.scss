@@ -14,7 +14,7 @@
 .column {
   display: flex; 
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
 }
 
 .half-width {
@@ -33,6 +33,11 @@
   align-content: center;
   text-align: center;
   text-justify: center;
+}
+
+.center-items {
+  align-items: center;
+  justify-items: center;
 }
 
 .row {
