@@ -30,7 +30,7 @@
 }
 
 .site-header nav a {
-  color: $site-color;
+  color: $header-color;
 }
 
 .site-header-bar nav {  
@@ -40,9 +40,9 @@
 .site-header-bar nav a:hover,
 .site-header-bar nav a:focus,
 .site-header-bar nav a:active {
-  color: #444;
+  color: #fff;
   opacity: 1;
-  border-bottom: 2px solid #444;
+  border-bottom: 2px solid #fff;
 }
 
 .site-header-bar a {
@@ -50,7 +50,7 @@
   text-transform: lowercase;
   color: $header-color;
   background-color: none;
-  border-bottom: $header-border-bottom;
+  border-bottom: $header-color;
   font-family: $heading-font-family;
   font-size: 1.3em;
   font-weight: $heading-font-weight;
@@ -72,7 +72,7 @@
 .posts .post a:hover .post-title,
 .posts .post a:hover .post-summary {
   opacity: 0.92;
-  color: $site-color;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -82,35 +82,6 @@
   width: auto;
   margin-bottom: 0;
   padding-right: 1em;
-
-  // -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  // -moz-animation: fadein 2s; /* Firefox < 16 */
-  //  -ms-animation: fadein 2s; /* Internet Explorer */
-  //   -o-animation: fadein 2s; /* Opera < 12.1 */
-  //      animation: fadein 2s;
-}
-
-@keyframes fadein {
-from { opacity: 0; }
-to   { opacity: 1; }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-from { opacity: 0; }
-to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-from { opacity: 0; }
-to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-from { opacity: 0; }
-to   { opacity: 1; }
 }
 
 /* NAVIGATION */
@@ -121,13 +92,7 @@ nav {
   margin-right: auto;
   display: flex;
   flex-direction: row;
-  justify-items: center;
-  
-  // -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  // -moz-animation: fadein 2s; /* Firefox < 16 */
-  //  -ms-animation: fadein 2s; /* Internet Explorer */
-  //   -o-animation: fadein 2s; /* Opera < 12.1 */
-  //      animation: fadein 2s;
+  justify-items: center;  
 }
 nav ul {
   list-style: none;
@@ -173,7 +138,7 @@ nav.fill ul li a::after {
   width: 0%;
   content: '.';
   color: transparent;
-  background: $site-color;
+  background: #fff;
   height: 2px;
 }
 nav.stroke ul li a:hover:after {

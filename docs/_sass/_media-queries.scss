@@ -1,4 +1,8 @@
 @media screen and (max-width: $viewport-small) {
+  html {
+    font-size: 10px;
+  }
+
   .mobile-hidden {
     display: none !important;
     width: 0;
