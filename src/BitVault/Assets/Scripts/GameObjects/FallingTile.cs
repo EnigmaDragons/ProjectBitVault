@@ -11,28 +11,29 @@ public class FallingTile : OnMessage<PieceMoved, UndoPieceMoved>
     [SerializeField] private float _lossDelay;
     [SerializeField] private CurrentLevelMap map;
 
-    private bool _isDangerous = false;
+    public bool IsDangerous { get; private set; } = false;
     private Material _originalMaterial;
 
     private void Awake()
     {
         _originalMaterial = renderer.material;
+        IsDangerous = false;
     }
 
     private void Revert()
     {
-        _isDangerous = false;
+        IsDangerous = false;
         renderer.material = _originalMaterial;
     }
     
     protected override void Execute(PieceMoved msg)
     {
-        if (msg.From.Equals(new TilePoint(gameObject)) && !_isDangerous)
+        if (msg.From.Equals(new TilePoint(gameObject)) && !IsDangerous)
         {
-            _isDangerous = true;
+            IsDangerous = true;
             renderer.material = map.BitVaultLocation.IsAdjacentTo(new TilePoint(gameObject)) ? dangerousGoalMaterial : dangerousMaterial;
         }
-        else if (msg.To.Equals(new TilePoint(gameObject)) && _isDangerous)
+        else if (msg.To.Equals(new TilePoint(gameObject)) && IsDangerous)
         {
             gameInputActive.Lock(gameObject);
             StartCoroutine(DelayedLoss());
@@ -41,7 +42,7 @@ public class FallingTile : OnMessage<PieceMoved, UndoPieceMoved>
 
     protected override void Execute(UndoPieceMoved msg)
     {
-        if (_isDangerous && msg.From.Equals(new TilePoint(gameObject)))
+        if (IsDangerous && msg.From.Equals(new TilePoint(gameObject)))
             Revert();
     }
 
