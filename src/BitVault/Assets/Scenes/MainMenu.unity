@@ -417,6 +417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2023028853}
   - component: {fileID: 2023028852}
+  - component: {fileID: 2023028854}
   m_Layer: 0
   m_Name: TestingFeatures
   m_TagString: Untagged
@@ -452,6 +453,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2023028854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023028851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0588b0f58144bf19afe6b2680cc733a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flag: {fileID: 11400000, guid: 15b10826e309e824fae8f7a22a780eba, type: 2}
+  keys: 62000000650000007400000061000000
 --- !u!1001 &795289444101026241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -459,6 +474,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 796503286028939448, guid: ffa0d08c728a77641ad9bb0c8ff02715,
+        type: 3}
+      propertyPath: m_Name
+      value: DigitLineParticles
+      objectReference: {fileID: 0}
     - target: {fileID: 794591977187816574, guid: ffa0d08c728a77641ad9bb0c8ff02715,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -513,11 +533,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 796503286028939448, guid: ffa0d08c728a77641ad9bb0c8ff02715,
-        type: 3}
-      propertyPath: m_Name
-      value: DigitLineParticles
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffa0d08c728a77641ad9bb0c8ff02715, type: 3}
@@ -1724,6 +1739,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -340
+      objectReference: {fileID: 0}
+    - target: {fileID: 2929519704514445743, guid: 8975afca44f838f48a877dd7a17f2150,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -814
+      objectReference: {fileID: 0}
+    - target: {fileID: 4282340205243669446, guid: 8975afca44f838f48a877dd7a17f2150,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -490
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8975afca44f838f48a877dd7a17f2150, type: 3}
