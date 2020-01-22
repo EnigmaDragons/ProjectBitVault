@@ -1,18 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 
 public class LevelSimulationSnapshot
 {
     private readonly int[,] _map;
     private int _goalX;
     private int _goalY;
+    public string Hash { get; }
 
     private LevelSimulationSnapshot(int[,] map, int goalX, int goalY)
     {
         _map = map;
         _goalX = goalX;
         _goalY = goalY;
+        Hash = _map.ToBytes().Md5Hash();
     }
 
     public LevelSimulationSnapshot(List<TilePoint> serverFloors, List<TilePoint> disengagedFailsafes,
@@ -30,8 +34,9 @@ public class LevelSimulationSnapshot
         _map[root.X, root.Y] += (int)GamePosition.Root;
         _goalX = root.X;
         _goalY = root.Y;
+        Hash = _map.ToBytes().Md5Hash();
     }
-
+    
     public List<AIMove> GetMoves()
     {
         var moves = new List<AIMove>();
@@ -97,20 +102,9 @@ public class LevelSimulationSnapshot
 
     public bool IsGameOver() => HasRootKey(_goalX + 1, _goalY) || HasRootKey(_goalX - 1, _goalY) || HasRootKey(_goalX, _goalY + 1) || HasRootKey(_goalX, _goalY - 1);
 
-    public override bool Equals(object obj)
-    {
-        var item = obj as LevelSimulationSnapshot;
-        return item != null && Equals(item);
-    }
-
-    public bool Equals(LevelSimulationSnapshot obj)
-    {
-        for (var x = 0; x < _map.GetLength(0); x++)
-            for (var y = 0; y < _map.GetLength(1); y++)
-                if (_map[x, y] != obj._map[x, y])
-                    return false;
-        return true;
-    } 
+    public override int GetHashCode() => Hash.GetHashCode();
+    public override bool Equals(object obj) => obj is LevelSimulationSnapshot item && Equals(item);
+    public bool Equals(LevelSimulationSnapshot obj) => obj.Hash.Equals(Hash);
 
     private bool IsWithinBounds(int x, int y) => x >= 0 && y >= 0 && x < _map.GetLength(0) && y < _map.GetLength(1);
     private bool IsSelectable(int x, int y) => IsWithinBounds(x, y) && _map[x, y] > 16;
