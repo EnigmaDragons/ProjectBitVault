@@ -14,7 +14,15 @@ public sealed class Navigator : ScriptableObject
     public void NavigateToDialogue() => NavigateTo("DialogueScene");
     public void NavigateToArchive() => NavigateTo("StoryArchive");
     public void NavigateBack() => NavigateTo(_previousScene);
-    public void ExitGame() => Application.Quit();
+
+    public void ExitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
     
     private void NavigateTo(string name)
     {

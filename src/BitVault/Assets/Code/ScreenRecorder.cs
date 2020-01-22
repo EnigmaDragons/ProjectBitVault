@@ -14,7 +14,7 @@
      public int captureHeight = 1080;
  
      // optional game object to hide during screenshots (usually your scene canvas hud)
-     public GameObject hideGameObject; 
+     [DTValidator.Optional] public GameObject hideGameObject; 
  
      // optimize for many screenshots will not destroy any objects so future screenshots will be fast
      public bool optimizeForManyScreenshots = true;

@@ -136,7 +136,11 @@ MonoBehaviour:
   resetDuration:
     UseConstant: 0
     ConstantValue: 0
-    FloatVariable: {fileID: 11400000, guid: 9e232b5ee6066a4428f975f27970236d, type: 2}
+    FloatVariable: {fileID: 11400000, guid: 9f11dc47bea92784cbbb050e48665153, type: 2}
+  resetCooldown:
+    UseConstant: 1
+    ConstantValue: 3
+    FloatVariable: {fileID: 0}
 --- !u!114 &998014594998745595
 MonoBehaviour:
   m_ObjectHideFlags: 0
