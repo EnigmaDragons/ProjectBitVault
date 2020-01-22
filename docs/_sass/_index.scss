@@ -2,10 +2,9 @@
   text-align: center;
 }
 
-
-
 .index p {
   color: $light-gray;
+  font-size: 0.8em;
 }
 
 .body-content {
@@ -22,7 +21,6 @@
 }
 
 .index li p {
-  font-size: 0.8em;
   text-align: left;
   padding-left: 1em;
 }
@@ -32,8 +30,13 @@
 }
 
 .hero-bg {
-  background-image: url('/images/bg1.jpg');
+  background-image: url('/images/bg3.jpg');
   background-size: 100vw auto;
   background-repeat: repeat-y;
+}
+
+.cta-icon {
+  width: 160px;
+  height: auto;
 }
 

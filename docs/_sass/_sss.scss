@@ -33,7 +33,7 @@
 	margin: 0;
 	position: absolute;
 	top: 0;
-	background: url('../img/arr.png') no-repeat;
+	background: url('/images/sss-arrow.png') no-repeat;
 }
 
 .sssprev {
@@ -48,4 +48,14 @@
 
 .sssprev:hover, .sssnext:hover {
 	cursor: pointer;
+}
+
+.slider {
+	min-width: 33vw;
+	width: 600px;
+	max-width: 50vw;
+	height: 40vh;
+	max-height: 40vh;
+	margin-left: auto;
+	margin-right: auto;
 }
