@@ -5,7 +5,7 @@ public class GameLevel : ScriptableObject
 {
     [SerializeField] private string levelName;
     [SerializeField] private GameObject prefab;
-    [SerializeField] private Solution solution;
+    [DTValidator.Optional, SerializeField] private Solution solution;
 
     public string Name => levelName;
     public GameObject Prefab => prefab;

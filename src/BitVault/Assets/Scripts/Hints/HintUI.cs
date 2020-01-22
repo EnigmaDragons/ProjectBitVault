@@ -20,9 +20,10 @@ public class HintUI : MonoBehaviour
 
     private void Start()
     {
+        var hintsAreActive = level.ActiveLevel.Solution.IsPresent;
         useHints.SetIsOnWithoutNotify(saveStorage.GetUseHints());
         useHints.onValueChanged.AddListener(x => saveStorage.SetUseHints(x));
-        openHintMenu.gameObject.SetActive(level.ActiveLevel.Solution.IsPresent);
+        openHintMenu.gameObject.SetActive(hintsAreActive);
         _hintExecutor = FindObjectOfType<HintExecutor>();
         hintCount.text = $"Current Level Hints: {saveStorage.GetHints(level.ActiveLevel)}";
         _cost = (int)Math.Pow(2, saveStorage.GetHints(level.ActiveLevel));
