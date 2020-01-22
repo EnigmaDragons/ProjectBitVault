@@ -5,12 +5,16 @@ public class AIBrute
 {
     private List<LevelSimulationSnapshot> _oldStates;
     private List<AIMove> _movesToWin;
-
+    
+    public bool CanWin { get; private set; }
+    public AIMove NextMove => _movesToWin.Last();
+    
     public bool CalculateSolution(LevelSimulationSnapshot state)
     {
         _oldStates = new List<LevelSimulationSnapshot>();
         _movesToWin = new List<AIMove>();
-        return RecursiveCalculateSolution(state);
+        CanWin = RecursiveCalculateSolution(state);
+        return true;
     }
 
     private bool RecursiveCalculateSolution(LevelSimulationSnapshot state)
@@ -23,7 +27,7 @@ public class AIBrute
             {
                 if (newState.HasWon())
                 {
-                    _movesToWin.Prepend(move);
+                    _movesToWin.Add(move);
                     return true;
                 }
             }

@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -315,6 +315,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8460699726020419687, guid: 9d72c28a2e23c9d42ac42208a1e2b18a,
+        type: 3}
+      propertyPath: m_Name
+      value: GameBackgroundMusic
+      objectReference: {fileID: 0}
     - target: {fileID: 2961466364825741659, guid: 9d72c28a2e23c9d42ac42208a1e2b18a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -369,11 +374,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460699726020419687, guid: 9d72c28a2e23c9d42ac42208a1e2b18a,
-        type: 3}
-      propertyPath: m_Name
-      value: GameBackgroundMusic
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d72c28a2e23c9d42ac42208a1e2b18a, type: 3}
@@ -528,6 +528,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 951932642522300966, guid: ede7d959dd0f07f478269a56ae5b5387,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelTestLoader
+      objectReference: {fileID: 0}
     - target: {fileID: 951932642522300964, guid: ede7d959dd0f07f478269a56ae5b5387,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -582,17 +587,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 951932642522300965, guid: ede7d959dd0f07f478269a56ae5b5387,
-        type: 3}
-      propertyPath: newLevel
-      value: 
-      objectReference: {fileID: 11400000, guid: 6c648469123c4c4438ff47225b5d587e,
-        type: 2}
-    - target: {fileID: 951932642522300966, guid: ede7d959dd0f07f478269a56ae5b5387,
-        type: 3}
-      propertyPath: m_Name
-      value: LevelTestLoader
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ede7d959dd0f07f478269a56ae5b5387, type: 3}

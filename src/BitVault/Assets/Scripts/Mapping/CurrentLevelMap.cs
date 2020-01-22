@@ -34,6 +34,7 @@ public class CurrentLevelMap : ScriptableObject
         blockedTiles = new List<GameObject>();
         jumpableObjects = new List<GameObject>();
         selectableObjects = new List<GameObject>();
+        collectibleObjects = new List<GameObject>();
         destroyedObjects = new Dictionary<GameObject, ObjectRules>();
         movementOptionRules = new List<MovementOptionRule>();
         movementRestrictionRules = new List<MovementRestrictionRule>();

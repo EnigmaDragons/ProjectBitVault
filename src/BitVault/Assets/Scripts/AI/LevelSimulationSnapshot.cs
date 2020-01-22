@@ -23,8 +23,8 @@ public class LevelSimulationSnapshot
         serverFloors.ForEach(x => _map[x.X, x.Y] = (int)GamePosition.Floor);
         disengagedFailsafes.ForEach(x => _map[x.X, x.Y] = (int)GamePosition.DisengagedFailsafe);
         oneHealthSubroutines.ForEach(x => _map[x.X, x.Y] += (int)GamePosition.Subroutine);
-        twoHealthSubroutines.ForEach(x => _map[x.X, x.Y] = (int)GamePosition.DoubleSubroutine);
-        iceSubroutines.ForEach(x => _map[x.X, x.Y] = (int)GamePosition.IceSubroutine);
+        twoHealthSubroutines.ForEach(x => _map[x.X, x.Y] += (int)GamePosition.DoubleSubroutine);
+        iceSubroutines.ForEach(x => _map[x.X, x.Y] += (int)GamePosition.IceSubroutine);
         dataCubes.ForEach(x => _map[x.X, x.Y] += (int)GamePosition.DataCube);
         _map[rootKey.X, rootKey.Y] += (int)GamePosition.RootKey;
         _map[root.X, root.Y] += (int)GamePosition.Root;
@@ -69,12 +69,18 @@ public class LevelSimulationSnapshot
         var newMap = new int[_map.GetLength(0), _map.GetLength(1)];
         Buffer.BlockCopy(_map, 0, newMap, 0, _map.Length * sizeof(int));
         var piece = GetPiece(move.FromX, move.FromY);
-        if (newMap[move.ToX, move.ToY] > 8)
-            newMap[move.ToX, move.ToY] -= 8;
+        if (newMap[move.ToX, move.ToY] > 4)
+            newMap[move.ToX, move.ToY] -= 4;
         newMap[move.ToX, move.ToY] += piece;
         newMap[move.FromX, move.FromY] = IsFloor(move.FromX, move.FromY) ? 1 : 0;
         if (piece < 128)
-            newMap[IntBetween(move.FromX, move.ToX), IntBetween(move.FromY, move.ToY)] -= GetPiece(IntBetween(move.FromX, move.ToX), IntBetween(move.FromY, move.ToY));
+        {
+            var damagedPiece = GetPiece(IntBetween(move.FromX, move.ToX), IntBetween(move.FromY, move.ToY));
+            if (damagedPiece == 64)
+                newMap[IntBetween(move.FromX, move.ToX), IntBetween(move.FromY, move.ToY)] -= 32;
+            else
+                newMap[IntBetween(move.FromX, move.ToX), IntBetween(move.FromY, move.ToY)] -= damagedPiece;
+        }
         return new LevelSimulationSnapshot(newMap, _goalX, _goalY);
     }
 
@@ -111,7 +117,7 @@ public class LevelSimulationSnapshot
     private bool DoesJump(int x, int y) => IsWithinBounds(x, y) && IsSelectable(x, y) && _map[x, y] < 128;
     private bool DoesTeleport(int x, int y) => IsWithinBounds(x, y) && _map[x, y] > 128;
     private bool IsJumpable(int x, int y) => IsWithinBounds(x, y) && _map[x, y] > 32;
-    private bool IsWalkable(int x, int y) => IsWithinBounds(x, y) && _map[x, y] == 1 || _map[x, y] == 2;
+    private bool IsWalkable(int x, int y) => IsWithinBounds(x, y) && _map[x, y] >= 1 && _map[x, y] < 8;
     private int GetPiece(int x, int y) => _map[x, y] % 2 == 1 ? _map[x, y] - 1 : _map[x, y] - 2;
     private bool IsFloor(int x, int y) => _map[x, y] % 2 == 1;
     private int IntBetween(int from, int to) => from + (to - from) / 2;
@@ -123,8 +129,8 @@ public class LevelSimulationSnapshot
         Nothing = 0,
         Floor = 1,
         DisengagedFailsafe = 2,
-        Root = 4,
-        DataCube = 8,
+        DataCube = 4,
+        Root = 8,
         RootKey = 16,
         Subroutine = 32,
         DoubleSubroutine = 64,
