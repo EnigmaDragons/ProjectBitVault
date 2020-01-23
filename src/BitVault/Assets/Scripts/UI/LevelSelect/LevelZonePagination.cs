@@ -10,13 +10,13 @@ public class LevelZonePagination : MonoBehaviour
     [SerializeField] private Button previousPageButton;
     [SerializeField] private TextMeshProUGUI pageNumText;
     [SerializeField] private Button nextPageButton;
-    [SerializeField] private Campaign zones;
     [SerializeField] private SaveStorage storage;
     [SerializeField] private CurrentZone zone;
     [SerializeField] private TutorialButton tutorialButton;
     [SerializeField] private GoToStoryButton storyButton;
 
-    private int ZoneCount => zones.Value.Length;
+    private Campaign Campaign => zone.Campaign;
+    private int ZoneCount => Campaign.Value.Length;
     private int _zoneIndex;
 
     public void Awake()
@@ -32,16 +32,16 @@ public class LevelZonePagination : MonoBehaviour
     
     private void Change(int newIndex)
     {
-        _zoneIndex = Math.Min(Math.Max(newIndex, 0), zones.Value.Length - 1);
+        _zoneIndex = Math.Min(Math.Max(newIndex, 0), Campaign.Value.Length - 1);
         zone.Init(_zoneIndex);
         Render();
     }
 
     private void Render()
     {
-        buttons.Init(_zoneIndex, zones.Value[_zoneIndex]);
+        buttons.Init(_zoneIndex, Campaign.Value[_zoneIndex]);
         tutorialButton.Init(_zoneIndex);
-        storyButton.Init(zones.Value[_zoneIndex]);
+        storyButton.Init(Campaign.Value[_zoneIndex]);
         controls.SetActive(ZoneCount > 1);
         previousPageButton.interactable = _zoneIndex != 0;
         nextPageButton.interactable = _zoneIndex != ZoneCount - 1;

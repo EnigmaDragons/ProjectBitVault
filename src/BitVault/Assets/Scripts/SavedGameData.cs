@@ -6,14 +6,14 @@ public sealed class SavedGameData
     public string SaveDataVersion = "0.7.5";
     public int ActiveZone = 0;
     public string ActiveCampaignName = "";
-    public Campaigns Campaigns = new Campaigns();
+    public CampaignsProgressData Campaigns = new CampaignsProgressData();
     public SettingsData Settings = new SettingsData();
 
     public CampaignLevelScores ActiveCampaign => Campaigns[ActiveCampaignName];
 }
 
 [Serializable]
-public sealed class Campaigns : SerializableDictionary<string, CampaignLevelScores> {}
+public sealed class CampaignsProgressData : SerializableDictionary<string, CampaignLevelScores> {}
 
 [Serializable]
 public sealed class CampaignLevelScores : SerializableDictionary<string, int> {}

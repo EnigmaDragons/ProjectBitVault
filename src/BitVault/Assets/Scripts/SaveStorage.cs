@@ -6,6 +6,8 @@ using System.Linq;
 [CreateAssetMenu]
 public class SaveStorage : ScriptableObject
 {
+    [SerializeField] private CurrentZone current; 
+    
     private const string _versionKey = "Version";
     private const string _version = "0.2";
     private const string _showMovementHints = "ShowMovementHints";
@@ -16,6 +18,8 @@ public class SaveStorage : ScriptableObject
     private PlayerPrefsKeyValueStore _store = new PlayerPrefsKeyValueStore();
     private Stored<SavedGameData> _currentSave;
     private SavedGameData SaveData => _currentSave.Get();
+
+    private Campaign ActiveCampaign => current.Campaign;
     
     public void Init()
     {
@@ -25,7 +29,7 @@ public class SaveStorage : ScriptableObject
            _currentSave = new JsonFileStored<SavedGameData>(Path.Combine(Application.persistentDataPath, "Save.json"), () => new SavedGameData
             {
                 ActiveCampaignName = _defaultCampaignKey,
-                Campaigns = new Campaigns { { _defaultCampaignKey, new CampaignLevelScores()} }
+                Campaigns = new CampaignsProgressData { { _defaultCampaignKey, new CampaignLevelScores()} }
             });
         _store.Put(_versionKey, _version);
     }
@@ -41,12 +45,19 @@ public class SaveStorage : ScriptableObject
     public int GetLevelsCompletedInZone(GameLevels zone) => zone.Value.Count(level => GetStars(level) > 0);
     public int GetZone() => SaveData.ActiveZone;
     public void SaveZone(int zone) => _currentSave.Write(s => s.ActiveZone = zone);
-    public int GetTotalStars() => SaveData.ActiveCampaign.Sum(x => x.Value);
-    public int GetStars(GameLevel level) => SaveData.ActiveCampaign.ValueOrDefault(level.Name, () => 0);
+    public int GetTotalStars() => CampaignScores().Sum(x => x.Value);
+    public int GetStars(GameLevel level) => CampaignScores().ValueOrDefault(level.Name, () => 0);
     public void SaveStars(GameLevel level, int stars)
     {
         if (GetStars(level) < stars) 
-            _currentSave.Write(s => s.ActiveCampaign[level.Name] = stars);
+            _currentSave.Write(s => CampaignScores()[level.Name] = stars);
+    }
+
+    private CampaignLevelScores CampaignScores()
+    {
+        if (!SaveData.Campaigns.ContainsKey(ActiveCampaign.Name))
+            _currentSave.Write(s => s.Campaigns[ActiveCampaign.Name] = new CampaignLevelScores());
+        return SaveData.Campaigns[ActiveCampaign.Name];
     }
 
     // Settings
