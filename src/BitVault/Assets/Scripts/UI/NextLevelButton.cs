@@ -4,7 +4,7 @@ namespace Assets.Scripts.UI
 {
     public class NextLevelButton : MonoBehaviour
     {
-        [SerializeField] private GameZones zones;
+        [SerializeField] private Campaign zones;
         [SerializeField] private CurrentLevel level;
         [SerializeField] private Navigator navigator;
         [SerializeField] private GameObject button;

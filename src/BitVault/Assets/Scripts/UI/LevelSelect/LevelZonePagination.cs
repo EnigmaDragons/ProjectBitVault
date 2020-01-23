@@ -10,7 +10,7 @@ public class LevelZonePagination : MonoBehaviour
     [SerializeField] private Button previousPageButton;
     [SerializeField] private TextMeshProUGUI pageNumText;
     [SerializeField] private Button nextPageButton;
-    [SerializeField] private GameZones zones;
+    [SerializeField] private Campaign zones;
     [SerializeField] private SaveStorage storage;
     [SerializeField] private CurrentZone zone;
     [SerializeField] private TutorialButton tutorialButton;

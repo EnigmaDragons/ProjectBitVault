@@ -10,7 +10,7 @@ public class StoryArchiveUI : MonoBehaviour
     [SerializeField] private Button previous;
     [SerializeField] private Button next;
     [SerializeField] private TextMeshProUGUI num;
-    [SerializeField] private GameZones zones;
+    [SerializeField] private Campaign zones;
     [SerializeField] private SaveStorage saveStorage;
     [SerializeField] private BoolReference developmentToolsActive;
     [SerializeField] private BoolVariable isStoryOnly;

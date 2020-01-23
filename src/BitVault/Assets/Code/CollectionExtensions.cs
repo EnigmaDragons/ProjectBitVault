@@ -14,6 +14,6 @@ public static class CollectionExtensions
     public static IEnumerable<T> Except<T>(this IEnumerable<T> items, T item) => items.Except(item.AsArray());
     public static bool None<T>(this IEnumerable<T> items) => !items.Any();
     public static IEnumerable<T> WrappedWith<T>(this IEnumerable<T> items, T wrapping) => wrapping.AsArray().Concat(items).Concat(wrapping);
-    public static Maybe<T> FirstAsMaybe<T>(this IEnumerable<T> items, Func<T, bool> condition) where T : class 
-        => new Maybe<T>(items.FirstOrDefault(condition));
+    public static Maybe<T> FirstAsMaybe<T>(this IEnumerable<T> items, Func<T, bool> condition) where T : class => new Maybe<T>(items.FirstOrDefault(condition));
+    public static TValue ValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> d, TKey key, Func<TValue> getDefault) => d.TryGetValue(key, out var value) ? value : getDefault();
 }

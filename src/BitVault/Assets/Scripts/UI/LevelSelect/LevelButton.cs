@@ -15,7 +15,7 @@ public class LevelButton : MonoBehaviour
     [SerializeField] private IsLevelUnlockedCondition levelUnlocked;
     [SerializeField] private BoolVariable isLevelStart;
     [SerializeField] private CurrentDialogue currentDialogue;
-    [SerializeField] private GameZones zones;
+    [SerializeField] private Campaign zones;
     [SerializeField] private BoolReference AutoSkipStory;
     
     public void Init(int zoneNumber, int levelNum, GameLevel level)

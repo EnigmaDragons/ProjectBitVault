@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class TutorialButton : MonoBehaviour
 {
-    [SerializeField] private GameZones zones;
+    [SerializeField] private Campaign zones;
     [SerializeField] private Button button;
     [SerializeField] private CurrentLevel currentLevel;
     [SerializeField] private BoolVariable isLevelStart;

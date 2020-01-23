@@ -2,7 +2,7 @@
 
 public class CurrentZone : ScriptableObject
 {
-    [SerializeField] private GameZones zones;
+    [SerializeField] private Campaign zones;
     [SerializeField] private GameLevels zone;
     [SerializeField] private GameEvent onCurrentZoneChanged;
     [SerializeField, ReadOnly] private int zoneIndex = 0;
@@ -16,5 +16,11 @@ public class CurrentZone : ScriptableObject
         zoneIndex = zoneNumber;
         zone = zones.Value[zoneIndex];
         onCurrentZoneChanged.Publish();
+    }
+
+    public void Init(Campaign campaign)
+    {
+        zones = campaign;
+        Init(0);
     }
 }

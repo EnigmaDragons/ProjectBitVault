@@ -2,7 +2,6 @@ using System;
 
 public interface IKeyValueStore<TKey, TValue>
 {
-    //bool Exists(TKey key);
     TValue GetOrDefault(TKey key, Func<TValue> getDefaultValue);
     void Put(TKey key, TValue obj);
     void Remove(TKey key);

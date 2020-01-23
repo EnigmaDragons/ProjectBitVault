@@ -13,6 +13,7 @@ public class MainMenuControls : MonoBehaviour
 
     private void Awake()
     {
+        saveStorage.Init();
         if (Application.isMobilePlatform || Application.platform == RuntimePlatform.WebGLPlayer)
             exitButtonObject.SetActive(false);
         continueButton.interactable = saveStorage.HasChosenGender();

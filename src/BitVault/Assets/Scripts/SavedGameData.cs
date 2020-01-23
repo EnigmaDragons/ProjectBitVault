@@ -1,0 +1,27 @@
+using System;
+
+[Serializable]
+public sealed class SavedGameData
+{
+    public string SaveDataVersion = "0.7.5";
+    public int ActiveZone = 0;
+    public string ActiveCampaignName = "";
+    public Campaigns Campaigns = new Campaigns();
+    public SettingsData Settings = new SettingsData();
+
+    public CampaignLevelScores ActiveCampaign => Campaigns[ActiveCampaignName];
+}
+
+[Serializable]
+public sealed class Campaigns : SerializableDictionary<string, CampaignLevelScores> {}
+
+[Serializable]
+public sealed class CampaignLevelScores : SerializableDictionary<string, int> {}
+
+[Serializable]
+public sealed class SettingsData
+{
+    public bool ShowMovementHints = true;
+    public bool AutoSkipStory = false;
+    public bool UseFemale = true;
+}

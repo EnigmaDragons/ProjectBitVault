@@ -7,7 +7,7 @@ public class UnlockNewZoneRequirements : MonoBehaviour
 {
     [SerializeField] private SaveStorage storage;
     [SerializeField] private TextMeshProUGUI text;
-    [SerializeField] private GameZones zones;
+    [SerializeField] private Campaign zones;
     [SerializeField] private GameObject locked;
     [SerializeField] private Button nextZoneButton;
     [SerializeField] private BoolVariable developmentToolsEnabled;

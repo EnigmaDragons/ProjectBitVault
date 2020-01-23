@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu]
-public class GameZones : ScriptableObject
+public class Campaign : ScriptableObject
 {
+    [SerializeField] private string campaignName;
     [SerializeField] private GameLevels[] value;
 
+    public string Name => campaignName;
     public GameLevels[] Value => value;
 }
