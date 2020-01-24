@@ -12,10 +12,10 @@ public class StoryExporter
     [MenuItem("EnigmaDragons/Export Story")]
     public static void ExportStory()
     {
-        ScriptableExtensions.GetAllInstances<GameZones>().ForEach(ExportStory);
+        ScriptableExtensions.GetAllInstances<Campaign>().ForEach(ExportStory);
     }
 
-    private static void ExportStory(GameZones zones)
+    private static void ExportStory(Campaign zones)
     {
         var path = EditorUtility.SaveFilePanel("Save Story To", "", "BitVaultStory.txt", "txt");
         if (path.Length == 0)

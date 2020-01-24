@@ -3,6 +3,12 @@ using UnityEngine;
 public sealed class CollectStarOnEntered : OnMessage<PieceMoved>
 {
     [SerializeField] private GameObject collectedStar;
+    [SerializeField] private CurrentLevelMap map;
+
+    private void Start()
+    {
+        map.RegisterAsCollectible(gameObject);
+    }
 
     protected override void Execute(PieceMoved msg)
     {

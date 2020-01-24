@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 6138795322213667701}
   - component: {fileID: 5642486032032017775}
   - component: {fileID: 6510534704027860042}
-  - component: {fileID: 7092323028601210661}
   m_Layer: 0
   m_Name: ReactiveSystems
   m_TagString: Untagged
@@ -137,7 +136,11 @@ MonoBehaviour:
   resetDuration:
     UseConstant: 0
     ConstantValue: 0
-    FloatVariable: {fileID: 11400000, guid: 9e232b5ee6066a4428f975f27970236d, type: 2}
+    FloatVariable: {fileID: 11400000, guid: 9f11dc47bea92784cbbb050e48665153, type: 2}
+  resetCooldown:
+    UseConstant: 1
+    ConstantValue: 3
+    FloatVariable: {fileID: 0}
 --- !u!114 &998014594998745595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,21 +216,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataCube: {fileID: 1207161415011134732, guid: fa336d9be762cf045a312251cc0e98b9,
     type: 3}
-  map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
---- !u!114 &7092323028601210661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5606890674040241735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea2f592f4db7d6148bf10f35c318ffea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  storage: {fileID: 11400000, guid: 1458f9b8798b4f147b62b7883c2ba217, type: 2}
-  gameInputActive: {fileID: 11400000, guid: 24002322d985f6d4087239253827123b, type: 2}
-  level: {fileID: 11400000, guid: f81c10460cdb9464397ed5864a15114b, type: 2}
-  secsBetweenMoves: 1
   map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}

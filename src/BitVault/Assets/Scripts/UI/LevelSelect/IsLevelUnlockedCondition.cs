@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public sealed class IsLevelUnlockedCondition : ScriptableObject
 {
-    [SerializeField] private GameZones zones;
+    [SerializeField] private Campaign zones;
     [SerializeField] private SaveStorage storage;
     [SerializeField] private BoolVariable isDevelopmentMode;
     
