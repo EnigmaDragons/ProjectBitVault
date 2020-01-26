@@ -10,7 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 090681d0cad653b4ba4bd3c63f4beb4d, type: 3}
-  m_Name: Z6-Distraction
+  m_Name: Z6-TSection
   m_EditorClassIdentifier: 
-  levelName: Distraction
-  prefab: {fileID: 7914148364327767238, guid: 4b99d77e0d01eb04bb3d3f1704d8be83, type: 3}
+  levelName: TSection
+  prefab: {fileID: 7914148364327767238, guid: e7d858961b9188941b75d7638a293131, type: 3}
+  starObjectives:
+  - {fileID: 11400000, guid: f4ace5f67f63d324ba8170b167be3fb8, type: 2}
+  - {fileID: 11400000, guid: 9c9956192ce5d14449243607a6f97f2b, type: 2}
+  - {fileID: 11400000, guid: 1661252d50dae194482f749ddaeeeb1a, type: 2}
