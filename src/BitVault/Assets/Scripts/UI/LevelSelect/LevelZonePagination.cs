@@ -14,6 +14,7 @@ public class LevelZonePagination : MonoBehaviour
     [SerializeField] private CurrentZone zone;
     [SerializeField] private TutorialButton tutorialButton;
     [SerializeField] private GoToStoryButton storyButton;
+    [SerializeField] private UnlockNewZoneRequirements locks;
 
     private Campaign Campaign => zone.Campaign;
     private int ZoneCount => Campaign.Value.Length;
@@ -26,9 +27,14 @@ public class LevelZonePagination : MonoBehaviour
         previousPageButton.GetComponent<Button>().onClick.AddListener(PreviousPage);
     }
 
-    public void PreviousPage() => Change(_zoneIndex - 1);
-    public void NextPage() => Change(_zoneIndex + 1);
     private void Init(int page) => Change(page);
+    public void PreviousPage() => Change(_zoneIndex - 1);
+    
+    public void NextPage()
+    {
+        if (!locks.IsLocked)
+            Change(_zoneIndex + 1);
+    }
     
     private void Change(int newIndex)
     {

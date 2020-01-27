@@ -2,12 +2,17 @@
 
 public class BoolVariable : ScriptableObject
 {
-    [SerializeField]
-    private bool value = false;
+    [SerializeField] private bool value = false;
+    [SerializeField] private bool logChanges = false;
 
     public bool Value
     {
-        get { return value; }
-        set { this.value = value; }
+        get => value;
+        set
+        {
+            this.value = value;
+            if (logChanges)
+                Debug.Log($"{name} changed to {value}");
+        }
     }
 }

@@ -14,6 +14,8 @@ public class UnlockNewZoneRequirements : MonoBehaviour
     private Campaign campaign => currentZone.Campaign;
     private int _zone = 0;
 
+    public bool IsLocked => locked.activeSelf;
+    
     private void OnEnable()
     {
         UpdateRequirements();
@@ -31,31 +33,37 @@ public class UnlockNewZoneRequirements : MonoBehaviour
 
         if (campaign.Value.Length == _zone + 1 || developmentToolsEnabled.Value)
         {
-            if (text != null)
-                text.text = "";
-            locked.SetActive(false);
-            nextZoneButton.interactable = true;
+            Unlock();
         }
         else if (storage.GetLevelsCompletedInZone(campaign.Value[_zone]) < campaign.Value[_zone].Value.Length)
         {
             if (text != null)
                 text.text = $"{campaign.Value[_zone].Value.Length - storage.GetLevelsCompletedInZone(campaign.Value[_zone])} Levels";
-            locked.SetActive(true);
-            nextZoneButton.interactable = false;
+            Lock();
         }
         else if (storage.GetTotalStars() < campaign.Value[_zone + 1].StarsRequired)
         {
             if (text != null)
                 text.text = $"{campaign.Value[_zone + 1].StarsRequired} Data Cubes";
-            locked.SetActive(true);
-            nextZoneButton.interactable = false;
+            Lock();
         }
         else
         {
-            if (text != null)
-                text.text = "";
-            locked.SetActive(false);
-            nextZoneButton.interactable = true;
+            Unlock();
         }
+    }
+
+    private void Unlock()
+    {
+        if (text != null)
+            text.text = "";
+        locked.SetActive(false);
+        nextZoneButton.interactable = true;
+    }
+
+    private void Lock()
+    {
+        locked.SetActive(true);
+        nextZoneButton.interactable = false;
     }
 }
