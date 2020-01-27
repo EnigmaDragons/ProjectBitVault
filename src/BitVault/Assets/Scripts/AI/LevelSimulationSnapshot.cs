@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
 
 public class LevelSimulationSnapshot
 {
@@ -18,7 +16,7 @@ public class LevelSimulationSnapshot
         _goalY = goalY;
         Hash = _map.ToBytes().Md5Hash();
     }
-
+    
     public LevelSimulationSnapshot(List<TilePoint> serverFloors, List<TilePoint> disengagedFailsafes,
         List<TilePoint> oneHealthSubroutines, List<TilePoint> twoHealthSubroutines, List<TilePoint> iceSubroutines, List<TilePoint> dataCubes,
         TilePoint rootKey, TilePoint root)

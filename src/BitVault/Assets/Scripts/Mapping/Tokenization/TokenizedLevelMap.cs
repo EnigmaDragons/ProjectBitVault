@@ -26,7 +26,7 @@ public class TokenizedLevelMap
         return sb.ToString();
     }
 
-    public override string ToString() => string.Join(Separator, Header, Size, FloorLayer, ObjectLayer);
+    public override string ToString() => string.Join(Separator, Header, _map.Name, Size, FloorLayer, ObjectLayer);
 
     public static LevelMap FromString(string token)
     {
@@ -34,10 +34,11 @@ public class TokenizedLevelMap
         if (!parts[0].Equals(Header))
             throw new ArgumentException("Invalid Token");
 
-        var size = parts[1].Substring(4).TrimStart('[').TrimEnd(']').Split(',');
+        var name = parts[1];
+        var size = parts[2].Substring(4).TrimStart('[').TrimEnd(']').Split(',');
         var width = int.Parse(size[0]);
         var height = int.Parse(size[1]);
-        var levelMapBuilder = new LevelMapBuilder(width, height);
+        var levelMapBuilder = new LevelMapBuilder(name, width, height);
 
         var floor = parts[2];
         new TwoDimensionalIterator(width, height)

@@ -10,11 +10,11 @@ using File = UnityEngine.Windows.File;
 [CreateAssetMenu]
 public sealed class CurrentMapTokenizer : ScriptableObject
 {
-    private LevelMapBuilder _builder = new LevelMapBuilder();
+    private LevelMapBuilder _builder = new LevelMapBuilder("Uninitialized");
 
-    public void Init()
+    public void Init(string name)
     {
-        _builder = new LevelMapBuilder();
+        _builder = new LevelMapBuilder(name);
     }
 
     public void RegisterAsMapPiece(GameObject obj, MapPiece piece) => _builder = _builder.With(new TilePoint(obj), piece);

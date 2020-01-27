@@ -2,12 +2,14 @@ using System;
 
 public sealed class LevelMapBuilder
 {
+    private readonly string _name;
     private readonly MapPiece[,] _floors;
     private readonly MapPiece[,] _objects;
     
-    public LevelMapBuilder() : this(7, 13) {}
-    public LevelMapBuilder(int width, int height)
+    public LevelMapBuilder(string name) : this(name, 7, 13) {}
+    public LevelMapBuilder(string name, int width, int height)
     {
+        _name = name;
         _floors = new MapPiece[width, height];
         _objects = new MapPiece[width, height];
     }
@@ -30,6 +32,6 @@ public sealed class LevelMapBuilder
         return this;
     }
     
-    public LevelMap Build() => new LevelMap(_floors, _objects);
+    public LevelMap Build() => new LevelMap(_name, _floors, _objects);
 }
 
