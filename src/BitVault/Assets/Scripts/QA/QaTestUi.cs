@@ -10,6 +10,7 @@ public sealed class QaTestUi : OnMessage<QaTestStarted, QaTestCompleted>
     [SerializeField] private Color successColor;
     [SerializeField] private Color failColor;
     [SerializeField] private TextMeshProUGUI report;
+    [SerializeField] private bool shouldLogErrors;
 
     private List<string> _issues = new List<string>();
     private int _numPassed = 0;
@@ -52,6 +53,8 @@ public sealed class QaTestUi : OnMessage<QaTestStarted, QaTestCompleted>
             sb.AppendLine("--------------------------------------------");
             _issues.ForEach(i => sb.AppendLine(i));
             report.text = sb.ToString();
+            if (shouldLogErrors)
+                _issues.ForEach(Debug.LogError);
         }
     }
 }
