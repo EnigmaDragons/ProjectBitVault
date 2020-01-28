@@ -23,6 +23,7 @@
 }
 
 .two-thirds-width {
+  min-width: 300px;
   max-width: 66%;
 }
 
@@ -56,6 +57,10 @@
 
 .row .flex-center {
   justify-content: center;
+}
+
+.row .space-evenly {
+  justify-content: space-evenly;
 }
 
 .wrap {
