@@ -2,22 +2,20 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class GameLevelsDuplicatesTester : MonoBehaviour
+public class GameLevelsDuplicatesTester : RuntimeAcceptanceTest
 {
-    
-#if UNITY_EDITOR
-    void Awake()
+    protected override List<string> GetAllIssues()
     {
+        var issues = new List<string>();
         var levels = new HashSet<string>();
         var gameLevels = UnityResourceUtils.FindAssetsByType<GameLevels>();
         gameLevels.SelectMany(zone => zone.Value).ForEach(level =>
         {
             var key = level.GetInstanceID().ToString();
             if (!levels.Add(key))
-                Debug.LogError($"Duplicate of {level.Name} - {level.GetInstanceID()}");
+                issues.Add($"Duplicate of {level.Name} - {level.GetInstanceID()}");
         });
         Debug.Log($"Tested {levels.Count} Levels in {gameLevels.Count} Zones for Duplicates");
+        return issues;
     }
-#endif
-    
 }

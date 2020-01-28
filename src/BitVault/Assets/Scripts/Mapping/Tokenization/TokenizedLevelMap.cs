@@ -1,5 +1,6 @@
 using System;
 using System.Text;
+using UnityEngine;
 
 public class TokenizedLevelMap
 {
@@ -14,14 +15,14 @@ public class TokenizedLevelMap
 
     private static string Separator => ">";
     private static string Header => $"BitVaultMap";
-    private string Size => $"Size[{Floor.Length},{Floor.Rank}]";
+    private string Size => $"Size[{_map.Width},{_map.Height}]";
     private string FloorLayer => LayerToString(Floor);
     private string ObjectLayer => LayerToString(Objects);
 
     private string LayerToString(MapPiece[,] layer)
     {
         var sb = new StringBuilder();
-        new TwoDimensionalIterator(layer.Length, layer.Rank)
+        new TwoDimensionalIterator(_map.Width, _map.Height)
             .ForEach(p => sb.Append(MapPieceSymbol.Symbol(layer[p.Item1, p.Item2])));
         return sb.ToString();
     }

@@ -14,10 +14,14 @@ public class CurrentLevelMap : ScriptableObject
     [DTValidator.Optional, SerializeField] private List<GameObject> selectableObjects = new List<GameObject>();
     [DTValidator.Optional, SerializeField] private List<GameObject> collectibleObjects = new List<GameObject>();
     [DTValidator.Optional, SerializeField] private Dictionary<GameObject, ObjectRules> destroyedObjects = new Dictionary<GameObject, ObjectRules>();
-
+    [SerializeField] private Vector2 min;
+    [SerializeField] private Vector2 max;
+    
     [SerializeField] private List<MovementOptionRule> movementOptionRules = new List<MovementOptionRule>();
     [SerializeField] private List<MovementRestrictionRule> movementRestrictionRules = new List<MovementRestrictionRule>();
 
+    public Vector2 Min => min;
+    public Vector2 Max => max;
     public GameObject Hero => hero;
     public TilePoint BitVaultLocation => bitVaultLocation;
     public int NumSelectableObjects => selectableObjects.Count;
@@ -28,6 +32,8 @@ public class CurrentLevelMap : ScriptableObject
 
     public void InitLevel()
     {
+        min = new Vector2();
+        max = new Vector2();
         bitVaultLocation = null;
         hero = null;
         walkableTiles = new List<GameObject>();
@@ -47,9 +53,17 @@ public class CurrentLevelMap : ScriptableObject
     public void RegisterAsSelectable(GameObject obj) => selectableObjects.Add(obj);
     public void RegisterAsJumpable(GameObject obj) => jumpableObjects.Add(obj);
     public void RegisterBitVault(GameObject obj) => bitVaultLocation = new TilePoint(obj);
-    public void RegisterWalkableTile(GameObject obj) => walkableTiles.Add(obj);
-    public void RegisterBlockingObject(GameObject obj) => blockedTiles.Add(obj);
+    public void RegisterWalkableTile(GameObject obj) => UpdateSize(() => walkableTiles.Add(obj));
+    public void RegisterBlockingObject(GameObject obj) => UpdateSize(() => blockedTiles.Add(obj));
     public void RegisterAsCollectible(GameObject obj) => collectibleObjects.Add(obj);
+
+    private void UpdateSize(Action a)
+    {
+        a();
+        var tiles = walkableTiles.Concat(blockedTiles).Select(x => new TilePoint(x));
+        min = new Vector2(tiles.Min(t => t.X), tiles.Min(t => t.Y));
+        max = new Vector2(tiles.Max(t => t.X), tiles.Max(t => t.Y));
+    }
 
     public Maybe<GameObject> GetTile(TilePoint tile) => walkableTiles.FirstAsMaybe(o => new TilePoint(o).Equals(tile));
     public Maybe<GameObject> GetSelectable(TilePoint tile) =>  selectableObjects.FirstAsMaybe(o => new TilePoint(o).Equals(tile));
@@ -95,6 +109,16 @@ public class CurrentLevelMap : ScriptableObject
         });
     }
 
+    public LevelMap GetMapSnapshot()
+    {
+        var offset = new Vector2(0 - min.x, 0 - min.y);
+        var builder = new LevelMapBuilder("Raw Map", Mathf.CeilToInt(max.x - min.x), Mathf.CeilToInt(max.y - min.y));
+        
+        // TODO: Code this;
+
+        return builder.Build();
+    }
+    
     //This is code is a bit concrete
     public LevelSimulationSnapshot GetSnapshot()
     {

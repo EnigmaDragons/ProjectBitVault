@@ -29,7 +29,7 @@ public sealed class TokenizedLevelSpawner : ScriptableObject
         };
         
         var map = TokenizedLevelMap.FromString(level);
-        var iterator = new TwoDimensionalIterator(map.FloorLayer.Length, map.FloorLayer.Rank);
+        var iterator = new TwoDimensionalIterator(map.Width, map.Height);
         var obj = new GameObject();
         iterator.Select(p => new TilePoint(p.Item1, p.Item2)).ForEach(t =>
         {

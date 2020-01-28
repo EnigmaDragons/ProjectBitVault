@@ -18,7 +18,8 @@ public sealed class CurrentMapTokenizer : ScriptableObject
     }
 
     public void RegisterAsMapPiece(GameObject obj, MapPiece piece) => _builder = _builder.With(new TilePoint(obj), piece);
-
+    public string Token => new TokenizedLevelMap(_builder.Build()).ToString();
+    
     #if UNITY_EDITOR
     public void ExportToFile()
     {

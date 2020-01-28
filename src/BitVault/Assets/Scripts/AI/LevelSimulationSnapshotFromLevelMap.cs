@@ -5,7 +5,7 @@ public static class LevelSimulationSnapshotFromLevelMap
 {
     public static LevelSimulationSnapshot Create(LevelMap map)
     {
-        var iterator = new TwoDimensionalIterator(map.FloorLayer.Length, map.FloorLayer.Rank);
+        var iterator = new TwoDimensionalIterator(map.Width, map.Height);
 
         var floors = new List<TilePoint>();
         var disengagedFailsafes = new List<TilePoint>();
