@@ -17,4 +17,6 @@ public sealed class LevelMap
         FloorLayer = floorLayer;
         ObjectLayer = objectLayer;
     }
+
+    public TwoDimensionalIterator GetIterator() => new TwoDimensionalIterator(Width, Height);
 }

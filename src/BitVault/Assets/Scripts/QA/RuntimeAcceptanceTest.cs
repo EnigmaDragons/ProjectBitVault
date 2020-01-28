@@ -4,6 +4,7 @@ using UnityEngine;
 public abstract class RuntimeAcceptanceTest : MonoBehaviour
 {
     [SerializeField] private bool runOnAwake;
+    [SerializeField] private bool runOnStart;
     
 #if UNITY_EDITOR
     void Awake()
@@ -14,11 +15,11 @@ public abstract class RuntimeAcceptanceTest : MonoBehaviour
 
     void Start()
     {
-        if (!runOnAwake)
+        if (runOnStart)
             RunTest();
     }
 
-    private void RunTest()
+    public void RunTest()
     {
         Message.Publish(new QaTestStarted());
         var issues = GetAllIssues();

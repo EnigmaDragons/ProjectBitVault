@@ -247,6 +247,7 @@ MonoBehaviour:
   successColor: {r: 0, g: 1, b: 0.5414665, a: 1}
   failColor: {r: 1, g: 0.4245283, b: 0.4245283, a: 1}
   report: {fileID: 1289532939}
+  shouldLogErrors: 0
 --- !u!114 &823997820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -775,6 +776,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5957555540246486146, guid: 092bcd96f3b4dc449a806e0e1c1e7541,
+        type: 3}
+      propertyPath: runOnStart
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 092bcd96f3b4dc449a806e0e1c1e7541, type: 3}

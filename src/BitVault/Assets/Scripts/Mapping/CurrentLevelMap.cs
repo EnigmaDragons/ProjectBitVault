@@ -16,6 +16,7 @@ public class CurrentLevelMap : ScriptableObject
     [DTValidator.Optional, SerializeField] private Dictionary<GameObject, ObjectRules> destroyedObjects = new Dictionary<GameObject, ObjectRules>();
     [SerializeField] private Vector2 min;
     [SerializeField] private Vector2 max;
+    [SerializeField] private string levelName;
     
     [SerializeField] private List<MovementOptionRule> movementOptionRules = new List<MovementOptionRule>();
     [SerializeField] private List<MovementRestrictionRule> movementRestrictionRules = new List<MovementRestrictionRule>();
@@ -30,8 +31,9 @@ public class CurrentLevelMap : ScriptableObject
     public IEnumerable<GameObject> Selectables => selectableObjects;
     public int NumOfJumpables => jumpableObjects.Count;
 
-    public void InitLevel()
+    public void InitLevel(string activeLevelName)
     {
+        levelName = activeLevelName;
         min = new Vector2();
         max = new Vector2();
         bitVaultLocation = null;
@@ -60,7 +62,7 @@ public class CurrentLevelMap : ScriptableObject
     private void UpdateSize(Action a)
     {
         a();
-        var tiles = walkableTiles.Concat(blockedTiles).Select(x => new TilePoint(x)).ConcatIfNotNull(bitVaultLocation);
+        var tiles = walkableTiles.Concat(blockedTiles).Select(x => new TilePoint(x)).ConcatIfNotNull(bitVaultLocation).ToList();
         min = new Vector2(tiles.Min(t => t.X), tiles.Min(t => t.Y));
         max = new Vector2(tiles.Max(t => t.X), tiles.Max(t => t.Y));
     }
@@ -109,12 +111,34 @@ public class CurrentLevelMap : ScriptableObject
         });
     }
 
-    public LevelMap GetMapSnapshot()
+    public LevelMap GetLevelMap()
     {
-        var offset = new Vector2(0 - min.x, 0 - min.y);
-        var builder = new LevelMapBuilder("Raw Map", Mathf.CeilToInt(max.x - min.x), Mathf.CeilToInt(max.y - min.y));
+        var builder = new LevelMapBuilder(levelName, Mathf.CeilToInt(max.x + 1), Mathf.CeilToInt(max.y + 1));
+        walkableTiles.ForEach(x =>
+        {
+            var t = new TilePoint(x);
+            var fallingTile = x.GetComponent<FallingTile>();
+            if (fallingTile)
+                builder.With(t, MapPiece.FailsafeFloor);
+            else
+                builder.With(t, MapPiece.Floor);
+        });
         
-        // TODO: Code this;
+        jumpableObjects.ForEach(x =>
+        {
+            var t = new TilePoint(x);
+            if (x.GetComponent<DestroyIfDoubleJumped>())
+                builder.With(t, MapPiece.DoubleRoutine);
+            else if (x.GetComponent<TeleportingPiece>())
+                builder.With(t, MapPiece.JumpingRoutine);
+            else if (x.GetComponent<DestroyIfJumped>())
+                builder.With(t, MapPiece.Routine);
+        });
+
+        collectibleObjects.ForEach(x => builder.With(new TilePoint(x), MapPiece.DataCube));
+        
+        builder.With(bitVaultLocation, MapPiece.Root);
+        builder.With(new TilePoint(hero), MapPiece.RootKey);
 
         return builder.Build();
     }

@@ -6,6 +6,6 @@ public class InitCurrentLevelMap : MonoBehaviour
 
     private void Awake()
     {
-        currentLevelMap.InitLevel();
+        currentLevelMap.InitLevel("Uninitialized");
     }
 }

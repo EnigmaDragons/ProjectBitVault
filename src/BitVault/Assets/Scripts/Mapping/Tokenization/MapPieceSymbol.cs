@@ -31,6 +31,6 @@ public static class MapPieceSymbol
     public static string Symbol(MapPiece piece) => _values[piece];
 
     public static bool IsFloor(MapPiece piece) => (int)piece < 100;
-    public static bool IsObject(MapPiece piece) => (int) piece >= 100;
+    public static bool IsObject(MapPiece piece) => (int)piece >= 100;
 }
 

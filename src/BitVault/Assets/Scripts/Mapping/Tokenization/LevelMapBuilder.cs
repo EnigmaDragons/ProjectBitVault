@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 public sealed class LevelMapBuilder
 {
@@ -6,7 +7,7 @@ public sealed class LevelMapBuilder
     private readonly MapPiece[,] _floors;
     private readonly MapPiece[,] _objects;
     
-    public LevelMapBuilder(string name) : this(name, 7, 13) {}
+    public LevelMapBuilder(string name) : this(name, 14, 8) {}
     public LevelMapBuilder(string name, int width, int height)
     {
         _name = name;
@@ -20,6 +21,13 @@ public sealed class LevelMapBuilder
     {
         if (!MapPieceSymbol.IsFloor(piece))
             throw new ArgumentException($"{piece} is not a floor piece.");
+    
+        var range = new TilePoint(_floors.GetLength(0), _floors.GetLength(1));
+        if (tile.X > _floors.GetLength(0) || tile.X < 0)
+            throw new ArgumentException($"{tile} is out of range {range} for {piece}");
+        if (tile.Y > _floors.GetLength(1) || tile.Y < 0)
+            throw new ArgumentException($"{tile} is out of range {range} for {piece}");
+    
         _floors[tile.X, tile.Y] = piece;
         return this;
     }
@@ -28,7 +36,14 @@ public sealed class LevelMapBuilder
     {
         if (!MapPieceSymbol.IsObject(piece))
             throw new ArgumentException($"{piece} is not an object piece.");
-        _floors[tile.X, tile.Y] = piece;
+        
+        var range = new TilePoint(_floors.GetLength(0), _floors.GetLength(1));
+        if (tile.X > _floors.GetLength(0) || tile.X < 0)
+            throw new ArgumentException($"{tile} is out of range {range} for {piece}");
+        if (tile.Y > _floors.GetLength(1) || tile.Y < 0)
+            throw new ArgumentException($"{tile} is out of range {range} for {piece}");
+        
+        _objects[tile.X, tile.Y] = piece;
         return this;
     }
     
