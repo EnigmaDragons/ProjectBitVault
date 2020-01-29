@@ -28,6 +28,8 @@ public sealed class Navigator : ScriptableObject
     {
         _previousScene = SceneManager.GetActiveScene().name;
         _currentScene = name;
-        SceneManager.LoadScene(name);
+        var loading = SceneManager.LoadSceneAsync(name);
+        if (LoadingScreen.Instance != null)
+            LoadingScreen.Instance.Init(loading);
     }
 }
