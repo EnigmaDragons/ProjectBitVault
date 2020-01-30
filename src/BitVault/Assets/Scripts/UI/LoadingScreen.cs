@@ -36,7 +36,8 @@ public class LoadingScreen : MonoBehaviour
         
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        _barFillLocalScale = barFillRectTransform.localScale;
+        if (barFillRectTransform != null)
+            _barFillLocalScale = barFillRectTransform.localScale;
         Hide();
     }
 

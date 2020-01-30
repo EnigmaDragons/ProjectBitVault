@@ -1,6 +1,5 @@
 using System;
 using System.IO;
-using System.Threading;
 using UnityEngine;
 using File = UnityEngine.Windows.File;
 
@@ -48,7 +47,6 @@ public sealed class JsonFileStored<T> : Stored<T>
         {
             using (var writer = new StreamWriter(_filename))
                 writer.Write(JsonUtility.ToJson(_item));
-            Debug.Log($"Updated {_filename}");
         }
         catch (Exception e)
         {
