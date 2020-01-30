@@ -66,7 +66,6 @@ public class LoadingScreen : MonoBehaviour
     private IEnumerator ProcessFadeOut()
     {
         animator.SetTrigger("FadeOut");
-        Debug.Log("Triggered");
         yield return new WaitForSeconds(fadeOutTime);
         Hide();
 
