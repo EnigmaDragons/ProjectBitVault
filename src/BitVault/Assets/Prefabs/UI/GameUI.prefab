@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2600772522750093948}
   - component: {fileID: 8880007997147373538}
   - component: {fileID: 8034527441891265755}
+  - component: {fileID: 5249333268203965673}
   m_Layer: 0
   m_Name: HintButton
   m_TagString: Untagged
@@ -153,6 +154,22 @@ MonoBehaviour:
   _secondsMessageTransition: 0.5
   _secondsDelayMove: 0.5
   _piece: {fileID: 11400000, guid: d282e5116cb67fc4ea25819f6057bab2, type: 2}
+--- !u!114 &5249333268203965673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2622390174411598754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c2d1921443465419f984a873420bcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boolRef:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: d04bfda9eff5e2f40bbfaa2b6095ac8a, type: 2}
 --- !u!1 &4328086245881627934
 GameObject:
   m_ObjectHideFlags: 0
@@ -2095,11 +2112,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4363411674048088990}
     m_Modifications:
-    - target: {fileID: 6594990342589299908, guid: 1f6d26852b970884eac9e43aacd9cba4,
-        type: 3}
-      propertyPath: m_Name
-      value: PanelGrapic
-      objectReference: {fileID: 0}
     - target: {fileID: 5786079237351775404, guid: 1f6d26852b970884eac9e43aacd9cba4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2205,12 +2217,17 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7826086342915920179, guid: 1f6d26852b970884eac9e43aacd9cba4,
+    - target: {fileID: 6594990342589299908, guid: 1f6d26852b970884eac9e43aacd9cba4,
+        type: 3}
+      propertyPath: m_Name
+      value: PanelGrapic
+      objectReference: {fileID: 0}
+    - target: {fileID: 8472675957387424768, guid: 1f6d26852b970884eac9e43aacd9cba4,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8472675957387424768, guid: 1f6d26852b970884eac9e43aacd9cba4,
+    - target: {fileID: 7826086342915920179, guid: 1f6d26852b970884eac9e43aacd9cba4,
         type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2220,12 +2237,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3879007421622406922, guid: 1f6d26852b970884eac9e43aacd9cba4,
+    - target: {fileID: 132933163606799765, guid: 1f6d26852b970884eac9e43aacd9cba4,
         type: 3}
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 132933163606799765, guid: 1f6d26852b970884eac9e43aacd9cba4,
+    - target: {fileID: 3879007421622406922, guid: 1f6d26852b970884eac9e43aacd9cba4,
         type: 3}
       propertyPath: m_Color.a
       value: 1
