@@ -12,6 +12,6 @@ public sealed class IsLevelUnlockedCondition : ScriptableObject
         if (levelNumber == 0 || isDevelopmentMode.Value)
             return true;
         var levelsCompleted = storage.GetLevelsCompletedInZone(zone.Zone);
-        return levelsCompleted > 0 && levelsCompleted > levelNumber - 3;
+        return levelsCompleted > 0 && levelsCompleted > levelNumber - zone.Campaign.NewLevelsAvailable;
     }
 }

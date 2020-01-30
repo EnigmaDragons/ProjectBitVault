@@ -19,7 +19,7 @@ namespace Assets.Scripts.UI
 
         private bool IsLastLevel => zone.Zone.Value.Length == level.LevelNumber + 1;
         private bool IsLastZone => _campaign.Value.Length == level.ZoneNumber + 1;
-        private bool IsNextZoneUnlocked => storage.GetTotalStars() >= _campaign.Value[level.ZoneNumber + 1].StarsRequired;
+        private bool IsNextZoneUnlocked => storage.GetTotalStars() >= _campaign.Value[level.ZoneNumber + 1].StarsRequired && storage.GetLevelsCompletedInZone(zone.Zone) == zone.Zone.Value.Length;
 
         public void Go()
         {
