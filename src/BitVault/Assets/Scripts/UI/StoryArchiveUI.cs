@@ -10,7 +10,6 @@ public class StoryArchiveUI : MonoBehaviour
     [SerializeField] private Button previous;
     [SerializeField] private Button next;
     [SerializeField] private TextMeshProUGUI num;
-    [SerializeField] private Campaign zones;
     [SerializeField] private SaveStorage saveStorage;
     [SerializeField] private BoolReference developmentToolsActive;
     [SerializeField] private BoolVariable isStoryOnly;
@@ -26,11 +25,11 @@ public class StoryArchiveUI : MonoBehaviour
     {
         previous.onClick.AddListener(Previous);
         next.onClick.AddListener(Next);
-        var stories = zones.Value
-            .SelectMany((zone, zoneI) => Enumerable
-                .Range(0, developmentToolsActive ? 99 : zone.Value.Count(level => saveStorage.GetStars(level) > 0))
-                .Where(i => i < zone.Story.Length)
-                .Select(i => new StoryChoice(zone.Story[i], zoneI, i + 1)))
+        var stories = zone.Campaign.Value
+            .SelectMany((xZone, zoneI) => Enumerable
+                .Range(0, developmentToolsActive ? 99 : xZone.Value.Count(level => saveStorage.GetStars(level) > 0))
+                .Where(i => i < xZone.Story.Length)
+                .Select(i => new StoryChoice(xZone.Story[i], zoneI, i + 1)))
             .ToList();
         unlockedStories = new List<List<StoryChoice>>();
         for (var i = 0; i < stories.Count; i += buttons.Length)

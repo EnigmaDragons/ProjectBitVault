@@ -46,7 +46,7 @@ public class LevelZonePagination : MonoBehaviour
     private void Render()
     {
         buttons.Init(_zoneIndex, Campaign.Value[_zoneIndex]);
-        tutorialButton.Init(_zoneIndex);
+        tutorialButton.Init(_zoneIndex, Campaign);
         storyButton.Init(Campaign.Value[_zoneIndex]);
         controls.SetActive(ZoneCount > 1);
         previousPageButton.interactable = _zoneIndex != 0;

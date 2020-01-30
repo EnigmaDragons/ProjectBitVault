@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class TutorialButton : MonoBehaviour
 {
-    [SerializeField] private Campaign zones;
     [SerializeField] private Button button;
     [SerializeField] private CurrentLevel currentLevel;
     [SerializeField] private BoolVariable isLevelStart;
@@ -12,9 +11,9 @@ public class TutorialButton : MonoBehaviour
     [SerializeField] private SaveStorage storage;
     [SerializeField] private CurrentDialogue currentDialogue;
 
-    public void Init(int zoneIndex)
+    public void Init(int zoneIndex, Campaign currentCampaign)
     {
-        var zone = zones.Value[zoneIndex];
+        var zone = currentCampaign.Value[zoneIndex];
         gameObject.SetActive(zone.Tutorial.IsPresent);
         if (!zone.Tutorial.IsPresent)
             return;
