@@ -37,8 +37,11 @@ public class SaveStorage : ScriptableObject
     public void Reset()
     {
         var showMovementHints = GetShowMovementHints();
+        var skipStory = GetAutoSkipStory();
+        _currentSave.Write(s => s.Campaigns = new CampaignsProgressData { {_defaultCampaignKey, new CampaignLevelScores()} });
         _store.Clear();
         SetShowMovementHints(showMovementHints);
+        SetAutoSkipStory(skipStory);
     }
     
     // Player Save Data
