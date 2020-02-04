@@ -10,7 +10,8 @@ public sealed class UseThemeImageTint : MonoBehaviour
 
     private void Awake()
     {
-        image.color = theme.ColorFor(element);
+        var baseColor = theme.ColorFor(element);
+        image.color = new Color(baseColor.r, baseColor.g, baseColor.b, image.color.a);
         if (fullyOpaque)
             image.color = new Color(image.color.r, image.color.g, image.color.b, 1);
     } 
