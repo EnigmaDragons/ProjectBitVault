@@ -89,7 +89,8 @@ public class LoadingScreen : MonoBehaviour
         _elapsedTime = 0;
         StartCoroutine(BeginShow());
         _currentLoadingOperation = loadingOperation;
-        _currentLoadingOperation.allowSceneActivation = false;
+        if (minTimeToShow > 0)
+            _currentLoadingOperation.allowSceneActivation = false;
         SetProgress(0f);
         _didTriggerFadeOut = false;
         _isLoading = true;
