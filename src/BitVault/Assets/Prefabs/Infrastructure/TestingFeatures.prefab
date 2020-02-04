@@ -74,10 +74,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92675778f7366e40b6860692ca5bfd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zone: {fileID: 11400000, guid: e8fc69fe1d2656a4c8f02b9da95abb99, type: 2}
   normalCampaign: {fileID: 11400000, guid: da6d9607955f7a04cac5744764d95f85, type: 2}
   betaCampaign: {fileID: 11400000, guid: 813cafd9b3f2ce348aaaad7901680090, type: 2}
   betaActive: {fileID: 11400000, guid: 15b10826e309e824fae8f7a22a780eba, type: 2}
+  save: {fileID: 11400000, guid: 1458f9b8798b4f147b62b7883c2ba217, type: 2}
 --- !u!114 &654230673671814619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,3 +90,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e54df6b9b54beab59ffd4e8c208f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  runOnAwake: 0
+  runOnStart: 0

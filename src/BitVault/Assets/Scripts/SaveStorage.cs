@@ -17,7 +17,16 @@ public class SaveStorage : ScriptableObject
     
     private PlayerPrefsKeyValueStore _store = new PlayerPrefsKeyValueStore();
     private Stored<SavedGameData> _currentSave;
-    private SavedGameData SaveData => _currentSave.Get();
+    
+    private SavedGameData SaveData
+    {
+        get 
+        {
+            if (_currentSave == null)
+                Init();
+             return _currentSave.Get(); 
+        }
+    }
 
     private Campaign ActiveCampaign => current.Campaign;
     
@@ -42,6 +51,13 @@ public class SaveStorage : ScriptableObject
         _store.Clear();
         SetShowMovementHints(showMovementHints);
         SetAutoSkipStory(skipStory);
+    }
+    
+    public Campaign GetCampaign() => ActiveCampaign;
+    public void SetCampaign(Campaign activeCampaign)
+    {
+        _currentSave.Write(s => s.ActiveCampaignName = activeCampaign.Name);
+        current.Init(activeCampaign);
     }
     
     // Player Save Data
