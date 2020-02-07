@@ -16,11 +16,16 @@ public class TutorialLevel : MonoBehaviour
     private void Start()
     {
         _ui = FindObjectOfType<TutorialUI>();
+        if (_ui == null)
+            Debug.LogWarning("No Tutorial UI found in Scene");
         _elements = new List<GameObject>();
     }
 
     private void Update()
     {
+        if (_ui == null)
+            return;
+        
         for (var i = 0; i < lines.Count; i++)
         {
             var line = lines[i];
