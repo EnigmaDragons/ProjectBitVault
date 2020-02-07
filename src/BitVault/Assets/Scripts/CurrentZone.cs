@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class CurrentZone : ScriptableObject
 {
@@ -14,7 +15,8 @@ public class CurrentZone : ScriptableObject
     
     public void Init(int zoneNumber)
     {
-        zoneIndex = zoneNumber;
+        var clamped = Math.Max(0, Math.Min(zones.Value.Length - 1, zoneNumber));
+        zoneIndex = clamped;
         zone = zones.Value[zoneIndex];
         onCurrentZoneChanged.Publish();
     }

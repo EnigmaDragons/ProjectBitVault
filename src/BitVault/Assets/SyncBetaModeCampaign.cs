@@ -12,7 +12,10 @@ public class SyncBetaModeCampaign : MonoBehaviour
     void Update()
     {
         var activeCampaign = betaActive.Value ? betaCampaign : normalCampaign;
-        if (activeCampaign.Name != save.GetCampaign().Name) 
+        if (activeCampaign.Name != save.GetCampaign().Name)
+        {
             save.SetCampaign(activeCampaign);
+            save.SaveZone(0);
+        }
     }
 }
