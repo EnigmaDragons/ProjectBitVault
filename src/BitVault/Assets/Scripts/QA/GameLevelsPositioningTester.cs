@@ -11,6 +11,7 @@ public sealed class GameLevelsPositioningTester : RuntimeAcceptanceTest
     {
         var issues = new List<string>();
         var levels = new HashSet<string>();
+#if UNITY_EDITOR        
         var gameLevels = UnityResourceUtils.FindAssetsByType<GameLevels>();
         gameLevels.SelectMany(zone => zone.Value).ForEach(level =>
         {
@@ -28,6 +29,7 @@ public sealed class GameLevelsPositioningTester : RuntimeAcceptanceTest
         current.Clear();
         Debug.Log($"Tested {levels.Count} Levels in {gameLevels.Count} Zones for Positioning");
         issues.ForEach(Debug.LogError);
+#endif        
         return issues;
     }
 }

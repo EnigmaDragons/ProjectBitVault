@@ -9,6 +9,7 @@ public class GameLevelsBasicComplexityCalculator : MonoBehaviour
 
     public IEnumerator AnalyzeAll()
     {
+#if UNITY_EDITOR
         var complexities = new List<string>();
         var gameLevels = UnityResourceUtils.FindAssetsByType<GameLevels>();
         foreach (var zone in gameLevels)
@@ -27,6 +28,8 @@ public class GameLevelsBasicComplexityCalculator : MonoBehaviour
         }
 
         Debug.Log($"Analyzed {complexities.Count} Levels in {gameLevels.Count} Zones for Complexity");
+#endif
+        yield break;
     }
     
     public void Analyze()

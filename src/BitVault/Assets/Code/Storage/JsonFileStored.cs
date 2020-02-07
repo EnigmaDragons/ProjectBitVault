@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using UnityEngine;
-using File = UnityEngine.Windows.File;
 
 public sealed class JsonFileStored<T> : Stored<T>
 {
@@ -26,7 +25,6 @@ public sealed class JsonFileStored<T> : Stored<T>
     {
         try
         {
-
             if (!File.Exists(_filename))
                 _item = _getDefaultValue();
             else

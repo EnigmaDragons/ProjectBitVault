@@ -25,7 +25,7 @@ public abstract class RuntimeAcceptanceTest : MonoBehaviour
         var issues = GetAllIssues();
         Message.Publish(new QaTestCompleted(issues));
     }
+#endif
     
     protected abstract List<string> GetAllIssues();
-#endif
 }

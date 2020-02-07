@@ -15,6 +15,7 @@ public class LogoController : MonoBehaviour
     private float _startFadingOutInSeconds;
     private float _finishInSeconds;
     private bool _finishedCurrent;
+    private bool _startedLoading;
 
     private void Awake()
     {
@@ -33,8 +34,11 @@ public class LogoController : MonoBehaviour
     {
         UpdateCounters();
         UpdatePresentation();
-        if (_finishedCurrent || AnyMouseButtonDown() || AnyRelevantButtonPress())
+        if (!_startedLoading && _finishedCurrent || AnyMouseButtonDown() || AnyRelevantButtonPress())
+        {
+            _startedLoading = true;
             NavigateToMainMenu();
+        }
     }
 
     private void BeginAnim()
