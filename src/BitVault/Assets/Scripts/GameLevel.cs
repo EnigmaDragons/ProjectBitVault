@@ -9,4 +9,5 @@ public class GameLevel : ScriptableObject
 
     public string Name => levelName;
     public GameObject Prefab => prefab;
+    public bool IsTutorial => isTutorial;
 }
