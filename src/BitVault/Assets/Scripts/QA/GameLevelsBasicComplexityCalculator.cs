@@ -16,6 +16,9 @@ public class GameLevelsBasicComplexityCalculator : MonoBehaviour
         {
             foreach (var level in zone.Value)
             {
+                if (level.IsTutorial)
+                    continue;
+                
                 map.InitLevel(level.name);
                 current.SelectLevel(level, -1, -1);
                 current.Init();
