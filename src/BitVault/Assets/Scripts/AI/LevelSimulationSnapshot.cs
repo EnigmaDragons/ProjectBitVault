@@ -1,19 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 public class LevelSimulationSnapshot
 {
     private readonly int[,] _map;
     private int _goalX;
     private int _goalY;
+    private bool _hasCollectedCube;
     public string Hash { get; }
 
-    private LevelSimulationSnapshot(int[,] map, int goalX, int goalY)
+    private LevelSimulationSnapshot(int[,] map, int goalX, int goalY, bool hasCollectedCube)
     {
         _map = map;
         _goalX = goalX;
         _goalY = goalY;
+        _hasCollectedCube = hasCollectedCube;
         Hash = _map.ToBytes().Md5Hash();
     }
     
@@ -32,6 +35,7 @@ public class LevelSimulationSnapshot
         _map[root.X, root.Y] += (int)GamePosition.Root;
         _goalX = root.X;
         _goalY = root.Y;
+        _hasCollectedCube = !dataCubes.Any();
         Hash = _map.ToBytes().Md5Hash();
     }
     
@@ -72,8 +76,12 @@ public class LevelSimulationSnapshot
         var newMap = new int[_map.GetLength(0), _map.GetLength(1)];
         Buffer.BlockCopy(_map, 0, newMap, 0, _map.Length * sizeof(int));
         var piece = GetPiece(move.FromX, move.FromY);
+        var hasCollectedCube = _hasCollectedCube;
         if (newMap[move.ToX, move.ToY] > 4)
+        {
             newMap[move.ToX, move.ToY] -= 4;
+            hasCollectedCube = true;
+        }
         newMap[move.ToX, move.ToY] += piece;
         newMap[move.FromX, move.FromY] = IsFloor(move.FromX, move.FromY) ? 1 : 0;
         if (piece < 128)
@@ -84,7 +92,7 @@ public class LevelSimulationSnapshot
             else
                 newMap[IntBetween(move.FromX, move.ToX), IntBetween(move.FromY, move.ToY)] -= damagedPiece;
         }
-        return new LevelSimulationSnapshot(newMap, _goalX, _goalY);
+        return new LevelSimulationSnapshot(newMap, _goalX, _goalY, hasCollectedCube);
     }
 
     public bool HasWon()
@@ -96,6 +104,25 @@ public class LevelSimulationSnapshot
             if (space > 8)
                 count++;
         return count == 1;
+    }
+
+    public int GetStars()
+    {
+        var stars = 0;
+        if (IsGameOver())
+            stars++;
+        if (_hasCollectedCube)
+            stars++;
+        stars++;
+        foreach (var space in _map)
+        {
+            if (space > 32)
+            {
+                stars--;
+                break;
+            }
+        }
+        return stars;
     }
 
     public bool IsGameOver() => HasRootKey(_goalX + 1, _goalY) || HasRootKey(_goalX - 1, _goalY) || HasRootKey(_goalX, _goalY + 1) || HasRootKey(_goalX, _goalY - 1);
