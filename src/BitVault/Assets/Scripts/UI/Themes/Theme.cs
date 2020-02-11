@@ -12,6 +12,8 @@ public sealed class Theme : ScriptableObject
     [SerializeField] public ColorReference menuButtonTextTint;
     [SerializeField] public TMP_ColorGradient menuButtonTextGradient;
     [SerializeField] public ColorReference panelTint;
+    [SerializeField] public ColorReference settingsTextTint;
+    [SerializeField] public TMP_ColorGradient settingsTextGradient;
     
     public Color ColorFor(ThemeElement element)
     {
@@ -22,6 +24,7 @@ public sealed class Theme : ScriptableObject
             { ThemeElement.SecondaryTextColor, dialogueButtonTextTint },
             { ThemeElement.PrimaryBorderColor, borderTint },
             { ThemeElement.PanelTint, panelTint },
+            { ThemeElement.SettingsTextTint, settingsTextTint },
         };
         return colors[element];
     }
@@ -31,6 +34,7 @@ public sealed class Theme : ScriptableObject
         var gradients = new Dictionary<ThemeElement, TMP_ColorGradient>
         {
             { ThemeElement.ButtonTextGradient, menuButtonTextGradient },
+            { ThemeElement.SettingsTextGradient, settingsTextGradient },
         };
         return gradients[element];
     }

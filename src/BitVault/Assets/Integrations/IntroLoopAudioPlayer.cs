@@ -9,7 +9,11 @@ public class IntroLoopAudioPlayer : ScriptableObject
     [SerializeField] private AudioMixer mixer;
     [SerializeField] private string volumeValueName = "MusicVolume";
 
-    public void Init() => currentClip = null;
+    public void Init()
+    {
+        IntroloopPlayer.Instance.SetMixerGroup(mixer.FindMatchingGroups(volumeValueName)[0]);
+        currentClip = null;
+    }
     
     public void PlaySelectedMusicLooping(IntroloopAudio clipToPlay)
     {

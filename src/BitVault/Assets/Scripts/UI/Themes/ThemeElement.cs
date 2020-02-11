@@ -5,10 +5,12 @@ public enum ThemeElement
     SecondaryTextColor = 2,
     ButtonTextTint = 3,
     DialogueUiTextColor = 4,
+    SettingsTextTint = 5,
     PrimaryBorderColor = 10,
     SecondaryBorderColor = 11,
     PanelTint = 50,
     ButtonTextGradient = 90,
-    DiagloueUiTextGradient = 91,
+    DialogueUiTextGradient = 91,
+    SettingsTextGradient = 92
     
 }
