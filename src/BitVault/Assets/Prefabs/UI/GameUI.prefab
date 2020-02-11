@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8880007997147373538}
   - component: {fileID: 8034527441891265755}
   - component: {fileID: 5249333268203965673}
+  - component: {fileID: 7255717449153674966}
   m_Layer: 0
   m_Name: HintButton
   m_TagString: Untagged
@@ -170,6 +171,23 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: d04bfda9eff5e2f40bbfaa2b6095ac8a, type: 2}
+  _inverted: 0
+--- !u!114 &7255717449153674966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2622390174411598754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7547f61a9e4f4899bd360435d6927250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: {fileID: 11400000, guid: ddd47553d52c5d24cb73a21b41dd0734, type: 2}
+  normalTint: 51
+  hoverTint: 52
+  pressedTint: 53
 --- !u!1 &4328086245881627934
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,6 +201,7 @@ GameObject:
   - component: {fileID: 8283820368668851904}
   - component: {fileID: 5955232679965791817}
   - component: {fileID: 3262180910671265533}
+  - component: {fileID: 6958610389768950478}
   m_Layer: 0
   m_Name: UndoButton
   m_TagString: Untagged
@@ -319,6 +338,22 @@ MonoBehaviour:
   image: {fileID: 8283820368668851904}
   text: {fileID: 3178402464831319540}
   history: {fileID: 11400000, guid: 95f27b9e96dd64443a8255b0eda723b2, type: 2}
+--- !u!114 &6958610389768950478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4328086245881627934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7547f61a9e4f4899bd360435d6927250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: {fileID: 11400000, guid: ddd47553d52c5d24cb73a21b41dd0734, type: 2}
+  normalTint: 51
+  hoverTint: 52
+  pressedTint: 53
 --- !u!1 &4993601378055797849
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,8 +1119,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeables:
-  - {fileID: 4443830446202898028}
+  - {fileID: 865640083359113400}
   - {fileID: 9058204544255643003}
+  - {fileID: 8635338238553163724}
   text: {fileID: 83291247217076891}
   fadeSpeed: 1
 --- !u!1 &6681350971359813450
@@ -1259,6 +1295,7 @@ GameObject:
   - component: {fileID: 5045004864876136298}
   - component: {fileID: 8541883498022365830}
   - component: {fileID: 8197021394812275175}
+  - component: {fileID: 902060407641886455}
   m_Layer: 0
   m_Name: MenuButton
   m_TagString: Untagged
@@ -1383,6 +1420,22 @@ MonoBehaviour:
   target: {fileID: 3158115983107519873}
   enableButton: {fileID: 8541883498022365830}
   disableButton: {fileID: 2959669215365259531}
+--- !u!114 &902060407641886455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8423267294219998454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7547f61a9e4f4899bd360435d6927250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: {fileID: 11400000, guid: ddd47553d52c5d24cb73a21b41dd0734, type: 2}
+  normalTint: 51
+  hoverTint: 52
+  pressedTint: 53
 --- !u!1 &9208643672413666413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,7 +1604,7 @@ PrefabInstance:
     - target: {fileID: 2338568669486713953, guid: 920b2f1c382daf74c8a73f753c41af78,
         type: 3}
       propertyPath: m_Name
-      value: InGameMenu
+      value: InGameOptions
       objectReference: {fileID: 0}
     - target: {fileID: 2338568669486713953, guid: 920b2f1c382daf74c8a73f753c41af78,
         type: 3}
@@ -2109,15 +2162,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 506441fbe38aa3c4092e2f3430f30574, type: 3}
---- !u!1 &2446941907694919903 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 788408717312407704, guid: 506441fbe38aa3c4092e2f3430f30574,
-    type: 3}
-  m_PrefabInstance: {fileID: 3100083197599684679}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4635631754807874519 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7732864983705193360, guid: 506441fbe38aa3c4092e2f3430f30574,
+    type: 3}
+  m_PrefabInstance: {fileID: 3100083197599684679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2446941907694919903 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 788408717312407704, guid: 506441fbe38aa3c4092e2f3430f30574,
     type: 3}
   m_PrefabInstance: {fileID: 3100083197599684679}
   m_PrefabAsset: {fileID: 0}
@@ -2243,16 +2296,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4739716689194942082, guid: 1f6d26852b970884eac9e43aacd9cba4,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 0.3372549
-      objectReference: {fileID: 0}
-    - target: {fileID: 4739716689194942082, guid: 1f6d26852b970884eac9e43aacd9cba4,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7826086342915920179, guid: 1f6d26852b970884eac9e43aacd9cba4,
         type: 3}
       propertyPath: m_IsActive
@@ -2262,6 +2305,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Border
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879007421622406922, guid: 1f6d26852b970884eac9e43aacd9cba4,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 132933163606799765, guid: 1f6d26852b970884eac9e43aacd9cba4,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8962053303168630003, guid: 1f6d26852b970884eac9e43aacd9cba4,
         type: 3}
@@ -2273,14 +2326,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PanelBack
       objectReference: {fileID: 0}
-    - target: {fileID: 132933163606799765, guid: 1f6d26852b970884eac9e43aacd9cba4,
+    - target: {fileID: 4739716689194942082, guid: 1f6d26852b970884eac9e43aacd9cba4,
         type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0.3372549
       objectReference: {fileID: 0}
-    - target: {fileID: 3879007421622406922, guid: 1f6d26852b970884eac9e43aacd9cba4,
+    - target: {fileID: 4739716689194942082, guid: 1f6d26852b970884eac9e43aacd9cba4,
         type: 3}
-      propertyPath: m_Color.a
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2303,9 +2356,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4443830446202898028 stripped
+--- !u!114 &8635338238553163724 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 132933163606799765, guid: 1f6d26852b970884eac9e43aacd9cba4,
+  m_CorrespondingSourceObject: {fileID: 5450776519051097141, guid: 1f6d26852b970884eac9e43aacd9cba4,
+    type: 3}
+  m_PrefabInstance: {fileID: 4356087210766480377}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &865640083359113400 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3490484517501539137, guid: 1f6d26852b970884eac9e43aacd9cba4,
     type: 3}
   m_PrefabInstance: {fileID: 4356087210766480377}
   m_PrefabAsset: {fileID: 0}

@@ -18,7 +18,7 @@ MonoBehaviour:
     Variable: {fileID: 0}
   borderTint:
     UseConstant: 1
-    ConstantValue: {r: 0.5803922, g: 0.1254902, b: 1, a: 1}
+    ConstantValue: {r: 0.5803922, g: 0.1254902, b: 1, a: 0.7529412}
     Variable: {fileID: 0}
   headerTextColor:
     UseConstant: 1
@@ -36,7 +36,7 @@ MonoBehaviour:
     type: 2}
   panelTint:
     UseConstant: 1
-    ConstantValue: {r: 1, g: 1, b: 1, a: 0.39215687}
+    ConstantValue: {r: 0.5803922, g: 0.1254902, b: 1, a: 0.39215687}
     Variable: {fileID: 0}
   settingsTextTint:
     UseConstant: 1
@@ -44,3 +44,15 @@ MonoBehaviour:
     Variable: {fileID: 0}
   settingsTextGradient: {fileID: 11400000, guid: 5b6d1d9b0ebba0c46b1a1b510a8e5cbf,
     type: 2}
+  iconButtonTint:
+    UseConstant: 1
+    ConstantValue: {r: 0.42510876, g: 0, b: 0.8207547, a: 0.7529412}
+    Variable: {fileID: 0}
+  iconButtonHoverTint:
+    UseConstant: 1
+    ConstantValue: {r: 0.8018868, g: 0.49685538, b: 0, a: 0.7529412}
+    Variable: {fileID: 0}
+  iconButtonPressedTint:
+    UseConstant: 1
+    ConstantValue: {r: 0.98823535, g: 0.6117647, b: 0, a: 1}
+    Variable: {fileID: 0}

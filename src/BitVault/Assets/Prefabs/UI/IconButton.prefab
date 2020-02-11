@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1493901928854869214}
   - component: {fileID: 2327720667991872325}
   - component: {fileID: 8670142268508281038}
+  - component: {fileID: 4294295285397651953}
   m_Layer: 0
   m_Name: IconButton
   m_TagString: Untagged
@@ -132,3 +133,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &4294295285397651953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788408717312407704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7547f61a9e4f4899bd360435d6927250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theme: {fileID: 11400000, guid: ddd47553d52c5d24cb73a21b41dd0734, type: 2}
+  normalTint: 51
+  hoverTint: 52
+  pressedTint: 53

@@ -9,6 +9,9 @@ public enum ThemeElement
     PrimaryBorderColor = 10,
     SecondaryBorderColor = 11,
     PanelTint = 50,
+    IconButtonTint = 51,
+    IconButtonHoverTint = 52,
+    IconButtonPressedTint = 53,
     ButtonTextGradient = 90,
     DialogueUiTextGradient = 91,
     SettingsTextGradient = 92

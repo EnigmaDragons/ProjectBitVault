@@ -14,17 +14,23 @@ public sealed class Theme : ScriptableObject
     [SerializeField] public ColorReference panelTint;
     [SerializeField] public ColorReference settingsTextTint;
     [SerializeField] public TMP_ColorGradient settingsTextGradient;
+    [SerializeField] public ColorReference iconButtonTint;
+    [SerializeField] public ColorReference iconButtonHoverTint;
+    [SerializeField] public ColorReference iconButtonPressedTint;
     
     public Color ColorFor(ThemeElement element)
     {
         var colors = new DictionaryWithDefault<ThemeElement, Color>(defaultColor)
         {
-            { ThemeElement.ButtonTextTint, menuButtonTextTint },
-            { ThemeElement.PrimaryTextColor, headerTextColor },
-            { ThemeElement.SecondaryTextColor, dialogueButtonTextTint },
-            { ThemeElement.PrimaryBorderColor, borderTint },
-            { ThemeElement.PanelTint, panelTint },
-            { ThemeElement.SettingsTextTint, settingsTextTint },
+            {ThemeElement.ButtonTextTint, menuButtonTextTint},
+            {ThemeElement.PrimaryTextColor, headerTextColor},
+            {ThemeElement.SecondaryTextColor, dialogueButtonTextTint},
+            {ThemeElement.PrimaryBorderColor, borderTint},
+            {ThemeElement.PanelTint, panelTint},
+            {ThemeElement.SettingsTextTint, settingsTextTint},
+            {ThemeElement.IconButtonTint, iconButtonTint},
+            {ThemeElement.IconButtonHoverTint, iconButtonHoverTint},
+            {ThemeElement.IconButtonPressedTint, iconButtonPressedTint},
         };
         return colors[element];
     }

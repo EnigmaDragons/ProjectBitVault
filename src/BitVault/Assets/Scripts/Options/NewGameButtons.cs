@@ -22,7 +22,7 @@ public class NewGameButtons : MonoBehaviour
         onlyPuzzles.onValueChanged.AddListener(_ => SelectOnlyPuzzles());
         male.onValueChanged.AddListener(_ => SelectMale());
         female.onValueChanged.AddListener(_ => SelectFemale());
-        start.onClick.AddListener(StartCommand);
+        start.onClick.AddListener(StartGame);
         OnEnable();
     }
 
@@ -64,7 +64,7 @@ public class NewGameButtons : MonoBehaviour
         female.SetIsOnWithoutNotify(true);
     }
 
-    private void StartCommand()
+    public void StartGame()
     {
         saveStorage.Init();
         saveStorage.Reset();
