@@ -12,6 +12,6 @@ public sealed class UseThemeTextGradient : MonoBehaviour
     {
         text.color = theme.ColorFor(tintElement);
         var gradientColors = theme.Current.GradientFor(gradientElement);
-        text.colorGradient = new VertexGradient(gradientColors.topLeft, gradientColors.topRight, gradientColors.bottomLeft, gradientColors.bottomRight);
+        text.colorGradientPreset = gradientColors;
     }
 }
