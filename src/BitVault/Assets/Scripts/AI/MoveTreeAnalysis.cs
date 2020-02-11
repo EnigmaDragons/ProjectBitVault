@@ -11,7 +11,7 @@ public class MoveTreeAnalysis
     private int _numberOfDeadBranches;
     private int _numberOfWinningBranches;
 
-    public void CalculateMoveTree(LevelSimulationSnapshot state)
+    public MoveTreeData CalculateMoveTree(LevelSimulationSnapshot state)
     {
         _initialState = state.Hash;
         _oldStates = new Dictionary<string, LevelSimulationSnapshot>();
@@ -19,14 +19,16 @@ public class MoveTreeAnalysis
         _numberOfDeadBranches = 0;
         _numberOfWinningBranches = 0;
         RecursiveCalculateMoveTree(state, state.Hash);
-        new JsonFileStored<MoveTreeData>(Path.Combine(Application.persistentDataPath, "MoveTree.json"), () => new MoveTreeData()).Write(_ => new MoveTreeData
+        var data = new MoveTreeData
         {
             HasThreeStar = (_possibleOutcomes[_initialState] & PossibleOutcomes.ThreeStar) != 0,
             HasTwoStar = (_possibleOutcomes[_initialState] & PossibleOutcomes.TwoStar) != 0,
             HasOneStar = (_possibleOutcomes[_initialState] & PossibleOutcomes.OneStar) != 0,
             NumberOfDeadBranches = _numberOfDeadBranches,
             NumberOfWinningBranches = _numberOfWinningBranches
-        });
+        };
+        new JsonFileStored<MoveTreeData>(Path.Combine(Application.persistentDataPath, "MoveTree.json"), () => new MoveTreeData()).Write(_ => data);
+        return data;
     }
 
     private PossibleOutcomes RecursiveCalculateMoveTree(LevelSimulationSnapshot state, string stateHash)
@@ -72,7 +74,7 @@ public class MoveTreeAnalysis
         ThreeStar = 8
     }
 
-    private class MoveTreeData
+    public class MoveTreeData
     {
         public bool HasThreeStar;
         public bool HasTwoStar;

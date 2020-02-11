@@ -12,8 +12,9 @@ public class MoveTreeAnalysisControl : MonoBehaviour
         if (_developmentIsActive.Value && !_calculating && Input.GetKey(KeyCode.T) && Input.GetKey(KeyCode.E))
         {
             _calculating = true;
-            new MoveTreeAnalysis().CalculateMoveTree(_map.GetSnapshot());
-            Debug.Log("CalculatingComplete");
+            var result = new MoveTreeAnalysis().CalculateMoveTree(_map.GetSnapshot());
+            Debug.Log($"CalculatingComplete - 1-Star: {result.HasOneStar} 2-Star: {result.HasTwoStar} 3-Star: {result.HasThreeStar}. " +
+                      $"Winning {result.NumberOfWinningBranches}. Dead {result.NumberOfDeadBranches}");
         }
     }
 }
