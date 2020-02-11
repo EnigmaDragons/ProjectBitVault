@@ -12,11 +12,6 @@ public sealed class FullscreenToggle : MonoBehaviour
         toggle.onValueChanged.AddListener(Set);
     }
 
-    private void Update()
-    {
-        Set(Screen.fullScreen);
-    }
-
     private void Set(bool on)
     {
         toggle.isOn = on;

@@ -21,8 +21,11 @@ public sealed class DisplaySettings : ScriptableObject
     
     private void UpdateAfter(Action set)
     {
+        var old = $"{isFullscreen}-{resolution.width}x{resolution.height}";
         set();
-        Screen.SetResolution(resolution.width, resolution.height, isFullscreen);    
+        var newHash = $"{isFullscreen}-{resolution.width}x{resolution.height}";
+        if (newHash != old)
+            Screen.SetResolution(resolution.width, resolution.height, isFullscreen);    
     }
 
 }
