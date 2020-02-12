@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PlayFirstJumpedSound : MonoBehaviour
+public class PlayFirstJumpedSound : OnMessage<PieceMoved, UndoPieceMoved>
 {
     [SerializeField] private AudioSource source;
     [SerializeField] private AudioClip clip;
@@ -8,19 +8,19 @@ public class PlayFirstJumpedSound : MonoBehaviour
 
     private bool _isFirstJump;
     
-    private void OnEnable()
-    {
-        _isFirstJump = true;
-        Message.Subscribe<PieceMoved>(Execute, this);
-    }
+    private void Awake() => _isFirstJump = true;
 
-    private void OnDisable() => Message.Unsubscribe(this);
-    
-    private void Execute(PieceMoved msg)
+    protected override void Execute(PieceMoved msg)
     {
         if (!_isFirstJump || !msg.HasJumpedOver(gameObject)) return;
         
         source.PlayOneShot(clip, volume);
         _isFirstJump = false;
+    }
+
+    protected override void Execute(UndoPieceMoved msg)
+    {
+        if (!_isFirstJump && msg.HadJumpedOver(gameObject))
+            _isFirstJump = true;
     }
 }

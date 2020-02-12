@@ -13,7 +13,7 @@ public class TutorialLevel : MonoBehaviour
     private List<GameObject> _elements;
     private TutorialLine _currentLine;
 
-    private void Start()
+    private void Awake()
     {
         _ui = FindObjectOfType<TutorialUI>();
         if (_ui == null)
