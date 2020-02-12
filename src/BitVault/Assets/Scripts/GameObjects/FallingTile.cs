@@ -35,6 +35,7 @@ public class FallingTile : OnMessage<PieceMoved, UndoPieceMoved>
         }
         else if (msg.To.Equals(new TilePoint(gameObject)) && IsDangerous)
         {
+            map.HasLost = true;
             gameInputActive.Lock(gameObject);
             StartCoroutine(DelayedLoss());
         }

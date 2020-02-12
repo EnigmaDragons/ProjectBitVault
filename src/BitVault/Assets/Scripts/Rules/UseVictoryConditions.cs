@@ -9,7 +9,7 @@ public class UseVictoryConditions : OnMessage<LevelStateChanged>
     
     protected override void Execute(LevelStateChanged msg)
     {
-        if (hasWon || !conditions.All(x => x.HasCompletedLevel(map))) return;
+        if (hasWon || map.HasLost || !conditions.All(x => x.HasCompletedLevel(map))) return;
         
         hasWon = true;
         Message.Publish(new LevelCompleted());

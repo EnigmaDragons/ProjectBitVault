@@ -30,9 +30,11 @@ public class CurrentLevelMap : ScriptableObject
     public IEnumerable<MovementRestrictionRule> MovementRestrictionRules => movementRestrictionRules;
     public IEnumerable<GameObject> Selectables => selectableObjects;
     public int NumOfJumpables => jumpableObjects.Count;
+    public bool HasLost { get; set; }
 
     public void InitLevel(string activeLevelName)
     {
+        HasLost = false;
         levelName = activeLevelName;
         min = new Vector2();
         max = new Vector2();
