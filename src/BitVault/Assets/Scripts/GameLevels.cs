@@ -1,3 +1,4 @@
+using System;
 using E7.Introloop;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public sealed class GameLevels : ScriptableObject
     [SerializeField] private GameLevel[] value;
     [SerializeField] private ConjoinedDialogues[] story; 
     [SerializeField] private IntReference starsRequired;
+    [SerializeField] private UnityDateTimeOffset minDateRequired = DateTimeOffset.MinValue.AddDays(2); 
     [SerializeField] private string name;
     [SerializeField] private string description;
     [SerializeField] private Sprite logo;
@@ -20,6 +22,7 @@ public sealed class GameLevels : ScriptableObject
     public GameLevel[] Value => value;
     public ConjoinedDialogues[] Story => story;
     public int StarsRequired => starsRequired;
+    public DateTimeOffset MinDateRequired => minDateRequired;
     public string Name => name;
     public string Description => description;
     public Sprite Logo => logo;

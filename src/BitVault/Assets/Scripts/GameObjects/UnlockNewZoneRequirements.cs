@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -45,6 +46,12 @@ public class UnlockNewZoneRequirements : MonoBehaviour
         {
             if (text != null)
                 text.text = $"{campaign.Value[_zone + 1].StarsRequired} Data Cubes";
+            Lock();
+        }
+        else if (DateTimeOffset.Now.CompareTo(campaign.Value[_zone + 1].MinDateRequired) < 0)
+        {
+            if (text != null)
+                text.text = $"Unlocks on {campaign.Value[_zone + 1].MinDateRequired.ToLocalTime():g}";
             Lock();
         }
         else
