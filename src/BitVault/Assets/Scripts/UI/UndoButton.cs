@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UndoButton : MonoBehaviour
 {
     [SerializeField] private Image image;
+    [SerializeField] private GameObject otherVisual;
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private MoveHistory history;
 
@@ -25,11 +26,15 @@ public class UndoButton : MonoBehaviour
         {
             text.text = "";
             image.enabled = false;
+            if (otherVisual != null)
+                otherVisual.SetActive(false);
         }
         else
         {
             text.text = history.Count.ToString();
             image.enabled = true;
+            if (otherVisual != null)
+                otherVisual.SetActive(true);
             _eventSystem.SetSelectedGameObject(null);
         }
     }
