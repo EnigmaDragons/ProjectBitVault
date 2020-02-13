@@ -21,7 +21,6 @@ public sealed class SelectedTilePresenter : MonoBehaviour
 
     private void UpdatePieceState()
     {
-        Debug.Log("New Piece Selected");
         if (piece.Selected.IsPresent)
             Show(piece.Selected.Value);
         else
