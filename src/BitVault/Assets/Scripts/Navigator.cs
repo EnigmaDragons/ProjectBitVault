@@ -14,6 +14,7 @@ public sealed class Navigator : ScriptableObject
     public void NavigateToDialogue() => NavigateTo("DialogueScene");
     public void NavigateToArchive() => NavigateTo("StoryArchive");
     public void NavigateToSurvey() => NavigateTo("SurveyPlayer");
+    public void NavigateToGuideImage() => NavigateTo("GuideImageScene");
     public void NavigateBack() => NavigateTo(_previousScene);
 
     public void ExitGame()
