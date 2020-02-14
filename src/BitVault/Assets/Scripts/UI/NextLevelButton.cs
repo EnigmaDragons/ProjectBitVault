@@ -12,10 +12,11 @@ namespace Assets.Scripts.UI
         [SerializeField] private BoolVariable isLevelStart;
         [SerializeField] private CurrentDialogue currentDialogue;
         [SerializeField] private BoolReference AutoSkipStory;
+        [SerializeField] private IsLevelUnlockedCondition isLevelUnlockedCondition;
 
         private Campaign _campaign => zone.Campaign;
 
-        private void Awake() => button.SetActive(!IsLastLevel);
+        private void Awake() => button.SetActive(!IsLastLevel && isLevelUnlockedCondition.IsLevelUnlocked(level.ZoneNumber, level.LevelNumber + 1));
 
         private bool IsLastLevel => zone.Zone.Value.Length == level.LevelNumber + 1;
         private bool IsLastZone => _campaign.Value.Length == level.ZoneNumber + 1;

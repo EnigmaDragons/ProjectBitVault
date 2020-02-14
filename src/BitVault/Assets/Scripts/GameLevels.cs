@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using E7.Introloop;
 using UnityEngine;
 
@@ -18,6 +19,7 @@ public sealed class GameLevels : ScriptableObject
     [SerializeField] private IntroloopAudio musicTheme;
     [SerializeField] private SaveStorage saveStorage;
     [SerializeField] private GameLevel tutorial;
+    [SerializeField] private int[] progression;
 
     public GameLevel[] Value => value;
     public ConjoinedDialogues[] Story => story;
@@ -31,6 +33,7 @@ public sealed class GameLevels : ScriptableObject
     public Color BackgroundColor => backgroundColor;
     public IntroloopAudio MusicTheme => musicTheme;
     public Maybe<GameLevel> Tutorial => tutorial;
+    public int[] Progression => progression;
 
     public Maybe<ConjoinedDialogues> CurrentStory()
     {

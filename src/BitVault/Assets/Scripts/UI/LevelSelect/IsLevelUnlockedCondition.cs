@@ -9,9 +9,9 @@ public sealed class IsLevelUnlockedCondition : ScriptableObject
     
     public bool IsLevelUnlocked(int zoneNumber, int levelNumber)
     {
-        if (levelNumber == 0 || isDevelopmentMode.Value)
+        if (isDevelopmentMode.Value)
             return true;
         var levelsCompleted = storage.GetLevelsCompletedInZone(zone.Zone);
-        return levelsCompleted > 0 && levelsCompleted > levelNumber - zone.Campaign.NewLevelsAvailable;
+        return levelsCompleted >= zone.Zone.Progression.Length ||  levelNumber < zone.Zone.Progression[levelsCompleted];
     }
 }
