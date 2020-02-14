@@ -6,6 +6,8 @@ public sealed class Navigator : ScriptableObject
     private string _currentScene;
     private string _previousScene;
 
+    [SerializeField] private bool loadSynchronously;
+
     public void NavigateToMainMenu() => NavigateTo("MainMenu");
     public void NavigateToGameScene() => NavigateTo("GameScene");
     public void NavigateToRewards() => NavigateTo("RewardScene");
@@ -30,8 +32,15 @@ public sealed class Navigator : ScriptableObject
     {
         _previousScene = SceneManager.GetActiveScene().name;
         _currentScene = name;
-        var loading = SceneManager.LoadSceneAsync(name);
-        if (LoadingScreen.Instance != null)
-            LoadingScreen.Instance.Init(loading);
+        if (!loadSynchronously)
+        {
+            var loading = SceneManager.LoadSceneAsync(name);
+            if (LoadingScreen.Instance != null)
+                LoadingScreen.Instance.Init(loading);
+        }
+        else
+        {
+            SceneManager.LoadScene(name);
+        }
     }
 }
