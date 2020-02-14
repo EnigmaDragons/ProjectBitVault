@@ -64,6 +64,8 @@ public class SaveStorage : ScriptableObject
     public int GetLevelsCompletedInZone(GameLevels zone) => zone.Value.Count(level => GetStars(level) > 0);
     public int GetZone() => SaveData.ActiveZone;
     public void SaveZone(int zone) => _currentSave.Write(s => s.ActiveZone = zone);
+    public bool HasWon() => SaveData.HasWon;
+    public void SaveWin() => _currentSave.Write(x => x.HasWon = true);
     public int GetTotalStars() => CampaignScores().Sum(x => x.Value);
     public int GetStars(GameLevel level) => CampaignScores().ValueOrDefault(level.Name, () => 0);
     public void SaveStars(GameLevel level, int stars)

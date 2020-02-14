@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 4584845112518647404}
   - component: {fileID: 4584845112518647407}
   - component: {fileID: 4584845112518647406}
+  - component: {fileID: 8802126165934573234}
   m_Layer: 5
   m_Name: RewardsScreenUI
   m_TagString: Untagged
@@ -114,6 +115,22 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8802126165934573234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4584845112518647401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13dd2de46aa6d4b469e02b2e3ad7871d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: {fileID: 11400000, guid: f81c10460cdb9464397ed5864a15114b, type: 2}
+  zone: {fileID: 11400000, guid: e8fc69fe1d2656a4c8f02b9da95abb99, type: 2}
+  storage: {fileID: 11400000, guid: 1458f9b8798b4f147b62b7883c2ba217, type: 2}
+  navigator: {fileID: 11400000, guid: 9ff41b1c7e54dd34d86e0faa800274fc, type: 2}
 --- !u!1 &4747159019229088254
 GameObject:
   m_ObjectHideFlags: 0
