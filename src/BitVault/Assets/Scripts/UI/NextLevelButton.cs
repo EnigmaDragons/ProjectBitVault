@@ -15,7 +15,7 @@ namespace Assets.Scripts.UI
 
         private Campaign _campaign => zone.Campaign;
 
-        private void Awake() => button.SetActive(!IsLastLevel || (!IsLastZone && IsNextZoneUnlocked));
+        private void Awake() => button.SetActive(!IsLastLevel);
 
         private bool IsLastLevel => zone.Zone.Value.Length == level.LevelNumber + 1;
         private bool IsLastZone => _campaign.Value.Length == level.ZoneNumber + 1;
@@ -23,13 +23,12 @@ namespace Assets.Scripts.UI
 
         public void Go()
         {
-            var nextZone = IsLastLevel ? level.ZoneNumber + 1 : level.ZoneNumber;
-            var nextLevel = IsLastLevel ? 0 : level.LevelNumber + 1;
-            var gameLevel = _campaign.Value[nextZone].Value[nextLevel];
-            level.SelectLevel(gameLevel, nextZone, nextLevel);
+            var nextLevel = level.LevelNumber + 1;
+            var gameLevel = _campaign.Value[level.ZoneNumber].Value[nextLevel];
+            level.SelectLevel(gameLevel, level.ZoneNumber, nextLevel);
             isLevelStart.Value = true;
-            currentDialogue.Set(storage.GetStars(gameLevel) == 0 ? _campaign.Value[nextZone].CurrentStory() : new Maybe<ConjoinedDialogues>());
-            storage.SaveZone(nextZone);
+            currentDialogue.Set(storage.GetStars(gameLevel) == 0 ? _campaign.Value[level.ZoneNumber].CurrentStory() : new Maybe<ConjoinedDialogues>());
+            storage.SaveZone(level.ZoneNumber);
             if (AutoSkipStory.Value || !currentDialogue.Dialogue.IsPresent) 
                 navigator.NavigateToGameScene();
             else

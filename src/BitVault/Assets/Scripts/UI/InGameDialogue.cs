@@ -18,6 +18,7 @@ public class InGameDialogue : MonoBehaviour
     [SerializeField] private BoolVariable IsLevelStart;
     [SerializeField] private BoolReference OnlyStory;
     [SerializeField] private DialogueLine BetweenLevelDialogue;
+    [SerializeField] private PlayerSurvey playerSurvey;
 
     private DialogueLine[] _currentDialogue;
     private int _nextIndex = 0;
@@ -58,6 +59,8 @@ public class InGameDialogue : MonoBehaviour
             navigator.NavigateToArchive();
         else if (IsLevelStart.Value) 
             navigator.NavigateToGameScene();
+        else if (playerSurvey.HasSurvey)
+            navigator.NavigateToSurvey();
         else
             navigator.NavigateToRewards();
     }

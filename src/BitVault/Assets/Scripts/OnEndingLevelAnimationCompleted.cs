@@ -6,13 +6,16 @@ public class OnEndingLevelAnimationCompleted : OnMessage<EndingLevelAnimationFin
     [SerializeField] private BoolVariable isLevelStart;
     [SerializeField] private BoolReference AutoSkipStory;
     [SerializeField] private CurrentDialogue dialogue;
+    [SerializeField] private PlayerSurvey playerSurvey;
 
     protected override void Execute(EndingLevelAnimationFinished msg)
     {
         isLevelStart.Value = false;
-        if (AutoSkipStory.Value || !dialogue.Dialogue.IsPresent)
-            navigator.NavigateToRewards();
-        else
+        if (!AutoSkipStory.Value && dialogue.Dialogue.IsPresent)
             navigator.NavigateToDialogue();
+        else if (playerSurvey.HasSurvey)
+            navigator.NavigateToSurvey();
+        else
+            navigator.NavigateToRewards();
     }
 }
