@@ -13,6 +13,7 @@ public sealed class Navigator : ScriptableObject
     public void NavigateToCredits() => NavigateTo("CreditsScene");
     public void NavigateToDialogue() => NavigateTo("DialogueScene");
     public void NavigateToArchive() => NavigateTo("StoryArchive");
+    public void NavigateToGuideImage() => NavigateTo("GuideImageScene");
     public void NavigateBack() => NavigateTo(_previousScene);
 
     public void ExitGame()
