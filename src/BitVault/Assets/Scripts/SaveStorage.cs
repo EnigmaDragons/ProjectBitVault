@@ -18,13 +18,13 @@ public class SaveStorage : ScriptableObject
     private PlayerPrefsKeyValueStore _store = new PlayerPrefsKeyValueStore();
     private Stored<SavedGameData> _currentSave;
     
-    private SavedGameData SaveData
+    public SavedGameData SaveData
     {
         get 
         {
             if (_currentSave == null)
                 Init();
-             return _currentSave.Get(); 
+            return _currentSave.Get(); 
         }
     }
 

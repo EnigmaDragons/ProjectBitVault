@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Threading;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public sealed class Navigator : ScriptableObject
@@ -32,6 +33,10 @@ public sealed class Navigator : ScriptableObject
     {
         _previousScene = SceneManager.GetActiveScene().name;
         _currentScene = name;
+        
+        // TODO: This should eventually be injected as an OnNavigate action instead.
+        PlayerPrefs.Save();
+        
         if (!loadSynchronously)
         {
             var loading = SceneManager.LoadSceneAsync(name);
