@@ -1,10 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Threading;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public sealed class Navigator : ScriptableObject
 {
     private string _currentScene;
     private string _previousScene;
+
+    [SerializeField] private bool loadSynchronously;
 
     public void NavigateToMainMenu() => NavigateTo("MainMenu");
     public void NavigateToGameScene() => NavigateTo("GameScene");
@@ -30,8 +33,19 @@ public sealed class Navigator : ScriptableObject
     {
         _previousScene = SceneManager.GetActiveScene().name;
         _currentScene = name;
-        var loading = SceneManager.LoadSceneAsync(name);
-        if (LoadingScreen.Instance != null)
-            LoadingScreen.Instance.Init(loading);
+        
+        // TODO: This should eventually be injected as an OnNavigate action instead.
+        PlayerPrefs.Save();
+        
+        if (!loadSynchronously)
+        {
+            var loading = SceneManager.LoadSceneAsync(name);
+            if (LoadingScreen.Instance != null)
+                LoadingScreen.Instance.Init(loading);
+        }
+        else
+        {
+            SceneManager.LoadScene(name);
+        }
     }
 }

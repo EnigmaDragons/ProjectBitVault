@@ -10,6 +10,7 @@ public class LevelZonePagination : MonoBehaviour
     [SerializeField] private Button previousPageButton;
     [SerializeField] private TextMeshProUGUI pageNumText;
     [SerializeField] private Button nextPageButton;
+    [SerializeField] private Image nextPageButtonImage;
     [SerializeField] private SaveStorage storage;
     [SerializeField] private CurrentZone zone;
     [SerializeField] private TutorialButton tutorialButton;
@@ -50,7 +51,9 @@ public class LevelZonePagination : MonoBehaviour
         storyButton.Init(Campaign.Value[_zoneIndex]);
         controls.SetActive(ZoneCount > 1);
         previousPageButton.interactable = _zoneIndex != 0;
-        nextPageButton.interactable = _zoneIndex != ZoneCount - 1;
+        var hasAnotherZone =  _zoneIndex < ZoneCount - 1;
+        nextPageButtonImage.enabled = hasAnotherZone;
+        nextPageButton.interactable = hasAnotherZone;
         if (pageNumText != null)
             pageNumText.text = (_zoneIndex + 1).ToString();
     }
