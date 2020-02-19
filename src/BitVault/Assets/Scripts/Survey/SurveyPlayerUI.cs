@@ -40,11 +40,13 @@ public class SurveyPlayerUI : MonoBehaviour
                     StartCoroutine(DelayedLeave());
                 });
         });
-        skipButton.onClick.AddListener(() =>
-        {
-            playerSurvey.HasSurvey = false;
-            navigator.NavigateToRewards();
-        });
+        skipButton.onClick.AddListener(SkipSurvey);
+    }
+
+    public void SkipSurvey()
+    {
+        playerSurvey.HasSurvey = false;
+        navigator.NavigateToRewards();
     }
 
     private IEnumerator DelayedLeave()
