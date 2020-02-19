@@ -16,16 +16,18 @@ public sealed class InitScreenResolutionOptions : MonoBehaviour
         _resolutions = Screen.resolutions
             .Where(x => x.width % 16 == 0 && x.height % 9 == 0)
             .Where(x => x.width > minWidth)
+            .Distinct()
             .Reverse()
             .ToArray();
         dropdownMenu.onValueChanged.AddListener(SetResolution);
+        dropdownMenu.options.Clear();
         var current = display.CurrentResolution;
         for (var i = 0; i < _resolutions.Length; i++)
         {
-            dropdownMenu.options[i].text = ResToString(_resolutions[i]);
+            var valString = ResToString(_resolutions[i]);
+            dropdownMenu.options.Add(new TMP_Dropdown.OptionData(valString));
             if (_resolutions[i].Equals(current))
                 dropdownMenu.value = i;
-            dropdownMenu.options.Add(new TMP_Dropdown.OptionData(dropdownMenu.options[i].text));
         }
 
         dropdownMenu.RefreshShownValue();
