@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -535,6 +535,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 741243440}
+    - target: {fileID: 5407646733771367366, guid: 89226a59307d37142bf55ef2e4444e63,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -93216649
+      objectReference: {fileID: 0}
     - target: {fileID: 6589639213533038597, guid: 89226a59307d37142bf55ef2e4444e63,
         type: 3}
       propertyPath: m_textInfo.characterCount
