@@ -7,6 +7,7 @@ public class TutorialLevel : MonoBehaviour
     [SerializeField] private List<TutorialLine> lines;
     [SerializeField] private CurrentLevelMap map;
     [SerializeField] private CurrentSelectedPiece selectedPiece;
+    [SerializeField] private BoolReference hasLevelReset;
 
     private TutorialUI _ui;
 
@@ -61,6 +62,8 @@ public class TutorialLevel : MonoBehaviour
             return condition.IsTrue 
                 ? selectedPiece.Selected.IsPresentAnd(x => new TilePoint(x).Equals(condition.TilePoint)) 
                 : !selectedPiece.Selected.IsPresent || !new TilePoint(selectedPiece.Selected.Value).Equals(condition.TilePoint);
+        if (condition.Type == TutorialConditonType.LevelHasReset)
+            return hasLevelReset.Value == condition.IsTrue;
         return false;
     }
 
