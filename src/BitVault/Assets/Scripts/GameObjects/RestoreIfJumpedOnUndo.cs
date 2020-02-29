@@ -7,6 +7,8 @@ public sealed class RestoreIfJumpedOnUndo : OnMessage<UndoPieceMoved, ObjectDest
     
     protected override void Execute(UndoPieceMoved msg)
     {
+        if (_damagedObjects.Count == 0)
+            return;
         RestoreAllCollectedStars();
         var obj = _damagedObjects.Peek();
         if (!msg.HadJumpedOver(obj)) return;
