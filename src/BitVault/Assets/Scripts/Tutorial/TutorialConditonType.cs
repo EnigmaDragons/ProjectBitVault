@@ -2,5 +2,6 @@
 {
     RootPresent,
     SubroutinePresent,
-    PieceSelected
+    PieceSelected,
+    LevelHasReset
 }

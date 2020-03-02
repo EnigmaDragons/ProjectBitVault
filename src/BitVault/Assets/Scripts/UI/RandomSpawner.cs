@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RandomSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject prefab;
+    [SerializeField] private GameObject[] prefabs;
     [SerializeField] private int minSpawns;
     [SerializeField] private int maxSpawns;
     [SerializeField] private Vector3 minBounds;
@@ -16,7 +16,7 @@ public class RandomSpawner : MonoBehaviour
     {
         for (var i = 0; i < Rng.Int(minSpawns, maxSpawns + 1); i++)
         {
-            var spawn = Instantiate(prefab, transform);
+            var spawn = Instantiate(prefabs.Random(), transform);
             spawn.transform.localPosition = GetRandomValidLocation();
         }
     }
