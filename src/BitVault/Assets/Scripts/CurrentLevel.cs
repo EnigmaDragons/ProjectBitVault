@@ -13,7 +13,7 @@ public class CurrentLevel : ScriptableObject
 
     public void SelectLevel(GameLevel level, int zoneNum, int levelNum)
     {
-        //Debug.Log($"Selected Z{zoneNum}-{levelNum} level {level.Name}");
+        Debug.Log($"Selected Z{zoneNum}-{levelNum} level {level.Name}");
         selectedLevel = level;
         currentZoneNum = zoneNum;
         currentLevelNum = levelNum;
@@ -21,6 +21,7 @@ public class CurrentLevel : ScriptableObject
 
     public void Init()
     {
+        Debug.Log($"Initialized Level {selectedLevel.Name}");
         DestroyImmediate(activeLevelPrefab);
         activeLevelPrefab = Instantiate(selectedLevel.Prefab);
     }

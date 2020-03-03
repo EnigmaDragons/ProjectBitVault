@@ -12,7 +12,6 @@ public class DemoLevelButton : MonoBehaviour
     
     public void Init(int zoneNumber, int levelNum, GameLevel level)
     {
-        Debug.Log($"{zoneNumber}, {levelNum}, {level.Name}");
         Init($"{levelNum + 1}", () =>
         {
             currentLevel.SelectLevel(level, zoneNumber, levelNum);

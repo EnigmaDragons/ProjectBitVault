@@ -5,7 +5,7 @@ public sealed class DemoLevelSelectionUI : OnMessage<StartDemoLevelRequested, Le
 {
     [SerializeField] private DemoLevelButtons buttons;
     [SerializeField] private CurrentZone zone;
-    [SerializeField] private TutorialButton tutorialButton;
+    [SerializeField] private DemoTutorialButton tutorialButton;
     [SerializeField] private GameObject[] children;
 
     private Campaign Campaign => zone.Campaign;

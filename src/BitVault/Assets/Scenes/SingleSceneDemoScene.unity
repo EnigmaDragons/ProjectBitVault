@@ -334,7 +334,6 @@ GameObject:
   m_Component:
   - component: {fileID: 937771212}
   - component: {fileID: 937771215}
-  - component: {fileID: 937771211}
   - component: {fileID: 937771214}
   - component: {fileID: 937771213}
   m_Layer: 0
@@ -344,21 +343,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &937771211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937771210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ad84f4c1dab44d1ab2649734e34353f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game: {fileID: 11400000, guid: 26b78a62af3d8984a985383c5b9f59d8, type: 2}
-  currentLevel: {fileID: 11400000, guid: f81c10460cdb9464397ed5864a15114b, type: 2}
-  newLevel: {fileID: 11400000, guid: 84fe8e9def9ab3145a05b20677c8295d, type: 2}
 --- !u!4 &937771212
 Transform:
   m_ObjectHideFlags: 0
@@ -740,6 +724,56 @@ PrefabInstance:
     - target: {fileID: 2377183662568581980, guid: 192b7f063bc8f1e49abe189b776659fa,
         type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928353923983281273, guid: 192b7f063bc8f1e49abe189b776659fa,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928353923983281273, guid: 192b7f063bc8f1e49abe189b776659fa,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928353923983281273, guid: 192b7f063bc8f1e49abe189b776659fa,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928353923983281273, guid: 192b7f063bc8f1e49abe189b776659fa,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928353923983281273, guid: 192b7f063bc8f1e49abe189b776659fa,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407453548090615593, guid: 192b7f063bc8f1e49abe189b776659fa,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407453548090615593, guid: 192b7f063bc8f1e49abe189b776659fa,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407453548090615593, guid: 192b7f063bc8f1e49abe189b776659fa,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407453548090615593, guid: 192b7f063bc8f1e49abe189b776659fa,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407453548090615593, guid: 192b7f063bc8f1e49abe189b776659fa,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
