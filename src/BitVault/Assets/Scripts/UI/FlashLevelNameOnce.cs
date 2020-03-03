@@ -8,7 +8,12 @@ public class FlashLevelNameOnce : MonoBehaviour
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private CurrentLevel level;
 
-    void Awake() => text.text = level.ActiveLevel.Name;
+    void Awake()
+    {
+        text.text = level.ActiveLevel.Name;
+        if (level.ActiveLevel.IsTutorial)
+            gameObject.SetActive(false);
+    }
 
     void Start() => StartCoroutine(HideAfterDelay());
 

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public sealed class StartDemoGameLevel : OnMessage<StartDemoLevelRequested, LevelCompleted>
@@ -11,6 +12,12 @@ public sealed class StartDemoGameLevel : OnMessage<StartDemoLevelRequested, Leve
 
     protected override void Execute(LevelCompleted msg)
     {
-        DestroyImmediate(game);
+        StartCoroutine(ResolveLevelEnd());
+    }
+
+    private IEnumerator ResolveLevelEnd()
+    {
+        Destroy(game, 3f);   
+        yield break;
     }
 }
