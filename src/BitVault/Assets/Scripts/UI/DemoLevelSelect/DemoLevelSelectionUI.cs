@@ -1,11 +1,12 @@
 using UnityEngine;
 using System;
 
-public sealed class DemoLevelSelectionUI : MonoBehaviour
+public sealed class DemoLevelSelectionUI : OnMessage<StartDemoLevelRequested, LevelCompleted>
 {
     [SerializeField] private DemoLevelButtons buttons;
     [SerializeField] private CurrentZone zone;
     [SerializeField] private TutorialButton tutorialButton;
+    [SerializeField] private GameObject[] children;
 
     private Campaign Campaign => zone.Campaign;
     private int _zoneIndex;
@@ -21,5 +22,15 @@ public sealed class DemoLevelSelectionUI : MonoBehaviour
     {
         buttons.Init(_zoneIndex, Campaign.Value[_zoneIndex]);
         tutorialButton.Init(_zoneIndex, Campaign);
+    }
+
+    protected override void Execute(StartDemoLevelRequested msg)
+    {
+        children.ForEach(c => c.SetActive(false));
+    }
+
+    protected override void Execute(LevelCompleted msg)
+    {
+        children.ForEach(c => c.SetActive(true));
     }
 }

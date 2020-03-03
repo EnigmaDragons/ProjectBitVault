@@ -11,7 +11,7 @@ public sealed class DemoLevelButtons : MonoBehaviour
         {
             var button = buttons[i];
             var hasLevel = i < zone.Value.Length;
-            Debug.Log($"Has Level {i}");
+            Debug.Log($"Has Level {i} - {hasLevel}");
             button.gameObject.SetActive(hasLevel);
             if (hasLevel)
                 button.Init(zoneNumber, i, zone.Value[i]);

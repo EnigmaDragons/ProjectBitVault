@@ -11,7 +11,7 @@ public class DisableForBriefPeriodUponLevelReset : OnMessage<LevelReset>
 
     protected override void Execute(LevelReset msg)
     {
-        if (_isSetup && !_isRunning)
+        if (_isSetup && !_isRunning && target != null)
             StartCoroutine(Activate());
         _isSetup = true;
     }

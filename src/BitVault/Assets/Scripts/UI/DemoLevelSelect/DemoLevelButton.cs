@@ -12,11 +12,12 @@ public class DemoLevelButton : MonoBehaviour
     
     public void Init(int zoneNumber, int levelNum, GameLevel level)
     {
+        Debug.Log($"{zoneNumber}, {levelNum}, {level.Name}");
         Init($"{levelNum + 1}", () =>
         {
             currentLevel.SelectLevel(level, zoneNumber, levelNum);
             isLevelStart.Value = true;
-            // TODO: Replace navigator.NavigateToGameScene();
+            Message.Publish(new StartDemoLevelRequested());
         }, level, true);
     }
 
