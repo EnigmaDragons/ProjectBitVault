@@ -1,23 +1,33 @@
 using System.Collections;
 using UnityEngine;
 
-public sealed class StartDemoGameLevel : OnMessage<StartDemoLevelRequested, LevelCompleted>
+public sealed class StartDemoGameLevel : OnMessage<StartDemoLevelRequested, LevelCompleted, DemoQuitLevelRequested>
 {
     [SerializeField] private GameObject game;
+
+    private GameObject _current;
     
     protected override void Execute(StartDemoLevelRequested msg)
     {
-        Instantiate(game);
+        _current = Instantiate(game);
     }
 
-    protected override void Execute(LevelCompleted msg)
+    protected override void Execute(LevelCompleted msg) => StartCoroutine(ResolveLevelEnd(3f));
+    protected override void Execute(DemoQuitLevelRequested msg) => StartCoroutine(ResolveLevelEnd(0f));
+
+    private IEnumerator ResolveLevelEnd(float delay)
     {
-        StartCoroutine(ResolveLevelEnd());
+        yield return new WaitForSeconds(delay);
+        KillCurrent();
     }
 
-    private IEnumerator ResolveLevelEnd()
+    private void KillCurrent()
     {
-        Destroy(game, 3f);   
-        yield break;
+        if (_current == null)
+            return;
+        
+        var theGame = _current;
+        _current = null;
+        Destroy(theGame);
     }
 }
