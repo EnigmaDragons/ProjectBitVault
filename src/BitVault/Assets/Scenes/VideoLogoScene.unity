@@ -206,7 +206,9 @@ GameObject:
   - component: {fileID: 807747252}
   - component: {fileID: 807747251}
   - component: {fileID: 807747250}
+  - component: {fileID: 807747255}
   - component: {fileID: 807747253}
+  - component: {fileID: 807747254}
   m_Layer: 0
   m_Name: Video Player
   m_TagString: Untagged
@@ -388,6 +390,57 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  delay:
+    UseConstant: 1
+    ConstantValue: 0.1
+    FloatVariable: {fileID: 0}
+--- !u!114 &807747254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807747249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964a412824244c8eb3dc2c738ad9197a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 978159943}
+  enableButton: {fileID: 0}
+  disableButton: {fileID: 0}
+--- !u!114 &807747255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807747249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c645d84dfbc6476d96298329282746c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onFinished:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 807747254}
+        m_MethodName: EnableTarget
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  delay:
+    UseConstant: 1
+    ConstantValue: 0
+    FloatVariable: {fileID: 0}
 --- !u!1 &978159943
 GameObject:
   m_ObjectHideFlags: 0

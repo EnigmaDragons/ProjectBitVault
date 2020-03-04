@@ -6,14 +6,16 @@ public class CurrentLevel : ScriptableObject
     [DTValidator.Optional, SerializeField] private GameObject activeLevelPrefab;
     [SerializeField] private int currentZoneNum;
     [SerializeField] private int currentLevelNum;
-
+    [SerializeField] private bool enableDebugLogging;
+    
     public GameLevel ActiveLevel => selectedLevel;
     public int ZoneNumber => currentZoneNum;
     public int LevelNumber => currentLevelNum;
 
     public void SelectLevel(GameLevel level, int zoneNum, int levelNum)
     {
-        Debug.Log($"Selected Z{zoneNum}-{levelNum} level {level.Name}");
+        if (enableDebugLogging)
+            Debug.Log($"Selected Z{zoneNum}-{levelNum} level {level.Name}");
         selectedLevel = level;
         currentZoneNum = zoneNum;
         currentLevelNum = levelNum;
@@ -21,7 +23,8 @@ public class CurrentLevel : ScriptableObject
 
     public void Init()
     {
-        Debug.Log($"Initialized Level {selectedLevel.Name}");
+        if (enableDebugLogging)
+            Debug.Log($"Initialized Level {selectedLevel.Name}");
         DestroyImmediate(activeLevelPrefab);
         activeLevelPrefab = Instantiate(selectedLevel.Prefab);
     }

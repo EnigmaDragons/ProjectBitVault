@@ -9,16 +9,23 @@ public class ToggleGameObject : MonoBehaviour
 
     void OnEnable()
     {
-        enableButton.onClick.AddListener(EnableTarget);
-        disableButton.onClick.AddListener(DisableTarget);
+        if (enableButton != null)
+            enableButton.onClick.AddListener(EnableTarget);
+        if (disableButton != null)
+            disableButton.onClick.AddListener(DisableTarget);
     }
 
     private void OnDisable()
     {
-        enableButton.onClick.RemoveListener(EnableTarget);
-        disableButton.onClick.RemoveListener(DisableTarget);
+        if (enableButton != null)
+            enableButton.onClick.RemoveListener(EnableTarget);
+        if (disableButton != null)
+            disableButton.onClick.RemoveListener(DisableTarget);
     }
 
-    private void DisableTarget() => target.SetActive(false);
-    private void EnableTarget() => target.SetActive(true);
+    public void DisableTarget() => target.SetActive(false);
+    public void EnableTarget()
+    {
+        target.SetActive(true);
+    }
 }
