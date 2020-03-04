@@ -44,3 +44,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   game: {fileID: 4129307192092616299, guid: 881ba9134e98be54bb270fad31655995, type: 3}
+  level: {fileID: 11400000, guid: f81c10460cdb9464397ed5864a15114b, type: 2}
+  destroyDelay:
+    UseConstant: 1
+    ConstantValue: 3.5
+    FloatVariable: {fileID: 0}
+  gameInputActive: {fileID: 11400000, guid: eebaf394924070845bc9896cb2a4d42c, type: 2}

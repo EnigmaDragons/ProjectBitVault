@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
 
-public sealed class DemoLevelSelectionUI : OnMessage<StartDemoLevelRequested, LevelCompleted, DemoQuitLevelRequested>
+public sealed class DemoLevelSelectionUI : OnMessage<StartDemoLevelRequested, DemoQuitLevelRequested>
 {
     [SerializeField] private DemoLevelButtons buttons;
     [SerializeField] private CurrentZone zone;
@@ -29,7 +29,6 @@ public sealed class DemoLevelSelectionUI : OnMessage<StartDemoLevelRequested, Le
         children.ForEach(c => c.SetActive(false));
     }
 
-    protected override void Execute(LevelCompleted msg) => Enable();
     protected override void Execute(DemoQuitLevelRequested msg) => Enable();
 
     private void Enable()

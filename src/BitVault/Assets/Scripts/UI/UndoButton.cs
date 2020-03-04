@@ -23,7 +23,6 @@ public class UndoButton : MonoBehaviour
 
     private void UpdateButton()
     {
-        Debug.Log($"Move History Count: {history.Count}");
         if (history.Count < 1)
         {
             text.text = "";
