@@ -10,6 +10,7 @@ public class FallingTile : OnMessage<PieceMoved, UndoPieceMoved>
     [SerializeField] private LockBoolVariable gameInputActive;
     [SerializeField] private float _lossDelay;
     [SerializeField] private CurrentLevelMap map;
+    [SerializeField] private Achievements achievements;
 
     public bool IsDangerous { get; private set; } = false;
     private Material _originalMaterial;
@@ -38,6 +39,9 @@ public class FallingTile : OnMessage<PieceMoved, UndoPieceMoved>
             map.HasLost = true;
             gameInputActive.Lock(gameObject);
             StartCoroutine(DelayedLoss());
+            //I wish i could put this in a seperate object but not sure how
+            if (new TilePoint(map.Hero).IsAdjacentTo(map.BitVaultLocation))
+                achievements.UnlockAchievement(AchievementType.FailsafeGoal);
         }
     }
 

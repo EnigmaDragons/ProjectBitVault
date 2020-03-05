@@ -1,0 +1,22 @@
+﻿public enum AchievementType
+{
+    BeatZone1,
+    BeatZone2,
+    BeatZone3,
+    BeatZone4,
+    BeatZone5,
+    PerfectZone1,
+    PerfectZone2,
+    PerfectZone3,
+    PerfectZone4,
+    PerfectZone5,
+    PerfectTutorial,
+    AllRoutesLevel1,
+    FailsafeGoal,
+    Thinking,
+    FailsafeEngaged,
+    SpeedLevel,
+    FailsafeUndo,
+    LineUp,
+    LaterLevel
+}

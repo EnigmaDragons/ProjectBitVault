@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 [Serializable]
 public sealed class SavedGameData
@@ -9,6 +10,7 @@ public sealed class SavedGameData
     public CampaignsProgressData Campaigns = new CampaignsProgressData();
     public SettingsData Settings = new SettingsData();
     public bool HasWon = false;
+    public AchievementData Achievements = new AchievementData();
 
     public CampaignLevelScores ActiveCampaign => Campaigns[ActiveCampaignName];
 }
@@ -25,4 +27,10 @@ public sealed class SettingsData
     public bool ShowMovementHints = true;
     public bool AutoSkipStory = false;
     public bool UseFemale = true;
+}
+
+[Serializable]
+public sealed class AchievementData
+{
+    public List<List<TilePoint>> RoutesTakenOnLevel1 = new List<List<TilePoint>>();
 }
