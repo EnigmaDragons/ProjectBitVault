@@ -9,6 +9,7 @@ public class BitVaultOnLevelCompleted : OnMessage<LevelCompleted>
     [SerializeField] private Renderer renderer;
     [SerializeField] private Texture _deathMask;
     [SerializeField] private float _secondsForEachSegment = 1;
+    [SerializeField] private float _secondsDelayBeforeCompletion = 0;
     [SerializeField] private GameObject collectedStar;
     [SerializeField] private LockBoolVariable gameInputActive;
 
@@ -64,7 +65,7 @@ public class BitVaultOnLevelCompleted : OnMessage<LevelCompleted>
 
     private IEnumerator DelayedCompletion()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(_secondsDelayBeforeCompletion);
         Message.Publish(new EndingLevelAnimationFinished());
         gameInputActive.Unlock(gameObject);
     }

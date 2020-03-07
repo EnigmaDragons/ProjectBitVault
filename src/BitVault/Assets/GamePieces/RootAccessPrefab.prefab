@@ -4824,6 +4824,7 @@ GameObject:
   - component: {fileID: -6579248514674523112}
   - component: {fileID: 6508073621623974287}
   - component: {fileID: 753343710789375978}
+  - component: {fileID: 753547235933813257}
   m_Layer: 0
   m_Name: RootAccessPrefab
   m_TagString: Untagged
@@ -4875,7 +4876,8 @@ MonoBehaviour:
   map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
   renderer: {fileID: 3856679156413785629}
   _deathMask: {fileID: 2800000, guid: 81288d7272d26f747883b10535bd88de, type: 3}
-  _secondsForEachSegment: 1.2
+  _secondsForEachSegment: 1.5
+  _secondsDelayBeforeCompletion: 1.5
   collectedStar: {fileID: 3908371975002010264, guid: 6b349472827e05d479e875450ab1cebd,
     type: 3}
   gameInputActive: {fileID: 11400000, guid: 24002322d985f6d4087239253827123b, type: 2}
@@ -4891,7 +4893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3af31409325874478b0db16b93688dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _secondsToZoom: 1.5
+  _secondsToZoom: 2
   _offset: {x: 0.5, y: 0.5, z: -5}
 --- !u!114 &753343710789375978
 MonoBehaviour:
@@ -4906,7 +4908,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles: {fileID: 4405522953627199814}
-  _delay: 1
+  _delay: 1.5
+--- !u!114 &753547235933813257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7513623614757099273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cab52f32ebe56742977c7d6ca2148f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeToTexture: {fileID: 2800000, guid: 37326c2d31fc44b4598ee6bff17e8522, type: 3}
+  fadeSeconds: 1
+  delaySeconds: 3.5
 --- !u!1001 &8504034257164299978
 PrefabInstance:
   m_ObjectHideFlags: 0

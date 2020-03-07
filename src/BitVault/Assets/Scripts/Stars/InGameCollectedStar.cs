@@ -7,6 +7,7 @@ public class InGameCollectedStar : MonoBehaviour
     [SerializeField] private Vector3Reference position2;
     [SerializeField] private Vector3Reference position3;
     [SerializeField] private float speed;
+    [SerializeField] private Renderer renderer;
     [SerializeField, ReadOnly] private int starNumber;
     
     private Vector3Reference _target;
@@ -21,6 +22,7 @@ public class InGameCollectedStar : MonoBehaviour
             _target = position2;
         else if (stars.Count == 2)
             _target = position3;
+        renderer.material.renderQueue = 4000;
     }
 
     private void OnDisable() => stars.OnChanged.Unsubscribe(this);
