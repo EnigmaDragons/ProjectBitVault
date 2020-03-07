@@ -4,7 +4,6 @@ public class LineUpAchievement : OnMessage<PieceMoved, LevelCompleted>
 {
     [SerializeField] private CurrentLevelMap map;
     [SerializeField] private Achievements achievements;
-    [SerializeField] private BoolVariable isTutorial;
 
     private bool _failed = false;
     private int _moveCount = 0;
@@ -19,7 +18,7 @@ public class LineUpAchievement : OnMessage<PieceMoved, LevelCompleted>
 
     protected override void Execute(LevelCompleted msg)
     {
-        if (_moveCount >= 5 && !_failed && !isTutorial.Value)
+        if (_moveCount >= 7 && !_failed)
             achievements.UnlockAchievement(AchievementType.LineUp);
     }
 }
