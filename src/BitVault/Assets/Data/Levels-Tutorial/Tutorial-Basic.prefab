@@ -163,13 +163,13 @@ MonoBehaviour:
     conditions:
     - type: 0
       tilePoint:
-        X: 5
-        Y: 2
+        X: 4
+        Y: 0
       isTrue: 1
     - type: 1
       tilePoint:
-        X: 4
-        Y: 2
+        X: 3
+        Y: 0
       isTrue: 0
     uiElements:
     - {fileID: 1625531463165026804, guid: 30692fe3c82b41d478f436af0d6b10e6, type: 3}
@@ -178,8 +178,8 @@ MonoBehaviour:
     conditions:
     - type: 1
       tilePoint:
-        X: 3
-        Y: 2
+        X: 2
+        Y: 0
       isTrue: 1
     uiElements:
     - {fileID: 1625531463165026804, guid: 30692fe3c82b41d478f436af0d6b10e6, type: 3}
@@ -188,8 +188,8 @@ MonoBehaviour:
     conditions:
     - type: 1
       tilePoint:
-        X: 3
-        Y: 4
+        X: 2
+        Y: 2
       isTrue: 1
     uiElements:
     - {fileID: 7329136811093447745, guid: 96e176b77d7276e44b4aa4428fefc66b, type: 3}
@@ -198,8 +198,8 @@ MonoBehaviour:
     conditions:
     - type: 1
       tilePoint:
-        X: 3
-        Y: 8
+        X: 2
+        Y: 6
       isTrue: 1
     uiElements:
     - {fileID: 7329136811093447745, guid: 96e176b77d7276e44b4aa4428fefc66b, type: 3}
@@ -208,176 +208,254 @@ MonoBehaviour:
     conditions:
     - type: 0
       tilePoint:
-        X: 5
-        Y: 2
+        X: 4
+        Y: 0
       isTrue: 1
     - type: 2
       tilePoint:
-        X: 5
-        Y: 2
+        X: 4
+        Y: 0
       isTrue: 0
     uiElements: []
     elements:
     - element: {fileID: 8539626386075226629, guid: 9857e29bec7675947861af0d46f4877d,
         type: 3}
-      position: {x: 5, y: 2, z: 0}
+      position: {x: 4, y: 0, z: 0}
   - text: Move the Root Key by going through a Subroutine.
     conditions:
     - type: 2
       tilePoint:
-        X: 5
-        Y: 2
+        X: 4
+        Y: 0
       isTrue: 1
     uiElements: []
     elements:
     - element: {fileID: 8539626386075226629, guid: 9857e29bec7675947861af0d46f4877d,
         type: 3}
-      position: {x: 3, y: 2, z: 0}
+      position: {x: 2, y: 0, z: 0}
   - text: The Root Key can't move forward. Select this Subroutine.
     conditions:
     - type: 0
       tilePoint:
-        X: 3
-        Y: 2
+        X: 2
+        Y: 0
       isTrue: 1
     - type: 1
       tilePoint:
-        X: 5
-        Y: 3
+        X: 4
+        Y: 1
       isTrue: 1
     - type: 2
       tilePoint:
-        X: 5
-        Y: 3
+        X: 4
+        Y: 1
       isTrue: 0
     uiElements: []
     elements:
     - element: {fileID: 8539626386075226629, guid: 9857e29bec7675947861af0d46f4877d,
         type: 3}
-      position: {x: 5, y: 3, z: 0}
+      position: {x: 4, y: 1, z: 0}
   - text: The Root Key can't move forward. Move this Subroutine by going through another
       Subroutine.
     conditions:
     - type: 0
       tilePoint:
-        X: 3
-        Y: 2
+        X: 2
+        Y: 0
       isTrue: 1
     - type: 1
       tilePoint:
-        X: 5
-        Y: 3
+        X: 4
+        Y: 1
       isTrue: 1
     - type: 2
       tilePoint:
-        X: 5
-        Y: 3
+        X: 4
+        Y: 1
       isTrue: 1
     uiElements: []
     elements:
     - element: {fileID: 8539626386075226629, guid: 9857e29bec7675947861af0d46f4877d,
         type: 3}
-      position: {x: 3, y: 3, z: 0}
+      position: {x: 2, y: 1, z: 0}
   - text: The Root Key can move forward. Select the Root Key.
     conditions:
     - type: 0
       tilePoint:
-        X: 3
-        Y: 2
+        X: 2
+        Y: 0
       isTrue: 1
     - type: 1
       tilePoint:
-        X: 3
-        Y: 3
+        X: 2
+        Y: 1
       isTrue: 1
     - type: 2
       tilePoint:
-        X: 3
-        Y: 2
+        X: 2
+        Y: 0
       isTrue: 0
     uiElements: []
     elements:
     - element: {fileID: 8539626386075226629, guid: 9857e29bec7675947861af0d46f4877d,
         type: 3}
-      position: {x: 3, y: 2, z: 0}
+      position: {x: 2, y: 0, z: 0}
   - text: The Root Key can move forward. Move the Root Key here.
     conditions:
     - type: 0
       tilePoint:
-        X: 3
-        Y: 2
+        X: 2
+        Y: 0
       isTrue: 1
     - type: 1
       tilePoint:
-        X: 3
-        Y: 3
+        X: 2
+        Y: 1
       isTrue: 1
     - type: 2
       tilePoint:
-        X: 3
-        Y: 2
+        X: 2
+        Y: 0
       isTrue: 1
     uiElements: []
     elements:
     - element: {fileID: 8539626386075226629, guid: 9857e29bec7675947861af0d46f4877d,
         type: 3}
-      position: {x: 3, y: 4, z: 0}
+      position: {x: 2, y: 2, z: 0}
   - text: The Root Key is blocked. Select this Subroutine.
     conditions:
     - type: 0
       tilePoint:
-        X: 3
-        Y: 4
+        X: 2
+        Y: 2
       isTrue: 1
     - type: 1
       tilePoint:
-        X: 1
-        Y: 4
+        X: 0
+        Y: 2
       isTrue: 1
     - type: 2
       tilePoint:
-        X: 1
-        Y: 3
+        X: 0
+        Y: 1
       isTrue: 0
     uiElements: []
     elements:
     - element: {fileID: 8539626386075226629, guid: 9857e29bec7675947861af0d46f4877d,
         type: 3}
-      position: {x: 1, y: 3, z: 0}
+      position: {x: 0, y: 1, z: 0}
   - text: The Root Key is blocked. Move this Subroutine to clear the way.
     conditions:
     - type: 0
       tilePoint:
-        X: 3
-        Y: 4
+        X: 2
+        Y: 2
       isTrue: 1
     - type: 1
       tilePoint:
-        X: 1
-        Y: 4
+        X: 0
+        Y: 2
       isTrue: 1
     - type: 2
       tilePoint:
-        X: 1
-        Y: 3
+        X: 0
+        Y: 1
       isTrue: 1
     uiElements: []
     elements:
     - element: {fileID: 8539626386075226629, guid: 9857e29bec7675947861af0d46f4877d,
         type: 3}
-      position: {x: 1, y: 5, z: 0}
+      position: {x: 0, y: 3, z: 0}
   - text: The Root Key is no longer blocked. Select the Root Key.
     conditions:
     - type: 0
       tilePoint:
-        X: 3
+        X: 2
+        Y: 2
+      isTrue: 1
+    - type: 1
+      tilePoint:
+        X: 0
+        Y: 2
+      isTrue: 0
+    - type: 2
+      tilePoint:
+        X: 2
+        Y: 2
+      isTrue: 0
+    uiElements: []
+    elements:
+    - element: {fileID: 8539626386075226629, guid: 9857e29bec7675947861af0d46f4877d,
+        type: 3}
+      position: {x: 2, y: 2, z: 0}
+  - text: The Root Key is no longer blocked. Move the Root Key forward.
+    conditions:
+    - type: 0
+      tilePoint:
+        X: 2
+        Y: 2
+      isTrue: 1
+    - type: 1
+      tilePoint:
+        X: 0
+        Y: 2
+      isTrue: 0
+    - type: 2
+      tilePoint:
+        X: 2
+        Y: 2
+      isTrue: 1
+    uiElements: []
+    elements:
+    - element: {fileID: 8539626386075226629, guid: 9857e29bec7675947861af0d46f4877d,
+        type: 3}
+      position: {x: 0, y: 2, z: 0}
+  - text: Select the Root Key.
+    conditions:
+    - type: 0
+      tilePoint:
+        X: 0
+        Y: 2
+      isTrue: 1
+    - type: 2
+      tilePoint:
+        X: 0
+        Y: 2
+      isTrue: 0
+    uiElements: []
+    elements:
+    - element: {fileID: 8539626386075226629, guid: 9857e29bec7675947861af0d46f4877d,
+        type: 3}
+      position: {x: 0, y: 2, z: 0}
+  - text: Move the Root Key forward.
+    conditions:
+    - type: 0
+      tilePoint:
+        X: 0
+        Y: 2
+      isTrue: 1
+    - type: 2
+      tilePoint:
+        X: 0
+        Y: 2
+      isTrue: 1
+    uiElements: []
+    elements:
+    - element: {fileID: 8539626386075226629, guid: 9857e29bec7675947861af0d46f4877d,
+        type: 3}
+      position: {x: 0, y: 4, z: 0}
+  - text: Data Cubes are optional bonus objectives. Select this Subroutine.
+    conditions:
+    - type: 0
+      tilePoint:
+        X: 0
         Y: 4
       isTrue: 1
     - type: 1
       tilePoint:
-        X: 1
+        X: 3
         Y: 4
-      isTrue: 0
+      isTrue: 1
     - type: 2
       tilePoint:
         X: 3
@@ -388,18 +466,19 @@ MonoBehaviour:
     - element: {fileID: 8539626386075226629, guid: 9857e29bec7675947861af0d46f4877d,
         type: 3}
       position: {x: 3, y: 4, z: 0}
-  - text: The Root Key is no longer blocked. Move the Root Key forward.
+  - text: Data Cubes can be collected by moving on to them. Move this Subroutine to
+      the Data Cube.
     conditions:
     - type: 0
       tilePoint:
-        X: 3
+        X: 0
         Y: 4
       isTrue: 1
     - type: 1
       tilePoint:
-        X: 1
+        X: 3
         Y: 4
-      isTrue: 0
+      isTrue: 1
     - type: 2
       tilePoint:
         X: 3
@@ -414,160 +493,81 @@ MonoBehaviour:
     conditions:
     - type: 0
       tilePoint:
+        X: 0
+        Y: 4
+      isTrue: 1
+    - type: 1
+      tilePoint:
         X: 1
         Y: 4
       isTrue: 1
     - type: 2
       tilePoint:
-        X: 1
+        X: 0
         Y: 4
       isTrue: 0
     uiElements: []
     elements:
     - element: {fileID: 8539626386075226629, guid: 9857e29bec7675947861af0d46f4877d,
         type: 3}
-      position: {x: 1, y: 4, z: 0}
+      position: {x: 0, y: 4, z: 0}
   - text: Move the Root Key forward.
     conditions:
     - type: 0
       tilePoint:
+        X: 0
+        Y: 4
+      isTrue: 1
+    - type: 1
+      tilePoint:
         X: 1
         Y: 4
       isTrue: 1
     - type: 2
       tilePoint:
-        X: 1
+        X: 0
         Y: 4
       isTrue: 1
     uiElements: []
     elements:
     - element: {fileID: 8539626386075226629, guid: 9857e29bec7675947861af0d46f4877d,
         type: 3}
-      position: {x: 1, y: 6, z: 0}
-  - text: Data Cubes are optional bonus objectives. Select this Subroutine.
+      position: {x: 2, y: 4, z: 0}
+  - text: A Data Cube appears when 1 Subroutine remains. Select the Root Key.
     conditions:
     - type: 0
       tilePoint:
-        X: 1
-        Y: 6
-      isTrue: 1
-    - type: 1
-      tilePoint:
-        X: 4
-        Y: 6
+        X: 2
+        Y: 4
       isTrue: 1
     - type: 2
       tilePoint:
-        X: 4
-        Y: 6
+        X: 2
+        Y: 4
       isTrue: 0
     uiElements: []
     elements:
     - element: {fileID: 8539626386075226629, guid: 9857e29bec7675947861af0d46f4877d,
         type: 3}
-      position: {x: 4, y: 6, z: 0}
-  - text: Data Cubes can be collected by moving on to them. Move this Subroutine to
-      the Data Cube.
+      position: {x: 2, y: 4, z: 0}
+  - text: A Data Cube appears when 1 Subroutine remains. Move the Root Key to Root
+      to win the level.
     conditions:
     - type: 0
       tilePoint:
-        X: 1
-        Y: 6
-      isTrue: 1
-    - type: 1
-      tilePoint:
-        X: 4
-        Y: 6
+        X: 2
+        Y: 4
       isTrue: 1
     - type: 2
       tilePoint:
-        X: 4
-        Y: 6
+        X: 2
+        Y: 4
       isTrue: 1
     uiElements: []
     elements:
     - element: {fileID: 8539626386075226629, guid: 9857e29bec7675947861af0d46f4877d,
         type: 3}
       position: {x: 2, y: 6, z: 0}
-  - text: Select the Root Key.
-    conditions:
-    - type: 0
-      tilePoint:
-        X: 1
-        Y: 6
-      isTrue: 1
-    - type: 1
-      tilePoint:
-        X: 2
-        Y: 6
-      isTrue: 1
-    - type: 2
-      tilePoint:
-        X: 1
-        Y: 6
-      isTrue: 0
-    uiElements: []
-    elements:
-    - element: {fileID: 8539626386075226629, guid: 9857e29bec7675947861af0d46f4877d,
-        type: 3}
-      position: {x: 1, y: 6, z: 0}
-  - text: Move the Root Key forward.
-    conditions:
-    - type: 0
-      tilePoint:
-        X: 1
-        Y: 6
-      isTrue: 1
-    - type: 1
-      tilePoint:
-        X: 2
-        Y: 6
-      isTrue: 1
-    - type: 2
-      tilePoint:
-        X: 1
-        Y: 6
-      isTrue: 1
-    uiElements: []
-    elements:
-    - element: {fileID: 8539626386075226629, guid: 9857e29bec7675947861af0d46f4877d,
-        type: 3}
-      position: {x: 3, y: 6, z: 0}
-  - text: A Data Cube appears when 1 Subroutine remains. Select the Root Key.
-    conditions:
-    - type: 0
-      tilePoint:
-        X: 3
-        Y: 6
-      isTrue: 1
-    - type: 2
-      tilePoint:
-        X: 3
-        Y: 6
-      isTrue: 0
-    uiElements: []
-    elements:
-    - element: {fileID: 8539626386075226629, guid: 9857e29bec7675947861af0d46f4877d,
-        type: 3}
-      position: {x: 3, y: 6, z: 0}
-  - text: A Data Cube appears when 1 Subroutine remains. Move the Root Key to Root
-      to win the level.
-    conditions:
-    - type: 0
-      tilePoint:
-        X: 3
-        Y: 6
-      isTrue: 1
-    - type: 2
-      tilePoint:
-        X: 3
-        Y: 6
-      isTrue: 1
-    uiElements: []
-    elements:
-    - element: {fileID: 8539626386075226629, guid: 9857e29bec7675947861af0d46f4877d,
-        type: 3}
-      position: {x: 3, y: 8, z: 0}
   map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
   selectedPiece: {fileID: 11400000, guid: d282e5116cb67fc4ea25819f6057bab2, type: 2}
   hasLevelReset:
@@ -631,12 +631,12 @@ PrefabInstance:
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
@@ -706,12 +706,12 @@ PrefabInstance:
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
@@ -781,12 +781,12 @@ PrefabInstance:
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
@@ -860,12 +860,12 @@ PrefabInstance:
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
@@ -935,12 +935,12 @@ PrefabInstance:
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
@@ -1010,12 +1010,12 @@ PrefabInstance:
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
@@ -1085,12 +1085,12 @@ PrefabInstance:
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
@@ -1160,12 +1160,12 @@ PrefabInstance:
     - target: {fileID: 1215546062855188290, guid: fa336d9be762cf045a312251cc0e98b9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1215546062855188290, guid: fa336d9be762cf045a312251cc0e98b9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1215546062855188290, guid: fa336d9be762cf045a312251cc0e98b9,
         type: 3}
@@ -1235,12 +1235,12 @@ PrefabInstance:
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
@@ -1310,12 +1310,12 @@ PrefabInstance:
     - target: {fileID: 7453126887534007949, guid: 06a8110c0fdedc247a2ee96d19b4c351,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7453126887534007949, guid: 06a8110c0fdedc247a2ee96d19b4c351,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7453126887534007949, guid: 06a8110c0fdedc247a2ee96d19b4c351,
         type: 3}
@@ -1389,12 +1389,12 @@ PrefabInstance:
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
@@ -1468,12 +1468,12 @@ PrefabInstance:
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
@@ -1543,12 +1543,12 @@ PrefabInstance:
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
@@ -1618,12 +1618,12 @@ PrefabInstance:
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
@@ -1693,12 +1693,12 @@ PrefabInstance:
     - target: {fileID: 4534637599029900136, guid: 9d2fd084446131241abb3a0782bb1517,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4534637599029900136, guid: 9d2fd084446131241abb3a0782bb1517,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4534637599029900136, guid: 9d2fd084446131241abb3a0782bb1517,
         type: 3}
@@ -1768,12 +1768,12 @@ PrefabInstance:
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
@@ -1843,12 +1843,12 @@ PrefabInstance:
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
@@ -1918,12 +1918,12 @@ PrefabInstance:
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
@@ -1997,12 +1997,12 @@ PrefabInstance:
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
@@ -2072,12 +2072,12 @@ PrefabInstance:
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
@@ -2151,12 +2151,12 @@ PrefabInstance:
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
@@ -2305,12 +2305,12 @@ PrefabInstance:
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
@@ -2384,12 +2384,12 @@ PrefabInstance:
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
@@ -2463,12 +2463,12 @@ PrefabInstance:
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
@@ -2538,12 +2538,12 @@ PrefabInstance:
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
@@ -2617,12 +2617,12 @@ PrefabInstance:
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8030467830039979414, guid: 36129413272ae754ba17c1cb4c98256f,
         type: 3}
@@ -2696,12 +2696,12 @@ PrefabInstance:
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
@@ -2771,12 +2771,12 @@ PrefabInstance:
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
@@ -2846,12 +2846,12 @@ PrefabInstance:
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8901094397418523576, guid: 664822e8518f799429fa3682696d7415,
         type: 3}
