@@ -8,6 +8,7 @@ public class AllRoutesLevel1Achievement : OnMessage<LevelReset, PieceMoved, Endi
     [SerializeField] private CurrentLevelStars stars;
     [SerializeField] private SaveStorage storage;
     [SerializeField] private Achievements achievements;
+    [SerializeField] private CurrentLevel level;
 
     private List<TilePoint> _route = new List<TilePoint>();
 
@@ -25,7 +26,7 @@ public class AllRoutesLevel1Achievement : OnMessage<LevelReset, PieceMoved, Endi
     protected override void Execute(EndingLevelAnimationFinished msg)
     {
         var routesTaken = storage.SaveData.Achievements.RoutesTakenOnLevel1;
-        if (stars.Count == 3 && !routesTaken.Any(x =>
+        if (stars.Count == 3 && level.ZoneNumber == 0 && level.LevelNumber == 0 && !routesTaken.Any(x =>
         {
             if (x.Count != _route.Count)
                 return false;

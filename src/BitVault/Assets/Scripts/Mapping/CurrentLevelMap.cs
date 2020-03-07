@@ -145,7 +145,7 @@ public class CurrentLevelMap : ScriptableObject
         return builder.Build();
     }
     
-    //This is code is a bit concrete
+    //This code is a bit concrete
     public LevelSimulationSnapshot GetSnapshot()
     {
         var floors = new List<TilePoint>();
@@ -175,7 +175,14 @@ public class CurrentLevelMap : ScriptableObject
         });
         return new LevelSimulationSnapshot(floors, disengagedFailsafes, oneHealthSubroutines, twoHealthSubroutines, iceSubroutines, collectibleObjects.Select(x => new TilePoint(x)).ToList(), new TilePoint(hero), bitVaultLocation);
     }
-    
+
+    public int CountDangerousTiles()
+        => walkableTiles.Count(x =>
+        {
+            var fallingTile = x.GetComponent<FallingTile>();
+            return fallingTile != null && fallingTile.IsDangerous;
+        });
+
     private void Notify(Action a)
     {
         a();

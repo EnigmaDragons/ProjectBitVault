@@ -25,6 +25,9 @@ GameObject:
   - component: {fileID: 1559714979355460193}
   - component: {fileID: 6775682634928860673}
   - component: {fileID: 3020478413133852619}
+  - component: {fileID: 5362876016527065537}
+  - component: {fileID: 202143250045307330}
+  - component: {fileID: 2948639864764948544}
   m_Layer: 0
   m_Name: Achievements
   m_TagString: Untagged
@@ -290,6 +293,7 @@ MonoBehaviour:
   stars: {fileID: 11400000, guid: 2ae4308fec58df94b863c1ed4ec4dc3a, type: 2}
   storage: {fileID: 11400000, guid: 1458f9b8798b4f147b62b7883c2ba217, type: 2}
   achievements: {fileID: 8608052900732721963}
+  level: {fileID: 11400000, guid: f81c10460cdb9464397ed5864a15114b, type: 2}
 --- !u!114 &1559714979355460193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,3 +337,45 @@ MonoBehaviour:
   zone: {fileID: 11400000, guid: e8fc69fe1d2656a4c8f02b9da95abb99, type: 2}
   level: {fileID: 11400000, guid: f81c10460cdb9464397ed5864a15114b, type: 2}
   achievements: {fileID: 8608052900732721963}
+--- !u!114 &5362876016527065537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7830573684215768955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d60dabfd513baa43a08bc13497af122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
+  achievements: {fileID: 8608052900732721963}
+--- !u!114 &202143250045307330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7830573684215768955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a6773818355bc14f9afa3222e872f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
+  achievements: {fileID: 8608052900732721963}
+--- !u!114 &2948639864764948544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7830573684215768955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aab975ba4dd24645a00168c29ea1f55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developmentToolsActive: {fileID: 11400000, guid: 49114531547a09c44aa9bf753a5a07f7,
+    type: 2}
