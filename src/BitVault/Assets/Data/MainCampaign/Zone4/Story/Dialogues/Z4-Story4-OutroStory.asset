@@ -14,14 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Droning Around
   lines:
-  - text: "If you turn yourself in, terrorist, I\u2019ll make sure your sentence is
+  - type: 0
+    text: "If you turn yourself in, terrorist, I\u2019ll make sure your sentence is
       a warning."
     character: {fileID: 11400000, guid: 593dcd71c4b435547aedcf8d503dec17, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "Oh, sure... I\u2019ll be let off with a warning for supposedly destroying
+  - type: 0
+    text: "Oh, sure... I\u2019ll be let off with a warning for supposedly destroying
       two cyber security companies. How gracious of the law."
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: The deal is off the table!
+  - type: 0
+    text: The deal is off the table!
     character: {fileID: 11400000, guid: 593dcd71c4b435547aedcf8d503dec17, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 593dcd71c4b435547aedcf8d503dec17, type: 2}

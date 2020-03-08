@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Untraceable
   lines:
-  - text: "The \u201Cuntraceable-ness\u201D of Nova's network may have been an extreme
+  - type: 0
+    text: "The \u201Cuntraceable-ness\u201D of Nova's network may have been an extreme
       exaggeration."
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "Hopefully Nova's network is as \u201Cimpenetrable\u201D as it was \u201Cuntraceable\u201D."
+  - type: 0
+    text: "Hopefully Nova's network is as \u201Cimpenetrable\u201D as it was \u201Cuntraceable\u201D."
     character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}

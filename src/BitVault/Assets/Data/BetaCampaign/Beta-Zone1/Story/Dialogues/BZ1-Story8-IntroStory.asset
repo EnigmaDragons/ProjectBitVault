@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Identity Crisis
   lines:
-  - text: You're probably gonna need to hack your identity, to appear old enough to
+  - type: 0
+    text: You're probably gonna need to hack your identity, to appear old enough to
       actually have done the things you claim you've done.
     character: {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}
-    customDisplay: {fileID: 0}
-  - text: I guess you could say I'm having an identity crisis.
+  - type: 0
+    text: I guess you could say I'm having an identity crisis.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
+  - {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}

@@ -14,23 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Game Over
   lines:
-  - text: Game over!
+  - type: 0
+    text: Game over!
     character: {fileID: 11400000, guid: 2fb337bf7fc8ebd4895067e36415fc42, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Third time saying "Game over!" is the charm.
+  - type: 0
+    text: Third time saying "Game over!" is the charm.
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: I have just delivered a bomb close to your location and I have the detonator.
+  - type: 0
+    text: I have just delivered a bomb close to your location and I have the detonator.
     character: {fileID: 11400000, guid: 2fb337bf7fc8ebd4895067e36415fc42, type: 2}
-    customDisplay: {fileID: 0}
-  - text: I had so much time hacking that bomb, given all those annoying shipping
+  - type: 0
+    text: I had so much time hacking that bomb, given all those annoying shipping
       delays.
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: By the way I really like how explosive the self destruct feature on your
+  - type: 0
+    text: By the way I really like how explosive the self destruct feature on your
       automated defense system is.
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Game over!
+  - type: 0
+    text: Game over!
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
+  - {fileID: 11400000, guid: 2fb337bf7fc8ebd4895067e36415fc42, type: 2}

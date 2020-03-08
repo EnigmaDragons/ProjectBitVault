@@ -14,15 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Slip and Slade
   lines:
-  - text: Guess what I found?
+  - type: 0
+    text: Guess what I found?
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "A wild server that\u2019s not relevant to getting the security keys?"
+  - type: 0
+    text: "A wild server that\u2019s not relevant to getting the security keys?"
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: The human resource server. We can dig up more on this Slade dude.
+  - type: 0
+    text: The human resource server. We can dig up more on this Slade dude.
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "I guess I\u2019m curious. What\u2019s a quick detour, anyway..."
+  - type: 0
+    text: "I guess I\u2019m curious. What\u2019s a quick detour, anyway..."
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}

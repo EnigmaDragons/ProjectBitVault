@@ -14,17 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Clean Slade
   lines:
-  - text: I win!
+  - type: 0
+    text: I win!
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "I\u2019ve been done since you started, but it was fun watching you rush."
+  - type: 0
+    text: "I\u2019ve been done since you started, but it was fun watching you rush."
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "Slade\u2019s computer was extremely easy to hack, I can\u2019t believe
+  - type: 0
+    text: "Slade\u2019s computer was extremely easy to hack, I can\u2019t believe
       this guy built security systems at one point."
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "Except for the impressive number of hours spent on \u201Cunproductive sites\u201D,
+  - type: 0
+    text: "Except for the impressive number of hours spent on \u201Cunproductive sites\u201D,
       there was nothing interesting."
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}

@@ -14,17 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Premonition
   lines:
-  - text: "Breaking News: Cyber Titan\u2019s message was from the attackers."
+  - type: 0
+    text: "Breaking News: Cyber Titan\u2019s message was from the attackers."
     character: {fileID: 11400000, guid: d230a09a40639d940ab2414d1c634c6a, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "Cyber Titan\u2019s communication server got hacked and is currently controlled
+  - type: 0
+    text: "Cyber Titan\u2019s communication server got hacked and is currently controlled
       by the attackers."
     character: {fileID: 11400000, guid: d230a09a40639d940ab2414d1c634c6a, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Cyber Titan is failing to defend their own systems, Was this an inside job?
+  - type: 0
+    text: Cyber Titan is failing to defend their own systems, Was this an inside job?
       Is this the end of Cyber Titan?
     character: {fileID: 11400000, guid: d230a09a40639d940ab2414d1c634c6a, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "I\u2019m Cacie Lockwell, giving you the updates you need!"
+  - type: 0
+    text: "I\u2019m Cacie Lockwell, giving you the updates you need!"
     character: {fileID: 11400000, guid: d230a09a40639d940ab2414d1c634c6a, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: d230a09a40639d940ab2414d1c634c6a, type: 2}

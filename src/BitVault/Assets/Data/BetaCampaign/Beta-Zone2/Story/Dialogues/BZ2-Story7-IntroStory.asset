@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Computer Chaos
   lines:
-  - text: Why are we paying lots of illegal creds to the Cult of Computer Chaos, time
+  - type: 0
+    text: Why are we paying lots of illegal creds to the Cult of Computer Chaos, time
       to hack them.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}

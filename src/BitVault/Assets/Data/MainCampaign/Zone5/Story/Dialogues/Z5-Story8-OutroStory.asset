@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Reverse Target
   lines:
-  - text: Looks like their target moved into Slade's location, and changed their appearence.
+  - type: 0
+    text: Looks like their target moved into Slade's location, and changed their appearence.
       I sent them a picture of Slade.
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
-  - text: What an amazing coincidence.
+  - type: 0
+    text: What an amazing coincidence.
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}

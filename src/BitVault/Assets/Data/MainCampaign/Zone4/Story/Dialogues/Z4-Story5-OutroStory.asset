@@ -14,16 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Bounty Hunt
   lines:
-  - text: You gonna turn me in for the credits?
+  - type: 0
+    text: You gonna turn me in for the credits?
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "Give yourself more credit, I couldn\u2019t turn you in for money..."
+  - type: 0
+    text: "Give yourself more credit, I couldn\u2019t turn you in for money..."
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Just kidding! I totally would if they were not completely lying about that
+  - type: 0
+    text: Just kidding! I totally would if they were not completely lying about that
       bounty.
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
-  - text: You're all heart Ruby.
+  - type: 0
+    text: You're all heart Ruby.
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}

@@ -14,20 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Sound the Alarm
   lines:
-  - text: "Now that we control this server, it\u2019s really important that Cyber
+  - type: 0
+    text: "Now that we control this server, it\u2019s really important that Cyber
       Titan doesn\u2019t know."
     character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Oh, Was I not supposed to shut it down?
+  - type: 0
+    text: Oh, Was I not supposed to shut it down?
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "Oops... well they probably won\u2019t notice."
+  - type: 0
+    text: "Oops... well they probably won\u2019t notice."
     character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Our server just got shut down, someone is breaking into our security system.
+  - type: 1
+    text: 
     character: {fileID: 11400000, guid: b75b0d2bbdb118d4fae51689a58585a8, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "Uh\u2026 Scratch that, the really important thing is that we move very
+  - type: 0
+    text: Our server just got shut down, someone is breaking into our security system.
+    character: {fileID: 11400000, guid: b75b0d2bbdb118d4fae51689a58585a8, type: 2}
+  - type: 2
+    text: 
+    character: {fileID: 11400000, guid: b75b0d2bbdb118d4fae51689a58585a8, type: 2}
+  - type: 0
+    text: "Uh\u2026 Scratch that, the really important thing is that we move very
       fast!"
     character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}

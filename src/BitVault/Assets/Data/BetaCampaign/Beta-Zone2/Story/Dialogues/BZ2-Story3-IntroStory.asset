@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Query Board
   lines:
-  - text: The Board is clearly hiding things, time to hack them and take a look inside
+  - type: 0
+    text: The Board is clearly hiding things, time to hack them and take a look inside
       some of their computers.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}

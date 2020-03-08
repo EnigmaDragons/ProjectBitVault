@@ -14,24 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Attack on Titan
   lines:
-  - text: 'Breaking News: In a surprising turn of events Cyber Titan is now under
+  - type: 0
+    text: 'Breaking News: In a surprising turn of events Cyber Titan is now under
       attack.'
     character: {fileID: 11400000, guid: d230a09a40639d940ab2414d1c634c6a, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "No we are not, that\u2019s a lie!"
+  - type: 1
+    text: 
     character: {fileID: 11400000, guid: b75b0d2bbdb118d4fae51689a58585a8, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Um what?! But these reports...
+  - type: 0
+    text: "No we are not, that\u2019s a lie!"
+    character: {fileID: 11400000, guid: b75b0d2bbdb118d4fae51689a58585a8, type: 2}
+  - type: 0
+    text: Um what?! But these reports...
     character: {fileID: 11400000, guid: d230a09a40639d940ab2414d1c634c6a, type: 2}
-    customDisplay: {fileID: 0}
-  - text: They are all lies, nothing more to add.
+  - type: 0
+    text: They are all lies, nothing more to add.
     character: {fileID: 11400000, guid: b75b0d2bbdb118d4fae51689a58585a8, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Viewers, Cyber Titan seems to be rather on edge. Could this attack be more
+  - type: 2
+    text: 
+    character: {fileID: 11400000, guid: b75b0d2bbdb118d4fae51689a58585a8, type: 2}
+  - type: 0
+    text: Viewers, Cyber Titan seems to be rather on edge. Could this attack be more
       serious than we thought?
     character: {fileID: 11400000, guid: d230a09a40639d940ab2414d1c634c6a, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "I\u2019m Cacie Lockwell, and up next \u201CWhy are more puzzle games putting
+  - type: 0
+    text: "I\u2019m Cacie Lockwell, and up next \u201CWhy are more puzzle games putting
       references to the media in them?\u201D"
     character: {fileID: 11400000, guid: d230a09a40639d940ab2414d1c634c6a, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: d230a09a40639d940ab2414d1c634c6a, type: 2}

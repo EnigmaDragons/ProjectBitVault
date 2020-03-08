@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Account Siphon
   lines:
-  - text: Now that funds are being siphoned into my account, they are gonna notice
+  - type: 0
+    text: Now that funds are being siphoned into my account, they are gonna notice
       real soon.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}

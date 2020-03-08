@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Reverse Target
   lines:
-  - text: Ooh, Slade just sent a large sum of creds to a private security group.
+  - type: 0
+    text: Ooh, Slade just sent a large sum of creds to a private security group.
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
-  - text: I'm gonna guess he didn't pay them for security.
+  - type: 0
+    text: I'm gonna guess he didn't pay them for security.
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: I think you need to hack in and send them updated details about their target.
+  - type: 0
+    text: I think you need to hack in and send them updated details about their target.
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}

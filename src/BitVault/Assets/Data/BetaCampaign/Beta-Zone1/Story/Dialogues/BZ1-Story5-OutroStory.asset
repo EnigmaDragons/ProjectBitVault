@@ -14,17 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Hacker's Graduation
   lines:
-  - text: I can now go apply for my dream job at Cyber Titan.
+  - type: 0
+    text: I can now go apply for my dream job at Cyber Titan.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: I don't understand why your dream job is working for a giant soulless corporation.
+  - type: 0
+    text: I don't understand why your dream job is working for a giant soulless corporation.
     character: {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}
-    customDisplay: {fileID: 0}
-  - text: If I was you, I would make some form of passive income and then do my own
+  - type: 0
+    text: If I was you, I would make some form of passive income and then do my own
       thing.
     character: {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}
-    customDisplay: {fileID: 0}
-  - text: I have ambitions, I want to change the face of Cyber Security, so the best
+  - type: 0
+    text: I have ambitions, I want to change the face of Cyber Security, so the best
       plan is to join Cyber Titan and make myself a name.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
+  - {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}

@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Vulnerable Clients
   lines:
-  - text: What are my responsibilities here?
+  - type: 0
+    text: What are my responsibilities here?
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: You will look for new types of cyber attacks and then produce security updates
+  - type: 0
+    text: You will look for new types of cyber attacks and then produce security updates
       that prevent them for us and our clients.
     character: {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Okay, then I'm going to test how secure our clients are right now.
+  - type: 0
+    text: Okay, then I'm going to test how secure our clients are right now.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
+  - {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}

@@ -9,8 +9,6 @@ public class InGameDialogue : MonoBehaviour
     [SerializeField] private CurrentDialogue currentDialogue;
     [SerializeField] private TextMeshProUGUI name;
     [SerializeField] private TextMeshProUGUI text;
-    [SerializeField] private Image bust;
-    [SerializeField] private GameObject staticVfx;
     [SerializeField] private Navigator navigator;
     [SerializeField] private Button continueButton;
     [SerializeField] private Button alternateContinueButton;
@@ -19,10 +17,12 @@ public class InGameDialogue : MonoBehaviour
     [SerializeField] private BoolReference OnlyStory;
     [SerializeField] private DialogueLine BetweenLevelDialogue;
     [SerializeField] private PlayerSurvey playerSurvey;
+    [SerializeField] private GameObject displayParent;
+    [SerializeField] private DialogueCharacterDisplay characterPrefab;
 
-    private DialogueLine[] _currentDialogue;
+    private readonly List<DialogueCharacterDisplay> _characters = new List<DialogueCharacterDisplay>();
+    private Dialogue _currentDialogue;
     private int _nextIndex = 0;
-    private GameObject _customDisplayInstance;
 
     private void Awake()
     {
@@ -33,16 +33,15 @@ public class InGameDialogue : MonoBehaviour
 
     private void Start()
     {
-        var dialogue = IsLevelStart.Value 
-            ? OnlyStory.Value 
-                ? currentDialogue.Dialogue.Value.Intro.Lines.Concat(new List<DialogueLine> { BetweenLevelDialogue }).ToArray() 
-                : currentDialogue.Dialogue.Value.Intro.Lines 
-            : currentDialogue.Dialogue.Value.Outro.Lines;
-        if (dialogue.Length == 0)
+        var dialogue = IsLevelStart.Value
+            ? currentDialogue.Dialogue.Value.Intro 
+            : currentDialogue.Dialogue.Value.Outro;
+        if (dialogue.Lines.Length == 0)
             Finish();
         else
         {
             _currentDialogue = dialogue;
+            InitStartingCharacters();
             _nextIndex = 0;
             Continue();
         }
@@ -67,31 +66,78 @@ public class InGameDialogue : MonoBehaviour
 
     public void Continue()
     {
-        if (_nextIndex == _currentDialogue.Length)
-            Finish();
-        else
+        if (_nextIndex == _currentDialogue.Lines.Length && OnlyStory.Value && IsLevelStart.Value)
         {
-            if (_customDisplayInstance)
-                Destroy(_customDisplayInstance);
-            var line = _currentDialogue[_nextIndex];
+            text.text = BetweenLevelDialogue.Text;
+            name.text = BetweenLevelDialogue.Character.Name;
+            _characters.ForEach(x => x.SetFocus(false));
+            _nextIndex++;
+        }
+        else if (_nextIndex >= _currentDialogue.Lines.Length)
+            Finish();
+        else if (_currentDialogue.Lines[_nextIndex].Type == DialogueLineType.StatementOnly)
+        {
+            var line = _currentDialogue.Lines[_nextIndex];
             text.text = line.Text;
             name.text = line.Character.Name;
-            bust.sprite = line.Character.Bust;
-            staticVfx.SetActive(line.Character.UseStatic);
-            if (line.CustomDisplay.IsPresent)
-            {
-                bust.gameObject.SetActive(false);
-                _customDisplayInstance = Instantiate(line.CustomDisplay.Value, bust.transform.parent);
-            }
-            else
-                bust.gameObject.SetActive(true);
+            _characters.ForEach(x => x.SetFocus(x.Character.Name == line.Character.Name));
             _nextIndex++;
+        }
+        else
+        {
+            var line = _currentDialogue.Lines[_nextIndex];
+            if (line.Type == DialogueLineType.CharacterExits)
+                RemoveCharacter(line.Character);
+            else if (line.Type == DialogueLineType.CharacterEnter)
+                AddCharacter(line.Character);
+            _nextIndex++;
+            Continue();
         }
     }
 
     public void Skip()
     {
         Finish();
+    }
+
+    private void InitStartingCharacters()
+    {
+        for (var i = 0; i < _currentDialogue.StartingCharacters.Length; i++)
+        {
+            var display = Instantiate(characterPrefab, displayParent.transform);
+            display.Init(_currentDialogue.StartingCharacters[i]);
+            _characters.Add(display);
+        }
+        SetCharacterLocations(true);
+    }
+
+    private void AddCharacter(Character character)
+    {
+        var display = Instantiate(characterPrefab, displayParent.transform);
+        display.Init(character);
+        _characters.Add(display);
+        SetCharacterLocations(false);
+    }
+
+    private void RemoveCharacter(Character character)
+    {
+        var display = _characters.First(x => x.Character.Name == character.Name);
+        display.Leave();
+        _characters.Remove(display);
+        SetCharacterLocations(false);
+    }
+
+    private void SetCharacterLocations(bool isTeleporting)
+    {
+        for (var i = 0; i < _characters.Count; i++)
+        {
+            if (i == 0 && _characters.Count > 1)
+                _characters[i].GoTo(DialogueDirection.Left, isTeleporting);
+            else if (i != 0 && i + 1 == _currentDialogue.StartingCharacters.Length)
+                _characters[i].GoTo(DialogueDirection.Right, isTeleporting);
+            else
+                _characters[i].GoTo(DialogueDirection.Center, isTeleporting);
+        }
     }
 }
 

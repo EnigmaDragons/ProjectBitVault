@@ -14,32 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Virtual Bacon
   lines:
-  - text: Congratulations. You really saved our virtual bacon!
+  - type: 0
+    text: Congratulations. You really saved our virtual bacon!
     character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
-    customDisplay: {fileID: 0}
-  - text: I don't know what virtual bacon is, but I'm going go offline and relax.
+  - type: 0
+    text: I don't know what virtual bacon is, but I'm going go offline and relax.
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Not so fast, friend. Do you remember that little hole you poked in the firewall?
+  - type: 0
+    text: Not so fast, friend. Do you remember that little hole you poked in the firewall?
     character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Well turns out, it might have just been used to steal our security keys.
+  - type: 0
+    text: Well turns out, it might have just been used to steal our security keys.
     character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
-    customDisplay: {fileID: 0}
-  - text: And now they might be on auction on the dark web.
+  - type: 0
+    text: And now they might be on auction on the dark web.
     character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "Wow, that\u2019s a DARK predicament."
+  - type: 0
+    text: "Wow, that\u2019s a DARK predicament."
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "But it\u2019s not all bad news, I know who did it, and I know that they
+  - type: 0
+    text: "But it\u2019s not all bad news, I know who did it, and I know that they
       are overconfident and would hide the keys in their Titan server."
     character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Cyber Titan?
+  - type: 0
+    text: Cyber Titan?
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "Bingo! I\u2019ll have to start calling you Zeus, cause you are about to
+  - type: 0
+    text: "Bingo! I\u2019ll have to start calling you Zeus, cause you are about to
       kill a Titan."
     character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}

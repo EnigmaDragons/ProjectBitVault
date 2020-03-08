@@ -14,16 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Grouped Attack
   lines:
-  - text: Alright, we will give you a fully fueled plane if you release the hostages.
+  - type: 0
+    text: Alright, we will give you a fully fueled plane if you release the hostages.
     character: {fileID: 11400000, guid: 593dcd71c4b435547aedcf8d503dec17, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "I don\u2019t have hostages. You are clearly reading the wrong negotiating
+  - type: 0
+    text: "I don\u2019t have hostages. You are clearly reading the wrong negotiating
       books."
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "Well... I didn\u2019t want to give you a plane anyway!"
+  - type: 0
+    text: "Well... I didn\u2019t want to give you a plane anyway!"
     character: {fileID: 11400000, guid: 593dcd71c4b435547aedcf8d503dec17, type: 2}
-    customDisplay: {fileID: 0}
-  - text: And I am winning! I have just caught another one of your hacker groups.
+  - type: 0
+    text: And I am winning! I have just caught another one of your hacker groups.
     character: {fileID: 11400000, guid: 593dcd71c4b435547aedcf8d503dec17, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 593dcd71c4b435547aedcf8d503dec17, type: 2}

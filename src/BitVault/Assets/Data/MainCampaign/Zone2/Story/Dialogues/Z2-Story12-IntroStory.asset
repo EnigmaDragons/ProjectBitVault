@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Virtual Bacon
   lines:
-  - text: Last server and then things are back to boring around here.
+  - type: 0
+    text: Last server and then things are back to boring around here.
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "You are just here for the ride, aren\u2019t you?"
+  - type: 0
+    text: "You are just here for the ride, aren\u2019t you?"
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Where is the fun, without a little conflict?
+  - type: 0
+    text: Where is the fun, without a little conflict?
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}

@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Broken Break-in
   lines:
-  - text: "Wow, you got in. You wouldn\u2019t happen to want to upload an update so
+  - type: 0
+    text: "Wow, you got in. You wouldn\u2019t happen to want to upload an update so
       it\u2019s not so broken?"
     character: {fileID: 11400000, guid: eb6dbedc36c2e4b48ac4c5a0fc6f2686, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "I\u2019ll pass."
+  - type: 0
+    text: "I\u2019ll pass."
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: eb6dbedc36c2e4b48ac4c5a0fc6f2686, type: 2}

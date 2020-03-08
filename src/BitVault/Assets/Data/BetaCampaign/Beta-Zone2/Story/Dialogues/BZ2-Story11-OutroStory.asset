@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Remote Retrieval
   lines:
-  - text: I have got the security patch, now all I have to do is upload it to the
+  - type: 0
+    text: I have got the security patch, now all I have to do is upload it to the
       security server.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}

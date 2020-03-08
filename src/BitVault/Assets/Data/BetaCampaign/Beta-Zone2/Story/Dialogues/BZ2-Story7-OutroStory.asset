@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Computer Chaos
   lines:
-  - text: This is a hacking group and they are on our payroll to hack our rival corps.
+  - type: 0
+    text: This is a hacking group and they are on our payroll to hack our rival corps.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Cyber Security is funding the hackers too! This industry is corrupt, I thought
+  - type: 0
+    text: Cyber Security is funding the hackers too! This industry is corrupt, I thought
       we were going to make things safer!
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}

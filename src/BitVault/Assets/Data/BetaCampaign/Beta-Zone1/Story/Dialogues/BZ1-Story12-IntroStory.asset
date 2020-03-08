@@ -14,11 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Spoofing School
   lines:
-  - text: Employer Eyes is gonna send emails to your school, those responses could
+  - type: 0
+    text: Employer Eyes is gonna send emails to your school, those responses could
       be pretty incriminating.
     character: {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}
-    customDisplay: {fileID: 0}
-  - text: I better hack the school's third party email system, and respond pretty
+  - type: 0
+    text: I better hack the school's third party email system, and respond pretty
       quickly then.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
+  - {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}

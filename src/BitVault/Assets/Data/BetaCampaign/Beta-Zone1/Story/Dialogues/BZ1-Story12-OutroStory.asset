@@ -14,24 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Spoofing School
   lines:
-  - text: Congratulations Slade, we are offering you the senior cyber security specialist
+  - type: 0
+    text: Congratulations Slade, we are offering you the senior cyber security specialist
       position.
     character: {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}
-    customDisplay: {fileID: 0}
-  - text: I'm Freya, direct assistant to the Board, I'll be directly overseeing you
+  - type: 0
+    text: I'm Freya, direct assistant to the Board, I'll be directly overseeing you
       while your at our corp.
     character: {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}
-    customDisplay: {fileID: 0}
-  - text: That's excellent! I look forward to working under you at Cyber Titan.
+  - type: 0
+    text: That's excellent! I look forward to working under you at Cyber Titan.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: '*Freya has left the call*'
+  - type: 2
+    text: 
+    character: {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}
+  - type: 0
+    text: '*Freya has left the call*'
     character: {fileID: 11400000, guid: aba9d7dbacc565941bc9f6a9d3bcde22, type: 2}
-    customDisplay: {fileID: 0}
-  - text: I've secured my dream job, now I'll be designing the security system of
+  - type: 1
+    text: 
+    character: {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}
+  - type: 0
+    text: I've secured my dream job, now I'll be designing the security system of
       the world's greatest cyber security company.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Just call me when you start feeling jaded over that large corp nonsense.
+  - type: 0
+    text: Just call me when you start feeling jaded over that large corp nonsense.
     character: {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
+  - {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}

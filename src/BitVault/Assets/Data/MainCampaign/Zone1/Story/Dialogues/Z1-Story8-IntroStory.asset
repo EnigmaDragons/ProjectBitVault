@@ -14,30 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Traffic Jam
   lines:
-  - text: "I\u2019ve got another favor to ask."
+  - type: 0
+    text: "I\u2019ve got another favor to ask."
     character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "The thing is, upper management recently banned the use of \u201Cunproductive
+  - type: 0
+    text: "The thing is, upper management recently banned the use of \u201Cunproductive
       websites\u201D."
     character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
-    customDisplay: {fileID: 0}
-  - text: How am I supposed to sit in my office all day without them?
+  - type: 0
+    text: How am I supposed to sit in my office all day without them?
     character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "So you just gotta hack into the monitoring server that\u2019s tracking
+  - type: 0
+    text: "So you just gotta hack into the monitoring server that\u2019s tracking
       our web traffic."
     character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
-    customDisplay: {fileID: 0}
-  - text: So you want a TRAFFIC jam.
+  - type: 0
+    text: So you want a TRAFFIC jam.
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Very clever, and then just hack the firewall and poke a hole in it for me.
+  - type: 0
+    text: Very clever, and then just hack the firewall and poke a hole in it for me.
     character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "I can\u2019t wait to give you a large raise as soon as I can excuse it."
+  - type: 0
+    text: "I can\u2019t wait to give you a large raise as soon as I can excuse it."
     character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "Back to my boring office where I apparently won\u2019t be on \u201Cunproductive
+  - type: 0
+    text: "Back to my boring office where I apparently won\u2019t be on \u201Cunproductive
       sites\u201D."
     character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}

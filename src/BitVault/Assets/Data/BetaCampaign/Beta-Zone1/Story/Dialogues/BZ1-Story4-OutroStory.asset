@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Expelled
   lines:
-  - text: Easy! I have expelled the expulsion.
+  - type: 0
+    text: Easy! I have expelled the expulsion.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: You are killing it! When do I get a copy of that fancy tool of yours?
+  - type: 0
+    text: You are killing it! When do I get a copy of that fancy tool of yours?
     character: {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}
-    customDisplay: {fileID: 0}
-  - text: You know, I think I want to keep my edge to myself for now.
+  - type: 0
+    text: You know, I think I want to keep my edge to myself for now.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
+  - {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}

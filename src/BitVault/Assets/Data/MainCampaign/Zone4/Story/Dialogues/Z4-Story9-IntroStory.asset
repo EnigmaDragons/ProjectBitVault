@@ -14,14 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: False Lead
   lines:
-  - text: "I\u2019ve got you now! We have your place surrounded thanks to an anonymous
+  - type: 0
+    text: "I\u2019ve got you now! We have your place surrounded thanks to an anonymous
       tip."
     character: {fileID: 11400000, guid: 593dcd71c4b435547aedcf8d503dec17, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "Oh no, I\u2019m caught in your trap."
+  - type: 0
+    text: "Oh no, I\u2019m caught in your trap."
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "Wow! There are a lot of hackers here. Let\u2019s arrest them all. I\u2019m
+  - type: 0
+    text: "Wow! There are a lot of hackers here. Let\u2019s arrest them all. I\u2019m
       sure to get a promotion."
     character: {fileID: 11400000, guid: 593dcd71c4b435547aedcf8d503dec17, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 593dcd71c4b435547aedcf8d503dec17, type: 2}

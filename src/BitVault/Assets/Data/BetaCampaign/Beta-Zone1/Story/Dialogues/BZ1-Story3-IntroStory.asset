@@ -14,18 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Grade A Hack
   lines:
-  - text: My incompetent teacher failed me because I was too smart. I deserve an A
+  - type: 0
+    text: My incompetent teacher failed me because I was too smart. I deserve an A
       for that midterm.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Our cyber security teacher is such a prick, if only you could hack your
+  - type: 0
+    text: Our cyber security teacher is such a prick, if only you could hack your
       grade to what it's supposed to be.
     character: {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}
-    customDisplay: {fileID: 0}
-  - text: You're right, this is just a minor inconvenience. I'll hack my grade to
+  - type: 0
+    text: You're right, this is just a minor inconvenience. I'll hack my grade to
       what it is supposed to be.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Good luck with that!
+  - type: 0
+    text: Good luck with that!
     character: {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
+  - {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}

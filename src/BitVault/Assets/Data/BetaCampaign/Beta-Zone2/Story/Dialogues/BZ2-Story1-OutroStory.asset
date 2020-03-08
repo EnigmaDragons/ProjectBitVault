@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Vulnerable Clients
   lines:
-  - text: "Found a vulnerability already, now I just got to make a security patch
+  - type: 0
+    text: "Found a vulnerability already, now I just got to make a security patch
       for this.\r\n"
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
