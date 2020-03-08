@@ -17,6 +17,7 @@ public class LevelButton : MonoBehaviour
     [SerializeField] private CurrentDialogue currentDialogue;
     [SerializeField] private CurrentZone zone;
     [SerializeField] private BoolReference AutoSkipStory;
+    [SerializeField] private MonoBehaviour[] newLevelEffects;
     
     public void Init(int zoneNumber, int levelNum, GameLevel level)
     {
@@ -41,5 +42,9 @@ public class LevelButton : MonoBehaviour
             stars[i].SetActive(storage.GetStars(level) > i);
         button.interactable = available;
         locked.SetActive(!available);
+        if (available && storage.GetStars(level) == 0)
+            newLevelEffects.ForEach(x => x.enabled = true);
+        else
+            newLevelEffects.ForEach(x => x.enabled = false);
     }
 }

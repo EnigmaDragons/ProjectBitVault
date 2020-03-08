@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 8353230331775045573}
   - component: {fileID: 2697032443397611799}
   - component: {fileID: 7574926177044181173}
+  - component: {fileID: 8530931812040356097}
   m_Layer: 5
   m_Name: LevelSelectButton
   m_TagString: Untagged
@@ -306,6 +307,41 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 02a3e05f882726f418a67feb2905e525, type: 2}
+  newLevelEffects:
+  - {fileID: 8530931812040356097}
+--- !u!114 &8530931812040356097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2826158271625775417}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19b7e2285c104f6ca47d583f3e5444f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 300
+  m_EffectMaterial: {fileID: 2100000, guid: 9dc7e810a87b444ab96919f3215c2fe5, type: 2}
+  m_EffectFactor: 0
+  m_Width: 0.2
+  m_Rotation: 135
+  m_Softness: 1
+  m_Brightness: 1
+  m_Gloss: 1
+  m_EffectArea: 0
+  m_Player:
+    play: 1
+    initialPlayDelay: 0
+    duration: 1.5
+    loop: 1
+    loopDelay: 0
+    updateMode: 0
+  m_Play: 0
+  m_Loop: 0
+  m_Duration: 1
+  m_LoopDelay: 1
+  m_UpdateMode: 0
 --- !u!1 &3655132352191685227
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,6 +995,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6226386018843366077}
     m_Modifications:
+    - target: {fileID: 8251874896424653464, guid: 68cb2c4ef63a25542aaee71f78055ff9,
+        type: 3}
+      propertyPath: m_Name
+      value: DataCubeBody
+      objectReference: {fileID: 0}
     - target: {fileID: 4251681376232025122, guid: 68cb2c4ef63a25542aaee71f78055ff9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1013,11 +1054,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251874896424653464, guid: 68cb2c4ef63a25542aaee71f78055ff9,
-        type: 3}
-      propertyPath: m_Name
-      value: DataCubeBody
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68cb2c4ef63a25542aaee71f78055ff9, type: 3}
@@ -1034,6 +1070,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4430387920231657606}
     m_Modifications:
+    - target: {fileID: 8251874896424653464, guid: 68cb2c4ef63a25542aaee71f78055ff9,
+        type: 3}
+      propertyPath: m_Name
+      value: DataCubeBody
+      objectReference: {fileID: 0}
     - target: {fileID: 4251681376232025122, guid: 68cb2c4ef63a25542aaee71f78055ff9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1088,11 +1129,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251874896424653464, guid: 68cb2c4ef63a25542aaee71f78055ff9,
-        type: 3}
-      propertyPath: m_Name
-      value: DataCubeBody
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68cb2c4ef63a25542aaee71f78055ff9, type: 3}
@@ -1109,6 +1145,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9010665690655744137}
     m_Modifications:
+    - target: {fileID: 8251874896424653464, guid: 68cb2c4ef63a25542aaee71f78055ff9,
+        type: 3}
+      propertyPath: m_Name
+      value: DataCubeBody
+      objectReference: {fileID: 0}
     - target: {fileID: 4251681376232025122, guid: 68cb2c4ef63a25542aaee71f78055ff9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1163,11 +1204,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251874896424653464, guid: 68cb2c4ef63a25542aaee71f78055ff9,
-        type: 3}
-      propertyPath: m_Name
-      value: DataCubeBody
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68cb2c4ef63a25542aaee71f78055ff9, type: 3}
