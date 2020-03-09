@@ -1,5 +1,4 @@
-﻿#if UNITY_EDITOR
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEditor;
@@ -34,4 +33,3 @@ public class StoryExporter
         return dialogue.Select(x => $"{x.Character.Name}: {x.Text}").ToList();
     }
 }
-#endif
