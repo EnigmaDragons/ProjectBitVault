@@ -17,15 +17,15 @@ public class StoryExporter
 
     private static void ExportStory(Campaign zones)
     {
-        var path = EditorUtility.SaveFilePanel("Save Story To", "", "BitVaultStory.txt", "txt");
+        var path = EditorUtility.SaveFilePanel("Save Story To", "", zones.Name + ".txt", "txt");
         if (path.Length == 0)
             return;
         File.WriteAllLines(path, zones.Value
             .SelectMany((zone, zoneI) => zone.Story
                 .SelectMany((story, storyI) => new List<string> { $"SELECTED STORY {zoneI + 1}-{storyI + 1}: {story.Intro.DialogueName}", "" }
-                    .Concat(DialogueToStrings(story.Intro.Lines))
+                    .Concat(DialogueToStrings(story.Intro.Lines.Where(x => x.Type == DialogueLineType.StatementOnly).ToArray()))
                     .Concat(new List<string> { "", $"COMPLETED LEVEL {zoneI + 1}-{storyI + 1}: {story.Intro.DialogueName}", "" })
-                    .Concat(DialogueToStrings(story.Outro.Lines))
+                    .Concat(DialogueToStrings(story.Outro.Lines.Where(x => x.Type == DialogueLineType.StatementOnly).ToArray()))
                     .Concat(new List<string> { "" }))));
     }
 
