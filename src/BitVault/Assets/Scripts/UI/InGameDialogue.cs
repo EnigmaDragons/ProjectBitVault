@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -19,10 +20,12 @@ public class InGameDialogue : MonoBehaviour
     [SerializeField] private PlayerSurvey playerSurvey;
     [SerializeField] private GameObject displayParent;
     [SerializeField] private DialogueCharacterDisplay characterPrefab;
+    [SerializeField] private float inputBufferSeconds;
 
     private readonly List<DialogueCharacterDisplay> _characters = new List<DialogueCharacterDisplay>();
     private Dialogue _currentDialogue;
     private int _nextIndex = 0;
+    private float _inputBufferRemaining;
 
     private void Awake()
     {
@@ -47,6 +50,8 @@ public class InGameDialogue : MonoBehaviour
         }
     }
 
+    private void Update() => _inputBufferRemaining = Math.Max(0, _inputBufferRemaining -= Time.deltaTime);
+
     private void Finish()
     {
         if (IsLevelStart.Value && OnlyStory.Value)
@@ -66,12 +71,15 @@ public class InGameDialogue : MonoBehaviour
 
     public void Continue()
     {
+        if (_inputBufferRemaining > 0)
+            return;
         if (_nextIndex == _currentDialogue.Lines.Length && OnlyStory.Value && IsLevelStart.Value)
         {
             text.text = BetweenLevelDialogue.Text;
             name.text = BetweenLevelDialogue.Character.Name;
             _characters.ForEach(x => x.SetFocus(false));
             _nextIndex++;
+            _inputBufferRemaining = inputBufferSeconds;
         }
         else if (_nextIndex >= _currentDialogue.Lines.Length)
             Finish();
@@ -82,6 +90,7 @@ public class InGameDialogue : MonoBehaviour
             name.text = line.Character.Name;
             _characters.ForEach(x => x.SetFocus(x.Character.Name == line.Character.Name));
             _nextIndex++;
+            _inputBufferRemaining = inputBufferSeconds;
         }
         else
         {
@@ -91,6 +100,7 @@ public class InGameDialogue : MonoBehaviour
             else if (line.Type == DialogueLineType.CharacterEnter)
                 AddCharacter(line.Character);
             _nextIndex++;
+            _inputBufferRemaining = 0;
             Continue();
         }
     }

@@ -120,7 +120,6 @@ MonoBehaviour:
   currentDialogue: {fileID: 11400000, guid: b9a604ab247fc6b46b102d550e48e5fc, type: 2}
   name: {fileID: 3773110196872911876}
   text: {fileID: 6295389559059151034}
-  staticVfx: {fileID: 0}
   navigator: {fileID: 11400000, guid: 9ff41b1c7e54dd34d86e0faa800274fc, type: 2}
   continueButton: {fileID: 1939029738888753178}
   alternateContinueButton: {fileID: 5620242189595677312}
@@ -138,6 +137,7 @@ MonoBehaviour:
   displayParent: {fileID: 7622495237529809708}
   characterPrefab: {fileID: 8522938606405267697, guid: 8453c639468a77245ba318ccc33b4580,
     type: 3}
+  inputBufferSeconds: 0.5
 --- !u!114 &1903629545265122778
 MonoBehaviour:
   m_ObjectHideFlags: 0
