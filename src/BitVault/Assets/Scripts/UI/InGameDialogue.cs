@@ -82,6 +82,7 @@ public class InGameDialogue : MonoBehaviour
             name.text = line.Character.Name;
             _characters.ForEach(x => x.SetFocus(x.Character.Name == line.Character.Name));
             _nextIndex++;
+            Message.Publish(new DialogueAdvanced());
         }
         else
         {
