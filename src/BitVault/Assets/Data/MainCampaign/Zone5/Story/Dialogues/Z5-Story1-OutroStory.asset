@@ -14,22 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Slade's Server
   lines:
-  - text: Congratulations, Morgan, you fell for my trap! I wanted you to hack into
+  - type: 0
+    text: Congratulations, Morgan, you fell for my trap! I wanted you to hack into
       my server so I could trace you.
     character: {fileID: 11400000, guid: 2fb337bf7fc8ebd4895067e36415fc42, type: 2}
-    customDisplay: {fileID: 0}
-  - text: I knew you were going to trace Morgan, so I traced your tracing message
+  - type: 0
+    text: I knew you were going to trace Morgan, so I traced your tracing message
       back to you!
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Ruby?! Oh... I see now. That explains so much. I should have known that
-      you two had teamed up.
+  - type: 0
+    text: Ruby?! Why would you betray me, we're friends?
     character: {fileID: 11400000, guid: 2fb337bf7fc8ebd4895067e36415fc42, type: 2}
-    customDisplay: {fileID: 0}
-  - text: No matter. I knew my message was going to be traced, so I sent that message
-      to a different server.
+  - type: 0
+    text: That was before you turned full villain Slade.
+    character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
+  - type: 0
+    text: Fair point, No matter. I knew my message was going to be traced, so I sent
+      that message to a different server.
     character: {fileID: 11400000, guid: 2fb337bf7fc8ebd4895067e36415fc42, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Now I just need to hack that server to get it.
+  - type: 0
+    text: Now I just need to hack that server to get it.
     character: {fileID: 11400000, guid: 2fb337bf7fc8ebd4895067e36415fc42, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
+  - {fileID: 11400000, guid: 2fb337bf7fc8ebd4895067e36415fc42, type: 2}

@@ -14,18 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Expelled
   lines:
-  - text: A new setback, I have been expelled. How will I get to work for my dream
+  - type: 0
+    text: A new setback, I have been expelled. How will I get to work for my dream
       job?
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: I mean... you could just make your expulsion disappear with that fancy tool
+  - type: 0
+    text: I mean... you could just make your expulsion disappear with that fancy tool
       of yours right?
     character: {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}
-    customDisplay: {fileID: 0}
-  - text: You're right, I will still get my dream job, I just gotta hack my expulsion
+  - type: 0
+    text: You're right, I will still get my dream job, I just gotta hack my expulsion
       record away.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Thanks for the advice Ruby.
+  - type: 0
+    text: Thanks for the advice Ruby.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
+  - {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}

@@ -14,22 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Hacking Hackers
   lines:
-  - text: Hello this is Tech Support.I need you, terrorist, to download an update
+  - type: 0
+    text: Hello this is Tech Support.I need you, terrorist, to download an update
       for your computer from this site.
     character: {fileID: 11400000, guid: 593dcd71c4b435547aedcf8d503dec17, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Scamming methods, ICE agent, really?
+  - type: 0
+    text: Scamming methods, ICE agent, really?
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "I\u2019m not from ICE, I said tech support."
+  - type: 0
+    text: "I\u2019m not from ICE, I said tech support."
     character: {fileID: 11400000, guid: 593dcd71c4b435547aedcf8d503dec17, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Oh yeah? What OS do I have?
+  - type: 0
+    text: Oh yeah? What OS do I have?
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: OS?
+  - type: 0
+    text: OS?
     character: {fileID: 11400000, guid: 593dcd71c4b435547aedcf8d503dec17, type: 2}
-    customDisplay: {fileID: 0}
-  - text: OS stands for operating system... How did you even get hired?
+  - type: 0
+    text: OS stands for operating system... How did you even get hired?
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 593dcd71c4b435547aedcf8d503dec17, type: 2}

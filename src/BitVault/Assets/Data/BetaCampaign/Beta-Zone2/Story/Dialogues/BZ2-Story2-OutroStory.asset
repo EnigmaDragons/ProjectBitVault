@@ -14,15 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Board Approval
   lines:
-  - text: The Board has decided that the vulnerability you found is not a problem
+  - type: 0
+    text: The Board has decided that the vulnerability you found is not a problem
       and that we will not apply the security patch.
     character: {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}
-    customDisplay: {fileID: 0}
-  - text: What are you talking about?! Anyone who knows about it could steal our client's
+  - type: 0
+    text: What are you talking about?! Anyone who knows about it could steal our client's
       data. Why would the Board want that?
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Do not question the Board! If the Board says it's not a problem, then it's
+  - type: 0
+    text: Do not question the Board! If the Board says it's not a problem, then it's
       not a problem or else we can find a new cyber security specialist.
     character: {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
+  - {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}

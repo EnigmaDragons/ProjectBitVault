@@ -14,19 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Board Approval
   lines:
-  - text: Heya Freya, I found a vulnerability in our client defense, here is the security
+  - type: 0
+    text: Heya Freya, I found a vulnerability in our client defense, here is the security
       patch to fix it.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Before we deploy that patch, it has to be approved by the Board.
+  - type: 0
+    text: Before we deploy that patch, it has to be approved by the Board.
     character: {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Why would the Board care about security patches for our clients?
+  - type: 0
+    text: Why would the Board care about security patches for our clients?
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: That's not important, I will tell you what the Board decides.
+  - type: 0
+    text: That's not important, I will tell you what the Board decides.
     character: {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Alright, well I'll go test some of our other systems then.
+  - type: 0
+    text: Alright, well I'll go test some of our other systems then.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
+  - {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}

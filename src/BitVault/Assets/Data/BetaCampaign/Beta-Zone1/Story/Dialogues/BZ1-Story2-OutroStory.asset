@@ -14,28 +14,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Cyber Midterm
   lines:
-  - text: That server was no problem, I got Root Access, so complete control of the
+  - type: 0
+    text: That server was no problem, I got Root Access, so complete control of the
       the server.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Impressive, that is not the kind of access you're expected to get in this
+  - type: 0
+    text: Impressive, that is not the kind of access you're expected to get in this
       midterm, show me your work.
     character: {fileID: 11400000, guid: c6c54097b634d6141a405c8710a74e04, type: 2}
-    customDisplay: {fileID: 0}
-  - text: I may have used this new tool I built.
+  - type: 0
+    text: I may have used this new tool I built.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: You expect me to believe you made this tool?
+  - type: 0
+    text: You expect me to believe you made this tool?
     character: {fileID: 11400000, guid: c6c54097b634d6141a405c8710a74e04, type: 2}
-    customDisplay: {fileID: 0}
-  - text: You downloaded this tool off the internet. These are not the methods I taught
+  - type: 0
+    text: You downloaded this tool off the internet. These are not the methods I taught
       you. I'm giving you an F.
     character: {fileID: 11400000, guid: c6c54097b634d6141a405c8710a74e04, type: 2}
-    customDisplay: {fileID: 0}
-  - text: You can't find my tool on the internet! Besides, we are supposed to be creative
+  - type: 0
+    text: You can't find my tool on the internet! Besides, we are supposed to be creative
       in our hacking solutions, right?
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: You are supposed to follow the curriculum! You are dismissed!
+  - type: 0
+    text: You are supposed to follow the curriculum! You are dismissed!
     character: {fileID: 11400000, guid: c6c54097b634d6141a405c8710a74e04, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
+  - {fileID: 11400000, guid: c6c54097b634d6141a405c8710a74e04, type: 2}

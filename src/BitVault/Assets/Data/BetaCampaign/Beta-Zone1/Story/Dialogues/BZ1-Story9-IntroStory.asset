@@ -14,23 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Automated Filter
   lines:
-  - text: Submitting my application again, this time I'm going for a senior level
+  - type: 0
+    text: Submitting my application again, this time I'm going for a senior level
       position.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Gonna hack the automated filters again?
+  - type: 0
+    text: Gonna hack the automated filters again?
     character: {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Hmm, they changed out their system, guess they were unhappy with the filters
+  - type: 0
+    text: Hmm, they changed out their system, guess they were unhappy with the filters
       previous mistakes.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Hopefully this new system isn't more secure.
+  - type: 0
+    text: Hopefully this new system isn't more secure.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Maybe you shouldn't remove ALL other applications this time.
+  - type: 0
+    text: Maybe you shouldn't remove ALL other applications this time.
     character: {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Fair enough, I just need to get accepted.
+  - type: 0
+    text: Fair enough, I just need to get accepted.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
+  - {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}

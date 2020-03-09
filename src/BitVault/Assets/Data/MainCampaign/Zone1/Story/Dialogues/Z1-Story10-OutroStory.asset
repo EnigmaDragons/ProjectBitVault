@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Hole in the Wall
   lines:
-  - text: "I\u2019ve caught you. Looks like you're hooking up our CTO with access
+  - type: 0
+    text: "I\u2019ve caught you. Looks like you're hooking up our CTO with access
       to \u201Cunproductive websites\u201D."
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Red-handed.
+  - type: 0
+    text: Red-handed.
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "Well don\u2019t let me stop you... assuming I get a firewall hole too."
+  - type: 0
+    text: "Well don\u2019t let me stop you... assuming I get a firewall hole too."
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}

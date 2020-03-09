@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Cult of Viruses
   lines:
-  - text: The Cult of Computer Chaos is planning another hack soon.
+  - type: 0
+    text: The Cult of Computer Chaos is planning another hack soon.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: They won't be able to hack anyone if I frag their systems.
+  - type: 0
+    text: They won't be able to hack anyone if I frag their systems.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}

@@ -14,9 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Fake Broadcast
   lines:
-  - text: "Hahaha\u2026 That was a blast!"
+  - type: 0
+    text: "Hahaha\u2026 That was a blast!"
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
-  - text: A blast to their reputation.
+  - type: 0
+    text: A blast to their reputation.
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}

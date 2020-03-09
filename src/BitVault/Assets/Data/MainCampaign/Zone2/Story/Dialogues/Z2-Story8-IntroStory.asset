@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Locked Out
   lines:
-  - text: I have an idea. We now control enough of Nova's network that I bet you we
+  - type: 0
+    text: I have an idea. We now control enough of Nova's network that I bet you we
       can cut her out of her own system.
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "That way she doesn\x19t decide to destroy the key."
+  - type: 0
+    text: "That way she doesn\x19t decide to destroy the key."
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Guess that means Nova will be losing her key to her network.
+  - type: 0
+    text: Guess that means Nova will be losing her key to her network.
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}

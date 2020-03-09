@@ -14,22 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Remote Consultant
   lines:
-  - text: So about that favor...
+  - type: 0
+    text: So about that favor...
     character: {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}
-    customDisplay: {fileID: 0}
-  - text: What did you have in mind?
+  - type: 0
+    text: What did you have in mind?
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Adding me as a remote consultant to Global Sec's payroll.
+  - type: 0
+    text: Adding me as a remote consultant to Global Sec's payroll.
     character: {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}
-    customDisplay: {fileID: 0}
-  - text: That corp is so big they wouldn't notice one remote consultant on payroll
+  - type: 0
+    text: That corp is so big they wouldn't notice one remote consultant on payroll
       not doing anything.
     character: {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}
-    customDisplay: {fileID: 0}
-  - text: I'll do it, but if they ever notice, you will be in legal trouble.
+  - type: 0
+    text: I'll do it, but if they ever notice, you will be in legal trouble.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: What's life without a little risk Slade?
+  - type: 0
+    text: What's life without a little risk Slade?
     character: {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
+  - {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}

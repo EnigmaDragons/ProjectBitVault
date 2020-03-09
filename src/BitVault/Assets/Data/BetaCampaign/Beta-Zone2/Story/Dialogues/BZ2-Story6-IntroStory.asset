@@ -14,21 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Jack Attack
   lines:
-  - text: The Board decided that the accountant Jack is not embezzling from us and
+  - type: 0
+    text: The Board decided that the accountant Jack is not embezzling from us and
       that you should stop investigating anyone else in this company.
     character: {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}
-    customDisplay: {fileID: 0}
-  - text: What?! He is definitely stealing those creds!
+  - type: 0
+    text: What?! He is definitely stealing those creds!
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Don't question the Board, you are getting REAL close to forcing us to find
+  - type: 0
+    text: Don't question the Board, you are getting REAL close to forcing us to find
       a new cyber security specialist.
     character: {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}
-    customDisplay: {fileID: 0}
-  - text: '*Freya has left the call*'
+  - type: 2
+    text: 
+    character: {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}
+  - type: 0
+    text: '*Freya has left the call*'
     character: {fileID: 11400000, guid: aba9d7dbacc565941bc9f6a9d3bcde22, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Hacking Jack's email, has got to be my next move to finding out what is
+  - type: 0
+    text: Hacking Jack's email, has got to be my next move to finding out what is
       going on.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
+  - {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}

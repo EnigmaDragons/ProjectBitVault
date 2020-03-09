@@ -14,35 +14,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Fake Broadcast
   lines:
-  - text: 'Breaking News: We are getting an urgent update about the attack on Cyber
+  - type: 0
+    text: 'Breaking News: We are getting an urgent update about the attack on Cyber
       Titan.'
     character: {fileID: 11400000, guid: d230a09a40639d940ab2414d1c634c6a, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Our security keys have been stolen.
+  - type: 0
+    text: Our security keys have been stolen.
     character: {fileID: 11400000, guid: b75b0d2bbdb118d4fae51689a58585a8, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Also the snacks and some of our cars in the parking lot.
+  - type: 0
+    text: Also the snacks and some of our cars in the parking lot.
     character: {fileID: 11400000, guid: b75b0d2bbdb118d4fae51689a58585a8, type: 2}
-    customDisplay: {fileID: 0}
-  - text: I have decided to give up and, uh, fire all my staff.
+  - type: 0
+    text: I have decided to give up and, uh, fire all my staff.
     character: {fileID: 11400000, guid: b75b0d2bbdb118d4fae51689a58585a8, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "Wow, won\u2019t you be sued for this?"
+  - type: 0
+    text: "Wow, won\u2019t you be sued for this?"
     character: {fileID: 11400000, guid: d230a09a40639d940ab2414d1c634c6a, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "Screw our customers! I\u2019m taking the money and running."
+  - type: 0
+    text: "Screw our customers! I\u2019m taking the money and running."
     character: {fileID: 11400000, guid: b75b0d2bbdb118d4fae51689a58585a8, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Cyber Titan has gone absolutely psycho, viewers.
+  - type: 0
+    text: Cyber Titan has gone absolutely psycho, viewers.
     character: {fileID: 11400000, guid: d230a09a40639d940ab2414d1c634c6a, type: 2}
-    customDisplay: {fileID: 0}
-  - text: No you're psycho! And screw your viewers; Cyber Titan out!
+  - type: 0
+    text: No you're psycho! And screw your viewers; Cyber Titan out!
     character: {fileID: 11400000, guid: b75b0d2bbdb118d4fae51689a58585a8, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Cyber Titan turns criminal in its final death throes.
+  - type: 2
+    text: 
+    character: {fileID: 11400000, guid: b75b0d2bbdb118d4fae51689a58585a8, type: 2}
+  - type: 0
+    text: Cyber Titan turns criminal in its final death throes.
     character: {fileID: 11400000, guid: d230a09a40639d940ab2414d1c634c6a, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "I\u2019m Cacie Lockwell, and we will keep you updated on this insane turn
+  - type: 0
+    text: "I\u2019m Cacie Lockwell, and we will keep you updated on this insane turn
       of events."
     character: {fileID: 11400000, guid: d230a09a40639d940ab2414d1c634c6a, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: d230a09a40639d940ab2414d1c634c6a, type: 2}
+  - {fileID: 11400000, guid: b75b0d2bbdb118d4fae51689a58585a8, type: 2}

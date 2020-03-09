@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Corrupt Accounting
   lines:
-  - text: Maybe I should also hack accounting and see where the cred trails lead...
+  - type: 0
+    text: Maybe I should also hack accounting and see where the cred trails lead...
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}

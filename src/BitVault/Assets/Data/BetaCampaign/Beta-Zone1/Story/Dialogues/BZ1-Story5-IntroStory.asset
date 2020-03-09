@@ -14,18 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Hacker's Graduation
   lines:
-  - text: College is boriiinnnggg... rather than keep at it for a bunch more years,
+  - type: 0
+    text: College is boriiinnnggg... rather than keep at it for a bunch more years,
       you could totally hack our degrees into existence, right?
     character: {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Didn't you just start college, and won't that be suspicious that you graduated
+  - type: 0
+    text: Didn't you just start college, and won't that be suspicious that you graduated
       so young?
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: What can I say, I'm a prodigy! Anyway, you can't risk the Cyber Security
+  - type: 0
+    text: What can I say, I'm a prodigy! Anyway, you can't risk the Cyber Security
       teacher seeing you again.
     character: {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Fair point, alright, let's make some records, time to graduate.
+  - type: 0
+    text: Fair point, alright, let's make some records, time to graduate.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
+  - {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}

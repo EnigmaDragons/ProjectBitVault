@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Dominate Dispatch
   lines:
-  - text: You need to hack ICE's dispatch system to know what they are doing and send
+  - type: 0
+    text: You need to hack ICE's dispatch system to know what they are doing and send
       fake orders.
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "Got it. I\u2019m being dispatched to hack dispatch."
+  - type: 0
+    text: "Got it. I\u2019m being dispatched to hack dispatch."
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}

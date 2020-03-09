@@ -14,15 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Waltzing In
   lines:
-  - text: This server needs more work. You are pretty good at this.
+  - type: 0
+    text: This server needs more work. You are pretty good at this.
     character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
-    customDisplay: {fileID: 0}
-  - text: I agree on both accounts.
+  - type: 1
+    text: 
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "I should just invite you to these calls; you\u2019re present anyway."
+  - type: 0
+    text: I agree on both accounts.
+    character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
+  - type: 0
+    text: "I should just invite you to these calls; you\u2019re present anyway."
     character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "That\u2019s so considerate of you."
+  - type: 0
+    text: "That\u2019s so considerate of you."
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}

@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Layered Security
   lines:
-  - text: I think I have a pretty good guess of who this vigilante is.
+  - type: 0
+    text: I think I have a pretty good guess of who this vigilante is.
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
-  - text: I'm guessing it could be a certain coworker we work with.
+  - type: 0
+    text: I'm guessing it could be a certain coworker we work with.
     character: {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Avon does have a motive.
+  - type: 0
+    text: Avon does have a motive.
     character: {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 79655eb27cff2a0458545c7f8b2d69b3, type: 2}

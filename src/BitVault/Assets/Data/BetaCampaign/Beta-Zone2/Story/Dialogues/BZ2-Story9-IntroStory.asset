@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Account Siphon
   lines:
-  - text: Time to hack Cyber Titan's payroll system.
+  - type: 0
+    text: Time to hack Cyber Titan's payroll system.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: I'll make the creds from those data collection corps go directly to me.
+  - type: 0
+    text: I'll make the creds from those data collection corps go directly to me.
       They won't report it because it's illegal creds anyway.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}

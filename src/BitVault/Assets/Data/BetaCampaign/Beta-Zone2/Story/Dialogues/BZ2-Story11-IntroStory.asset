@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Remote Retrieval
   lines:
-  - text: They are gonna discover I have been hacking them. I still need to upload
+  - type: 0
+    text: They are gonna discover I have been hacking them. I still need to upload
       my security patch, but it's on my work rig.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: I have got no better option, I am going to remotely hack my own computer
+  - type: 0
+    text: I have got no better option, I am going to remotely hack my own computer
       from my home rig.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}

@@ -14,9 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Automated Filter
   lines:
-  - text: Just got an invite for an interview!
+  - type: 0
+    text: Just got an invite for an interview!
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Break a leg.
+  - type: 0
+    text: Break a leg.
     character: {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
+  - {fileID: 11400000, guid: e46b5f32cd2cff14ea7b13b853bc0e45, type: 2}

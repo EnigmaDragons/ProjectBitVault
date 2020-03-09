@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Jack Attack
   lines:
-  - text: Jack is blackmailing some of the Board members about their illegal selling
+  - type: 0
+    text: Jack is blackmailing some of the Board members about their illegal selling
       of our client's data.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Cyber Titan is rotten, so much corruption.
+  - type: 0
+    text: Cyber Titan is rotten, so much corruption.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}

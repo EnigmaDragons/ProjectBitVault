@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Cyber Midterm
   lines:
-  - text: Today is your cyber penetration midterm test.
+  - type: 0
+    text: Today is your cyber penetration midterm test.
     character: {fileID: 11400000, guid: c6c54097b634d6141a405c8710a74e04, type: 2}
-    customDisplay: {fileID: 0}
-  - text: You are trying to gain as much access as you can to this server, using the
+  - type: 0
+    text: You are trying to gain as much access as you can to this server, using the
       various hacking methods I taught you during the semester.
     character: {fileID: 11400000, guid: c6c54097b634d6141a405c8710a74e04, type: 2}
-    customDisplay: {fileID: 0}
-  - text: This is gonna be real easy.
+  - type: 0
+    text: This is gonna be real easy.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
+  - {fileID: 11400000, guid: c6c54097b634d6141a405c8710a74e04, type: 2}

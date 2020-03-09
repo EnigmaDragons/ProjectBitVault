@@ -14,20 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Corrupt Accounting
   lines:
-  - text: There are a ton of weird numbers here.
+  - type: 0
+    text: There are a ton of weird numbers here.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Cyber Titan is getting paid large cred amounts from data collection corps.
+  - type: 0
+    text: Cyber Titan is getting paid large cred amounts from data collection corps.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: What data could we possibly be selling them that is making all these creds?
+  - type: 0
+    text: What data could we possibly be selling them that is making all these creds?
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: In addition to the Board getting paid lots of creds, it looks like one accountant
+  - type: 0
+    text: In addition to the Board getting paid lots of creds, it looks like one accountant
       by the name of Jack is getting a fair share, is this embezzlement?
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Lastly some group called the Cult of Computer Chaos is getting paid tons
+  - type: 0
+    text: Lastly some group called the Cult of Computer Chaos is getting paid tons
       of creds, what does this shadowy group do?
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}

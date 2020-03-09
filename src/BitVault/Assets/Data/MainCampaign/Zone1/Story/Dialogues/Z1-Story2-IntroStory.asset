@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Remaining Training
   lines:
-  - text: This will be your first REAL practice server.
+  - type: 0
+    text: This will be your first REAL practice server.
     character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
-    customDisplay: {fileID: 0}
-  - text: If you get stuck; I'll send you out-of-date documentation or links to useless
+  - type: 0
+    text: If you get stuck; I'll send you out-of-date documentation or links to useless
       resources.
     character: {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 3cbeb74c11fcdc54488993b561de2ee1, type: 2}

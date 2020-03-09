@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Discommunication
   lines:
-  - text: The Board has sent me to confiscate your computer, they want to ensure your
+  - type: 0
+    text: The Board has sent me to confiscate your computer, they want to ensure your
       not the one screwing us over.
     character: {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}
-    customDisplay: {fileID: 0}
-  - text: How do you expect me to work when you are taking my rig.
+  - type: 0
+    text: How do you expect me to work when you are taking my rig.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: You don't! Not until we are sure your not involved.
+  - type: 0
+    text: You don't! Not until we are sure your not involved.
     character: {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
+  - {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}

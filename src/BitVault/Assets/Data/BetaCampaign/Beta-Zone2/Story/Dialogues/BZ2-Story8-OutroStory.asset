@@ -14,14 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Cult of Viruses
   lines:
-  - text: The Cult of Computer Chaos should call themselves the Cult of Viruses now
+  - type: 0
+    text: The Cult of Computer Chaos should call themselves the Cult of Viruses now
       that I'm done with their rigs.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Cyber Titan's gonna pay, I'm going to take their creds and upload my security
+  - type: 0
+    text: Cyber Titan's gonna pay, I'm going to take their creds and upload my security
       patch.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: They won't steal anymore of their client's data!
+  - type: 0
+    text: They won't steal anymore of their client's data!
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}

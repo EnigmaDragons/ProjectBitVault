@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: An Open Port
   lines:
-  - text: "Cyber Titan have a special security measure, Titan Subroutines, which  I\u2019m
+  - type: 0
+    text: "Cyber Titan have a special security measure, Titan Subroutines, which  I\u2019m
       updating your cyberdeck to handle."
     character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
-    customDisplay: {fileID: 0}
-  - text: "I\u2019m sure you\u2019ll knock 'em dead."
+  - type: 0
+    text: "I\u2019m sure you\u2019ll knock 'em dead."
     character: {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: a8b27447bc68ef545b43e8ba84c9a202, type: 2}
+  - {fileID: 11400000, guid: 287b237bb0998ae499addce6c6edc1ba, type: 2}

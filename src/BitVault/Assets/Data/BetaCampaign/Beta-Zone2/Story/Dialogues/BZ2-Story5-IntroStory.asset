@@ -14,26 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueName: Collection Corps
   lines:
-  - text: Heya Freya, one of our accountants, Jack appears to be embezzling large
+  - type: 0
+    text: Heya Freya, one of our accountants, Jack appears to be embezzling large
       amounts of creds.
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: The Board will be informed at once and we will get them removed, but for
+  - type: 0
+    text: The Board will be informed at once and we will get them removed, but for
       now keep this on the down low.
     character: {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Is the Board part of EVERY decision?
+  - type: 0
+    text: Is the Board part of EVERY decision?
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
-  - text: Yes and you better get used to it.
+  - type: 0
+    text: Yes and you better get used to it.
     character: {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}
-    customDisplay: {fileID: 0}
-  - text: '*Freya has left the call*'
+  - type: 2
+    text: 
+    character: {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}
+  - type: 0
+    text: '*Freya has left the call*'
     character: {fileID: 11400000, guid: aba9d7dbacc565941bc9f6a9d3bcde22, type: 2}
-    customDisplay: {fileID: 0}
-  - text: 'In the meantime I''m going to hack one of these data collection corps and
+  - type: 0
+    text: 'In the meantime I''m going to hack one of these data collection corps and
       find out what data we are selling them.
 
 '
     character: {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
-    customDisplay: {fileID: 0}
+  startingCharacters:
+  - {fileID: 11400000, guid: 63523354b3d3a73419a402108c3fffe7, type: 2}
+  - {fileID: 11400000, guid: 575e770282875024482729559efbfc3a, type: 2}
