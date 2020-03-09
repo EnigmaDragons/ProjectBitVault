@@ -4,7 +4,7 @@ using System.Collections.Generic;
 [Serializable]
 public sealed class SavedGameData
 {
-    public string SaveDataVersion = "0.7.6";
+    public string SaveDataVersion = "0.7.7";
     public int ActiveZone = 0;
     public string ActiveCampaignName = "";
     public CampaignsProgressData Campaigns = new CampaignsProgressData();
