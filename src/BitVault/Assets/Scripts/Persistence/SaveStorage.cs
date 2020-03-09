@@ -67,11 +67,11 @@ public class SaveStorage : ScriptableObject
     public bool HasWon() => SaveData.HasWon;
     public void SaveWin() => _currentSave.Write(x => x.HasWon = true);
     public int GetTotalStars() => CampaignScores().Sum(x => x.Value);
-    public int GetStars(GameLevel level) => CampaignScores().ValueOrDefault(level.Name, () => 0);
+    public int GetStars(GameLevel level) => CampaignScores().ValueOrDefault(level.Id, () => 0);
     public void SaveStars(GameLevel level, int stars)
     {
         if (GetStars(level) < stars) 
-            _currentSave.Write(s => CampaignScores()[level.Name] = stars);
+            _currentSave.Write(s => CampaignScores()[level.Id] = stars);
     }
 
     private CampaignLevelScores CampaignScores()
