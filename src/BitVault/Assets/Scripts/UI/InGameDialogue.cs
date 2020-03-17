@@ -116,7 +116,7 @@ public class InGameDialogue : MonoBehaviour
         for (var i = 0; i < _currentDialogue.StartingCharacters.Length; i++)
         {
             var display = Instantiate(characterPrefab, displayParent.transform);
-            display.Init(_currentDialogue.StartingCharacters[i]);
+            display.Init(_currentDialogue.StartingCharacters[i],  _characters.Count == 0);
             _characters.Add(display);
         }
         SetCharacterLocations(true);
@@ -125,7 +125,7 @@ public class InGameDialogue : MonoBehaviour
     private void AddCharacter(Character character)
     {
         var display = Instantiate(characterPrefab, displayParent.transform);
-        display.Init(character);
+        display.Init(character, _characters.Count == 0);
         _characters.Add(display);
         SetCharacterLocations(false);
     }

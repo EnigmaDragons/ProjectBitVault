@@ -20,12 +20,22 @@ public class DialogueCharacterDisplay : MonoBehaviour
 
     public Character Character { get; set; }
 
-    public void Init(Character character)
+    public void Init(Character character, bool isLeftMostCharacter)
     {
         Character = character;
         image.sprite = character.Bust;
+        SetFacing(isLeftMostCharacter);
+
         staticVfx.SetActive(character.UseStatic);
         transform.localPosition = startPosition;
+    }
+
+    private void SetFacing(bool isLeftMostCharacter)
+    {
+        if (!isLeftMostCharacter) return;
+        
+        var t = image.transform.localScale;
+        image.transform.localScale = new Vector3(-t.x, t.y, t.z);
     }
 
     public void SetFocus(bool focused) => image.color = focused ? Color.white : Color.gray;
