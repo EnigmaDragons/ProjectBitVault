@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Steamworks;
 using UnityEngine;
 
@@ -25,6 +26,7 @@ public class Achievements : MonoBehaviour
         { AchievementType.FailsafeUndo, "ACH_FAILSAFE_UNDO" },
         { AchievementType.LineUp, "ACH_LINE_UP" },
         { AchievementType.LaterLevel, "ACH_LATER_LEVEL" },
+        { AchievementType.HackThePlanet, "ACH_ALL_ACHIEVEMENTS" },
     };
 
     private readonly Dictionary<StatType, string> _stats = new Dictionary<StatType, string>
@@ -81,6 +83,9 @@ public class Achievements : MonoBehaviour
                     else
                         Debug.LogWarning("SteamUserStats.GetStat failed for Stat " + stat.Value);
                 }
+
+                if (_achievements.Count(x => _completedAchievements[x.Key]) == _achievements.Count - 1)
+                    UnlockAchievement(AchievementType.HackThePlanet);
             }
             else
             {

@@ -18,5 +18,6 @@
     SpeedLevel,
     FailsafeUndo,
     LineUp,
-    LaterLevel
+    LaterLevel,
+    HackThePlanet
 }
