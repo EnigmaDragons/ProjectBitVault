@@ -17,6 +17,7 @@ public sealed class Theme : ScriptableObject
     [SerializeField] public ColorReference iconButtonTint;
     [SerializeField] public ColorReference iconButtonHoverTint;
     [SerializeField] public ColorReference iconButtonPressedTint;
+    [SerializeField] public ColorReference creditsTint;
     
     public Color ColorFor(ThemeElement element)
     {
@@ -31,6 +32,7 @@ public sealed class Theme : ScriptableObject
             {ThemeElement.IconButtonTint, iconButtonTint},
             {ThemeElement.IconButtonHoverTint, iconButtonHoverTint},
             {ThemeElement.IconButtonPressedTint, iconButtonPressedTint},
+            {ThemeElement.CreditsTint, creditsTint},
         };
         return colors[element];
     }

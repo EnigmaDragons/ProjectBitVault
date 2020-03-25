@@ -12,8 +12,8 @@ public enum ThemeElement
     IconButtonTint = 51,
     IconButtonHoverTint = 52,
     IconButtonPressedTint = 53,
+    CreditsTint = 54,
     ButtonTextGradient = 90,
     DialogueUiTextGradient = 91,
     SettingsTextGradient = 92
-    
 }
