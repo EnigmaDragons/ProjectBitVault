@@ -15,7 +15,7 @@ public class SetPlayerSurvey : OnMessage<LevelCompleted>
 
     protected override void Execute(LevelCompleted msg)
     {
-        if (_hasCompletedLevel && !shouldSurvey.Value)
+        if (_hasCompletedLevel || !shouldSurvey.Value)
             return;
         playerSurvey.HasSurvey = true;
         playerSurvey.Question = question.Value;
