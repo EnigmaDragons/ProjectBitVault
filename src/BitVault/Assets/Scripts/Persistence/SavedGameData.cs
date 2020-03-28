@@ -11,6 +11,7 @@ public sealed class SavedGameData
     public SettingsData Settings = new SettingsData();
     public bool HasWon = false;
     public AchievementData Achievements = new AchievementData();
+    public List<int> ZonesVisited = new List<int>();
 
     public CampaignLevelScores ActiveCampaign => Campaigns[ActiveCampaignName];
 }
