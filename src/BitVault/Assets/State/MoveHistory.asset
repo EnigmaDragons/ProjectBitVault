@@ -13,3 +13,7 @@ MonoBehaviour:
   m_Name: MoveHistory
   m_EditorClassIdentifier: 
   onChanged: {fileID: 11400000, guid: 3db53b87fa5361e4886865c97688edb6, type: 2}
+  maxUndoDepth:
+    UseConstant: 1
+    ConstantValue: 999
+    Variable: {fileID: 0}

@@ -5,20 +5,30 @@ using UnityEngine;
 public sealed class MoveHistory : ScriptableObject
 {
     [SerializeField] private GameEvent onChanged;
+    [SerializeField] private IntReference maxUndoDepth;
 
-    private readonly FixedSizeStack<PieceMoved> _moves = new FixedSizeStack<PieceMoved>(3);
+    private FixedSizeStack<PieceMoved> _moves;
+    private FixedSizeStack<PieceMoved> Moves
+    {
+        get
+        {
+            if (_moves == null || _moves.Size < maxUndoDepth)
+                _moves = new FixedSizeStack<PieceMoved>(maxUndoDepth);
+            return _moves;
+        }
+    }
 
     public GameEvent OnChanged => onChanged;
-    public void Reset() => Notify(() => _moves.Clear());
-    public void Add(PieceMoved p) => Notify(() => _moves.Push(p));
+    public void Reset() => Notify(() => Moves.Clear());
+    public void Add(PieceMoved p) => Notify(() => Moves.Push(p));
     
     public void Undo()
     {
-        if (_moves.Count() > 0)
-            Notify(() => _moves.Pop().Undo());
+        if (Moves.Count() > 0)
+            Notify(() => Moves.Pop().Undo());
     }
 
-    public int Count => _moves.Count();
+    public int Count => Moves.Count();
 
     private void Notify(Action a)
     {
