@@ -14,37 +14,36 @@ public sealed class InitScreenResolutionOptions : MonoBehaviour
     private void Awake()
     {
         var comparer = new ResolutionEqualityComparer();
-        display.InitWithoutChanging();
+        var current = display.GetInitializedScreenSize();
         _resolutions = Screen.resolutions
             .Where(x => x.width % 16 == 0 && x.height % 9 == 0)
             .Where(x => x.width > minWidth)
             .Distinct(comparer)
             .Reverse()
             .ToArray();
-        dropdownMenu.onValueChanged.AddListener(SetResolution);
+        
         dropdownMenu.options.Clear();
-        var current = display.CurrentScreenSize;
         for (var i = 0; i < _resolutions.Length; i++)
         {
             var valString = ResToString(_resolutions[i]);
             dropdownMenu.options.Add(new TMP_Dropdown.OptionData(valString));
             if (comparer.Equals(_resolutions[i], current))
             {
-                dropdownMenu.value = i;
+                dropdownMenu.SetValueWithoutNotify(i);
                 Debug.Log($"Matching Resolution Option is {i}");
             }
         }
-
         dropdownMenu.RefreshShownValue();
+        dropdownMenu.onValueChanged.AddListener(SetResolution);
     }
-    
+
     private string ResToString(Resolution res) => res.width + " x " + res.height;
     private void SetResolution(int index) => display.SetResolution(_resolutions[index]);
 
     private class ResolutionEqualityComparer : IEqualityComparer<Resolution>
     {
-        public bool Equals(Resolution x, Resolution y) => x.height == y.height && x.width == y.width;
-        public bool Equals(Resolution x, Vector2Int y) => x.height == y.x && x.width == y.y;
+        public bool Equals(Resolution x, Resolution y) => x.width == y.width && x.height == y.height;
+        public bool Equals(Resolution x, Vector2Int y) => x.width == y.x && x.height == y.y;
 
         public int GetHashCode(Resolution obj) => int.Parse($"{obj.height}{obj.width}");
     }
