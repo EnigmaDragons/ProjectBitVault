@@ -52,6 +52,7 @@ public class SaveStorage : ScriptableObject
         {
             s.Campaigns = new CampaignsProgressData {{_defaultCampaignKey, new CampaignLevelScores()}};
             s.ZonesVisited = new List<int>();
+            s.ActiveZone = 0;
         });
         _store.Clear();
         SetShowMovementHints(showMovementHints);

@@ -12,7 +12,6 @@ namespace Assets.Scripts.UI
         private void OnEnable()
         {
             onZoneChanged.Subscribe(EnsurePlayerKnowsAboutTutorials, this);
-            EnsurePlayerKnowsAboutTutorials();
         }
 
         private void OnDisable() => onZoneChanged.Unsubscribe(this);
