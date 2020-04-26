@@ -12,8 +12,8 @@ public sealed class DisplayVersionNumberText : MonoBehaviour
     private string Mode => demoMode 
         ? "Demo" 
         : betaMode 
-            ? "Beta" 
+            ? "Demo" 
             : "";
     
-    private void Update() => text.text = $"{prefix}{value} {Mode}";
+    private void Update() => text.text = $"{prefix}{value} {Mode}".TrimEnd(' ');
 }
