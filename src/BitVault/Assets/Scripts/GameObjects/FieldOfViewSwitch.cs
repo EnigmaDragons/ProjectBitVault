@@ -7,5 +7,11 @@ public class FieldOfViewSwitch : MonoBehaviour
     [SerializeField] private float tallFieldOfView;
     [SerializeField] private float widFieldOfView;
 
-    private void Update() => camera.fieldOfView = layout.IsTall ? tallFieldOfView : widFieldOfView;
+    private bool isTall;
+    
+    private void Update()
+    {
+        if (isTall != layout.IsTall)
+            camera.fieldOfView = layout.IsTall ? tallFieldOfView : widFieldOfView;
+    }
 }

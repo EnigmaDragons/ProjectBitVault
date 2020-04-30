@@ -7,9 +7,7 @@ public class SyncBetaModeCampaign : MonoBehaviour
     [SerializeField] private BoolVariable betaActive;
     [SerializeField] private SaveStorage save;
 
-    void Awake() => Update();
-    
-    void Update()
+    void Awake()
     {
         var activeCampaign = betaActive.Value ? betaCampaign : normalCampaign;
         if (activeCampaign.Name != save.GetCampaign().Name)

@@ -12,12 +12,24 @@ public class PositionSwitch : MonoBehaviour
     [SerializeField] private bool effectsY;
     [SerializeField] private bool effectsZ;
 
+    private Transform t;
+    
+    private void Awake()
+    {
+        t = transform;
+    }
+    
     private void Update()
     {
         if (effectsRotation)
-            transform.localEulerAngles = layout.IsTall ? tallRotation : wideRotation;
-        transform.localPosition = new Vector3(effectsX ? (layout.IsTall ? tallPosition.x : widePosition.x) : transform.localPosition.x,
-            effectsY ? (layout.IsTall ? tallPosition.y : widePosition.y) : transform.localPosition.y,
-            effectsZ ? (layout.IsTall ? tallPosition.z : widePosition.z) : transform.localPosition.z);
+            t.localEulerAngles = layout.IsTall ? tallRotation : wideRotation;
+
+        if (!effectsX && !effectsY && !effectsZ)
+            return;
+        
+        var pos = t.localPosition;
+        t.localPosition = new Vector3(effectsX ? (layout.IsTall ? tallPosition.x : widePosition.x) : pos.x,
+            effectsY ? (layout.IsTall ? tallPosition.y : widePosition.y) : pos.y,
+            effectsZ ? (layout.IsTall ? tallPosition.z : widePosition.z) : pos.z);
     }
 }

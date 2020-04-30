@@ -10,9 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1918828017358904510}
   - component: {fileID: 1918828017358904511}
-  - component: {fileID: 1918828017358904509}
   - component: {fileID: 1918828017358904508}
-  - component: {fileID: 654230673671814619}
   m_Layer: 0
   m_Name: TestingFeatures
   m_TagString: Untagged
@@ -48,20 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flag: {fileID: 11400000, guid: 49114531547a09c44aa9bf753a5a07f7, type: 2}
   keys: 640000006500000076000000
---- !u!114 &1918828017358904509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1918828017358904504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0588b0f58144bf19afe6b2680cc733a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flag: {fileID: 11400000, guid: 15b10826e309e824fae8f7a22a780eba, type: 2}
-  keys: 62000000650000007400000061000000
 --- !u!114 &1918828017358904508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,17 +62,3 @@ MonoBehaviour:
   betaCampaign: {fileID: 11400000, guid: 813cafd9b3f2ce348aaaad7901680090, type: 2}
   betaActive: {fileID: 11400000, guid: 15b10826e309e824fae8f7a22a780eba, type: 2}
   save: {fileID: 11400000, guid: 1458f9b8798b4f147b62b7883c2ba217, type: 2}
---- !u!114 &654230673671814619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1918828017358904504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0e54df6b9b54beab59ffd4e8c208f4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runOnAwake: 0
-  runOnStart: 0

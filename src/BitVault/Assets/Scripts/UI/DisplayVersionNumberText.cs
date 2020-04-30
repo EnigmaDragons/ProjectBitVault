@@ -15,5 +15,5 @@ public sealed class DisplayVersionNumberText : MonoBehaviour
             ? "Demo" 
             : "";
     
-    private void Update() => text.text = $"{prefix}{value} {Mode}".TrimEnd(' ');
+    private void Awake() => text.text = $"{prefix}{value} {Mode}".TrimEnd(' ');
 }

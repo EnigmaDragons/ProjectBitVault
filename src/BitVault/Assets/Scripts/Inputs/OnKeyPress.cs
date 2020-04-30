@@ -10,7 +10,8 @@ public sealed class OnKeyPress : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(key) || alternateKeys.Any(Input.GetKeyDown))
-            action.Invoke();
+        if (Input.anyKey)
+            if (Input.GetKeyDown(key) || alternateKeys.Any(Input.GetKeyDown))
+                action.Invoke();
     }
 }

@@ -10,7 +10,7 @@ public sealed class ToggleBoolVariableOnKeyInputs : MonoBehaviour
     
     void Update ()
     {
-        if (keys.All(Input.GetKey))
+        if (Input.anyKey && keys.All(Input.GetKey))
         {
             if (!_isReady) return;
             
