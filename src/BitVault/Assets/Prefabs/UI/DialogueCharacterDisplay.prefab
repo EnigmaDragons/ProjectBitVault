@@ -151,6 +151,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 678ee1d0a575b7148bfeddf62aebccd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  extraVisualComponenets:
+  - {fileID: 3681537116366335273}
+  - {fileID: 1153857639668458142}
   image: {fileID: 7755312930394573699}
   startPosition: {x: 2100, y: 300, z: 0}
   leftPosition: {x: -1050, y: 300, z: 0}
@@ -159,6 +162,7 @@ MonoBehaviour:
   endPosition: {x: 2100, y: 300, z: 0}
   secondsToMove: 0.3
   staticVfx: {fileID: 2784474514101182525}
+  layout: {fileID: 11400000, guid: 32c0440eab8835c4780ee58adacf09a2, type: 2}
 --- !u!1 &2219745008868340576
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,16 +607,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6514488788657950328}
     m_Modifications:
-    - target: {fileID: 6594990342589299908, guid: 1f6d26852b970884eac9e43aacd9cba4,
-        type: 3}
-      propertyPath: m_Name
-      value: PanelGrapic
-      objectReference: {fileID: 0}
-    - target: {fileID: 6594990342589299908, guid: 1f6d26852b970884eac9e43aacd9cba4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5786079237351775404, guid: 1f6d26852b970884eac9e43aacd9cba4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -728,6 +722,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.02
       objectReference: {fileID: 0}
+    - target: {fileID: 6594990342589299908, guid: 1f6d26852b970884eac9e43aacd9cba4,
+        type: 3}
+      propertyPath: m_Name
+      value: PanelGrapic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594990342589299908, guid: 1f6d26852b970884eac9e43aacd9cba4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4739716689194942082, guid: 1f6d26852b970884eac9e43aacd9cba4,
         type: 3}
       propertyPath: m_Color.r
@@ -745,6 +749,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f6d26852b970884eac9e43aacd9cba4, type: 3}
+--- !u!1 &3681537116366335273 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6594990342589299908, guid: 1f6d26852b970884eac9e43aacd9cba4,
+    type: 3}
+  m_PrefabInstance: {fileID: 7534924899220247021}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4097473220286434625 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5786079237351775404, guid: 1f6d26852b970884eac9e43aacd9cba4,
