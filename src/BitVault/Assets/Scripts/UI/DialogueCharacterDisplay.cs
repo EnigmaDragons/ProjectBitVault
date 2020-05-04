@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class DialogueCharacterDisplay : MonoBehaviour
 {
+    [SerializeField] private GameObject[] extraVisualComponenets;
     [SerializeField] private Image image;
     [SerializeField] private Vector3 startPosition;
     [SerializeField] private Vector3 leftPosition;
@@ -12,6 +13,7 @@ public class DialogueCharacterDisplay : MonoBehaviour
     [SerializeField] private Vector3 endPosition;
     [SerializeField] private float secondsToMove;
     [SerializeField] private GameObject staticVfx;
+    [SerializeField] private LayoutMode layout;
 
     private float _t;
     private Vector3 _source;
@@ -38,16 +40,32 @@ public class DialogueCharacterDisplay : MonoBehaviour
         image.transform.localScale = new Vector3(-t.x, t.y, t.z);
     }
 
-    public void SetFocus(bool focused) => image.color = focused ? Color.white : Color.gray;
+    public void SetFocus(bool focused)
+    {
+        if (focused)
+        {
+            extraVisualComponenets.ForEach(x => x.SetActive(true));
+            image.color = Color.white;
+        }
+        else if (layout.IsWide)
+        {
+            image.color = Color.gray;
+        }
+        else
+        {
+            image.color = new Color(1, 1, 1, 0);
+            extraVisualComponenets.ForEach(x => x.SetActive(false));
+        }
+    }
 
     public void GoTo(DialogueDirection direction, bool isTeleporting)
     {
         _t = isTeleporting ? 1 : 0;
         _source = transform.localPosition;
-        if (direction == DialogueDirection.Left)
-            _destination = leftPosition;
-        else if (direction == DialogueDirection.Center)
+        if (direction == DialogueDirection.Center || layout.IsTall)
             _destination = centerPosition;
+        else if (direction == DialogueDirection.Left)
+            _destination = leftPosition;
         else if (direction == DialogueDirection.Right)
             _destination = rightPosition;
     }
