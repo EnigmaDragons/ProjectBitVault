@@ -1,10 +1,20 @@
-﻿using System.Collections.Generic;
+﻿#if UNITY_ANDROID || UNITY_IOS || UNITY_TIZEN || UNITY_TVOS || UNITY_WEBGL || UNITY_WSA || UNITY_PS4 || UNITY_WII || UNITY_XBOXONE || UNITY_SWITCH
+#define DISABLESTEAMWORKS
+#endif
+
+using System.Collections.Generic;
 using System.Linq;
-using Steamworks;
 using UnityEngine;
+
+#if !DISABLESTEAMWORKS 
+    using Steamworks;
+#endif
 
 public class Achievements : MonoBehaviour
 {
+#if !DISABLESTEAMWORKS 
+    using Steamworks;
+
     private readonly Dictionary<AchievementType, string> _achievements = new Dictionary<AchievementType, string>
     {
         { AchievementType.BeatZone1, "ACH_BEAT_ZONE1" },
@@ -135,4 +145,14 @@ public class Achievements : MonoBehaviour
             }
         }
     }
+#else
+    // NO-OP
+    public void UnlockAchievement(AchievementType achievement)
+    {
+    }
+
+    public void SetStat(StatType stat, int value)
+    {
+    }
+#endif
 }
