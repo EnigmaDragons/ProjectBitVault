@@ -44,7 +44,7 @@
 - PreFabs must have all of their required connections set in the Editor
 - ScriptableObjects are safe connections, since the are Global Singletons
 - Children elements are safe connections, since they exist within the current hierarchical 
-- PreFabs must not have more 8 immediate children
+- PreFabs must not have more than 8 immediate children
 - When a generic PreFab is available for an element, use the generic PreFab instead of a custom one (buttons, for example)
 
 ----
