@@ -8,7 +8,7 @@
     {% endif %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{% if page.title %}{{ page.title | strip_html }} &#8211; {% endif %}{{ site.title | strip_html }}</title>
+    <title>{% if page.title %}{{ page.title | strip_html }} | {% endif %}{{ site.title | strip_html }}</title>
     <link rel="dns-prefetch" href="//use.typekit.net">
     <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
     <link rel="dns-prefetch" href="//cdn.mathjax.org">
@@ -31,7 +31,7 @@
     <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl }}" />
 
     <!-- JS -->
-    <script defer src="/js/matrix.js"></script>      
+    <script defer src="/js/matrix.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="/js/sss.min.js"></script>
     <script>jQuery(function($) {$('.slider').sss();});</script> -->
@@ -44,7 +44,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ "/css/pixyll.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" type="text/css">
 
-    <!-- Fonts -->    
+    <!-- Fonts -->
     <link href="https://use.typekit.net/qor7lxl.css" rel="stylesheet" >
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Rubik:300,300italic,400,400italic,500,500italic,600,700,700italic" rel="stylesheet">
     {% if site.extended_fonts %}
