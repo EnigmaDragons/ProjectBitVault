@@ -14,10 +14,15 @@ public class ZoomInAtLevelCompleted : OnMessage<LevelCompleted, LevelReset>
     private void Awake()
     {
         _camera = Camera.main;
-        _startingPosition = _camera.gameObject.transform.position;
+        _startingPosition = _camera.transform.position;
     }
 
-    protected override void Execute(LevelCompleted msg) => _zooming = true;
+    protected override void Execute(LevelCompleted msg)
+    {
+        _zooming = true;
+        _startingPosition = _camera.transform.position;
+    }
+
     protected override void Execute(LevelReset msg)
     {
         _zooming = false;
@@ -29,6 +34,6 @@ public class ZoomInAtLevelCompleted : OnMessage<LevelCompleted, LevelReset>
         if (!_zooming)
             return;
         _t = Math.Min(1, _t + Time.deltaTime / _secondsToZoom);
-        _camera.gameObject.transform.position = Vector3.Lerp(_startingPosition, new Vector3(transform.position.x + _offset.x, transform.position.y + _offset.y, _offset.z), _t);
+        _camera.transform.position = Vector3.Lerp(_startingPosition, new Vector3(transform.position.x + _offset.x, transform.position.y + _offset.y, _offset.z), _t);
     }
 }

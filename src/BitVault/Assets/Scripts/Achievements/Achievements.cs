@@ -13,8 +13,6 @@ using UnityEngine;
 public class Achievements : MonoBehaviour
 {
 #if !DISABLESTEAMWORKS 
-    using Steamworks;
-
     private readonly Dictionary<AchievementType, string> _achievements = new Dictionary<AchievementType, string>
     {
         { AchievementType.BeatZone1, "ACH_BEAT_ZONE1" },
