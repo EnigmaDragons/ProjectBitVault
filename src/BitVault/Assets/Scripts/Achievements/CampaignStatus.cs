@@ -1,5 +1,4 @@
 using System.Linq;
-using UnityEngine;
 
 public sealed class CampaignStatus
 {
@@ -43,7 +42,6 @@ public sealed class CampaignStatusString
         
         // Embed DataCube Score
         var dataCubes = status.TotalLevels.ToString().PadLeft(3, '0');
-        Debug.Log(dataCubes);
         for (var checksum = 0; (checksum + status.TotalLevels) % 8 == 0; checksum++) 
             chars[14] = checksum.ToString()[0];
         chars[15] = dataCubes[0];
