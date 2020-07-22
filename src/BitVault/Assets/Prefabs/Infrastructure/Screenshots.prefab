@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8058192338193835981}
   - component: {fileID: 8058192338193835980}
   - component: {fileID: 8058192338193835983}
+  - component: {fileID: 8208237502146243991}
   m_Layer: 0
   m_Name: Screenshots
   m_TagString: Untagged
@@ -83,3 +84,75 @@ MonoBehaviour:
   screenshotSound: {fileID: 8300000, guid: 447b0f7cf6b5b9442a516c5a660296aa, type: 3}
   soundPlayer: {fileID: 11400000, guid: 86eac65d09e3f1643a51c753e9397bf6, type: 2}
   enableVideoCapture: 0
+--- !u!114 &8208237502146243991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8058192338193835982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bbe94d700718f74bba933f9da511556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useRenderTexture: 1
+  SSHTextureFormat: 1
+  cameras: []
+  fileNamePrefix: 
+  openFolderWhenDone: 1
+  didPressEditorScreenshotButton: 0
+  orientation: 1
+  shotInfo:
+  - width: 960
+    height: 640
+    label: 
+  - width: 1136
+    height: 640
+    label: 
+  - width: 1334
+    height: 750
+    label: 
+  - width: 2048
+    height: 946
+    label: 
+  - width: 1920
+    height: 1080
+    label: 
+  - width: 2160
+    height: 1080
+    label: 
+  - width: 2436
+    height: 1125
+    label: 
+  - width: 1920
+    height: 1200
+    label: 
+  - width: 2208
+    height: 1242
+    label: 
+  - width: 2880
+    height: 1440
+    label: 
+  - width: 2960
+    height: 1440
+    label: 
+  - width: 2048
+    height: 1496
+    label: 
+  - width: 2048
+    height: 1536
+    label: 
+  - width: 2560
+    height: 1600
+    label: 
+  - width: 2224
+    height: 1668
+    label: 
+  - width: 2732
+    height: 2048
+    label: 
+  savePath: 
+  buildSavePathRoot: 17
+  buildSavePathExtra: temp/screenshots/bitvault
+  configFile: 
