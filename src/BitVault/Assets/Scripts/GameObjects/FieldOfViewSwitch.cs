@@ -9,9 +9,14 @@ public class FieldOfViewSwitch : MonoBehaviour
 
     private bool isTall;
     
+    private void Start() => camera.fieldOfView = layout.IsTall ? tallFieldOfView : widFieldOfView;
+
     private void Update()
     {
         if (isTall != layout.IsTall)
+        {
+            isTall = layout.IsTall;
             camera.fieldOfView = layout.IsTall ? tallFieldOfView : widFieldOfView;
+        }
     }
 }
