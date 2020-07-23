@@ -15,4 +15,6 @@ public class BoolVariable : ScriptableObject
                 Debug.Log($"{name} changed to {value}");
         }
     }
+
+    public void Set(bool v) => Value = v;
 }
