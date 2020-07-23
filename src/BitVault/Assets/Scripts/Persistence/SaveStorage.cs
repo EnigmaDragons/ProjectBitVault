@@ -57,19 +57,14 @@ public class SaveStorage : ScriptableObject
         _store.Put(_versionKey, _version);
     }
     
-    public void Reset()
+    public void StartNewGame()
     {
-        var showMovementHints = GetShowMovementHints();
-        var skipStory = GetAutoSkipStory();
         _currentSave.Write(s =>
         {
             s.Campaigns = new CampaignsProgressData {{_defaultCampaignKey, new CampaignLevelScores()}};
             s.ZonesVisited = new List<int>();
             s.ActiveZone = 0;
         });
-        _store.Clear();
-        SetShowMovementHints(showMovementHints);
-        SetAutoSkipStory(skipStory);
     }
     
     public Campaign GetCampaign() => ActiveCampaign;
