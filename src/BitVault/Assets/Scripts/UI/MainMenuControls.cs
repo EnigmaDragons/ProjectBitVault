@@ -11,7 +11,7 @@ public class MainMenuControls : MonoBehaviour
     private void Awake()
     {
         saveStorage.Init();
-        continueButton.interactable = saveStorage.HasChosenGender();
+        continueButton.interactable = saveStorage.HasStartedGame();
         continueButton.onClick.AddListener(() => navigator.NavigateToLevelSelect());
     }
 }
