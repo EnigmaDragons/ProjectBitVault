@@ -157,8 +157,10 @@ MonoBehaviour:
   image: {fileID: 7755312930394573699}
   startPosition: {x: 2100, y: 300, z: 0}
   leftPosition: {x: -1050, y: 300, z: 0}
+  leftTabletPosition: {x: -700, y: 300, z: 0}
   centerPosition: {x: 0, y: 300, z: 0}
   rightPosition: {x: 1050, y: 300, z: 0}
+  rightTabletPosition: {x: 700, y: 300, z: 0}
   endPosition: {x: 2100, y: 300, z: 0}
   secondsToMove: 0.3
   staticVfx: {fileID: 2784474514101182525}
@@ -607,6 +609,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6514488788657950328}
     m_Modifications:
+    - target: {fileID: 6594990342589299908, guid: 1f6d26852b970884eac9e43aacd9cba4,
+        type: 3}
+      propertyPath: m_Name
+      value: PanelGrapic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594990342589299908, guid: 1f6d26852b970884eac9e43aacd9cba4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5786079237351775404, guid: 1f6d26852b970884eac9e43aacd9cba4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -721,16 +733,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 6594990342589299908, guid: 1f6d26852b970884eac9e43aacd9cba4,
-        type: 3}
-      propertyPath: m_Name
-      value: PanelGrapic
-      objectReference: {fileID: 0}
-    - target: {fileID: 6594990342589299908, guid: 1f6d26852b970884eac9e43aacd9cba4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4739716689194942082, guid: 1f6d26852b970884eac9e43aacd9cba4,
         type: 3}

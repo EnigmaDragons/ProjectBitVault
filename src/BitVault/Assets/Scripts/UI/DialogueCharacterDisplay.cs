@@ -8,8 +8,10 @@ public class DialogueCharacterDisplay : MonoBehaviour
     [SerializeField] private Image image;
     [SerializeField] private Vector3 startPosition;
     [SerializeField] private Vector3 leftPosition;
+    [SerializeField] private Vector3 leftTabletPosition;
     [SerializeField] private Vector3 centerPosition;
     [SerializeField] private Vector3 rightPosition;
+    [SerializeField] private Vector3 rightTabletPosition;
     [SerializeField] private Vector3 endPosition;
     [SerializeField] private float secondsToMove;
     [SerializeField] private GameObject staticVfx;
@@ -65,9 +67,9 @@ public class DialogueCharacterDisplay : MonoBehaviour
         if (direction == DialogueDirection.Center || layout.IsTall)
             _destination = centerPosition;
         else if (direction == DialogueDirection.Left)
-            _destination = leftPosition;
+            _destination = layout.Is16By9Ratio ? leftPosition : leftTabletPosition;
         else if (direction == DialogueDirection.Right)
-            _destination = rightPosition;
+            _destination = layout.Is16By9Ratio ? rightPosition : rightTabletPosition;
     }
 
     public void Leave()
