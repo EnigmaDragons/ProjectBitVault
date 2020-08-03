@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5606427599095341073}
   - component: {fileID: 7408844143108933189}
   - component: {fileID: 1326165581653608367}
+  - component: {fileID: 5356651417017378856}
   - component: {fileID: 1013242949515757510}
   - component: {fileID: 1903629545265122778}
   - component: {fileID: 8905336342155193214}
@@ -106,6 +107,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &5356651417017378856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096350206656118937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2a4961bf8262f42b4bb42180ef4c6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useFemale: {fileID: 11400000, guid: f8ca9ea4bc24b6749aa311d431fd6993, type: 2}
+  storage: {fileID: 11400000, guid: 1458f9b8798b4f147b62b7883c2ba217, type: 2}
 --- !u!114 &1013242949515757510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,7 +552,7 @@ PrefabInstance:
     - target: {fileID: 706963985781603965, guid: 2e8222a5fe5bf934881762a5bb868432,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 706963985781603965, guid: 2e8222a5fe5bf934881762a5bb868432,
         type: 3}

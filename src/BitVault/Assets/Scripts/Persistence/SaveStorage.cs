@@ -13,20 +13,33 @@ public class SaveStorage : ScriptableObject
     private const string _version = "0.2";
     private const string _showMovementHints = "ShowMovementHints";
     private const string _autoSkipStory = "AutoSkipStory";
-    private const string _useFemale = "UseFemale";
     private const string _defaultCampaignKey = "Main";
     
     private PlayerPrefsKeyValueStore _store = new PlayerPrefsKeyValueStore();
     private Stored<SavedGameData> _currentSave;
     
-    public SavedGameData SaveData
+    public SavedGameData SaveData => GetUpversionedSaveData();
+
+    private SavedGameData GetUpversionedSaveData()
     {
-        get 
+        if (_currentSave == null)
+            Init();
+        
+        var save = _currentSave.Get();
+        var isOutdated = !save.SaveDataVersion.Equals(SavedGameData.CurrentDataVersion);
+        
+        if (isOutdated)
         {
-            if (_currentSave == null)
-                Init();
-            return _currentSave.Get(); 
+            _currentSave.Write(s =>
+            {
+                s.SaveDataVersion = SavedGameData.CurrentDataVersion;
+                if (string.IsNullOrWhiteSpace(save.SelectedCharacter) || save.SelectedCharacter.Equals("None"))
+                    s.SelectedCharacter = _store.GetOrDefault("UseFemale", false) ? "Female" : "Male";
+            });
+            return _currentSave.Get();
         }
+
+        return save;
     }
 
     private Campaign ActiveCampaign => current.Campaign;
@@ -44,19 +57,14 @@ public class SaveStorage : ScriptableObject
         _store.Put(_versionKey, _version);
     }
     
-    public void Reset()
+    public void StartNewGame()
     {
-        var showMovementHints = GetShowMovementHints();
-        var skipStory = GetAutoSkipStory();
         _currentSave.Write(s =>
         {
             s.Campaigns = new CampaignsProgressData {{_defaultCampaignKey, new CampaignLevelScores()}};
             s.ZonesVisited = new List<int>();
             s.ActiveZone = 0;
         });
-        _store.Clear();
-        SetShowMovementHints(showMovementHints);
-        SetAutoSkipStory(skipStory);
     }
     
     public Campaign GetCampaign() => ActiveCampaign;
@@ -67,6 +75,9 @@ public class SaveStorage : ScriptableObject
     }
     
     // Player Save Data
+    public bool HasStartedGame() => GetTotalStars() > 0 || !_currentSave.Get().SelectedCharacter.Equals("None");
+    public bool GetUseFemale() => _currentSave.Get().SelectedCharacter.Equals("Female");
+    public void SetUseFemale(bool useFemale) => _currentSave.Write(s => s.SelectedCharacter = useFemale ? "Female" : "Male");
     public int GetLevelsCompletedInZone(GameLevels zone) => zone.Value.Count(level => GetStars(level) > 0);
     public int GetZone() => SaveData.ActiveZone;
     public void SaveZone(int zone) => _currentSave.Write(s => s.ActiveZone = zone);
@@ -95,10 +106,6 @@ public class SaveStorage : ScriptableObject
 
     public bool GetAutoSkipStory() => _store.GetOrDefault(_autoSkipStory, false);
     public void SetAutoSkipStory(bool active) => _store.Put(_autoSkipStory, active);
-
-    public bool HasChosenGender() => _store.Exists(_useFemale);
-    public bool GetUseFemale() => _store.GetOrDefault(_useFemale, false);
-    public void SetUseFemale(bool active) => _store.Put(_useFemale, active);
 
     // Hints
     private const string _useHints = "UseHints";

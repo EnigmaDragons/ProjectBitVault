@@ -67,7 +67,7 @@ public class NewGameButtons : MonoBehaviour
     public void StartGame()
     {
         saveStorage.Init();
-        saveStorage.Reset();
+        saveStorage.StartNewGame();
         saveStorage.SetUseFemale(_useFemale);
         saveStorage.SetAutoSkipStory(_autoSkip);
         useFemale.Value = _useFemale;

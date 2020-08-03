@@ -25,7 +25,7 @@ public class GameLevelsBasicComplexityCalculator : MonoBehaviour
                 var levelMap = map.GetLevelMap();
                 var stats = levelMap.BasicComplexityStats();
                 complexities.Add(stats.ToString());
-                Debug.Log(stats.ToString());
+                Debug.Log($"Stats: {stats}");
                 yield return new WaitForEndOfFrame();
             }
         }
