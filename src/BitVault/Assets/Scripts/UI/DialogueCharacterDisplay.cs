@@ -67,9 +67,9 @@ public class DialogueCharacterDisplay : MonoBehaviour
         if (direction == DialogueDirection.Center || layout.IsTall)
             _destination = centerPosition;
         else if (direction == DialogueDirection.Left)
-            _destination = layout.Is16By9Ratio ? leftPosition : leftTabletPosition;
+            _destination = layout.AspectRatio == ResolutionAspectRatio.FourByThree ? leftTabletPosition : leftPosition;
         else if (direction == DialogueDirection.Right)
-            _destination = layout.Is16By9Ratio ? rightPosition : rightTabletPosition;
+            _destination = layout.AspectRatio == ResolutionAspectRatio.FourByThree ? rightTabletPosition : rightPosition;
     }
 
     public void Leave()
