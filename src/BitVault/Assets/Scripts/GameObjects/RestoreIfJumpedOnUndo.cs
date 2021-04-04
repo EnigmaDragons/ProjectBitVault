@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public sealed class RestoreIfJumpedOnUndo : OnMessage<UndoPieceMoved, ObjectDestroyed, LevelReset, PieceJumped>
@@ -28,10 +29,13 @@ public sealed class RestoreIfJumpedOnUndo : OnMessage<UndoPieceMoved, ObjectDest
             Message.Publish(new UndoObjectDestroyed(obj));
             _damagedObjects.Pop();
         }
+        RestoreAllCollectedStars();
     }
 
     private void RestoreAllCollectedStars()
     {
+        if (!_damagedObjects.Any())
+            return;
         var obj = _damagedObjects.Peek();
         var collectedStartComponent = obj.GetComponent<CollectStarOnEntered>();
         if (collectedStartComponent != null)
