@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.WSA;
 
 [Serializable]
 public class TilePoint
@@ -60,4 +61,19 @@ public class TilePoint
                     results.Add(new TilePoint(x, y));
         return results;
     }
+
+    public List<TilePoint> GetAdjacents() => GetCardinals(1);
+    
+    public List<TilePoint> GetCardinals(int distance = 2)
+        => new List<TilePoint>
+        {
+            new TilePoint(X, Y + distance),
+            new TilePoint(X, Y - distance),
+            new TilePoint(X + distance, Y),
+            new TilePoint(X - distance, Y),
+        };
+
+    public bool IsInBounds(int maxX, int maxY) => 
+        X >= 0 && X < maxX &&
+        Y >= 0 && Y < maxY;
 }

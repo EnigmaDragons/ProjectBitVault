@@ -30,7 +30,7 @@ public class SurveyPlayerUI : MonoBehaviour
                         { "answer", x },
                         { "zoneName", zone.Zone.Name },
                         { "zoneNum", level.ZoneNumber },
-                        { "levelName", level.ActiveLevel.Name },
+                        { "levelName", level.ActiveLevelName },
                         { "levelNumber", level.LevelNumber }
                     });
                     answerParent.SetActive(false);

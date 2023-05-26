@@ -12,8 +12,10 @@ public class CenterOnLevel : OnMessage<LevelReset>
     private void Center()
     {
         if (level.ActiveLevel == null)
+        {
             return;
-        
+        }
+
         var bounds = level.ActiveLevel.Prefab.GetComponentsInChildren<Renderer>().Select(x => x.bounds);
         var boundsCombined = bounds.First();
         bounds.ForEach(x => boundsCombined.Encapsulate(x));

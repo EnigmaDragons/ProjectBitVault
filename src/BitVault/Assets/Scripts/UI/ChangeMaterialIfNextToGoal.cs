@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
 
-public class ChangeMaterialIfNextToGoal : MonoBehaviour
+public class ChangeMaterialIfNextToGoal : OnMessage<LevelReset>
 {
     [SerializeField] private CurrentLevelMap map;
     [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private Material swapTo;
-
-    private void Start()
-    {
-        if (map.BitVaultLocation.IsAdjacentTo(new TilePoint(gameObject)))
-            meshRenderer.material = swapTo;
+    
+    protected override void Execute(LevelReset msg)
+    {        
+        if (map.BitVaultLocation != null)
+            if (map.BitVaultLocation.IsAdjacentTo(new TilePoint(gameObject)))
+                meshRenderer.material = swapTo;
     }
 }

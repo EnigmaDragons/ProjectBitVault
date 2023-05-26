@@ -17,7 +17,7 @@ public class GameState : ScriptableObject
         currentZone.Init(currentLevel.ZoneNumber);
         currentLevelStars.Reset();
         currentMoveCounter.Reset();
-        currentLevelMap.InitLevel(CurrentLevel.ActiveLevel.name);
+        currentLevelMap.InitLevel(CurrentLevel.ActiveLevelName);
         currentPiece.Deselect();
         currentLevel.Init();
         hasResetLevel.Value = false;

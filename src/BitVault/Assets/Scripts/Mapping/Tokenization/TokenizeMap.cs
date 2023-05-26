@@ -6,7 +6,7 @@ public sealed class TokenizeMap : MonoBehaviour
     [SerializeField] private CurrentLevel current;
     [SerializeField, TextArea(10, 10)] private string token = "";
 
-    private void Awake() => map.Init(current.ActiveLevel.Name);
+    private void Awake() => map.Init(current.ActiveLevelName);
 
     private void Update()
     {

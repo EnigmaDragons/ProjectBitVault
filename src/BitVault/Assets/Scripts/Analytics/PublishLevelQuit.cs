@@ -12,6 +12,6 @@ public class PublishLevelQuit : OnMessage<LevelCompleted>
     private void OnDestroy()
     {
         if (!_levelFinished)
-            AnalyticsEvent.LevelQuit(level.ActiveLevel.Name);
+            AnalyticsEvent.LevelQuit(level.ActiveLevelName);
     }
 }

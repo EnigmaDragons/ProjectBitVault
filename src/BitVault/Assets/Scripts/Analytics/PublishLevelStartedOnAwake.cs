@@ -5,5 +5,5 @@ public class PublishLevelStartedOnAwake : MonoBehaviour
 {
     [SerializeField] private CurrentLevel level;
     
-    private void Awake() => AnalyticsEvent.LevelStart(level.ActiveLevel.Name);
+    private void Awake() => AnalyticsEvent.LevelStart(level.ActiveLevelName);
 }

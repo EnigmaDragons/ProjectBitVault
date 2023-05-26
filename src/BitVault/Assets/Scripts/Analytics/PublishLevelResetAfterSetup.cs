@@ -10,7 +10,7 @@ public class PublishLevelResetAfterSetup : OnMessage<LevelReset>
     protected override void Execute(LevelReset msg)
     {
         if (_isSetup)
-            AnalyticsEvent.LevelFail(level.ActiveLevel.Name);
+            AnalyticsEvent.LevelFail(level.ActiveLevelName);
         _isSetup = true;
     }
 }

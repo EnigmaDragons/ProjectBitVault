@@ -8,7 +8,8 @@ public class SaveStarsAchievedOnLevel : OnMessage<EndingLevelAnimationFinished>
 
     protected override void Execute(EndingLevelAnimationFinished msg)
     {
-        storage.SaveStars(level.ActiveLevel, stars.Count);
+        if (level.ActiveLevel != null)
+            storage.SaveStars(level.ActiveLevel, stars.Count);
         Message.Publish(new StarsUpdated());
     } 
 }

@@ -10,7 +10,7 @@ public class PublishLevelComplete : OnMessage<LevelCompleted>
     protected override void Execute(LevelCompleted msg)
     {
         if (!_done)
-            AnalyticsEvent.LevelComplete(level.ActiveLevel.Name);
+            AnalyticsEvent.LevelComplete(level.ActiveLevelName);
         _done = true;
     }
 }
