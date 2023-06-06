@@ -9,6 +9,8 @@ public class CurrentLevel : ScriptableObject
     [SerializeField] private int currentLevelNum;
     [SerializeField] private bool enableDebugLogging;
 
+    private Transform anonMapTransform;
+    
     public string ActiveLevelName
     {
         get
@@ -22,6 +24,7 @@ public class CurrentLevel : ScriptableObject
     }
 
     public LevelMap ActiveMap => anonMap;
+    public Transform ActiveMapTransform => anonMapTransform;
     
     public GameLevel ActiveLevel => selectedLevel;
     public int ZoneNumber => currentZoneNum;
@@ -37,10 +40,11 @@ public class CurrentLevel : ScriptableObject
         anonMap = null;
     }
 
-    public void UseGenMap(LevelMap levelMap)
+    public void UseGenMap(LevelMap levelMap, Transform obj)
     {
         anonMap = levelMap;
         selectedLevel = null;
+        anonMapTransform = obj;
     }
 
     public void Init()

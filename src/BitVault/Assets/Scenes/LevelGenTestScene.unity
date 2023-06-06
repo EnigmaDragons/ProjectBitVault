@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -141,10 +141,20 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -515.375
       objectReference: {fileID: 0}
+    - target: {fileID: 3223432025699928197, guid: 4a919419c31a1a0449513343ae104aeb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3887317331505100470, guid: 4a919419c31a1a0449513343ae104aeb,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -354.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4141218120299662268, guid: 4a919419c31a1a0449513343ae104aeb,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4418620096322889764, guid: 4a919419c31a1a0449513343ae104aeb,
         type: 3}
@@ -644,6 +654,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2116746607}
   - component: {fileID: 2116746606}
+  - component: {fileID: 2116746608}
+  - component: {fileID: 2116746609}
   m_Layer: 0
   m_Name: LevelGen
   m_TagString: Untagged
@@ -678,6 +690,7 @@ MonoBehaviour:
     type: 3}
   protoDataCube: {fileID: 1207161415011134732, guid: fa336d9be762cf045a312251cc0e98b9,
     type: 3}
+  victoryConditions: []
 --- !u!4 &2116746607
 Transform:
   m_ObjectHideFlags: 0
@@ -693,6 +706,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2116746608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116746605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eda96f8de3140c3bdf6bbec95ce5013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 109
+--- !u!114 &2116746609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116746605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c80a5d89d183477ea4e7f539625faa73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 11400000, guid: 3e1868dedbe7c5945b4fe845baa54d80, type: 2}
+  conditions:
+  - {fileID: 11400000, guid: 1c3026dfdac17be4a96d201ffcc96b06, type: 2}
+  hasWon: 0
 --- !u!1001 &951932641292713903
 PrefabInstance:
   m_ObjectHideFlags: 0

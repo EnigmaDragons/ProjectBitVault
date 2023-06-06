@@ -16,6 +16,7 @@ public class MouseLeftClickProcessor : MonoBehaviour
         var adjustedMousePos = rawMousePos + new Vector3(0, 0, -_mainCamera.transform.position.z);
         var mousePos = _mainCamera.ScreenToWorldPoint(adjustedMousePos);
         var clickedTile = new TilePoint(mousePos);
+        Debug.Log($"Clicked {clickedTile}");
         Message.Publish(new TileIndicated(clickedTile));
     }
 }

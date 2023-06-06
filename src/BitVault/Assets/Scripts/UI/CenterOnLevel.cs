@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CenterOnLevel : OnMessage<LevelReset>
@@ -11,12 +12,20 @@ public class CenterOnLevel : OnMessage<LevelReset>
 
     private void Center()
     {
-        if (level.ActiveLevel == null)
+        if (level.ActiveMap != null)
         {
-            return;
+            var bounds = level.ActiveMapTransform.GetComponentsInChildren<Renderer>().Select(x => x.bounds);
+            SetCameraPosition(bounds);
         }
+        else if (level.ActiveLevel != null)
+        {
+            var bounds = level.ActiveLevel.Prefab.GetComponentsInChildren<Renderer>().Select(x => x.bounds);
+            SetCameraPosition(bounds);
+        }
+    }
 
-        var bounds = level.ActiveLevel.Prefab.GetComponentsInChildren<Renderer>().Select(x => x.bounds);
+    private void SetCameraPosition(IEnumerable<Bounds> bounds)
+    {
         var boundsCombined = bounds.First();
         bounds.ForEach(x => boundsCombined.Encapsulate(x));
         transform.position = new Vector3(boundsCombined.center.x, boundsCombined.center.y, transform.position.z);

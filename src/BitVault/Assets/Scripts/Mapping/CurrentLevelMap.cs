@@ -34,6 +34,7 @@ public class CurrentLevelMap : ScriptableObject
 
     public void InitLevel(string activeLevelName)
     {
+        Debug.Log("Init Current Level Map");
         HasLost = false;
         levelName = activeLevelName;
         min = new Vector2();
@@ -63,6 +64,7 @@ public class CurrentLevelMap : ScriptableObject
 
     private void UpdateSize(Action a)
     {
+        Debug.Log("Update Size");
         a();
         var tiles = walkableTiles.Concat(blockedTiles).Select(x => new TilePoint(x)).ConcatIfNotNull(bitVaultLocation).ToList();
         min = new Vector2(tiles.Min(t => t.X), tiles.Min(t => t.Y));

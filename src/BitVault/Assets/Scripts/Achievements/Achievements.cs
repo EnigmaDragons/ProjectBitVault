@@ -62,7 +62,10 @@ public class Achievements : MonoBehaviour
     {
         if (!SteamManager.Initialized)
             return;
-
+        #if UNITY_EDITOR
+        return;
+        #endif
+        
         _gameID = new CGameID(SteamUtils.GetAppID());
         Callback<UserStatsReceived_t>.Create(OnUserStatsReceived);
     }

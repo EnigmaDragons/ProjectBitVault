@@ -8,8 +8,8 @@ public static class LevelGenV1
 {
     public static LevelMap Generate(int minMoves)
     {
-        var maxX = 14;
-        var maxY = 8;
+        var maxX = 8;
+        var maxY = 14;
         var lb = new LevelMapBuilder(Guid.NewGuid().ToString(), maxX, maxY);
 
         var knownPieces = new Dictionary<TilePoint, MapPiece>();
@@ -18,7 +18,7 @@ public static class LevelGenV1
         lb.WithPieceAndFloor(serverLoc, MapPiece.Root);
         knownPieces[serverLoc] = MapPiece.Root;
 
-        var adjacents = serverLoc.GetAdjacents().Where(x => x.IsInBounds(14, 8)).ToArray();
+        var adjacents = serverLoc.GetAdjacents().Where(x => x.IsInBounds(maxX, maxY)).ToArray();
         var rootKeyLoc = adjacents.Random();
         lb.WithPieceAndFloor(rootKeyLoc, MapPiece.RootKey);
 
@@ -33,7 +33,7 @@ public static class LevelGenV1
                 ? new KeyValuePair<TilePoint, MapPiece>(rootKeyLoc, MapPiece.RootKey) 
                 : knownPieces.Random();
 
-            var move = selectedPiece.Key.GetCardinals(2).Where(x => x.IsInBounds(14, 8)).ToArray().Random();
+            var move = selectedPiece.Key.GetCardinals(2).Where(x => x.IsInBounds(maxX, maxY)).ToArray().Random();
             var inBetweenLoc = selectedPiece.Key.InBetween(move).First();
             if (knownPieces.ContainsKey(move) || knownPieces.ContainsKey(inBetweenLoc) ||
                 selectedPiece.Value == MapPiece.Root)

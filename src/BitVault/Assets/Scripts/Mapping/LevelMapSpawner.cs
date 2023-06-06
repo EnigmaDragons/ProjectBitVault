@@ -19,6 +19,9 @@ public class LevelMapSpawner : MonoBehaviour
     [SerializeField] private GameObject protoRoot;
     [SerializeField] private GameObject protoRoutine;
     [SerializeField] private GameObject protoDataCube;
+    
+    [Header("Victory Conditions")]
+    [SerializeField] private VictoryCondition[] victoryConditions;
 
     private Dictionary<MapPiece, GameObject> _mapPiecePrototypes;
 
@@ -49,8 +52,8 @@ public class LevelMapSpawner : MonoBehaviour
         }
         
         var level = LevelGenV1.Generate(numMinMoves);
-        currentLevel.UseGenMap(level);
-        game.InitLevel();
+        currentLevel.UseGenMap(level, parent.transform);
+        game.BeginInitGeneratedLevelMap();
         foreach (var (x, y) in level.GetIterator())
         {
             var floor = level.FloorLayer[x, y];
@@ -63,7 +66,7 @@ public class LevelMapSpawner : MonoBehaviour
             if (_mapPiecePrototypes.TryGetValue(piece, out var proto2))
                 Instantiate(proto2, new Vector3(x, y, 0), Quaternion.identity, parent.transform);
         }
-        Message.Publish(new LevelReset());
+        game.FinishInitGeneratedLevelMap();
     }
     
 }
